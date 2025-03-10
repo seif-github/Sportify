@@ -22,5 +22,5 @@ The project is developed over a **6-week duration**, following an agile approach
 ## Installation & Setup (To Be Updated)  
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/yourusername/league-management-system.git
-   cd league-management-system
+   git clone https://github.com/seif-github/Sportify.git
+   cd Sportify
