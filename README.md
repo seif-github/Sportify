@@ -38,6 +38,8 @@ This project follows a **6-week development plan**, progressing from prototype t
    git clone https://github.com/seif-github/Sportify.git
    cd Sportify
 
+---
+
 ## 👥 Contributors
 This project is developed by a dedicated team as part of the DEPI internship graduation project:
 
