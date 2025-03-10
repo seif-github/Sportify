@@ -1,7 +1,7 @@
 # League Management System  
 
 ## About the Project  
-The **League Management System** is a **graduation project from the DEPI internship**, aimed at providing an intuitive platform for managing leagues and tournaments. Inspired by [leaguelobster.com](https://www.leaguelobster.com/), this system supports multiple game types, allowing users to create, organize, and track competitions efficiently.  
+The **League Management System** is a **graduation project from the DEPI internship**, aimed at providing an intuitive platform for managing leagues and tournaments. This system supports multiple game types, allowing users to create, organize, and track competitions efficiently.  
 
 ## Features  
 - **League & Tournament Creation** – Organize structured competitions with automated scheduling.  
