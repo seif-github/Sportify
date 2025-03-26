@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sportify.PL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b05eeb96081db89202dc15089a46b0d347fc3f88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd220f63a2a6e3cb223a074e6e9258072d429e0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sportify.PL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sportify.PL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
