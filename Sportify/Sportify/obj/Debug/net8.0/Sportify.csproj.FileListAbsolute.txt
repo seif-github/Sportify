@@ -1,0 +1,10 @@
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.csproj.AssemblyReference.cache
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.AssemblyInfoInputs.cache
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.AssemblyInfo.cs
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.csproj.CoreCompileInputs.cache
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.MvcApplicationPartsAssemblyInfo.cs
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.MvcApplicationPartsAssemblyInfo.cache
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.RazorAssemblyInfo.cache
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.RazorAssemblyInfo.cs
+E:\projects\Sportify\Sportify\Sportify\obj\Debug\net8.0\Sportify.sourcelink.json
