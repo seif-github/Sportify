@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sportify</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+            
+            <a href="/" class="nav-logo"><img src="assets/logo3.png" alt=""></a>
+            
+            <div class="nav-center nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#leagues">Leagues</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="nav-right">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="ph ph-sun"></i>
+                </button>
+                
+                <div class="user-buttons">
+                    <div class="nav-icon" id="notifications">
+                        <i class="ph ph-bell"></i>
+                        <div class="dropdown">
+                            <div class="dropdown-item">
+                                <i class="ph ph-trophy"></i>
+                                <div>
+                                    <h4>New Tournament Started</h4>
+                                    <p>Summer League 2025 is now live!</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="ph ph-game-controller"></i>
+                                <div>
+                                    <h4>Match Results</h4>
+                                    <p>Team Alpha won against Team Beta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-icon" id="profile">
+                        <i class="ph ph-user-circle"></i>
+                        <div class="dropdown">
+                            <a href="#profile" class="dropdown-item">
+                                <i class="ph ph-user"></i>
+                                <span>View Profile</span>
+                            </a>
+                            <a href="#settings" class="dropdown-item">
+                                <i class="ph ph-gear"></i>
+                                <span>Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#logout" class="dropdown-item">
+                                <i class="ph ph-sign-out"></i>
+                                <span onclick="signOut()">Sign Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-buttons">
+                    <button class="sign-in-btn" onclick="showLogin()">Login</button>
+                    <button class="sign-up-btn" onclick="showSignUp()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Manage Your League Effortlessly</h1>
+            <p>Create, schedule, and track leagues & tournaments in one place</p>
+            <div class="hero-buttons">
+                <a href="#get-started" class="button button-primary">Get Started</a>
+                <a href="#features" class="button button-secondary">Why Sportify?</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/gold-trophy.png" alt="">
+            <svg class="hero-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                
+                <path fill="rgba(255,255,255,0.1)" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.8,-0.7C87.6,14.9,82.6,29.8,74.7,43.2C66.8,56.7,55.9,68.7,42.2,77.6C28.5,86.5,12.1,92.3,-2.7,96.3C-17.5,100.3,-35,102.5,-48.7,94.9C-62.4,87.3,-72.3,69.9,-81.3,52.6C-90.3,35.3,-98.4,18.2,-98.9,0.3C-99.4,-17.6,-92.3,-35.1,-83.2,-52.6C-74.1,-70.1,-63,-87.6,-47.8,-94C-32.6,-100.4,-13.3,-95.7,1.7,-98.6C16.7,-101.5,33.3,-112,44.7,-76.4Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Why Choose Our Platform?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="ph ph-trophy ph-2x"></i>
+                <h3>Create & Manage Leagues</h3>
+                <p>Organize tournaments with ease using our intuitive platform</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph ph-calendar ph-2x"></i>
+                <h3>Smart Match Scheduling</h3>
+                <p>Automated scheduling for fair play and convenience</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph ph-chart-line-up ph-2x"></i>
+                <h3>Real-time Leaderboard</h3>
+                <p>Track rankings & stats instantly as matches progress</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph ph-bell-ringing ph-2x"></i>
+                <h3>Instant Notifications</h3>
+                <p>Get updates on match results and important events</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Create a League</h3>
+                <p>Set up tournament rules, teams, and schedule with just a few clicks</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Invite Teams & Players</h3>
+                <p>Send invites and build your competition effortlessly</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Track Scores & Standings</h3>
+                <p>View real-time match updates and league statistics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Start Your League Today!</h2>
+        <p>No credit card required – Get started in minutes</p>
+        <div class="cta-buttons">
+            <a href="#signup" class="button button-primary">Sign Up for Free</a>
+            <a href="#contact" class="button button-secondary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3><i class="ph ph-trophy"></i> Sportify</h3>
+                <p>Making league management simple</p><br>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Legal</h3><br>
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Socials</h3><br>
+                <ul class="footer-links">
+                    <li><i class="ph ph-facebook-logo"></i> <a href="#facebook">Facebook</a></li>
+                    <li><i class="ph ph-x-logo"></i> <a href="#X">X (Formerly Twitter)</a></li>
+                    <li><i class="ph ph-linkedin-logo"></i> <a href="#linkedin">LinkedIn</a></li>
+                    <li><i class="ph ph-discord-logo"></i> <a href="#discord">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © <script>document.write(new Date().getFullYear())</script> Sportify. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
