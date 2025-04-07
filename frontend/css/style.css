@@ -276,17 +276,18 @@
   animation: fadeInUp 0.8s ease forwards;
 }
 
-.hero-image img {
+.hero-image .hero-icon {
   position: absolute;
   z-index: 1;
 }
 
-.hero-image .hero-icon {
+.hero-image .hero-icon-bg {
   width: 140%;
   height: auto;
   opacity: 0;
   transform: translateX(30px);
   animation: fadeInRight 0.8s ease 0.4s forwards;
+  z-index: 2;
 }
 
 /* Buttons */
