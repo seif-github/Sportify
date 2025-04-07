@@ -177,7 +177,7 @@
     transform: translateY(0);
   }
   
-  .user-buttons .dropdown-item {
+  .user-buttons .dropdown-item, .user-buttons a {
     padding: 0.75rem;
     border-radius: 8px;
     display: flex;
@@ -188,7 +188,7 @@
     transition: all 0.2s ease;
   }
   
-  .user-buttons .dropdown-item:hover {
+  .user-buttons .dropdown-item:hover, .user-buttons a:hover{
     background: var(--bg-secondary);
   }
   

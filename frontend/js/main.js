@@ -93,7 +93,7 @@ document.querySelectorAll('.feature-card, .step-card').forEach(element => {
 });
 
 // Simulate user logged-in state (you can replace this with actual login logic)
-let isLoggedIn = false;
+let isLoggedIn = true;
 
 // Function to handle sign-in
 function showLogin() {
