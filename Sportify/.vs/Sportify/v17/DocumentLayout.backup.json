@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub_Repos\\Sportify\\Sportify\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\userleague.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\userleague.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\leagueteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\leagueteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\league.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\league.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\data\\migrations\\20250327010816_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\data\\migrations\\20250327010816_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\data\\migrations\\00000000000000_createidentityschema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\data\\migrations\\00000000000000_createidentityschema.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|d:\\github_repos\\sportify\\sportify\\sportify\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFDF3E5D-799C-47F9-BB4C-9B02384E80BD}|Sportify\\Sportify.csproj|solutionrelative:sportify\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Sportify\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Sportify\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T17:44:57.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Sportify\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T17:44:08.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Program.cs",
+              "RelativeDocumentMoniker": "Sportify\\Program.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Program.cs",
+              "RelativeToolTip": "Sportify\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T00:47:13.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "League.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\League.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\League.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\League.cs",
+              "RelativeToolTip": "Sportify\\Models\\League.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:08:25.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LeagueTeam.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\LeagueTeam.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\LeagueTeam.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\LeagueTeam.cs",
+              "RelativeToolTip": "Sportify\\Models\\LeagueTeam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:25:30.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Match.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\Match.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\Match.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\Match.cs",
+              "RelativeToolTip": "Sportify\\Models\\Match.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:28:14.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\Notification.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\Notification.cs",
+              "RelativeToolTip": "Sportify\\Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:26:38.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Team.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\Team.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\Team.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\Team.cs",
+              "RelativeToolTip": "Sportify\\Models\\Team.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:24:57.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\User.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\User.cs",
+              "RelativeToolTip": "Sportify\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:05:58.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserLeague.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\UserLeague.cs",
+              "RelativeDocumentMoniker": "Sportify\\Models\\UserLeague.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Models\\UserLeague.cs",
+              "RelativeToolTip": "Sportify\\Models\\UserLeague.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:11:33.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "00000000000000_CreateIdentitySchema.Designer.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "RelativeDocumentMoniker": "Sportify\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "RelativeToolTip": "Sportify\\Data\\Migrations\\00000000000000_CreateIdentitySchema.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:05:55.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Sportify\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Sportify\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:07:26.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250327010816_initial.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\Migrations\\20250327010816_initial.cs",
+              "RelativeDocumentMoniker": "Sportify\\Data\\Migrations\\20250327010816_initial.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\Migrations\\20250327010816_initial.cs",
+              "RelativeToolTip": "Sportify\\Data\\Migrations\\20250327010816_initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:08:17.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\appsettings.json",
+              "RelativeDocumentMoniker": "Sportify\\appsettings.json",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\appsettings.json",
+              "RelativeToolTip": "Sportify\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T23:35:54.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Sportify\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\Sportify\\Sportify\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Sportify\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:34:35.954Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
