@@ -1,16 +1,16 @@
 /* Modern CSS Reset and Base Styles */
 :root {
-    --primary-green: #22c55e; /* A fresher, sportier green */
-    --primary-dark: #1f2937;  /* Deep gray-blue for subtle contrast */
-    --primary-light: #f5f7fa; /* Soft, modern light background */
+    --primary-green: #22c55e;
+    --primary-dark: #1f2937;
+    --primary-light: #f5f7fa;
     --gradient: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
   
-    --text-primary: #1f2937;     /* Darker and crisper for clarity */
-    --text-secondary: #4b5563;   /* Soft contrast for less important text */
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
   
-    --bg-primary: #ffffff;       /* Pure white background */
-    --bg-secondary: #f9fafb;     /* Just a tad off-white for soft sections */
-    --bg-tertiary: #e5e7eb;      /* Subtle card or divider background */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #e5e7eb;
   
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
@@ -22,16 +22,16 @@
   }
   
   [data-theme="dark"] {
-    --primary-green: #10b981; /* Vivid green, stands out well on dark */
-    --primary-dark: #f3f4f6;  /* Light gray for text on dark BG */
-    --primary-light: #1f2937; /* Container background or buttons */
+    --primary-green: #10b981;
+    --primary-dark: #f3f4f6;
+    --primary-light: #1f2937;
   
-    --text-primary: #f3f4f6;    /* High contrast light text */
-    --text-secondary: #d1d5db;  /* Muted gray-blue for secondary */
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
   
-    --bg-primary: #111827;      /* Almost black with a bluish hint */
-    --bg-secondary: #1f2937;    /* Slightly lighter for layering */
-    --bg-tertiary: #374151;     /* Use for borders or lower-level backgrounds */
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --bg-tertiary: #374151;
   
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.35);
@@ -148,6 +148,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
+    color: var(--text-primary);
   }
   
   .user-buttons .nav-icon:hover {
@@ -211,6 +212,7 @@
   }
 
   .auth-buttons .sign-in-btn , .sign-up-btn {
+  text-decoration: none;
   padding: 0.8em 1.75em;
   background-color: transparent;
   border-radius: 6px;
