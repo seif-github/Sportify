@@ -52,7 +52,7 @@
   }
   
   /* Navigation */
-  .navbar {
+  .nav-bar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -63,7 +63,7 @@
     transition: all 0.3s ease;
   }
   
-  [data-theme="dark"] .navbar {
+  [data-theme="dark"] .nav-bar {
     background: rgba(26, 32, 44, 0.9);
   }
   
@@ -538,7 +538,7 @@
 }
 
 @media (max-width: 480px) {
-  .navbar {
+  .nav-bar {
     padding: 0.75rem 1rem;
   }
 

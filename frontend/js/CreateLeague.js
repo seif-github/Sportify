@@ -256,24 +256,24 @@ $(document).ready(function() {
   });
   
   document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('themeToggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    // const themeToggle = document.getElementById('themeToggle');
+    // const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
   
-    if (prefersDarkScheme.matches) {
-      document.body.setAttribute('data-theme', 'dark');
-      themeToggle.textContent = '☀️';
-    }
+    // if (prefersDarkScheme.matches) {
+    //   document.body.setAttribute('data-theme', 'dark');
+    //   themeToggle.textContent = '☀️';
+    // }
   
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.body.getAttribute('data-theme');
-      if (currentTheme === 'dark') {
-        document.body.removeAttribute('data-theme');
-        themeToggle.textContent = '🌙';
-      } else {
-        document.body.setAttribute('data-theme', 'dark');
-        themeToggle.textContent = '☀️';
-      }
-    });
+    // themeToggle.addEventListener('click', () => {
+    //   const currentTheme = document.body.getAttribute('data-theme');
+    //   if (currentTheme === 'dark') {
+    //     document.body.removeAttribute('data-theme');
+    //     themeToggle.textContent = '🌙';
+    //   } else {
+    //     document.body.setAttribute('data-theme', 'dark');
+    //     themeToggle.textContent = '☀️';
+    //   }
+    // });
   
     // Button functionality
     document.querySelector('.create-league')?.addEventListener('click', () => {
