@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/profile.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+          <div class="nav-logo">
+            <span>🏆 League Manager</span>
+          </div>
+          <div class="nav-center">
+            <a href="#" class="nav-item active">Home</a>
+            <a href="CreateLeague.html" class="nav-item">Leagues</a>
+            <a href="#" class="nav-item">Teams</a>
+            <a href="#" class="nav-item">Matches</a>
+            <a href="Dashboard.html" class="nav-item">Dashboard</a>
+    
+          </div>
+          <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="user-profile">
+                <a class="nav-item" href="profile.html">
+                    <img src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=40" alt="Profile" class="avatar">
+
+                </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+  <main class="profile-container">
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <img src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=100" alt="John Doe">
+        </div>
+        <div class="profile-info">
+          <h1>John Doe</h1>
+          <p class="role">Team Manager</p>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <div class="detail-group">
+          <label>Email</label>
+          <div class="detail-value">
+            <i class="fas fa-envelope"></i>
+            <span>john.doe@example.com</span>
+          </div>
+        </div>
+
+        <div class="detail-group">
+          <label>Phone</label>
+          <div class="detail-value">
+            <i class="fas fa-phone"></i>
+            <span>+1 (555) 123-4567</span>
+          </div>
+        </div>
+
+        <div class="detail-group">
+          <label>Location</label>
+          <div class="detail-value">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>New York, USA</span>
+          </div>
+        </div>
+
+        <div class="detail-group">
+          <label>Member Since</label>
+          <div class="detail-value">
+            <i class="fas fa-calendar"></i>
+            <span>January 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-actions">
+        <button class="btn-primary">
+          <i class="fas fa-edit"></i>
+          Edit Profile
+        </button>
+        <button class="btn-secondary">
+          <i class="fas fa-key"></i>
+          Change Password
+        </button>
+      </div>
+    </div>
+
+    <div class="settings-card">
+      <h2>Settings</h2>
+      
+      <div class="settings-group">
+        <div class="setting-item">
+          <div class="setting-info">
+            <h3>Email Notifications</h3>
+            <p>Receive email updates</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h3>Push Notifications</h3>
+            <p>Receive push notifications</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h3>Two-Factor Auth</h3>
+            <p>Extra security layer</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/profile.js"></script>
+</body>
+</html>

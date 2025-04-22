@@ -25,84 +25,22 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <i class="ph ph-trophy me-2"></i>
-        <span>League Manager</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#dashboard">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#leagues">Leagues</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#teams">Teams</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#schedule">Schedule</a>
-          </li>
-        </ul>
-
-        <div class="d-flex align-items-center gap-3">
-          <button class="btn theme-toggle" aria-label="Toggle theme">
-            <i class="ph ph-sun"></i>
-          </button>
-
-          <!-- User menu (hidden by default) -->
-          <div class="user-buttons d-none">
-            <div class="dropdown">
-              <button class="btn position-relative" data-bs-toggle="dropdown">
-                <i class="ph ph-bell"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end p-3">
-                <h6 class="dropdown-header">Notifications</h6>
-                <div class="dropdown-item d-flex align-items-center gap-3">
-                  <i class="ph ph-calendar"></i>
-                  <div>
-                    <strong>New Game Scheduled</strong>
-                    <p class="mb-0">Warriors vs. Knights - Tomorrow at 5 PM</p>
-                  </div>
-                </div>
-                <div class="dropdown-divider"></div>
-                <div class="dropdown-item d-flex align-items-center gap-3">
-                  <i class="ph ph-user-plus"></i>
-                  <div>
-                    <strong>Team Invitation</strong>
-                    <p class="mb-0">You've been invited to join Rockets</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="dropdown">
-              <button class="btn" data-bs-toggle="dropdown">
-                <i class="ph ph-user-circle"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#"><i class="ph ph-user me-2"></i>My Profile</a>
-                <a class="dropdown-item" href="#"><i class="ph ph-gear me-2"></i>Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" onclick="signOut()">
-                  <i class="ph ph-sign-out me-2"></i>Sign Out
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Auth buttons -->
-          <div class="auth-buttons">
-            <button class="btn btn-outline-primary" onclick="showLogin()">Sign In</button>
-            <button class="btn btn-primary" onclick="showSignUp()">Sign Up</button>
-          </div>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-logo">
+        <span>🏆 League Manager</span>
+      </div>
+      <div class="nav-center">
+        <a href="#" class="nav-item active">Home</a>
+        <a href="CreateLeague.html" class="nav-item">Leagues</a>
+        <a href="#" class="nav-item">Teams</a>
+        <a href="#" class="nav-item">Matches</a>
+        <a href="Dashboard.html" class="nav-item">Dashboard</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <div class="user-profile">
+          <img src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=40" alt="Profile" class="avatar">
         </div>
       </div>
     </div>

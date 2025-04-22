@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League Manager Dashboard</title>
+  <link rel="stylesheet" href="./css/Dashboard.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-logo">
+        <span>🏆 League Manager</span>
+      </div>
+      <div class="nav-center">
+        <a href="#" class="nav-item active">Home</a>
+        <a href="CreateLeague.html" class="nav-item">Leagues</a>
+        <a href="#" class="nav-item">Teams</a>
+        <a href="#" class="nav-item">Matches</a>
+        <a href="Dashboard.html" class="nav-item">Dashboard</a>
+
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <div class="user-profile">
+            <a class="nav-item" href="profile.html">
+                <img src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=40" alt="Profile" class="avatar">
+
+            </a>        
+        </div>
+    </div>
+  </nav>
+
+  <main class="dashboard">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-info">
+          <h3>Total Leagues</h3>
+          <p class="stat-number">24</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-info">
+          <h3>Active Teams</h3>
+          <p class="stat-number">156</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-info">
+          <h3>Upcoming Matches</h3>
+          <p class="stat-number">12</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">👤</div>
+        <div class="stat-info">
+          <h3>Total Players</h3>
+          <p class="stat-number">1,248</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-actions">
+      <h2>Quick Actions</h2>
+      <div class="action-buttons">
+        <button class="action-btn create-league">Create League</button>
+        <button class="action-btn schedule-match">Schedule Match</button>
+      </div>
+    </div>
+
+    <div class="recent-leagues">
+      <div class="section-header">
+        <h2>Recent Leagues</h2>
+      </div>
+      <div class="leagues-table">
+        <table>
+          <thead>
+            <tr>
+              <th>League Name</th>
+              <th>Sport</th>
+              <th>Teams</th>
+              <th>Start Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Premier League 2025</td>
+              <td>Football</td>
+              <td>20</td>
+              <td>Jan 15, 2025</td>
+              <td><span class="status active">Active</span></td>
+            </tr>
+            <tr>
+              <td>E-Sports Championship</td>
+              <td>Gaming</td>
+              <td>16</td>
+              <td>Feb 1, 2025</td>
+              <td><span class="status upcoming">Upcoming</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="upcoming-matches">
+      <div class="section-header">
+        <h2>Upcoming Matches</h2>
+      </div>
+      <div class="matches-grid">
+        <div class="match-card">
+          <div class="match-header">
+            <span class="match-date">Jan 20, 2025 - 15:00</span>
+            <span class="match-sport">Football</span>
+          </div>
+          <div class="match-teams">
+            <div class="team">
+              <span class="team-name">Team Alpha</span>
+              <span class="team-score">T1</span>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team">
+              <span class="team-score">T2</span>
+              <span class="team-name">Team Beta</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </main>
+  <script src="./js/Dashboard.js"></script>
+</body>
+</html>
