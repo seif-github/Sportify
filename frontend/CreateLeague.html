@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League Manager - Create League</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+  <!-- jQuery UI for datepicker -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/CreateLeague.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <!-- Google Fonts -->  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Owl Carousel -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- Custom CSS -->
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <i class="ph ph-trophy me-2"></i>
+        <span>League Manager</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#leagues">Leagues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#teams">Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#schedule">Schedule</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn theme-toggle" aria-label="Toggle theme">
+            <i class="ph ph-sun"></i>
+          </button>
+
+          <!-- User menu (hidden by default) -->
+          <div class="user-buttons d-none">
+            <div class="dropdown">
+              <button class="btn position-relative" data-bs-toggle="dropdown">
+                <i class="ph ph-bell"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end p-3">
+                <h6 class="dropdown-header">Notifications</h6>
+                <div class="dropdown-item d-flex align-items-center gap-3">
+                  <i class="ph ph-calendar"></i>
+                  <div>
+                    <strong>New Game Scheduled</strong>
+                    <p class="mb-0">Warriors vs. Knights - Tomorrow at 5 PM</p>
+                  </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-item d-flex align-items-center gap-3">
+                  <i class="ph ph-user-plus"></i>
+                  <div>
+                    <strong>Team Invitation</strong>
+                    <p class="mb-0">You've been invited to join Rockets</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn" data-bs-toggle="dropdown">
+                <i class="ph ph-user-circle"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="#"><i class="ph ph-user me-2"></i>My Profile</a>
+                <a class="dropdown-item" href="#"><i class="ph ph-gear me-2"></i>Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" onclick="signOut()">
+                  <i class="ph ph-sign-out me-2"></i>Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Auth buttons -->
+          <div class="auth-buttons">
+            <button class="btn btn-outline-primary" onclick="showLogin()">Sign In</button>
+            <button class="btn btn-primary" onclick="showSignUp()">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content container py-5">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <!-- Progress Steps -->
+        <div class="progress-steps mb-4">
+          <div class="step active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-label">League Details</div>
+          </div>
+          <div class="step" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-label">Teams Setup</div>
+          </div>
+          <div class="step" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-label">Schedule</div>
+          </div>
+        </div>
+
+        <!-- Form Content -->
+        <div class="form-content">
+          <!-- Step 1: League Details -->
+          <div class="form-step active" data-step="1">
+            <h2 class="mb-4">Create New League</h2>
+            
+            <div class="mb-3">
+              <label for="league-name" class="form-label">League Name</label>
+              <input type="text" id="league-name" class="form-control" placeholder="Enter league name">
+            </div>
+            
+            <div class="mb-3">
+              <label for="sport-type" class="form-label">Sport Type</label>
+              <select id="sport-type" class="form-select">
+                <option value="" disabled selected>Select sport type</option>
+                <option value="basketball">Basketball</option>
+                <option value="soccer">Soccer</option>
+                <option value="volleyball">Volleyball</option>
+                <option value="baseball">Baseball</option>
+                <option value="football">Football</option>
+                <option value="tennis">Tennis</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="start-date" class="form-label">Start Date</label>
+                <div class="input-group">
+                  <input type="text" id="start-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
+                  <span class="input-group-text"><i class="ph ph-calendar"></i></span>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <label for="end-date" class="form-label">End Date</label>
+                <div class="input-group">
+                  <input type="text" id="end-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
+                  <span class="input-group-text"><i class="ph ph-calendar"></i></span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-end mt-4">
+              <button id="next-step-1" class="btn btn-primary">Create League</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Teams Setup -->
+          <div class="form-step" data-step="2">
+            <h2 class="mb-4">Teams Setup</h2>
+            
+            <div class="mb-3">
+              <label for="team-count" class="form-label">Number of Teams</label>
+              <input type="number" id="team-count" class="form-control" min="2" max="32" value="8">
+            </div>
+            
+            <div id="team-list" class="team-list mb-3">
+              <!-- Teams will be generated here -->
+            </div>
+            
+            <button id="add-team" class="btn btn-outline-primary mb-4">
+              <i class="ph ph-plus me-2"></i>Add Team
+            </button>
+            
+            <div class="d-flex justify-content-between mt-4">
+              <button id="prev-step-2" class="btn btn-outline-secondary">Back</button>
+              <button id="next-step-2" class="btn btn-primary">Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Schedule -->
+          <div class="form-step" data-step="3">
+            <h2 class="mb-4">Schedule Games</h2>
+            
+            <div class="mb-3">
+              <label for="schedule-type" class="form-label">Schedule Type</label>
+              <select id="schedule-type" class="form-select">
+                <option value="round-robin">Round Robin</option>
+                <option value="double-round-robin">Double Round Robin</option>
+                <option value="elimination">Single Elimination</option>
+                <option value="double-elimination">Double Elimination</option>
+              </select>
+            </div>
+            
+            <div class="mb-3">
+              <label for="match-duration" class="form-label">Match Duration (minutes)</label>
+              <input type="number" id="match-duration" class="form-control" min="30" step="15" value="90">
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Game Days</label>
+              <div class="row g-3">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="monday" value="monday" checked>
+                    <label class="form-check-label" for="monday">Monday</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="tuesday" value="tuesday">
+                    <label class="form-check-label" for="tuesday">Tuesday</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="wednesday" value="wednesday" checked>
+                    <label class="form-check-label" for="wednesday">Wednesday</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="thursday" value="thursday">
+                    <label class="form-check-label" for="thursday">Thursday</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="friday" value="friday" checked>
+                    <label class="form-check-label" for="friday">Friday</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="saturday" value="saturday" checked>
+                    <label class="form-check-label" for="saturday">Saturday</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="sunday" value="sunday">
+                    <label class="form-check-label" for="sunday">Sunday</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="d-flex justify-content-between mt-4">
+              <button id="prev-step-3" class="btn btn-outline-secondary">Back</button>
+              <button id="finish" class="btn btn-primary">Create Schedule</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="text-muted">© 2025 League Manager. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="#" class="text-muted text-decoration-none me-3">Terms</a>
+          <a href="#" class="text-muted text-decoration-none me-3">Privacy</a>
+          <a href="#" class="text-muted text-decoration-none">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/CreateLeague.js"></script>
+</body>
+</html>
