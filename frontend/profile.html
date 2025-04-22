@@ -8,35 +8,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/profile.css">
   <link rel="stylesheet" href="./css/style.css">
-
-
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-content">
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <i class="ph ph-list"></i>
+      </button>
+      
+      <a href="/" class="nav-logo"><img src="assets/logo3.png" alt="Sportify Logo"></a>
+      
+      <div class="nav-center nav-links">
+          <a href="/">Home</a>
+          <a href="#features">Features</a>
+          <a href="CreateLeague.html">Leagues</a>
+          <a href="#contact">Contact</a>
+      </div>
+      
+      <div class="nav-right">
+          <button class="theme-toggle" aria-label="Toggle theme">
+              <i class="ph ph-sun"></i>
+          </button>
+          
+          <div class="user-buttons">
+              <a href="#notifications" class="nav-icon" id="notifications" title="Notifications">
+                  <i class="ph ph-bell"></i>
+              </a>
+              
+              <div class="nav-icon" id="profile">
+                  <i class="ph ph-user-circle"></i>
+                  <div class="dropdown">
+                      <a href="profile.html" class="dropdown-item">
+                          <i class="ph ph-user"></i>
+                          <span>View Profile</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a href="#logout" class="dropdown-item">
+                          <i class="ph ph-sign-out"></i>
+                          <span onclick="signOut()">Sign Out</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
 
-    <nav class="navbar">
-        <div class="nav-content">
-          <div class="nav-logo">
-            <span>🏆 League Manager</span>
+          <div class="auth-buttons">
+              <a href="login.html" class="sign-in-btn" onclick="">Login</a>
+              <a href="signup.html" class="sign-up-btn" onclick="">Sign Up</a>
           </div>
-          <div class="nav-center">
-            <a href="#" class="nav-item active">Home</a>
-            <a href="CreateLeague.html" class="nav-item">Leagues</a>
-            <a href="#" class="nav-item">Teams</a>
-            <a href="#" class="nav-item">Matches</a>
-            <a href="Dashboard.html" class="nav-item">Dashboard</a>
-    
-          </div>
-          <div class="nav-right">
-            <button class="theme-toggle" id="themeToggle">🌙</button>
-            <div class="user-profile">
-                <a class="nav-item" href="profile.html">
-                    <img src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=40" alt="Profile" class="avatar">
-
-                </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      </div>
+  </div>
+</nav>
     
   <main class="profile-container">
     <div class="profile-card">
@@ -137,5 +161,6 @@
   </main>
 
   <script src="./js/profile.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
