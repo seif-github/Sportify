@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "sportify.DAL": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59213;http://localhost:59214"
+    }
+  }
+}
