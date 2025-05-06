@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj": {}
+    "E:\\projects\\Sportify\\Sportify\\sportify.DAL\\sportify.DAL.csproj": {}
   },
   "projects": {
-    "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj": {
+    "E:\\projects\\Sportify\\Sportify\\sportify.DAL\\sportify.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj",
+        "projectUniqueName": "E:\\projects\\Sportify\\Sportify\\sportify.DAL\\sportify.DAL.csproj",
         "projectName": "sportify.DAL",
-        "projectPath": "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj",
+        "projectPath": "E:\\projects\\Sportify\\Sportify\\sportify.DAL\\sportify.DAL.csproj",
         "packagesPath": "C:\\Users\\Noureldeen\\.nuget\\packages\\",
         "outputPath": "E:\\projects\\Sportify\\sportify\\sportify.DAL\\obj\\",
         "projectStyle": "PackageReference",

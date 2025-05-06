@@ -8093,9 +8093,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\projects\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj",
+      "projectUniqueName": "E:\\projects\\Sportify\\Sportify\\sportify.BLL\\sportify.BLL.csproj",
       "projectName": "sportify.BLL",
-      "projectPath": "E:\\projects\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj",
+      "projectPath": "E:\\projects\\Sportify\\Sportify\\sportify.BLL\\sportify.BLL.csproj",
       "packagesPath": "C:\\Users\\Noureldeen\\.nuget\\packages\\",
       "outputPath": "E:\\projects\\Sportify\\sportify\\sportify.BLL\\obj\\",
       "projectStyle": "PackageReference",
@@ -8116,8 +8116,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj": {
-              "projectPath": "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj"
+            "E:\\projects\\Sportify\\Sportify\\sportify.DAL\\sportify.DAL.csproj": {
+              "projectPath": "E:\\projects\\Sportify\\Sportify\\sportify.DAL\\sportify.DAL.csproj"
             }
           }
         }

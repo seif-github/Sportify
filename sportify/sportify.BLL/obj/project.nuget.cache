@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V/u1Zn9fPwo=",
+  "dgSpecHash": "9+ODIXxBKGA=",
   "success": true,
-  "projectFilePath": "E:\\projects\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj",
+  "projectFilePath": "E:\\projects\\Sportify\\Sportify\\sportify.BLL\\sportify.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Noureldeen\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Noureldeen\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

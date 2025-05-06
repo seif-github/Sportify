@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = sportify.BLL
-build_property.ProjectDir = E:\projects\Sportify\sportify\sportify.BLL\
+build_property.ProjectDir = E:\projects\Sportify\Sportify\sportify.BLL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
