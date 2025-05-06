@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\sportify.PL.props" />
+</Project>

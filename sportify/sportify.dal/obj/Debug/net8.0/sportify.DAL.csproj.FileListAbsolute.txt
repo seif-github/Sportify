@@ -1,0 +1,15 @@
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\bin\Debug\net8.0\sportify.DAL.deps.json
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\bin\Debug\net8.0\sportify.DAL.runtimeconfig.json
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\bin\Debug\net8.0\sportify.DAL.dll
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\bin\Debug\net8.0\sportify.DAL.pdb
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.csproj.AssemblyReference.cache
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.AssemblyInfoInputs.cache
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.AssemblyInfo.cs
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.csproj.CoreCompileInputs.cache
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.sourcelink.json
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.dll
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\refint\sportify.DAL.dll
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.pdb
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\sportify.DAL.genruntimeconfig.cache
+D:\FCAI-CU\Sportify\sportify\sportify.DAL\obj\Debug\net8.0\ref\sportify.DAL.dll
