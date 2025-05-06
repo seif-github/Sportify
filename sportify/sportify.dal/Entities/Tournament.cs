@@ -1,42 +1,27 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Sportify.DAL.Entities
+namespace sportify.DAL.Entities;
+
+public partial class Tournament
 {
-    public class Tournament
-    {
-        [Key]
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        [Required(ErrorMessage = "اسم البطولة مطلوب")]
-        [StringLength(100, ErrorMessage = "الاسم لا يمكن أن يزيد عن 100 حرف")]
-        public string Name { get; set; }
+    public string Name { get; set; } = null!;
 
-        [StringLength(255, ErrorMessage = "الوصف لا يمكن أن يزيد عن 255 حرف")]
-        public string Description { get; set; }
+    public string Description { get; set; } = null!;
 
-        [StringLength(255, ErrorMessage = "رابط اللوجو غير صحيح")]
-        public string LogoUrl { get; set; }
+    public string LogoUrl { get; set; } = null!;
 
-        [Required(ErrorMessage = "تاريخ البدء مطلوب")]
-        [Column(TypeName = "datetime2")]
-        public DateTime StartDate { get; set; }
+    public DateTime StartDate { get; set; }
 
-        [Required(ErrorMessage = "تاريخ الانتهاء مطلوب")]
-        [Column(TypeName = "datetime2")]
-        public DateTime EndDate { get; set; }
+    public DateTime EndDate { get; set; }
 
-        [Required(ErrorMessage = "الحالة مطلوبة")]
-        public TournamentStatus Status { get; set; } = TournamentStatus.Upcoming;
+    public int Status { get; set; }
 
-        public virtual ICollection<TeamTournament> TeamTournaments { get; set; } = new HashSet<TeamTournament>();
-        public virtual ICollection<Match> Matches { get; set; } = new HashSet<Match>();
-    }
-    public enum TournamentStatus
-    {
-        Upcoming,
-        Active,
-        Completed,
-        Cancelled
-    }
+    public virtual ICollection<Match> Matches { get; set; } = new List<Match>();
+
+    public virtual ICollection<TeamTournamentMatchStatistic> TeamTournamentMatchStatistics { get; set; } = new List<TeamTournamentMatchStatistic>();
+
+    public virtual ICollection<Team> Teams { get; set; } = new List<Team>();
 }

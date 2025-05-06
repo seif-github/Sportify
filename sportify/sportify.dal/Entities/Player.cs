@@ -1,21 +1,17 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Sportify.DAL.Entities
+namespace sportify.DAL.Entities;
+
+public partial class Player
 {
-    public class Player
-    {
-        [Key]
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        [Required(ErrorMessage = "اسم اللاعب مطلوب")]
-        [StringLength(100, ErrorMessage = "الاسم لا يمكن أن يزيد عن 100 حرف")]
-        public string Name { get; set; }
+    public string Name { get; set; } = null!;
 
-        [ForeignKey("Team")]
-        public int TeamId { get; set; }
-        public virtual Team Team { get; set; }
+    public int TeamId { get; set; }
 
-        public virtual ICollection<PlayerStatistic> PlayerStatistics { get; set; } = new HashSet<PlayerStatistic>();
-    }
+    public virtual ICollection<PlayerStatistic> PlayerStatistics { get; set; } = new List<PlayerStatistic>();
+
+    public virtual Team Team { get; set; } = null!;
 }

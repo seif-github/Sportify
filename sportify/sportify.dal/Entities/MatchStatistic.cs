@@ -1,28 +1,23 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Sportify.DAL.Entities
+namespace sportify.DAL.Entities;
+
+public partial class MatchStatistic
 {
-    public class MatchStatistic
-    {
-        [Key]
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        [ForeignKey("Match")]
-        public int MatchId { get; set; }
-        public virtual Match Match { get; set; }
+    public int MatchId { get; set; }
 
-        [ForeignKey("Team")]
-        public int TeamId { get; set; }
-        public virtual Team Team { get; set; }
+    public int TeamId { get; set; }
 
-        [Required]
-        public int Goals { get; set; }
+    public int Goals { get; set; }
 
-        [Required]
-        public int YellowCards { get; set; }
+    public int YellowCards { get; set; }
 
-        [Required]
-        public int RedCards { get; set; }
-    }
+    public int RedCards { get; set; }
+
+    public virtual Match Match { get; set; } = null!;
+
+    public virtual Team Team { get; set; } = null!;
 }

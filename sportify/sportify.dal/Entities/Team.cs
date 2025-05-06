@@ -1,39 +1,39 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Sportify.DAL.Entities
+namespace sportify.DAL.Entities;
+
+public partial class Team
 {
-    public class Team
-    {
-        [Key]
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        [Required(ErrorMessage = "اسم الفريق مطلوب")]
-        [StringLength(100, ErrorMessage = "الاسم لا يمكن أن يزيد عن 100 حرف")]
-        public string Name { get; set; }
+    public string Name { get; set; } = null!;
 
-        [StringLength(255, ErrorMessage = "الوصف لا يمكن أن يزيد عن 255 حرف")]
-        public string Description { get; set; }
+    public string Description { get; set; } = null!;
 
-        [StringLength(255, ErrorMessage = "رابط اللوجو غير صحيح")]
-        public string LogoUrl { get; set; }
+    public string LogoUrl { get; set; } = null!;
 
-        [StringLength(100, ErrorMessage = "الموقع الجغرافي طويل جدًا")]
-        public string Location { get; set; }
+    public string Location { get; set; } = null!;
 
-        [StringLength(50, ErrorMessage = "سنة التأسيس غير صحيحة")]
-        public string FoundedYear { get; set; }
+    public string FoundedYear { get; set; } = null!;
 
-        [StringLength(255, ErrorMessage = "اسم الملعب طويل جدًا")]
-        public string StadiumName { get; set; }
+    public string StadiumName { get; set; } = null!;
 
-        public int? ManagerUserId { get; set; }
+    public int? ManagerUserId { get; set; }
 
-        [ForeignKey("ManagerUserId")]
-        public virtual User ManagerUser { get; set; }
+    public virtual User? ManagerUser { get; set; }
 
-        public virtual ICollection<Player> Players { get; set; } = new HashSet<Player>();
-        public virtual ICollection<TeamTournament> TeamTournaments { get; set; } = new HashSet<TeamTournament>();
-        public virtual ICollection<User> Fans { get; set; } = new HashSet<User>();
-    }
+    public virtual ICollection<Match> MatchAwayTeams { get; set; } = new List<Match>();
+
+    public virtual ICollection<Match> MatchHomeTeams { get; set; } = new List<Match>();
+
+    public virtual ICollection<MatchStatistic> MatchStatistics { get; set; } = new List<MatchStatistic>();
+
+    public virtual ICollection<Player> Players { get; set; } = new List<Player>();
+
+    public virtual ICollection<TeamTournamentMatchStatistic> TeamTournamentMatchStatistics { get; set; } = new List<TeamTournamentMatchStatistic>();
+
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
+
+    public virtual ICollection<Tournament> Tournaments { get; set; } = new List<Tournament>();
 }

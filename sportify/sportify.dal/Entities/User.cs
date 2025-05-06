@@ -1,38 +1,27 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Sportify.DAL.Entities
+namespace sportify.DAL.Entities;
+
+public partial class User
 {
-    public class User
-    {
-        [Key]
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        [Required(ErrorMessage = "اسم المستخدم مطلوب")]
-        [StringLength(100, ErrorMessage = "اسم المستخدم طويل جدًا")]
-        public string Username { get; set; }
+    public string Username { get; set; } = null!;
 
-        [Required(ErrorMessage = "البريد الإلكتروني مطلوب")]
-        [StringLength(100, ErrorMessage = "البريد الإلكتروني طويل جدًا")]
-        [EmailAddress(ErrorMessage = "صيغة البريد الإلكتروني غير صحيحة")]
-        public string Email { get; set; }
+    public string Email { get; set; } = null!;
 
-        [Required(ErrorMessage = "كلمة المرور مطلوبة")]
-        [StringLength(255, ErrorMessage = "كلمة المرور طويلة جدًا")]
-        public string PasswordHash { get; set; }
+    public string PasswordHash { get; set; } = null!;
 
-        [Required(ErrorMessage = "الدور مطلوب")]
-        [StringLength(50, ErrorMessage = "الدور طويل جدًا")]
-        public string Role { get; set; }
+    public string Role { get; set; } = null!;
 
-        [Required]
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime CreatedAt { get; set; }
 
-        public DateTime? LastLogin { get; set; }
+    public DateTime? LastLogin { get; set; }
 
-        public int? FavoriteTeamId { get; set; }
+    public int? FavoriteTeamId { get; set; }
 
-        [ForeignKey("FavoriteTeamId")]
-        public virtual Team FavoriteTeam { get; set; }
-    }
+    public virtual Team? FavoriteTeam { get; set; }
+
+    public virtual ICollection<Team> Teams { get; set; } = new List<Team>();
 }
