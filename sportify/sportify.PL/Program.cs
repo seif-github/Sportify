@@ -14,6 +14,7 @@ builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<ITournamentService, TournamentService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

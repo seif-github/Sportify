@@ -7,5 +7,6 @@ public class MapperProfile : Profile
     public MapperProfile()
     {
         CreateMap<Tournament, TournamentModel>().ReverseMap();
+        CreateMap<Team, TeamModel>().ReverseMap();
     }
 }
