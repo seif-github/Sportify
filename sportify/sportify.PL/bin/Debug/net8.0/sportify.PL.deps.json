@@ -1977,10 +1977,7 @@
           "sportify.DAL": "1.0.0"
         },
         "runtime": {
-          "sportify.BLL.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "sportify.BLL.dll": {}
         }
       },
       "sportify.DAL/1.0.0": {
@@ -1990,10 +1987,7 @@
           "Microsoft.Extensions.Configuration": "9.0.4"
         },
         "runtime": {
-          "sportify.DAL.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "sportify.DAL.dll": {}
         }
       }
     }

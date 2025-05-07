@@ -7620,24 +7620,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Seif\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Noureldeen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\sportify.PL.csproj",
+      "projectUniqueName": "E:\\projects\\Sportify\\sportify\\sportify.PL\\sportify.PL.csproj",
       "projectName": "sportify.PL",
-      "projectPath": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\sportify.PL.csproj",
-      "packagesPath": "C:\\Users\\Seif\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\",
+      "projectPath": "E:\\projects\\Sportify\\sportify\\sportify.PL\\sportify.PL.csproj",
+      "packagesPath": "C:\\Users\\Noureldeen\\.nuget\\packages\\",
+      "outputPath": "E:\\projects\\Sportify\\sportify\\sportify.PL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Seif\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Noureldeen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7645,14 +7640,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj": {
-              "projectPath": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj"
+            "E:\\projects\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj": {
+              "projectPath": "E:\\projects\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj"
             }
           }
         }
@@ -7665,9 +7662,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -7701,7 +7697,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
