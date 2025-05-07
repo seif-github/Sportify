@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sportify.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c328b8debd26d961568a31a7b201352e1b8636f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d509095de11d9a6bf0347bd93a62b35c0c482c08")]
 [assembly: System.Reflection.AssemblyProductAttribute("sportify.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sportify.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

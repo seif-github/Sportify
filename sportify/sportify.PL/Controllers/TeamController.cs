@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.Services;
-using sportify.BLL.CustomModels;
+using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 
 namespace sportify.PL.Controllers
@@ -22,10 +22,10 @@ namespace sportify.PL.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            return View();
+            return View(new TeamDTO());
         }
         [HttpPost]
-        public async Task<IActionResult> Create(TeamModel newTeam)
+        public async Task<IActionResult> Create(TeamDTO newTeam)
         {
             if (ModelState.IsValid)
             {
@@ -56,7 +56,7 @@ namespace sportify.PL.Controllers
         }
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(TeamModel model)
+        public async Task<IActionResult> Edit(TeamDTO model)
         {
             if (ModelState.IsValid)
             {

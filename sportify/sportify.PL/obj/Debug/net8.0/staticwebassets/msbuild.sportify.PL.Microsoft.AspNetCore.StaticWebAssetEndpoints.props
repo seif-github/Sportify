@@ -1,5 +1,65 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/gold-trophy.gts0tdzk6r.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\gold-trophy.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gts0tdzk6r"},{"Name":"integrity","Value":"sha256-5FLwCwBsU8Vmhcfa7M9Ln\u002B4i6K\u002B6oFEG5Uph9/asUmI="},{"Name":"label","Value":"_content/sportify.PL/assets/gold-trophy.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"128120"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00225FLwCwBsU8Vmhcfa7M9Ln\u002B4i6K\u002B6oFEG5Uph9/asUmI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 02:39:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/gold-trophy.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\gold-trophy.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5FLwCwBsU8Vmhcfa7M9Ln\u002B4i6K\u002B6oFEG5Uph9/asUmI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"128120"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00225FLwCwBsU8Vmhcfa7M9Ln\u002B4i6K\u002B6oFEG5Uph9/asUmI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 02:39:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/icon-bg.0d4pw0fvyq.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\icon-bg.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0d4pw0fvyq"},{"Name":"integrity","Value":"sha256-VLIb6JPzUa55\u002BgfrZ90AF2kErQCFPtFvoEywFQKaCX8="},{"Name":"label","Value":"_content/sportify.PL/assets/icon-bg.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6004"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022VLIb6JPzUa55\u002BgfrZ90AF2kErQCFPtFvoEywFQKaCX8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 10:54:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/icon-bg.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\icon-bg.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VLIb6JPzUa55\u002BgfrZ90AF2kErQCFPtFvoEywFQKaCX8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6004"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022VLIb6JPzUa55\u002BgfrZ90AF2kErQCFPtFvoEywFQKaCX8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 10:54:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/logo.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1VcLnSUcgADkUt15CDPuslBvjF4CTDpnb5Cdvkj7cms="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"30755"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00221VcLnSUcgADkUt15CDPuslBvjF4CTDpnb5Cdvkj7cms=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 06:42:14 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/logo.rg9tnnmpq1.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rg9tnnmpq1"},{"Name":"integrity","Value":"sha256-1VcLnSUcgADkUt15CDPuslBvjF4CTDpnb5Cdvkj7cms="},{"Name":"label","Value":"_content/sportify.PL/assets/logo.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30755"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00221VcLnSUcgADkUt15CDPuslBvjF4CTDpnb5Cdvkj7cms=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 06:42:14 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/logo2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4\u002BzwoAGhfImts90Q/57hJmp3sWnbNAzzlgtaJ/aQS\u002Bc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"33169"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00224\u002BzwoAGhfImts90Q/57hJmp3sWnbNAzzlgtaJ/aQS\u002Bc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 04:14:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/logo2.x70k1dekdo.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"x70k1dekdo"},{"Name":"integrity","Value":"sha256-4\u002BzwoAGhfImts90Q/57hJmp3sWnbNAzzlgtaJ/aQS\u002Bc="},{"Name":"label","Value":"_content/sportify.PL/assets/logo2.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"33169"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00224\u002BzwoAGhfImts90Q/57hJmp3sWnbNAzzlgtaJ/aQS\u002Bc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 04:14:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/logo3.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo3.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-I\u002BRPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"482374"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022I\u002BRPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 04:47:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/assets/logo3.r6run2orh7.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\logo3.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r6run2orh7"},{"Name":"integrity","Value":"sha256-I\u002BRPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco="},{"Name":"label","Value":"_content/sportify.PL/assets/logo3.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"482374"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022I\u002BRPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 04:47:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/sportify.PL/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -12,17 +72,41 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 01:32:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/sportify.PL/favicon.61n19gt1b8.ico">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/css/style.831j8fwygx.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"61n19gt1b8"},{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="},{"Name":"label","Value":"_content/sportify.PL/favicon.ico"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 01:32:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"831j8fwygx"},{"Name":"integrity","Value":"sha256-RLDEzzvTPpwEjyrM8\u002BC6gRs3oHrfalgtA1xoO0vrWTY="},{"Name":"label","Value":"_content/sportify.PL/css/style.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"11867"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RLDEzzvTPpwEjyrM8\u002BC6gRs3oHrfalgtA1xoO0vrWTY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 07 May 2025 21:44:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/css/style.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RLDEzzvTPpwEjyrM8\u002BC6gRs3oHrfalgtA1xoO0vrWTY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"11867"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RLDEzzvTPpwEjyrM8\u002BC6gRs3oHrfalgtA1xoO0vrWTY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 07 May 2025 21:44:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/sportify.PL/favicon.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 01:32:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lJRpIugyE7\u002BPgIeIE6copMqkqNF2UR2TA5hLf3QSI58="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"410598"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022lJRpIugyE7\u002BPgIeIE6copMqkqNF2UR2TA5hLf3QSI58=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 03:11:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/favicon.kihreb8a08.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kihreb8a08"},{"Name":"integrity","Value":"sha256-lJRpIugyE7\u002BPgIeIE6copMqkqNF2UR2TA5hLf3QSI58="},{"Name":"label","Value":"_content/sportify.PL/favicon.ico"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"410598"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022lJRpIugyE7\u002BPgIeIE6copMqkqNF2UR2TA5hLf3QSI58=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Apr 2025 03:11:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/js/main.9ck8uq58v4.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\main.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9ck8uq58v4"},{"Name":"integrity","Value":"sha256-\u002Be5nnlZT3cpk24w27/MAukvRtU/fyqytQXsPR2k8Pa8="},{"Name":"label","Value":"_content/sportify.PL/js/main.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4347"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022\u002Be5nnlZT3cpk24w27/MAukvRtU/fyqytQXsPR2k8Pa8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 07 May 2025 21:44:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/sportify.PL/js/main.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\main.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-\u002Be5nnlZT3cpk24w27/MAukvRtU/fyqytQXsPR2k8Pa8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4347"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022\u002Be5nnlZT3cpk24w27/MAukvRtU/fyqytQXsPR2k8Pa8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 07 May 2025 21:44:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/sportify.PL/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

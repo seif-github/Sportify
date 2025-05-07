@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using sportify.BLL.CustomModels;
+using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories.Contracts;
@@ -22,26 +22,26 @@ namespace sportify.BLL.Services
             _mapper = mapper;
         }
 
-        public async Task<List<TournamentModel>> GetAllAsync()
+        public async Task<List<TournamentDTO>> GetAllAsync()
         {
             var data = await _repository.GetAllAsync();
-            return _mapper.Map<List<TournamentModel>>(data);
+            return _mapper.Map<List<TournamentDTO>>(data);
         }
 
-        public async Task<TournamentModel?> GetByIdAsync(int id)
+        public async Task<TournamentDTO?> GetByIdAsync(int id)
         {
             var entity = await _repository.GetByIdAsync(id);
-            return entity == null ? null : _mapper.Map<TournamentModel>(entity);
+            return entity == null ? null : _mapper.Map<TournamentDTO>(entity);
         }
 
-        public async Task AddAsync(TournamentModel model)
+        public async Task AddAsync(TournamentDTO model)
         {
             var entity = _mapper.Map<Tournament>(model);
             await _repository.AddAsync(entity);
             await _repository.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(TournamentModel model)
+        public async Task UpdateAsync(TournamentDTO model)
         {
             var entity = _mapper.Map<Tournament>(model);
             await _repository.UpdateAsync(entity);

@@ -1,4 +1,4 @@
-﻿using sportify.BLL.CustomModels;
+﻿using sportify.BLL.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ namespace sportify.BLL.Services.Contracts
 {
     public interface ITeamService
     {
-        Task<List<TeamModel>> GetAllAsync();
-        Task<TeamModel?> GetByIdAsync(int id);
-        Task AddAsync(TeamModel teamModel);
-        Task UpdateAsync(TeamModel teamModel);
+        Task<List<TeamDTO>> GetAllAsync();
+        Task<TeamDTO?> GetByIdAsync(int id);
+        Task AddAsync(TeamDTO teamModel);
+        Task UpdateAsync(TeamDTO teamModel);
         Task DeleteAsync(int id);
     }
 }

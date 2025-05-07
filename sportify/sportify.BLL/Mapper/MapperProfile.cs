@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using sportify.BLL.CustomModels;
+using sportify.BLL.DTOs;
 using sportify.DAL.Entities;
 
 public class MapperProfile : Profile
 {
     public MapperProfile()
     {
-        CreateMap<Tournament, TournamentModel>().ReverseMap();
-        CreateMap<Team, TeamModel>().ReverseMap();
+        CreateMap<Tournament, TournamentDTO>().ReverseMap();
+        CreateMap<Team, TeamDTO>().ReverseMap();
     }
 }
