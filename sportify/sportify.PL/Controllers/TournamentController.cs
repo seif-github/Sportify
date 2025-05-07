@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using sportify.BLL.CustomModels;
+using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 
 public class TournamentController : Controller
@@ -33,7 +33,7 @@ public class TournamentController : Controller
     // POST: /Tournament/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(TournamentModel model)
+    public async Task<IActionResult> Create(TournamentDTO model)
     {
         if (ModelState.IsValid)
         {
@@ -53,7 +53,7 @@ public class TournamentController : Controller
     // POST: /Tournament/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, TournamentModel model)
+    public async Task<IActionResult> Edit(int id, TournamentDTO model)
     {
         if (id != model.Id) return BadRequest();
 

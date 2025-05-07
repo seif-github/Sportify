@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using sportify.BLL.CustomModels;
+using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories.Contracts;
@@ -23,7 +23,7 @@ namespace sportify.BLL.Services
             _mapper = mapper;
         }
 
-        public async Task AddAsync(TeamModel teamModel)
+        public async Task AddAsync(TeamDTO teamModel)
         {
             var entity = _mapper.Map<Team>(teamModel);
             await _repository.AddAsync(entity);
@@ -36,20 +36,20 @@ namespace sportify.BLL.Services
             await _repository.SaveChangesAsync();        
         }
 
-        public async Task<List<TeamModel>> GetAllAsync()
+        public async Task<List<TeamDTO>> GetAllAsync()
         {
             var data = await _repository.GetAllAsync();
-            return _mapper.Map<List<TeamModel>>(data);
+            return _mapper.Map<List<TeamDTO>>(data);
             
         }
 
-        public async Task<TeamModel?> GetByIdAsync(int id)
+        public async Task<TeamDTO?> GetByIdAsync(int id)
         {
             var data = await _repository.GetByIdAsync(id);
-            return _mapper.Map<TeamModel>(data);
+            return _mapper.Map<TeamDTO>(data);
         }
 
-        public async Task UpdateAsync(TeamModel teamModel)
+        public async Task UpdateAsync(TeamDTO teamModel)
         {
             var entity = _mapper.Map<Team>(teamModel);
             await _repository.UpdateAsync(entity);

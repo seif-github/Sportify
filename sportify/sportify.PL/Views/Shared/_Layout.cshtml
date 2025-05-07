@@ -3,50 +3,105 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - sportify.PL</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/sportify.PL.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Sportify</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <script src="https://unpkg.com/@@phosphor-icons/web"></script>
+    @* <link rel="stylesheet" href="~/sportify.PL.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">sportify.PL</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <a asp-controller="Home" asp-action="Index" class="nav-logo"><img src="~/assets/logo3.png" alt="Sportify Logo"></a>
+
+            <div class="nav-center nav-links">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="Team" asp-action="Index">Teams</a>
+                <a asp-controller="Tournament" asp-action="Index">Tournaments</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="ph ph-sun"></i>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tournament" asp-action="Index">Tournaments</a>
-                        </li>
-                    </ul>
+
+                <div class="user-buttons">
+                    <a href="#notifications" class="nav-icon" id="notifications" title="Notifications">
+                        <i class="ph ph-bell"></i>
+                    </a>
+
+                    <div class="nav-icon" id="profile">
+                        <i class="ph ph-user-circle"></i>
+                        <div class="dropdown">
+                            <a asp-controller="Account" asp-action="Profile" class="dropdown-item">
+                                <i class="ph ph-user"></i>
+                                <span>View Profile</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#logout" class="dropdown-item">
+                                <i class="ph ph-sign-out"></i>
+                                <span onclick="signOut()">Sign Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-buttons">
+                    <a asp-controller="Account" asp-action="Login" class="sign-in-btn" onclick="">Login</a>
+                    <a asp-controller="Account" asp-action="Signup" class="sign-up-btn" onclick="">Sign Up</a>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - sportify.PL - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3><i class="ph ph-trophy"></i> Sportify</h3>
+                <p>Making league management simple</p><br>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Legal</h3><br>
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Socials</h3><br>
+                <ul class="footer-links">
+                    <li><i class="ph ph-facebook-logo"></i> <a href="#facebook">Facebook</a></li>
+                    <li><i class="ph ph-x-logo"></i> <a href="#X">X (Formerly Twitter)</a></li>
+                    <li><i class="ph ph-linkedin-logo"></i> <a href="#linkedin">LinkedIn</a></li>
+                    <li><i class="ph ph-discord-logo"></i> <a href="#discord">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © <script>document.write(new Date().getFullYear())</script> Sportify. All rights reserved.
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/js/main.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

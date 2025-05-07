@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sportify.BLL.CustomModels
+namespace sportify.BLL.DTOs
 {
-    public class TournamentModel
+    public class TournamentDTO
     {
         public int Id { get; set; }
 

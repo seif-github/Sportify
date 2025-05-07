@@ -5,15 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sportify.BLL.CustomModels
+namespace sportify.BLL.DTOs
 {
-    public class TeamModel
+    public class TeamDTO
     {
         public int Id { get; set; }
 
         [Required]
+
         [RegularExpression(@"^Team.*$", ErrorMessage = "Name must start with 'Team'.")]
-        public string Name { get; set; }
+
+        public string Name { get; set; } = "Team";
 
         public string Description { get; set; }
 
