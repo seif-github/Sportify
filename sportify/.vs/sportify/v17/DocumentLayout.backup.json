@@ -1,102 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\FCAI-CU\\Sportify\\sportify\\",
+  "WorkspaceRootPath": "D:\\GitHub_Repos\\Sportify\\sportify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Migrations\\20250506213121_first-test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sportify.dal\\Migrations\\20250506213121_first-test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\data\\sportifycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\data\\sportifycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\teamtournamentmatchstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\teamtournamentmatchstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.bll\\services\\tournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\services\\tournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.bll\\services\\contracts\\itournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\services\\contracts\\itournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\viewmodels\\tournamentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\viewmodels\\tournamentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\repositories\\contracts\\itournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\repositories\\contracts\\itournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\repositories\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\repositories\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\views\\tournament\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\views\\tournament\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.pl\\views\\tournament\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\views\\tournament\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\repositories\\tournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\repositories\\tournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\playerstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\playerstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\views\\tournament\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\fcai-cu\\sportify\\sportify\\sportify.dal\\entities\\matchstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\matchstatistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\views\\tournament\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\views\\tournament\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\tournament\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.bll\\services\\tournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\services\\tournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.bll\\services\\contracts\\itournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\services\\contracts\\itournamentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.bll\\custommodels\\tournamentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\custommodels\\tournamentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.dal\\entities\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\entities\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.dal\\repositories\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\repositories\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|d:\\github_repos\\sportify\\sportify\\sportify.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2B2456A-10ED-4565-BAC9-8F09CBF3F13F}|sportify.DAL\\sportify.DAL.csproj|solutionrelative:sportify.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,322 +82,244 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Index.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Index.cshtml",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Index.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Index.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T10:01:08.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Details.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Details.cshtml",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Details.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T09:58:22.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "sportify.PL\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "sportify.PL\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:56:39.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\ViewModels\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "sportify.PL\\ViewModels\\ErrorViewModel.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\ViewModels\\ErrorViewModel.cs",
+              "RelativeToolTip": "sportify.PL\\ViewModels\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:56:23.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T09:55:32.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T09:53:45.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Create.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Create.cshtml",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Create.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Create.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T09:47:38.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TournamentController.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Controllers\\TournamentController.cs",
+              "RelativeDocumentMoniker": "sportify.PL\\Controllers\\TournamentController.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Controllers\\TournamentController.cs",
+              "RelativeToolTip": "sportify.PL\\Controllers\\TournamentController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:36:59.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Edit.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Edit.cshtml",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Edit.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Edit.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T09:50:12.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Delete.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Delete.cshtml",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Delete.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Delete.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T09:49:59.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Program.cs",
+              "RelativeDocumentMoniker": "sportify.PL\\Program.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\Program.cs",
+              "RelativeToolTip": "sportify.PL\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:36:02.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MapperProfile.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\Mapper\\MapperProfile.cs",
+              "RelativeDocumentMoniker": "sportify.BLL\\Mapper\\MapperProfile.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\Mapper\\MapperProfile.cs",
+              "RelativeToolTip": "sportify.BLL\\Mapper\\MapperProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:35:23.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TournamentModel.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\CustomModels\\TournamentModel.cs",
+              "RelativeDocumentMoniker": "sportify.BLL\\CustomModels\\TournamentModel.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\CustomModels\\TournamentModel.cs",
+              "RelativeToolTip": "sportify.BLL\\CustomModels\\TournamentModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:26:45.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITournamentService.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
+              "RelativeDocumentMoniker": "sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
+              "RelativeToolTip": "sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:24:53.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Tournament.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.dal\\Entities\\Tournament.cs",
+              "RelativeDocumentMoniker": "sportify.dal\\Entities\\Tournament.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.dal\\Entities\\Tournament.cs",
+              "RelativeToolTip": "sportify.dal\\Entities\\Tournament.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:14:40.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TournamentService.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\Services\\TournamentService.cs",
+              "RelativeDocumentMoniker": "sportify.BLL\\Services\\TournamentService.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\Services\\TournamentService.cs",
+              "RelativeToolTip": "sportify.BLL\\Services\\TournamentService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:07:19.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
+              "RelativeToolTip": "sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:07:57.219Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250506213121_first-test.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Migrations\\20250506213121_first-test.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Migrations\\20250506213121_first-test.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Migrations\\20250506213121_first-test.cs",
-              "RelativeToolTip": "sportify.dal\\Migrations\\20250506213121_first-test.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T21:31:21.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TournamentService.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.BLL\\Services\\TournamentService.cs",
-              "RelativeDocumentMoniker": "sportify.BLL\\Services\\TournamentService.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.BLL\\Services\\TournamentService.cs",
-              "RelativeToolTip": "sportify.BLL\\Services\\TournamentService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:16:02.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SportifyContext.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.DAL\\Data\\SportifyContext.cs",
-              "RelativeDocumentMoniker": "sportify.DAL\\Data\\SportifyContext.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.DAL\\Data\\SportifyContext.cs*",
-              "RelativeToolTip": "sportify.DAL\\Data\\SportifyContext.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:19:18.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TeamTournamentMatchStatistic.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\TeamTournamentMatchStatistic.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\TeamTournamentMatchStatistic.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\TeamTournamentMatchStatistic.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\TeamTournamentMatchStatistic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:28:21.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\User.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\User.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\User.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA+wBEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:37:53.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Program.cs",
-              "RelativeDocumentMoniker": "sportify.PL\\Program.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Program.cs*",
-              "RelativeToolTip": "sportify.PL\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:57:14.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\appsettings.json",
-              "RelativeDocumentMoniker": "sportify.PL\\appsettings.json",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\appsettings.json",
-              "RelativeToolTip": "sportify.PL\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-06T14:24:45.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Match.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Match.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\Match.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Match.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\Match.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:29:06.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ITournamentService.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
-              "RelativeDocumentMoniker": "sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
-              "RelativeToolTip": "sportify.BLL\\Services\\Contracts\\ITournamentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:15:41.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TournamentController.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Controllers\\TournamentController.cs",
-              "RelativeDocumentMoniker": "sportify.PL\\Controllers\\TournamentController.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Controllers\\TournamentController.cs",
-              "RelativeToolTip": "sportify.PL\\Controllers\\TournamentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:17:11.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TournamentViewModel.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\ViewModels\\TournamentViewModel.cs",
-              "RelativeDocumentMoniker": "sportify.PL\\ViewModels\\TournamentViewModel.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\ViewModels\\TournamentViewModel.cs",
-              "RelativeToolTip": "sportify.PL\\ViewModels\\TournamentViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:12:59.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ITournamentRepository.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\Contracts\\ITournamentRepository.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Repositories\\Contracts\\ITournamentRepository.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\Contracts\\ITournamentRepository.cs",
-              "RelativeToolTip": "sportify.dal\\Repositories\\Contracts\\ITournamentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:14:13.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
-              "RelativeToolTip": "sportify.dal\\Repositories\\Contracts\\IGenericRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T13:16:49.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Repositories\\GenericRepository.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\GenericRepository.cs*",
-              "RelativeToolTip": "sportify.dal\\Repositories\\GenericRepository.cs*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAuwCoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T13:17:25.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Tournament.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Tournament.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\Tournament.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Tournament.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\Tournament.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:28:05.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Create.cshtml",
-              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Create.cshtml",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Create.cshtml",
-              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-06T19:04:27.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Delete.cshtml",
-              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Delete.cshtml",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Delete.cshtml",
-              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-06T19:16:57.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Edit.cshtml",
-              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Edit.cshtml",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Edit.cshtml",
-              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-06T19:14:19.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Index.cshtml",
-              "RelativeDocumentMoniker": "sportify.PL\\Views\\Tournament\\Index.cshtml",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.PL\\Views\\Tournament\\Index.cshtml",
-              "RelativeToolTip": "sportify.PL\\Views\\Tournament\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-06T18:19:55.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TournamentRepository.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\TournamentRepository.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Repositories\\TournamentRepository.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Repositories\\TournamentRepository.cs*",
-              "RelativeToolTip": "sportify.dal\\Repositories\\TournamentRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.dal\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "sportify.dal\\Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.dal\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "sportify.dal\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T18:14:44.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PlayerStatistic.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\PlayerStatistic.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\PlayerStatistic.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\PlayerStatistic.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\PlayerStatistic.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:28:45.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Team.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Team.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\Team.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Team.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\Team.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:28:31.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Player.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Player.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\Player.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\Player.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:28:52.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MatchStatistic.cs",
-              "DocumentMoniker": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\MatchStatistic.cs",
-              "RelativeDocumentMoniker": "sportify.dal\\Entities\\MatchStatistic.cs",
-              "ToolTip": "D:\\FCAI-CU\\Sportify\\sportify\\sportify.dal\\Entities\\MatchStatistic.cs",
-              "RelativeToolTip": "sportify.dal\\Entities\\MatchStatistic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:28:57.086Z",
+              "WhenOpened": "2025-05-07T09:06:13.917Z",
               "EditorCaption": ""
             }
           ]

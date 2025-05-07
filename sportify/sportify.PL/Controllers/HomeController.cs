@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using sportify.PL.Models;
+using sportify.PL.ViewModels;
 using System.Diagnostics;
 
 namespace sportify.PL.Controllers

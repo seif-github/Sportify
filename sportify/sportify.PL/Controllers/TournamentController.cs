@@ -1,34 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using sportify.BLL.Services;
+using sportify.BLL.CustomModels;
 using sportify.BLL.Services.Contracts;
-using sportify.DAL.Entities;
-using sportify.PL.ViewModels;
 
 public class TournamentController : Controller
 {
     private readonly ITournamentService _tournamentService;
 
-    public TournamentController(ITournamentService service)
+    public TournamentController(ITournamentService tournamentService)
     {
-        _tournamentService = service;
+        _tournamentService = tournamentService;
     }
 
     public async Task<IActionResult> Index()
     {
-        var tournaments = await _tournamentService.GetAllTournamentsAsync();
+        var tournaments = await _tournamentService.GetAllAsync();
 
-        var viewModel = tournaments.Select(t => new TournamentViewModel
-        {
-            Id = t.Id,
-            Name = t.Name,
-            Description = t.Description,
-            LogoUrl = t.LogoUrl,
-            StartDate = t.StartDate,
-            EndDate = t.EndDate,
-            Status = t.Status
-        });
+        return View(tournaments);
+    }
 
-        return View(viewModel);
+    public async Task<IActionResult> Details(int id)
+    {
+        var tournament = await _tournamentService.GetByIdAsync(id);
+        return tournament == null ? NotFound() : View(tournament);
     }
 
     // GET: /Tournament/Create
@@ -40,56 +33,33 @@ public class TournamentController : Controller
     // POST: /Tournament/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(Tournament tournament)
+    public async Task<IActionResult> Create(TournamentModel model)
     {
         if (ModelState.IsValid)
         {
-            await _tournamentService.AddAsync(tournament);
+            await _tournamentService.AddAsync(model);
             return RedirectToAction(nameof(Index));
         }
-        return View(tournament);
+        return View(model);
     }
 
     // GET: /Tournament/Edit/5
     public async Task<IActionResult> Edit(int id)
     {
         var tournament = await _tournamentService.GetByIdAsync(id);
-        if (tournament == null) return NotFound();
-
-        var viewModel = new TournamentViewModel
-        {
-            Id = tournament.Id,
-            Name = tournament.Name,
-            Description = tournament.Description,
-            LogoUrl = tournament.LogoUrl,
-            StartDate = tournament.StartDate,
-            EndDate = tournament.EndDate,
-            Status = tournament.Status
-        };
-
-        return View(viewModel);
+        return tournament == null ? NotFound() : View(tournament);
     }
 
     // POST: /Tournament/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, TournamentViewModel model)
+    public async Task<IActionResult> Edit(int id, TournamentModel model)
     {
         if (id != model.Id) return BadRequest();
 
         if (ModelState.IsValid)
         {
-            var tournament = new Tournament
-            {
-                Id = model.Id,
-                Name = model.Name,
-                Description = model.Description,
-                LogoUrl = model.LogoUrl,
-                StartDate = model.StartDate,
-                EndDate = model.EndDate,
-                Status = model.Status
-            };
-            await _tournamentService.UpdateAsync(tournament);
+            await _tournamentService.UpdateAsync(model);
             return RedirectToAction(nameof(Index));
         }
         return View(model);
@@ -99,19 +69,8 @@ public class TournamentController : Controller
     public async Task<IActionResult> Delete(int id)
     {
         var tournament = await _tournamentService.GetByIdAsync(id);
-        if (tournament == null) return NotFound();
 
-        var viewModel = new TournamentViewModel
-        {
-            Id = tournament.Id,
-            Name = tournament.Name,
-            Description = tournament.Description,
-            LogoUrl = tournament.LogoUrl,
-            StartDate = tournament.StartDate,
-            EndDate = tournament.EndDate,
-            Status = tournament.Status
-        };
-        return View(viewModel);
+        return tournament == null ? NotFound() : View(tournament);
     }
 
     // POST: /Tournament/Delete/5
