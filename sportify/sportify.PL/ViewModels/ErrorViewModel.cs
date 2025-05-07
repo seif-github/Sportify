@@ -1,4 +1,4 @@
-namespace sportify.PL.Models
+namespace sportify.PL.ViewModels
 {
     public class ErrorViewModel
     {

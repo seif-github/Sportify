@@ -10,8 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SportifyContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("cs")));
 
+builder.Services.AddAutoMapper(typeof(MapperProfile));
+
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped<ITournamentRepository, TournamentRepository>();
 builder.Services.AddScoped<ITournamentService, TournamentService>();
 
 // Add services to the container.

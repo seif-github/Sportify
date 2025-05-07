@@ -1,4 +1,6 @@
-﻿using sportify.BLL.Services.Contracts;
+﻿using AutoMapper;
+using sportify.BLL.CustomModels;
+using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories.Contracts;
 using System;
@@ -11,29 +13,46 @@ namespace sportify.BLL.Services
 {
     public class TournamentService : ITournamentService
     {
-        private readonly ITournamentRepository _repository;
+        private readonly IGenericRepository<Tournament> _repository;
+        private readonly IMapper _mapper;
 
-        public TournamentService(ITournamentRepository repository)
+        public TournamentService(IGenericRepository<Tournament> repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
-        public async Task<IEnumerable<Tournament>> GetAllTournamentsAsync()
+        public async Task<List<TournamentModel>> GetAllAsync()
         {
-            return await _repository.GetAllAsync();
+            var data = await _repository.GetAllAsync();
+            return _mapper.Map<List<TournamentModel>>(data);
         }
 
-        public async Task<Tournament?> GetByIdAsync(int id)
-        => await _repository.GetByIdAsync(id);
+        public async Task<TournamentModel?> GetByIdAsync(int id)
+        {
+            var entity = await _repository.GetByIdAsync(id);
+            return entity == null ? null : _mapper.Map<TournamentModel>(entity);
+        }
 
-        public async Task AddAsync(Tournament tournament)
-        => await _repository.AddAsync(tournament);
+        public async Task AddAsync(TournamentModel model)
+        {
+            var entity = _mapper.Map<Tournament>(model);
+            await _repository.AddAsync(entity);
+            await _repository.SaveChangesAsync();
+        }
 
-        public async Task UpdateAsync(Tournament tournament)
-            => await _repository.UpdateAsync(tournament);
+        public async Task UpdateAsync(TournamentModel model)
+        {
+            var entity = _mapper.Map<Tournament>(model);
+            await _repository.UpdateAsync(entity);
+            await _repository.SaveChangesAsync();
+        }
 
         public async Task DeleteAsync(int id)
-            => await _repository.DeleteAsync(id);
+        {
+            await _repository.DeleteAsync(id);
+            await _repository.SaveChangesAsync();
+        }
     }
 
 }
