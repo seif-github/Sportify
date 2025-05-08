@@ -22,53 +22,34 @@ namespace sportify.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("TeamTournament", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
-                    b.Property<int>("TeamId")
-                        .HasColumnType("int");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("TournamentId")
-                        .HasColumnType("int");
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("TeamId", "TournamentId");
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
-                    b.HasIndex(new[] { "TournamentId" }, "IX_TeamTournaments_TournamentId");
-
-                    b.ToTable("TeamTournaments", (string)null);
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Match", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AwayTeamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("HomeTeamId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("MatchDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("TournamentId")
-                        .HasColumnType("int");
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "AwayTeamId" }, "IX_Matches_AwayTeamId");
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.HasIndex(new[] { "HomeTeamId" }, "IX_Matches_HomeTeamId");
-
-                    b.HasIndex(new[] { "TournamentId" }, "IX_Matches_TournamentId");
-
-                    b.ToTable("Matches");
+                    b.ToTable("AspNetRoles", (string)null);
                 });
 
-            modelBuilder.Entity("sportify.DAL.Entities.MatchStatistic", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -76,444 +57,428 @@ namespace sportify.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Goals")
-                        .HasColumnType("int");
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MatchId")
-                        .HasColumnType("int");
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RedCards")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TeamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("YellowCards")
-                        .HasColumnType("int");
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "MatchId" }, "IX_MatchStatistics_MatchId");
+                    b.HasIndex("RoleId");
 
-                    b.HasIndex(new[] { "TeamId" }, "IX_MatchStatistics_TeamId");
-
-                    b.ToTable("MatchStatistics");
+                    b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
-            modelBuilder.Entity("sportify.DAL.Entities.Player", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("sportify.DAL.Entities.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("sportify.DAL.Entities.League", b =>
+                {
+                    b.Property<int>("LeagueID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LeagueID"));
+
+                    b.Property<int>("DurationBetweenMatches")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TeamId")
+                    b.Property<int>("NumberOfTeams")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex(new[] { "TeamId" }, "IX_Players_TeamId");
-
-                    b.ToTable("Players");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.PlayerStatistic", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Assists")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Goals")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MatchId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PlayerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RedCards")
-                        .HasColumnType("int");
-
-                    b.Property<int>("YellowCards")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex(new[] { "MatchId" }, "IX_PlayerStatistics_MatchId");
-
-                    b.HasIndex(new[] { "PlayerId" }, "IX_PlayerStatistics_PlayerId");
-
-                    b.ToTable("PlayerStatistics");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Team", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
+                    b.Property<string>("OrganizerID")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("FoundedYear")
+                    b.Property<string>("SportType")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("LogoUrl")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<int?>("ManagerUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("StadiumName")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex(new[] { "ManagerUserId" }, "IX_Teams_ManagerUserId");
-
-                    b.ToTable("Teams");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.TeamTournamentMatchStatistic", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Corners")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Fouls")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GoalsConceded")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GoalsScored")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MatchId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Offsides")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Possession")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RedCards")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ShotsOffTarget")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ShotsOnTarget")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TeamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TournamentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("YellowCards")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex(new[] { "MatchId" }, "IX_TeamTournamentMatchStatistics_MatchId");
-
-                    b.HasIndex(new[] { "TeamId" }, "IX_TeamTournamentMatchStatistics_TeamId");
-
-                    b.HasIndex(new[] { "TournamentId" }, "IX_TeamTournamentMatchStatistics_TournamentId");
-
-                    b.ToTable("TeamTournamentMatchStatistics");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Tournament", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LogoUrl")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.HasKey("LeagueID");
 
-                    b.HasKey("Id");
+                    b.HasIndex("OrganizerID");
 
-                    b.ToTable("Tournaments");
+                    b.ToTable("Leagues");
                 });
 
-            modelBuilder.Entity("sportify.DAL.Entities.User", b =>
+            modelBuilder.Entity("sportify.DAL.Entities.Match", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MatchID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MatchID"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int?>("FavoriteTeamId")
+                    b.Property<int>("FirstTeamGoals")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("LastLogin")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("FirstTeamId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("LeagueId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int>("SecondTeamGoals")
+                        .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<int>("SecondTeamId")
+                        .HasColumnType("int");
 
-                    b.HasIndex(new[] { "FavoriteTeamId" }, "IX_Users_FavoriteTeamId");
+                    b.Property<int?>("TeamID")
+                        .HasColumnType("int");
 
-                    b.ToTable("Users");
+                    b.Property<int?>("WinnerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MatchID");
+
+                    b.HasIndex("FirstTeamId");
+
+                    b.HasIndex("LeagueId");
+
+                    b.HasIndex("SecondTeamId");
+
+                    b.HasIndex("TeamID");
+
+                    b.HasIndex("WinnerId");
+
+                    b.ToTable("Matches");
                 });
 
-            modelBuilder.Entity("TeamTournament", b =>
+            modelBuilder.Entity("sportify.DAL.Entities.Team", b =>
                 {
+                    b.Property<int>("TeamID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TeamID"));
+
+                    b.Property<int>("Draws")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LeagueID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Losses")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalMatchesPlayed")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Wins")
+                        .HasColumnType("int");
+
+                    b.HasKey("TeamID");
+
+                    b.HasIndex("LeagueID");
+
+                    b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("sportify.DAL.Entities.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("sportify.DAL.Entities.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("sportify.DAL.Entities.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("sportify.DAL.Entities.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("sportify.DAL.Entities.League", b =>
+                {
+                    b.HasOne("sportify.DAL.Entities.ApplicationUser", "Organizer")
+                        .WithMany("Leagues")
+                        .HasForeignKey("OrganizerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Organizer");
+                });
+
+            modelBuilder.Entity("sportify.DAL.Entities.Match", b =>
+                {
+                    b.HasOne("sportify.DAL.Entities.Team", "FirstTeam")
+                        .WithMany()
+                        .HasForeignKey("FirstTeamId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("sportify.DAL.Entities.League", "League")
+                        .WithMany()
+                        .HasForeignKey("LeagueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("sportify.DAL.Entities.Team", "SecondTeam")
+                        .WithMany()
+                        .HasForeignKey("SecondTeamId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("sportify.DAL.Entities.Team", null)
-                        .WithMany()
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("sportify.DAL.Entities.Tournament", null)
-                        .WithMany()
-                        .HasForeignKey("TournamentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Match", b =>
-                {
-                    b.HasOne("sportify.DAL.Entities.Team", "AwayTeam")
-                        .WithMany("MatchAwayTeams")
-                        .HasForeignKey("AwayTeamId")
-                        .IsRequired();
-
-                    b.HasOne("sportify.DAL.Entities.Team", "HomeTeam")
-                        .WithMany("MatchHomeTeams")
-                        .HasForeignKey("HomeTeamId")
-                        .IsRequired();
-
-                    b.HasOne("sportify.DAL.Entities.Tournament", "Tournament")
                         .WithMany("Matches")
-                        .HasForeignKey("TournamentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TeamID");
 
-                    b.Navigation("AwayTeam");
+                    b.HasOne("sportify.DAL.Entities.Team", "Winner")
+                        .WithMany()
+                        .HasForeignKey("WinnerId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
-                    b.Navigation("HomeTeam");
+                    b.Navigation("FirstTeam");
 
-                    b.Navigation("Tournament");
-                });
+                    b.Navigation("League");
 
-            modelBuilder.Entity("sportify.DAL.Entities.MatchStatistic", b =>
-                {
-                    b.HasOne("sportify.DAL.Entities.Match", "Match")
-                        .WithMany("MatchStatistics")
-                        .HasForeignKey("MatchId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("SecondTeam");
 
-                    b.HasOne("sportify.DAL.Entities.Team", "Team")
-                        .WithMany("MatchStatistics")
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Match");
-
-                    b.Navigation("Team");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Player", b =>
-                {
-                    b.HasOne("sportify.DAL.Entities.Team", "Team")
-                        .WithMany("Players")
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Team");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.PlayerStatistic", b =>
-                {
-                    b.HasOne("sportify.DAL.Entities.Match", "Match")
-                        .WithMany("PlayerStatistics")
-                        .HasForeignKey("MatchId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("sportify.DAL.Entities.Player", "Player")
-                        .WithMany("PlayerStatistics")
-                        .HasForeignKey("PlayerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Match");
-
-                    b.Navigation("Player");
+                    b.Navigation("Winner");
                 });
 
             modelBuilder.Entity("sportify.DAL.Entities.Team", b =>
                 {
-                    b.HasOne("sportify.DAL.Entities.User", "ManagerUser")
+                    b.HasOne("sportify.DAL.Entities.League", "League")
                         .WithMany("Teams")
-                        .HasForeignKey("ManagerUserId");
-
-                    b.Navigation("ManagerUser");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.TeamTournamentMatchStatistic", b =>
-                {
-                    b.HasOne("sportify.DAL.Entities.Match", "Match")
-                        .WithMany("TeamTournamentMatchStatistics")
-                        .HasForeignKey("MatchId")
+                        .HasForeignKey("LeagueID")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("sportify.DAL.Entities.Team", "Team")
-                        .WithMany("TeamTournamentMatchStatistics")
-                        .HasForeignKey("TeamId")
-                        .IsRequired();
-
-                    b.HasOne("sportify.DAL.Entities.Tournament", "Tournament")
-                        .WithMany("TeamTournamentMatchStatistics")
-                        .HasForeignKey("TournamentId")
-                        .IsRequired();
-
-                    b.Navigation("Match");
-
-                    b.Navigation("Team");
-
-                    b.Navigation("Tournament");
+                    b.Navigation("League");
                 });
 
-            modelBuilder.Entity("sportify.DAL.Entities.User", b =>
+            modelBuilder.Entity("sportify.DAL.Entities.ApplicationUser", b =>
                 {
-                    b.HasOne("sportify.DAL.Entities.Team", "FavoriteTeam")
-                        .WithMany("Users")
-                        .HasForeignKey("FavoriteTeamId");
-
-                    b.Navigation("FavoriteTeam");
+                    b.Navigation("Leagues");
                 });
 
-            modelBuilder.Entity("sportify.DAL.Entities.Match", b =>
-                {
-                    b.Navigation("MatchStatistics");
-
-                    b.Navigation("PlayerStatistics");
-
-                    b.Navigation("TeamTournamentMatchStatistics");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Player", b =>
-                {
-                    b.Navigation("PlayerStatistics");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Team", b =>
-                {
-                    b.Navigation("MatchAwayTeams");
-
-                    b.Navigation("MatchHomeTeams");
-
-                    b.Navigation("MatchStatistics");
-
-                    b.Navigation("Players");
-
-                    b.Navigation("TeamTournamentMatchStatistics");
-
-                    b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Tournament", b =>
-                {
-                    b.Navigation("Matches");
-
-                    b.Navigation("TeamTournamentMatchStatistics");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.User", b =>
+            modelBuilder.Entity("sportify.DAL.Entities.League", b =>
                 {
                     b.Navigation("Teams");
+                });
+
+            modelBuilder.Entity("sportify.DAL.Entities.Team", b =>
+                {
+                    b.Navigation("Matches");
                 });
 #pragma warning restore 612, 618
         }

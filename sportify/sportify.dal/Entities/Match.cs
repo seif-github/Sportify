@@ -1,29 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace sportify.DAL.Entities;
-
-public partial class Match
+namespace sportify.DAL.Entities
 {
-    public int Id { get; set; }
-
-    public int HomeTeamId { get; set; }
-
-    public int AwayTeamId { get; set; }
-
-    public int TournamentId { get; set; }
-
-    public DateTime MatchDate { get; set; }
-
-    public virtual Team AwayTeam { get; set; } = null!;
-
-    public virtual Team HomeTeam { get; set; } = null!;
-
-    public virtual ICollection<MatchStatistic> MatchStatistics { get; set; } = new List<MatchStatistic>();
-
-    public virtual ICollection<PlayerStatistic> PlayerStatistics { get; set; } = new List<PlayerStatistic>();
-
-    public virtual ICollection<TeamTournamentMatchStatistic> TeamTournamentMatchStatistics { get; set; } = new List<TeamTournamentMatchStatistic>();
-
-    public virtual Tournament Tournament { get; set; } = null!;
+    public class Match
+    {
+        public int MatchID { get; set; }
+        [ForeignKey("League")]
+        public int LeagueId { get; set; }
+        public League League { get; set; } = null!;
+        [ForeignKey("FirstTeam")]
+        public int FirstTeamId { get; set; }
+        public Team FirstTeam { get; set; } = null!; 
+        [ForeignKey("SecondTeam")]
+        public int SecondTeamId { get; set; }
+        public Team SecondTeam { get; set; } = null!; 
+        public DateTime Date { get; set; }  
+        public int FirstTeamGoals { get; set; }
+        public int SecondTeamGoals { get; set; }
+        [ForeignKey("Winner")]
+        public int? WinnerId { get; set; }  
+        public Team? Winner { get; set; }
+        public bool IsCompleted { get; set; }  
+    }
 }
