@@ -35,16 +35,16 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
   }
   
-  body {
+  /* body {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     margin: 0;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
-  }
+  } */
   
   /* Navigation Bar */
-  .nav-bar {
+  /* .nav-bar {
     background-color: var(--bg-primary);
     box-shadow: var(--shadow-sm);
     position: sticky;
@@ -190,16 +190,16 @@
   
   .sign-up-btn:hover {
     opacity: 0.9;
-  }
+  } */
   
   /* Main Content */
   .main-content {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 5rem auto;
     padding: 2rem 1rem;
   }
   
-  .top-nav {
+  /* .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -240,7 +240,7 @@
   .notification-icon:hover,
   .user-profile:hover {
     color: var(--primary-green);
-  }
+  } */
   
   .page-header {
     margin-bottom: 2rem;
@@ -273,7 +273,7 @@
   }
   
   .card {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     box-shadow: var(--shadow-md);
     border: none;
     border-radius: 0.5rem;
