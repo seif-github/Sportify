@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LeagueHub - Football League</title>
-    <meta name="description" content="Football League Overview" />
+    <title>League Details</title>
+    <meta name="description" content="League Overview" />
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     
     <!-- Google Font - Inter -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <!--main Css-->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"> -->
+
+    <link href="./css/LeagueDetails.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Custom CSS -->
-    <link href="./css/BrowseLeague.css" rel="stylesheet">
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -88,7 +87,6 @@
             <span class="ms-4">Started: April 15, 2025</span>
           </div>
           
-          <button class="btn btn-primary mt-3 mt-sm-0">Join League</button>
         </div>
       </div>
     </div>
@@ -109,9 +107,7 @@
           <li class="nav-item">
             <a class="nav-link" id="teams-tab" data-bs-toggle="tab" href="#teams">Teams</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" id="notifications-tab" data-bs-toggle="tab" href="#notifications">Notifications</a>
-          </li>
+          
         </ul>
       </div>
     </div>
@@ -273,15 +269,6 @@
           </div>
         </div>
         
-        <!-- Notifications Tab -->
-        <div class="tab-pane fade" id="notifications">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title fs-5 fw-semibold mb-3">Notifications</h2>
-              <p class="text-secondary">League notifications and updates will be displayed here.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -291,6 +278,6 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom JS -->
-    <script src="./js/"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
