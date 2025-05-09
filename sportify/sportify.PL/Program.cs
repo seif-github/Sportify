@@ -4,6 +4,8 @@ using sportify.DAL.Repositories.Contracts;
 using sportify.DAL.Repositories;
 using sportify.DAL.Data;
 using sportify.DAL.Entities;
+using sportify.BLL.Services.Contracts;
+using sportify.BLL.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,14 +14,25 @@ builder.Services.AddDbContext<SportifyContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("cs"))); 
 
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+                        options.Password.RequireNonAlphanumeric = false)
     .AddEntityFrameworkStores<SportifyContext>()
     .AddDefaultTokenProviders();
+
+#region Cookie Settings
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.ExpireTimeSpan = TimeSpan.FromDays(4);
+    options.SlidingExpiration = true;
+}
+            );
+#endregion
 
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 
 builder.Services.AddControllersWithViews();
