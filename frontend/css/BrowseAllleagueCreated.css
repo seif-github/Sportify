@@ -119,6 +119,9 @@
     border-top: 1px solid var(--bg-tertiary);
   }
   
+  .mt-5{
+    margin-top: 6rem !important;
+  }
   /* Media queries for responsive design */
   @media (max-width: 768px) {
     .container {
