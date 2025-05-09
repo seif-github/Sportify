@@ -1,0 +1,19 @@
+# Visual Studio / .NET artifacts
+bin/
+obj/
+
+# VS-specific files
+.vs/
+
+# User-specific files
+*.user
+*.suo
+
+# DLLs, executables, and other binaries
+*.dll
+*.exe
+*.pdb
+
+# Cache and debug logs
+*.cache
+*.log
