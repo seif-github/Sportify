@@ -1,0 +1,27 @@
+﻿@model sportify.BLL.DTOs.LeagueDTO
+
+@{
+    ViewData["Title"] = "Delete League";
+}
+
+<h1>Delete League</h1>
+
+<div>
+    <h3>Are you sure you want to delete the league @Model.Name?</h3>
+    <div>
+        <strong>Sport Type:</strong> @Model.SportType
+    </div>
+    <div>
+        <strong>Start Date:</strong> @Model.StartDate.ToString("yyyy-MM-dd")
+    </div>
+    <div>
+        <strong>Number of Teams:</strong> @Model.NumberOfTeams
+    </div>
+
+    <form method="post">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+s

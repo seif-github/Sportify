@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sportify.DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,8 @@ namespace sportify.BLL.DTOs
         public int NumberOfTeams { get; set; }
         public bool IsCompleted { get; set; }
         public string? ImageUrl { get; set; }
+        public ApplicationUser Organizer {  get; set; }
+
+
     }
 }

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj": {}
+    "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj": {
+    "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj",
+        "projectUniqueName": "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj",
         "projectName": "sportify.DAL",
-        "projectPath": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj",
-        "packagesPath": "C:\\Users\\alima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.DAL\\obj\\",
+        "projectPath": "E:\\projects\\Sportify\\sportify\\sportify.DAL\\sportify.DAL.csproj",
+        "packagesPath": "C:\\Users\\Noureldeen\\.nuget\\packages\\",
+        "outputPath": "E:\\projects\\Sportify\\sportify\\sportify.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alima\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Noureldeen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,7 +23,8 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
         },
         "frameworks": {
           "net8.0": {
@@ -44,8 +41,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -100,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
