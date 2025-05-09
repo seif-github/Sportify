@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Sportify</title>
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/auth.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <script src="https://unpkg.com/@@phosphor-icons/web"></script>
     @* <link rel="stylesheet" href="~/sportify.PL.styles.css" asp-append-version="true" /> *@
@@ -60,8 +61,7 @@
                 {
                     <div class="auth-buttons">
                         <a asp-controller="Account" asp-action="Login" class="sign-in-btn" onclick="">Login</a>
-                        <a asp-controller="Account" asp-action="Register" class="sign-up-btn" onclick="">Sign Up</a>
-                    </div>
+                        <a asp-controller="Account" asp-action="Register" class="sign-up-btn" onclick="">Register</a>                    </div>
                 }
             </div>
         </div>
@@ -109,7 +109,9 @@
 
     @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
     @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
-    <script src="~/js/main.js" asp-append-version="true"></script>
+    
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/auth.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
 </body>
 </html>

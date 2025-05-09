@@ -15,6 +15,8 @@ namespace sportify.BLL.DTOs
         public string UserName { get; set; } = null!;
         [Required]
         [DataType(DataType.Password)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",
+            ErrorMessage = "Password must be at least 8 characters and contain at least one uppercase, one lowercase, one number and one special character")]
         public string Password { get; set; }
         [Required]
         [DataType(DataType.Password)]
@@ -26,6 +28,6 @@ namespace sportify.BLL.DTOs
         [UniqueEmail]
         public string Email { get; set; } = null!;
         [Display(Name = "Image")]
-        public string? ImageUrl { get; set; }
+        public string? ImageUrl { get; set; } = "/assets/default-user-image.png";
     }
 }
