@@ -1,11 +1,14 @@
+wwwroot\assets\default-user-image.png
 wwwroot\assets\gold-trophy.png
 wwwroot\assets\icon-bg.png
 wwwroot\assets\logo.png
 wwwroot\assets\logo2.png
 wwwroot\assets\logo3.png
+wwwroot\css\auth.css
 wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\favicon.ico
+wwwroot\js\auth.js
 wwwroot\js\main.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
