@@ -1,0 +1,132 @@
+:root {
+    --primary-green: #22c55e;
+    --primary-dark: #1f2937;
+    --primary-light: #f5f7fa;
+    --gradient: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #e5e7eb;
+    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+  }
+  
+  /* Header styling */
+  .navbar {
+    box-shadow: var(--shadow-sm);
+    background-color: var(--bg-primary);
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+  }
+  
+  .navbar-brand i {
+    color: var(--primary-green);
+  }
+  
+  /* Main content */
+  h1 {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  
+  .card {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .card-title {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+    border-radius: 4px;
+  }
+  
+  .badge.bg-primary {
+    background-color: #e0f2fe !important;
+    color: #0369a1;
+  }
+  
+  .badge.bg-success {
+    background-color: #dcfce7 !important;
+    color: #166534;
+  }
+  
+  .badge.bg-secondary {
+    background-color: #f1f5f9 !important;
+    color: #475569;
+  }
+  
+  .league-info {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+  
+  .league-info i {
+    width: 20px;
+    text-align: center;
+  }
+  
+  .btn-outline-primary {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+  }
+  
+  .btn-outline-secondary {
+    color: var(--text-secondary);
+    border-color: #d1d5db;
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: #d1d5db;
+  }
+  
+  /* Footer styling */
+  footer {
+    color: var(--text-secondary);
+    border-top: 1px solid var(--bg-tertiary);
+  }
+  
+  .mt-5{
+    margin-top: 6rem !important;
+  }
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
