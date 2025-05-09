@@ -993,10 +993,7 @@
           "Microsoft.Extensions.Configuration": "9.0.4"
         },
         "runtime": {
-          "sportify.DAL.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "sportify.DAL.dll": {}
         }
       }
     }

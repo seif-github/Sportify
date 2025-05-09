@@ -1,0 +1,36 @@
+﻿@model sportify.BLL.DTOs.LeagueDTO
+
+@{
+    ViewData["Title"] = "League Details";
+}
+
+<h1>@Model.Name</h1>
+
+<div>
+    <strong>Sport Type:</strong> @Model.SportType
+</div>
+<div>
+    <strong>Start Date:</strong> @Model.StartDate.ToString("yyyy-MM-dd")
+</div>
+<div>
+    <strong>Duration Between Matches:</strong> @Model.DurationBetweenMatches
+</div>
+<div>
+    <strong>Number of Teams:</strong> @Model.NumberOfTeams
+</div>
+<div>
+    <strong>Is Completed:</strong> @Model.IsCompleted
+</div>
+<div>
+    <strong>Image:</strong>
+    @if (Model.ImageUrl != null)
+    {
+        <img src="@Model.ImageUrl" alt="League Image" style="max-width: 200px; max-height: 200px;" />
+    }
+</div>
+
+<p>
+    <a href="@Url.Action("Edit", new { id = Model.LeagueID })" class="btn btn-warning">Edit</a>
+    <a href="@Url.Action("Delete", new { id = Model.LeagueID })" class="btn btn-danger">Delete</a>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+</p>

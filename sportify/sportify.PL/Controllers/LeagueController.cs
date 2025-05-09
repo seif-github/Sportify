@@ -15,24 +15,25 @@ namespace sportify.PL.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var tournaments = await _leagueService.GetAllAsync();
+            var League = await _leagueService.GetAllAsync();
 
-            return View(tournaments);
+            return View("Index",League);
         }
 
         public async Task<IActionResult> Details(int id)
         {
-            var tournament = await _leagueService.GetByIdAsync(id);
-            return tournament == null ? NotFound() : View(tournament);
+            var League = await _leagueService.GetByIdAsync(id);
+            return League == null ? NotFound() : View(League);
         }
 
-        // GET: /Tournament/Create
+
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: /Tournament/Create
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(LeagueDTO model)
@@ -45,14 +46,14 @@ namespace sportify.PL.Controllers
             return View(model);
         }
 
-        // GET: /Tournament/Edit/5
+
         public async Task<IActionResult> Edit(int id)
         {
-            var tournament = await _leagueService.GetByIdAsync(id);
-            return tournament == null ? NotFound() : View(tournament);
+            var League = await _leagueService.GetByIdAsync(id);
+            return League == null ? NotFound() : View(League);
         }
 
-        // POST: /Tournament/Edit/5
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, LeagueDTO model)
@@ -67,15 +68,14 @@ namespace sportify.PL.Controllers
             return View(model);
         }
 
-        // GET: /Tournament/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
-            var tournament = await _leagueService.GetByIdAsync(id);
+            var League = await _leagueService.GetByIdAsync(id);
 
-            return tournament == null ? NotFound() : View(tournament);
+            return League == null ? NotFound() : View(League);
         }
 
-        // POST: /Tournament/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
