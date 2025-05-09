@@ -33,6 +33,7 @@ builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ILeagueService, LeagueService>();
 
 
 builder.Services.AddControllersWithViews();
