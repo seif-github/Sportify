@@ -18,11 +18,14 @@
             </button>
 
             <a asp-controller="Home" asp-action="Index" class="nav-logo"><img src="~/assets/logo3.png" alt="Sportify Logo"></a>
-
+            
             <div class="nav-center nav-links">
                 <a asp-controller="Home" asp-action="Index">Home</a>
-                <a asp-controller="Team" asp-action="Index">Teams</a>
-                <a asp-controller="Tournament" asp-action="Index">Tournaments</a>
+                @if (@User.Identity.IsAuthenticated)
+                {
+                    <a asp-controller="League" asp-action="Dashboard">Dashboard</a>
+                }
+                <a asp-controller="League" asp-action="Index">Leagues</a>
             </div>
 
             <div class="nav-right">
@@ -30,31 +33,36 @@
                     <i class="ph ph-sun"></i>
                 </button>
 
-                <div class="user-buttons">
-                    <a href="#notifications" class="nav-icon" id="notifications" title="Notifications">
-                        <i class="ph ph-bell"></i>
-                    </a>
+                @if(@User.Identity.IsAuthenticated)
+                {
+                   <div class="user-buttons">
+                        <a href="#notifications" class="nav-icon" id="notifications" title="Notifications">
+                            <i class="ph ph-bell"></i>
+                        </a>
 
-                    <div class="nav-icon" id="profile">
-                        <i class="ph ph-user-circle"></i>
-                        <div class="dropdown">
-                            <a asp-controller="Account" asp-action="Profile" class="dropdown-item">
-                                <i class="ph ph-user"></i>
-                                <span>View Profile</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#logout" class="dropdown-item">
-                                <i class="ph ph-sign-out"></i>
-                                <span onclick="signOut()">Sign Out</span>
-                            </a>
+                        <div class="nav-icon" id="profile">
+                            <i class="ph ph-user-circle"></i>
+                            <div class="dropdown">
+                                <a asp-controller="Account" asp-action="Profile" class="dropdown-item">
+                                    <i class="ph ph-user"></i>
+                                    <span>View Profile</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a asp-controller="Account" asp-action="Logout" class="dropdown-item">
+                                    <i class="ph ph-sign-out"></i>
+                                    <span>Sign Out</span>
+                                </a>
+                            </div>
                         </div>
+                    </div> 
+                }
+                else
+                {
+                    <div class="auth-buttons">
+                        <a asp-controller="Account" asp-action="Login" class="sign-in-btn" onclick="">Login</a>
+                        <a asp-controller="Account" asp-action="Register" class="sign-up-btn" onclick="">Sign Up</a>
                     </div>
-                </div>
-
-                <div class="auth-buttons">
-                    <a asp-controller="Account" asp-action="Login" class="sign-in-btn" onclick="">Login</a>
-                    <a asp-controller="Account" asp-action="Signup" class="sign-up-btn" onclick="">Sign Up</a>
-                </div>
+                }
             </div>
         </div>
     </nav>
