@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sportify.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33f8b85b2cf065a44384eba8abf734337115d2e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce32460252c7010237c95c8d3f8bd9593166be37")]
 [assembly: System.Reflection.AssemblyProductAttribute("sportify.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sportify.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

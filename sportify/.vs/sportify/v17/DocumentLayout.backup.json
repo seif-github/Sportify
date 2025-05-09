@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|c:\\users\\alima\\onedrive\\desktop\\sportify\\sportify\\sportify.bll\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|c:\\users\\alima\\onedrive\\desktop\\sportify\\sportify\\sportify.bll\\services\\contracts\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\services\\contracts\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|c:\\users\\alima\\onedrive\\desktop\\sportify\\sportify\\sportify.bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|c:\\users\\alima\\onedrive\\desktop\\sportify\\sportify\\sportify.bll\\dtos\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFFD29C0-67E8-467E-BF35-687BF93D0258}|sportify.BLL\\sportify.BLL.csproj|solutionrelative:sportify.bll\\dtos\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|c:\\users\\alima\\onedrive\\desktop\\sportify\\sportify\\sportify.pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|solutionrelative:sportify.pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0AB21BB-D025-434E-968C-B16922DB1CB3}|sportify.PL\\sportify.PL.csproj|c:\\users\\alima\\onedrive\\desktop\\sportify\\sportify\\sportify.pl\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -30,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,69 +29,33 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MapperProfile.cs",
-              "DocumentMoniker": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\Mapper\\MapperProfile.cs",
-              "RelativeDocumentMoniker": "sportify.BLL\\Mapper\\MapperProfile.cs",
-              "ToolTip": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\Mapper\\MapperProfile.cs",
-              "RelativeToolTip": "sportify.BLL\\Mapper\\MapperProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T10:54:22.165Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginUserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\DTOs\\LoginUserDTO.cs",
-              "RelativeDocumentMoniker": "sportify.BLL\\DTOs\\LoginUserDTO.cs",
-              "ToolTip": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\DTOs\\LoginUserDTO.cs",
-              "RelativeToolTip": "sportify.BLL\\DTOs\\LoginUserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T10:01:13.107Z",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "sportify.PL\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "sportify.PL\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-09T11:42:33.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IAccountService.cs",
-              "DocumentMoniker": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\Services\\Contracts\\IAccountService.cs",
-              "RelativeDocumentMoniker": "sportify.BLL\\Services\\Contracts\\IAccountService.cs",
-              "ToolTip": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\Services\\Contracts\\IAccountService.cs",
-              "RelativeToolTip": "sportify.BLL\\Services\\Contracts\\IAccountService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T08:39:58.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "sportify.BLL\\Services\\AccountService.cs",
-              "ToolTip": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.BLL\\Services\\AccountService.cs",
-              "RelativeToolTip": "sportify.BLL\\Services\\AccountService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCUAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T08:27:47.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "sportify.PL\\Views\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\Views\\Account\\Register.cshtml",
               "RelativeToolTip": "sportify.PL\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAgwCAAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-09T06:25:06.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T06:25:06.686Z"
             }
           ]
         }
