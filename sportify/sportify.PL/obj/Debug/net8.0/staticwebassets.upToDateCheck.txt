@@ -4,6 +4,7 @@ wwwroot\assets\icon-bg.png
 wwwroot\assets\logo.png
 wwwroot\assets\logo2.png
 wwwroot\assets\logo3.png
+wwwroot\assets\pl.png
 wwwroot\css\auth.css
 wwwroot\css\site.css
 wwwroot\css\style.css
