@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4N6UzrrjJoQ=",
+  "dgSpecHash": "YKDWu2l2RMw=",
   "success": true,
-  "projectFilePath": "D:\\GitHub_Repos\\Sportify\\Sportify\\sportify.BLL\\sportify.BLL.csproj",
+  "projectFilePath": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.BLL\\sportify.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Seif\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Seif\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

@@ -1,17 +1,27 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Entities;
 
 namespace sportify.PL.Controllers
 {
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController(IAccountService accountService)
+
+        public AccountController(
+            IAccountService accountService,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
-            this._accountService = accountService;
+            _accountService = accountService;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         [HttpGet]
@@ -67,7 +77,73 @@ namespace sportify.PL.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        
-    
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteAccount()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            // Sign out first
+            await _signInManager.SignOutAsync();
+
+            // Then delete
+            var result = await _userManager.DeleteAsync(user);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            // If deletion failed
+            TempData["Error"] = "Failed to delete account. Please try again.";
+            return RedirectToAction("Profile");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Profile()
+        {
+            var userId = _userManager.GetUserId(User);
+            if (userId == null)
+                return RedirectToAction("Login");
+
+            var profile = await _accountService.GetUserProfileAsync(userId);
+            return View(profile);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Profile(ProfileDTO model)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Log model state errors for debugging
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine(error.ErrorMessage);
+                }
+                return View(model);
+            }
+
+            var result = await _accountService.UpdateUserProfileAsync(model);
+
+            if (result.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Profile updated successfully!";
+                return RedirectToAction("Profile");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(model);
+        }
+
     }
 }

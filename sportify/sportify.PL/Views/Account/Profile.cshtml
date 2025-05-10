@@ -1,0 +1,204 @@
+﻿@model sportify.BLL.DTOs.ProfileDTO
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="notification-toast notification-success">
+        <i class="ph ph-check-circle"></i>
+        <span>@TempData["SuccessMessage"]</span>
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="notification-toast notification-error">
+        <i class="ph ph-warning-circle"></i>
+        <span>@TempData["ErrorMessage"]</span>
+    </div>
+}
+
+<div class="profile-container">
+    <div class="profile-card">
+        <form asp-action="Profile" enctype="multipart/form-data" method="post" class="profile-form">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <label for="ImageFile" class="avatar-upload">
+                        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                        {
+                            <img src="~/images/@Model.ImageUrl" alt="Profile picture" id="profileImage" class="avatar-image">
+                        }
+                        else
+                        {
+                            <img src="~/assets/default-profile.png" alt="Profile picture" id="profileImage" class="avatar-image">
+                        }
+                        <div class="avatar-overlay">
+                            <i class="ph ph-camera"></i>
+                        </div>
+                    </label>
+                    <input asp-for="ImageFile" type="file" id="ImageFile" class="avatar-input" accept="image/*" />
+                </div>
+                <div class="profile-info">
+                    <h1>@Model.UserName</h1>
+                    <div class="role">Member</div>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-group">
+                    <label asp-for="UserName" class="detail-label">Username</label>
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <i class="ph ph-user"></i>
+                        </div>
+                        <input asp-for="UserName" class="form-control" aria-label="Username" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="detail-group">
+                    <label asp-for="Email" class="detail-label">Email</label>
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <i class="ph ph-envelope"></i>
+                        </div>
+                        <input asp-for="Email" class="form-control" aria-label="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ImageUrl" />
+
+            <div class="profile-actions">
+                <button type="submit" class="btn-primary" aria-label="Save changes">
+                    <i class="ph ph-floppy-disk"></i> Save Changes
+                </button>
+                <a asp-action="Index" asp-controller="Home" class="btn-secondary" aria-label="Cancel and go to home">
+                    <i class="ph ph-x"></i> Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <div class="settings-card">
+        <h2 class="settings-title">Account Settings</h2>
+        <div class="settings-group">
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3 class="setting-title">Change Password</h3>
+                    <p class="setting-description">Update your account password</p>
+                </div>
+                <a asp-action="ChangePassword" class="btn-secondary btn-icon" aria-label="Change password">
+                    <i class="ph ph-key"></i> Change
+                </a>
+            </div>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3 class="setting-title">Delete Account</h3>
+                    <p class="setting-description">Permanently remove your account</p>
+                </div>
+                <button type="button" class="btn-secondary btn-icon btn-danger" aria-label="Delete account" data-delete-account>
+                    <i class="ph ph-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Confirm Account Deletion</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <i class="ph ph-warning-circle modal-icon"></i>
+                <p>Are you sure you want to permanently delete your account? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelDelete" class="btn btn-secondary">Cancel</button>
+                <form asp-action="DeleteAccount" method="post" style="display: inline;">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger">Delete Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        // Store the original image source for fallback
+        const originalImageSrc = document.getElementById('profileImage').src;
+
+        // Image preview functionality with original image fallback
+        document.getElementById('ImageFile').addEventListener('change', function(e) {
+            const [file] = e.target.files;
+            if (file) {
+                document.getElementById('profileImage').src = URL.createObjectURL(file);
+            } else {
+                document.getElementById('profileImage').src = originalImageSrc;
+            }
+        });
+
+        // Delete account confirmation
+        // document.querySelector('[data-delete-account]')?.addEventListener('click', function() {
+        //     if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+        //         alert('Account deletion would be processed here');
+        //     }
+        // });
+        // Add custom email validation
+        // $.validator.addMethod("customemail", 
+        //     function(value, element) {
+        //         return this.optional(element) || 
+        //             /^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
+        //     },
+        //     "Please enter a valid email address"
+        // );
+
+        // $("form").validate({
+        //     rules: {
+        //         Email: {
+        //             required: true,
+        //             email: true,
+        //             customemail: true
+        //         }
+        //     }
+        // });
+    // Delete account modal
+    const deleteBtn = document.querySelector('[data-delete-account]');
+    const modal = document.getElementById('deleteModal');
+    const closeBtn = document.querySelector('.modal-close');
+    const cancelBtn = document.getElementById('cancelDelete');
+
+    if (deleteBtn) {
+        deleteBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    [closeBtn, cancelBtn].forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    </script>
+}

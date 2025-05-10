@@ -7,6 +7,7 @@ public class MapperProfile : Profile
 {
     public MapperProfile()
     {
+        CreateMap<ApplicationUser, ProfileDTO>().ReverseMap();
         CreateMap<ApplicationUser, RegisterUserDTO>().ReverseMap();
         CreateMap<ApplicationUser, LoginUserDTO>().ReverseMap();
         CreateMap<League, LeagueDTO>().ReverseMap();

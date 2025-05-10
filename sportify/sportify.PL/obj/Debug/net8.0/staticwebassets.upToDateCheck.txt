@@ -7,11 +7,12 @@ wwwroot\assets\logo3.png
 wwwroot\assets\pl.png
 wwwroot\css\auth.css
 wwwroot\css\CreateLeague.css
+wwwroot\css\profile.css
 wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\favicon.ico
+wwwroot\images\e22fc3bc-64ad-4a2a-b6a6-54617a9df404.png
 wwwroot\js\auth.js
-wwwroot\js\CreateLeague.js
 wwwroot\js\main.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
