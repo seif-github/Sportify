@@ -1,19 +1,19 @@
-# Visual Studio / .NET artifacts
-bin/
-obj/
+# .NET
+**/bin/
+**/obj/
 
-# VS-specific files
+# Visual Studio
 .vs/
-
-# User-specific files
-*.user
 *.suo
+*.user
 
-# DLLs, executables, and other binaries
+# Build artifacts
 *.dll
-*.exe
 *.pdb
-
-# Cache and debug logs
 *.cache
 *.log
+
+# NuGet & MSBuild
+project.assets.json
+*.nuget.*
+*.csproj.AssemblyReference.cache
