@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4V1ycsyg2TwoLiNtwuU3dKPQCrAy83SpV1voNGPdRbc=",
+  "Hash": "nisEQmDaopLfIurAhCAsKvhbKOa3TJ2aB+/rmw3cHBc=",
   "Source": "sportify.PL",
   "BasePath": "_content/sportify.PL",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "sportify.PL\\wwwroot",
       "Source": "sportify.PL",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
       "SourceId": "sportify.PL",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "sportify.PL#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css"
+      "OriginalItemSpec": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
       "SourceId": "sportify.PL",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "sportify.PL#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css"
+      "OriginalItemSpec": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "assets/default-user-image#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\default-user-image.png"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "assets/gold-trophy#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\gold-trophy.png"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "assets/icon-bg#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon-bg.png"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "assets/logo#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo2.png",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo2.png",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "assets/logo2#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\logo2.png"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo3.png",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo3.png",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "assets/logo3#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\logo3.png"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\pl.png",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\pl.png",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "assets/pl#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\pl.png"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "css/auth#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -227,10 +227,31 @@
       "OriginalItemSpec": "wwwroot\\css\\auth.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\site.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\CreateLeague.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/CreateLeague#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rdjsqypl0p",
+      "Integrity": "4byfkB0lI7fzlWX+6fnZ2NLgU0E6pfO+/JrSvKLSq1c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CreateLeague.css"
+    },
+    {
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\site.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -248,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "css/style#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -269,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -290,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "js/auth#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -311,10 +332,31 @@
       "OriginalItemSpec": "wwwroot\\js\\auth.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\CreateLeague.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "js/CreateLeague#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u2mz25zgeu",
+      "Integrity": "ev/U7BCvrDrwke90YYOjTllqVx3v2g8e1uDLeFVAxKs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CreateLeague.js"
+    },
+    {
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "js/main#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -332,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\site.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\site.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -353,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -374,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -395,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -416,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -437,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -458,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -479,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -500,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -521,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -542,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -563,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -584,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -605,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -626,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -647,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -668,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -689,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -710,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -731,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -752,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -773,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -794,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -815,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -836,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -857,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -878,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -899,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -920,10 +962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -941,10 +983,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -962,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -983,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1004,10 +1046,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1025,10 +1067,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1046,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1067,10 +1109,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1088,10 +1130,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1109,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1130,10 +1172,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1151,10 +1193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1172,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1193,10 +1235,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1214,10 +1256,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1235,10 +1277,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1256,10 +1298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1277,10 +1319,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -1298,10 +1340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1319,10 +1361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1340,10 +1382,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1361,10 +1403,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1382,10 +1424,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1403,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1424,10 +1466,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1445,10 +1487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1466,10 +1508,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -1487,10 +1529,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1508,10 +1550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1529,10 +1571,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "sportify.PL",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
       "BasePath": "_content/sportify.PL",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1553,7 +1595,7 @@
   "Endpoints": [
     {
       "Route": "assets/default-user-image.28fs6jpt6j.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1574,7 +1616,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1598,7 +1640,7 @@
     },
     {
       "Route": "assets/default-user-image.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1619,7 +1661,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1635,7 +1677,7 @@
     },
     {
       "Route": "assets/gold-trophy.gts0tdzk6r.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1656,7 +1698,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1680,7 +1722,7 @@
     },
     {
       "Route": "assets/gold-trophy.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1701,7 +1743,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1717,7 +1759,7 @@
     },
     {
       "Route": "assets/icon-bg.0d4pw0fvyq.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1738,7 +1780,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1762,7 +1804,7 @@
     },
     {
       "Route": "assets/icon-bg.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1783,7 +1825,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1799,7 +1841,7 @@
     },
     {
       "Route": "assets/logo.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1820,7 +1862,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1836,7 +1878,7 @@
     },
     {
       "Route": "assets/logo.rg9tnnmpq1.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1857,7 +1899,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1881,7 +1923,7 @@
     },
     {
       "Route": "assets/logo2.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo2.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1902,7 +1944,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1918,7 +1960,7 @@
     },
     {
       "Route": "assets/logo2.x70k1dekdo.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo2.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1939,7 +1981,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1963,7 +2005,7 @@
     },
     {
       "Route": "assets/logo3.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo3.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1984,7 +2026,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2000,7 +2042,7 @@
     },
     {
       "Route": "assets/logo3.r6run2orh7.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo3.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2021,7 +2063,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2045,7 +2087,7 @@
     },
     {
       "Route": "assets/pl.32p8p730ul.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\pl.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\pl.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2066,7 +2108,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2090,7 +2132,7 @@
     },
     {
       "Route": "assets/pl.png",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\pl.png",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\pl.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2111,7 +2153,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2127,7 +2169,7 @@
     },
     {
       "Route": "css/auth.1vrlgf8q6i.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2148,7 +2190,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2172,7 +2214,7 @@
     },
     {
       "Route": "css/auth.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2193,7 +2235,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2208,8 +2250,90 @@
       ]
     },
     {
+      "Route": "css/CreateLeague.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\CreateLeague.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8963"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4byfkB0lI7fzlWX+6fnZ2NLgU0E6pfO+/JrSvKLSq1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 13:38:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4byfkB0lI7fzlWX+6fnZ2NLgU0E6pfO+/JrSvKLSq1c="
+        }
+      ]
+    },
+    {
+      "Route": "css/CreateLeague.rdjsqypl0p.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\CreateLeague.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8963"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4byfkB0lI7fzlWX+6fnZ2NLgU0E6pfO+/JrSvKLSq1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 13:38:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rdjsqypl0p"
+        },
+        {
+          "Name": "label",
+          "Value": "css/CreateLeague.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4byfkB0lI7fzlWX+6fnZ2NLgU0E6pfO+/JrSvKLSq1c="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\site.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2230,7 +2354,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2254,7 +2378,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\site.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2275,7 +2399,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2291,7 +2415,7 @@
     },
     {
       "Route": "css/style.831j8fwygx.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2312,7 +2436,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2336,7 +2460,7 @@
     },
     {
       "Route": "css/style.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2357,7 +2481,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2373,7 +2497,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2394,7 +2518,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2410,7 +2534,7 @@
     },
     {
       "Route": "favicon.kihreb8a08.ico",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2431,7 +2555,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2455,7 +2579,7 @@
     },
     {
       "Route": "js/auth.h3qkj4dutc.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2476,7 +2600,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2500,7 +2624,7 @@
     },
     {
       "Route": "js/auth.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2521,7 +2645,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2536,8 +2660,90 @@
       ]
     },
     {
+      "Route": "js/CreateLeague.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\CreateLeague.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9295"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ev/U7BCvrDrwke90YYOjTllqVx3v2g8e1uDLeFVAxKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 13:38:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ev/U7BCvrDrwke90YYOjTllqVx3v2g8e1uDLeFVAxKs="
+        }
+      ]
+    },
+    {
+      "Route": "js/CreateLeague.u2mz25zgeu.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\CreateLeague.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9295"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ev/U7BCvrDrwke90YYOjTllqVx3v2g8e1uDLeFVAxKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 13:38:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u2mz25zgeu"
+        },
+        {
+          "Name": "label",
+          "Value": "js/CreateLeague.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ev/U7BCvrDrwke90YYOjTllqVx3v2g8e1uDLeFVAxKs="
+        }
+      ]
+    },
+    {
       "Route": "js/main.9ck8uq58v4.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2558,7 +2764,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2582,7 +2788,7 @@
     },
     {
       "Route": "js/main.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2603,7 +2809,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2619,7 +2825,7 @@
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\site.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2640,7 +2846,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2656,7 +2862,7 @@
     },
     {
       "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\site.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2677,7 +2883,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2701,7 +2907,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2722,7 +2928,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2738,7 +2944,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2759,7 +2965,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2783,7 +2989,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2804,7 +3010,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2820,7 +3026,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2841,7 +3047,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2865,7 +3071,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2886,7 +3092,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2902,7 +3108,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2923,7 +3129,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2947,7 +3153,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2968,7 +3174,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2984,7 +3190,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3005,7 +3211,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3029,7 +3235,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3050,7 +3256,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3066,7 +3272,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3087,7 +3293,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3111,7 +3317,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3132,7 +3338,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3148,7 +3354,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.gjcw7pocpk.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3169,7 +3375,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3193,7 +3399,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3214,7 +3420,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3238,7 +3444,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3259,7 +3465,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3275,7 +3481,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3296,7 +3502,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3320,7 +3526,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3341,7 +3547,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3357,7 +3563,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3378,7 +3584,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3394,7 +3600,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3415,7 +3621,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3431,7 +3637,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3452,7 +3658,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3476,7 +3682,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.5p029spbuu.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3497,7 +3703,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3521,7 +3727,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3542,7 +3748,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3558,7 +3764,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3579,7 +3785,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3603,7 +3809,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3624,7 +3830,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3640,7 +3846,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.nakmwdwsxp.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3661,7 +3867,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3685,7 +3891,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3706,7 +3912,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3722,7 +3928,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3743,7 +3949,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3767,7 +3973,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3788,7 +3994,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3804,7 +4010,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.e6q6xbwqzk.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3825,7 +4031,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3849,7 +4055,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3870,7 +4076,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3886,7 +4092,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3907,7 +4113,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3923,7 +4129,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3944,7 +4150,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3968,7 +4174,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.dy6jgresuo.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3989,7 +4195,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4013,7 +4219,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4034,7 +4240,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4050,7 +4256,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4071,7 +4277,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4095,7 +4301,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4116,7 +4322,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4132,7 +4338,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4153,7 +4359,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4169,7 +4375,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4190,7 +4396,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4206,7 +4412,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4227,7 +4433,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4251,7 +4457,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.z7kmom2977.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4272,7 +4478,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4296,7 +4502,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.mk8rdyw69w.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4317,7 +4523,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4341,7 +4547,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.97yrjpyf9r.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4362,7 +4568,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4386,7 +4592,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4407,7 +4613,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4423,7 +4629,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4444,7 +4650,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4468,7 +4674,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4489,7 +4695,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4505,7 +4711,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4526,7 +4732,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4542,7 +4748,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4563,7 +4769,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4579,7 +4785,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4600,7 +4806,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4624,7 +4830,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.y53cy5s2zj.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4645,7 +4851,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4669,7 +4875,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4690,7 +4896,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4706,7 +4912,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4727,7 +4933,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4751,7 +4957,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4772,7 +4978,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4788,7 +4994,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.2yn17lgxub.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4809,7 +5015,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4833,7 +5039,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4854,7 +5060,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4870,7 +5076,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4891,7 +5097,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4907,7 +5113,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4928,7 +5134,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4952,7 +5158,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4973,7 +5179,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4989,7 +5195,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5010,7 +5216,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5034,7 +5240,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5055,7 +5261,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5071,7 +5277,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5092,7 +5298,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5108,7 +5314,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5129,7 +5335,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5153,7 +5359,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5174,7 +5380,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5190,7 +5396,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.ik6i2hrs65.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5211,7 +5417,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5235,7 +5441,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.ophe14yye5.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5256,7 +5462,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5280,7 +5486,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.z9shlbduue.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5301,7 +5507,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5325,7 +5531,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.1piudyfv7h.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5346,7 +5552,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5370,7 +5576,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.f6zq8v6eb3.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5391,7 +5597,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5415,7 +5621,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5436,7 +5642,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5452,7 +5658,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5473,7 +5679,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5497,7 +5703,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5518,7 +5724,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5534,7 +5740,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.89qbw8ngem.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5555,7 +5761,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5579,7 +5785,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5600,7 +5806,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5616,7 +5822,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5637,7 +5843,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5661,7 +5867,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5682,7 +5888,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5698,7 +5904,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5719,7 +5925,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5735,7 +5941,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5756,7 +5962,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5780,7 +5986,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5801,7 +6007,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5817,7 +6023,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.jqwzsa9uv6.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5838,7 +6044,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5862,7 +6068,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5883,7 +6089,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5899,7 +6105,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5920,7 +6126,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5936,7 +6142,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5957,7 +6163,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5981,7 +6187,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.n5w6o92d9r.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6002,7 +6208,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6026,7 +6232,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6047,7 +6253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6063,7 +6269,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6084,7 +6290,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6108,7 +6314,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6129,7 +6335,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6145,7 +6351,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.4908xmbfjr.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6166,7 +6372,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6190,7 +6396,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6211,7 +6417,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6227,7 +6433,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6248,7 +6454,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6264,7 +6470,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6285,7 +6491,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6309,7 +6515,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6330,7 +6536,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6346,7 +6552,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6367,7 +6573,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6391,7 +6597,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.7s2n0ol71w.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6412,7 +6618,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6436,7 +6642,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6457,7 +6663,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6473,7 +6679,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6494,7 +6700,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6518,7 +6724,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.ehgnz7f14e.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6539,7 +6745,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6563,7 +6769,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6584,7 +6790,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6600,7 +6806,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6621,7 +6827,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6637,7 +6843,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6658,7 +6864,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6682,7 +6888,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6703,7 +6909,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6719,7 +6925,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6740,7 +6946,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6764,7 +6970,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6785,7 +6991,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6801,7 +7007,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6822,7 +7028,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6846,7 +7052,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6867,7 +7073,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6883,7 +7089,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.6d0lkjaslc.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6904,7 +7110,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6928,7 +7134,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6949,7 +7155,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6965,7 +7171,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6986,7 +7192,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7002,7 +7208,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.l1zq2mitth.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7023,7 +7229,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7047,7 +7253,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7068,7 +7274,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7084,7 +7290,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7105,7 +7311,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7129,7 +7335,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7150,7 +7356,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7174,7 +7380,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7195,7 +7401,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7211,7 +7417,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7232,7 +7438,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7256,7 +7462,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7277,7 +7483,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7293,7 +7499,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7314,7 +7520,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7338,7 +7544,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7359,7 +7565,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 13:38:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7375,7 +7581,7 @@
     },
     {
       "Route": "sportify.PL.bundle.scp.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7396,7 +7602,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 12:33:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7412,7 +7618,7 @@
     },
     {
       "Route": "sportify.PL.ew210nodlh.bundle.scp.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7433,7 +7639,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 12:33:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7457,7 +7663,7 @@
     },
     {
       "Route": "sportify.PL.ew210nodlh.styles.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7478,7 +7684,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 12:33:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7502,7 +7708,7 @@
     },
     {
       "Route": "sportify.PL.styles.css",
-      "AssetFile": "C:\\Users\\alima\\OneDrive\\Desktop\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
+      "AssetFile": "D:\\GitHub_Repos\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7523,7 +7729,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 12:01:32 GMT"
+          "Value": "Sat, 10 May 2025 12:33:19 GMT"
         },
         {
           "Name": "Cache-Control",

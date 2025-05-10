@@ -12,11 +12,11 @@ namespace sportify.BLL.DTOs
         public int TeamID { get; set; }
         [Display (Name = "Team Name")]
         public string Name { get; set; } = null!;
-        public int Wins { get; set; }
-        public int Losses { get; set; }
-        public int Draws { get; set; }
-        public int TotalMatchesPlayed { get; set; }
-        public int Points { get; set; }
+        public int? Wins { get; set; }
+        public int? Losses { get; set; }
+        public int? Draws { get; set; }
+        public int? TotalMatchesPlayed { get; set; }
+        public int? Points { get; set; }
         public int LeagueID { get; set; }
         [Display(Name = "Team Image")]
         public string? ImageUrl { get; set; }

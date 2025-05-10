@@ -1,57 +1,143 @@
 ﻿@model sportify.BLL.DTOs.LeagueDTO
-
 @{
     ViewData["Title"] = "Create League";
 }
-<br />
-<br />
-<br />
-<br />
-<h1>Create New League</h1>
 
-<form asp-action="Create" asp-controller="League" method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+<main class="main-content">
+    <div class="league-form-container">
+        <div class="card-body">
+            <!-- Progress Steps -->
+            <div class="progress-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">League Details</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Teams Setup</div>
+                </div>
+            </div>
+
+            <!-- Form Content -->
+            <div class="form-content">
+                <div class="form-step active">
+                    <h2>Create New League</h2>
+
+                    <form asp-action="Create" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            <label asp-for="Name">League Name</label>
+                            <input asp-for="Name" class="form-control" placeholder="Premier League" required>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="SportType">Sport Type</label>
+                            <div class="custom-select">
+                                <select asp-for="SportType" class="form-control" required>
+                                    <option value="">Select sport type</option>
+                                    <option value="basketball">Basketball</option>
+                                    <option value="soccer">Soccer</option>
+                                    <option value="volleyball">Volleyball</option>
+                                    <option value="baseball">Baseball</option>
+                                    <option value="football">Football</option>
+                                    <option value="tennis">Tennis</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="select-arrow">▼</span>
+                            </div>
+                            <span asp-validation-for="SportType" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label asp-for="StartDate">Start Date</label>
+                                <div class="date-input-container">
+                                    <input asp-for="StartDate" type="date" class="form-control" required
+                                           value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                                    <span class="date-icon">📅</span>
+                                </div>
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="DurationBetweenMatches">Duration Between Matches (days)</label>
+                                <input asp-for="DurationBetweenMatches" class="form-control" type="number" min="1" value="7" required>
+                                <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="NumberOfTeams">Number of Teams</label>
+                            <input asp-for="NumberOfTeams" class="form-control" type="number" min="2" max="32" value="8" required>
+                            <span asp-validation-for="NumberOfTeams" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Continue to Team Setup</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+</main>
 
-    <div class="form-group">
-        <label asp-for="SportType" class="control-label"></label>
-        <input asp-for="SportType" class="form-control" />
-        <span asp-validation-for="SportType" class="text-danger"></span>
-    </div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+@* <br /> *@
+@* <br /> *@
+@* <br /> *@
+@* <br /> *@
+@* <h1>Create New League</h1> *@
 
-    <div class="form-group">
-        <label asp-for="StartDate" class="control-label"></label>
-        <input asp-for="StartDate" class="form-control datepicker" placeholder="mm/dd/yyyy" type="date" />
-        <span asp-validation-for="StartDate" class="text-danger"></span>
-    </div>
+@* <form asp-action="Create" asp-controller="League" method="post"> *@
+@*     <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
+@*     <div class="form-group"> *@
+@*         <label asp-for="Name" class="control-label"></label> *@
+@*         <input asp-for="Name" class="form-control" /> *@
+@*         <span asp-validation-for="Name" class="text-danger"></span> *@
+@*     </div> *@
 
-    <div class="form-group">
-        <label asp-for="DurationBetweenMatches" class="control-label"></label>
-        <input asp-for="DurationBetweenMatches" class="form-control" />
-        <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span>
-    </div>
+@*     <div class="form-group"> *@
+@*         <label asp-for="SportType" class="control-label"></label> *@
+@*         <input asp-for="SportType" class="form-control" /> *@
+@*         <span asp-validation-for="SportType" class="text-danger"></span> *@
+@*     </div> *@
 
-    <div class="form-group">
-        <label asp-for="NumberOfTeams" class="control-label"></label>
-        <input asp-for="NumberOfTeams" class="form-control" />
-        <span asp-validation-for="NumberOfTeams" class="text-danger"></span>
-    </div>
+@*     <div class="form-group"> *@
+@*         <label asp-for="StartDate" class="control-label"></label> *@
+@*         <input asp-for="StartDate" class="form-control datepicker" placeholder="mm/dd/yyyy" type="date" /> *@
+@*         <span asp-validation-for="StartDate" class="text-danger"></span> *@
+@*     </div> *@
 
-    <div class="form-group form-check">
-        <input asp-for="IsCompleted" class="form-check-input" />
-        <label asp-for="IsCompleted" class="form-check-label"></label>
-        <span asp-validation-for="IsCompleted" class="text-danger"></span>
-    </div>
+@*     <div class="form-group"> *@
+@*         <label asp-for="DurationBetweenMatches" class="control-label"></label> *@
+@*         <input asp-for="DurationBetweenMatches" class="form-control" /> *@
+@*         <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span> *@
+@*     </div> *@
 
-    <div class="form-group">
-        <label asp-for="ImageUrl" class="control-label"></label>
-        <input asp-for="ImageUrl" class="form-control" />
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>
-    </div>
+@*     <div class="form-group"> *@
+@*         <label asp-for="NumberOfTeams" class="control-label"></label> *@
+@*         <input asp-for="NumberOfTeams" class="form-control" /> *@
+@*         <span asp-validation-for="NumberOfTeams" class="text-danger"></span> *@
+@*     </div> *@
 
-    <button type="submit" class="btn btn-primary">Create</button>
-</form>
+@*     <div class="form-group form-check"> *@
+@*         <input asp-for="IsCompleted" class="form-check-input" /> *@
+@*         <label asp-for="IsCompleted" class="form-check-label"></label> *@
+@*         <span asp-validation-for="IsCompleted" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="ImageUrl" class="control-label"></label> *@
+@*         <input asp-for="ImageUrl" class="form-control" /> *@
+@*         <span asp-validation-for="ImageUrl" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <button type="submit" class="btn btn-primary">Create</button> *@
+@* </form> *@
