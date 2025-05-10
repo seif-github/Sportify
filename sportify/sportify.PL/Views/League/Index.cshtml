@@ -18,6 +18,7 @@
             <th>@Html.DisplayNameFor(model => model.StartDate)</th>
             <th>@Html.DisplayNameFor(model => model.NumberOfTeams)</th>
             <th>@Html.DisplayNameFor(model => model.IsCompleted)</th>
+            <th>@Html.DisplayNameFor(model => model.OrganizerID)</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -30,6 +31,7 @@
                 <td>@league.StartDate.ToString("yyyy-MM-dd")</td>
                 <td>@league.NumberOfTeams</td>
                 <td>@league.IsCompleted</td>
+                <td>@league.OrganizerID</td>
                 <td>
                     <a href="@Url.Action("Details", new { id = league.LeagueID })" class="btn btn-info">Details</a>
                     <a href="@Url.Action("Edit", new { id = league.LeagueID })" class="btn btn-warning">Edit</a>

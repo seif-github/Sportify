@@ -25,7 +25,7 @@
     <strong>Image:</strong>
     @if (Model.ImageUrl != null)
     {
-        <img src="@Model.ImageUrl" alt="League Image" style="max-width: 200px; max-height: 200px;" />
+        <img src="@Url.Content(Model.ImageUrl)" alt="League Image" style="max-width: 200px; max-height: 200px;" />
     }
 </div>
 
