@@ -18,7 +18,8 @@ namespace sportify.BLL.DTOs
         public int NumberOfTeams { get; set; }
         public bool IsCompleted { get; set; }
         public string? ImageUrl { get; set; }
-        public ApplicationUser Organizer {  get; set; }
+
+        //public ApplicationUser Organizer {  get; set; }
 
 
     }

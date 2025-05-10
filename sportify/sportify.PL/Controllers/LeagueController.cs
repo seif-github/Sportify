@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using System.Security.Claims;
 
 namespace sportify.PL.Controllers
 {
@@ -38,6 +39,9 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(LeagueDTO model)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            model.OrganizerID = userId;
+            ModelState.Remove("OrganizerID");
             if (ModelState.IsValid)
             {
                 await _leagueService.AddAsync(model);
@@ -56,10 +60,8 @@ namespace sportify.PL.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, LeagueDTO model)
+        public async Task<IActionResult> Edit(LeagueDTO model)
         {
-            if (id != model.LeagueID) return BadRequest();
-
             if (ModelState.IsValid)
             {
                 await _leagueService.UpdateAsync(model);

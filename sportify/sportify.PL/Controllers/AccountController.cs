@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 
@@ -28,7 +29,7 @@ namespace sportify.PL.Controllers
                 var result = await _accountService.RegisterUserAsync(model);
 
                 if (result.Succeeded)
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Create", "League");
                 else
                 {
                     foreach (var item in result.Errors)
@@ -65,5 +66,8 @@ namespace sportify.PL.Controllers
             await _accountService.LogoutUserAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        
+    
     }
 }
