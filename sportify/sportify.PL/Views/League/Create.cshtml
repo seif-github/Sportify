@@ -3,54 +3,55 @@
 @{
     ViewData["Title"] = "Create League";
 }
-<br /><br /><br /><br />
+<br />
+<br />
+<br />
+<br />
 <h1>Create New League</h1>
 
-@using (Html.BeginForm("Create", "League", FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
-
+<form asp-action="Create" asp-controller="League" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="form-group">
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Name)
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.SportType)
-        @Html.TextBoxFor(model => model.SportType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.SportType)
+        <label asp-for="SportType" class="control-label"></label>
+        <input asp-for="SportType" class="form-control" />
+        <span asp-validation-for="SportType" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.StartDate)
-        @Html.TextBoxFor(model => model.StartDate, "{0:yyyy-MM-dd}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.StartDate)
+        <label asp-for="StartDate" class="control-label"></label>
+        <input asp-for="StartDate" class="form-control datepicker" placeholder="mm/dd/yyyy" type="date" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.DurationBetweenMatches)
-        @Html.TextBoxFor(model => model.DurationBetweenMatches, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.DurationBetweenMatches)
+        <label asp-for="DurationBetweenMatches" class="control-label"></label>
+        <input asp-for="DurationBetweenMatches" class="form-control" />
+        <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.NumberOfTeams)
-        @Html.TextBoxFor(model => model.NumberOfTeams, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.NumberOfTeams)
+        <label asp-for="NumberOfTeams" class="control-label"></label>
+        <input asp-for="NumberOfTeams" class="form-control" />
+        <span asp-validation-for="NumberOfTeams" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input asp-for="IsCompleted" class="form-check-input" />
+        <label asp-for="IsCompleted" class="form-check-label"></label>
+        <span asp-validation-for="IsCompleted" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.IsCompleted)
-        @Html.CheckBoxFor(model => model.IsCompleted)
-        @Html.ValidationMessageFor(model => model.IsCompleted)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.ImageUrl)
-        @Html.TextBoxFor(model => model.ImageUrl, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.ImageUrl)
+        <label asp-for="ImageUrl" class="control-label"></label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Create</button>
-}
+</form>

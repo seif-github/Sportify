@@ -44,8 +44,8 @@ namespace sportify.PL.Controllers
             ModelState.Remove("OrganizerID");
             if (ModelState.IsValid)
             {
-                await _leagueService.AddAsync(model);
-                return RedirectToAction(nameof(Index));
+                var createdLeague = await _leagueService.AddAndReturnAsync(model);
+                return RedirectToAction("AddTeams", "Team", new{ leagueId = createdLeague.LeagueID, numberOfTeams = createdLeague.NumberOfTeams });
             }
             return View(model);
         }

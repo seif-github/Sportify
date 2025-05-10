@@ -41,6 +41,16 @@ namespace sportify.BLL.Services
             await _genericRepository.SaveChangesAsync();
         }
 
+        public async Task<LeagueDTO> AddAndReturnAsync(LeagueDTO model)
+        {
+            var entity = _mapper.Map<League>(model);
+            await _genericRepository.AddAsync(entity);
+            await _genericRepository.SaveChangesAsync();
+
+            // Map the saved entity back to DTO to return
+            return _mapper.Map<LeagueDTO>(entity);
+        }
+
         public async Task UpdateAsync(LeagueDTO model)
         {
             var entity = _mapper.Map<League>(model);
