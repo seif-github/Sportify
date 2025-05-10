@@ -2,6 +2,7 @@
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 using System.Security.Claims;
+using System.Text.Json;
 
 namespace sportify.PL.Controllers
 {
@@ -27,10 +28,24 @@ namespace sportify.PL.Controllers
             return League == null ? NotFound() : View(League);
         }
 
-
+        [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            // If coming back from teams page, use TempData
+            if (TempData["LeagueData"] is string leagueData)
+            {
+                var model = JsonSerializer.Deserialize<LeagueDTO>(leagueData);
+                TempData.Keep("LeagueData"); // Keep for another request
+                return View(model);
+            }
+
+            // Otherwise show fresh form
+            return View(new LeagueDTO
+            {
+                StartDate = DateTime.Today,
+                DurationBetweenMatches = 7,
+                NumberOfTeams = 8
+            });
         }
 
 
@@ -41,15 +56,54 @@ namespace sportify.PL.Controllers
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             model.OrganizerID = userId;
+
             ModelState.Remove("OrganizerID");
+
             if (ModelState.IsValid)
             {
-                var createdLeague = await _leagueService.AddAndReturnAsync(model);
-                return RedirectToAction("AddTeams", "Team", new{ leagueId = createdLeague.LeagueID, numberOfTeams = createdLeague.NumberOfTeams });
+                TempData["LeagueData"] = JsonSerializer.Serialize(model);
+                //var createdLeague = await _leagueService.AddAndReturnAsync(model);
+                return RedirectToAction("AddTeams", "Team", new{
+                    numberOfTeams = model.NumberOfTeams
+                });
             }
             return View(model);
         }
 
+        //[HttpGet]
+        //public IActionResult CreateFromTeamSetup()
+        //{
+        //    if (TempData["LeagueData"] is string leagueData)
+        //    {
+        //        var model = JsonSerializer.Deserialize<LeagueDTO>(leagueData);
+        //        TempData.Keep("LeagueData"); // Keep the data for additional requests
+        //        return View("Create", model);
+        //    }
+        //    return RedirectToAction("Create");
+        //}
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> FinalizeCreation(LeagueDTO model)
+        {
+            if (ModelState.IsValid)
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                model.OrganizerID = userId;
+
+                // Now actually create the league
+                var createdLeague = await _leagueService.AddAndReturnAsync(model);
+                TempData.Remove("LeagueData"); // Clean up
+
+                return RedirectToAction("Details", new { id = createdLeague.LeagueID });
+            }
+
+            // If validation fails, return to teams page
+            return RedirectToAction("AddTeams", "Team", new
+            {
+                numberOfTeams = model.NumberOfTeams
+            });
+        }
 
         public async Task<IActionResult> Edit(int id)
         {
