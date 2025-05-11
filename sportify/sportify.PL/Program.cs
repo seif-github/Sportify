@@ -6,6 +6,7 @@ using sportify.DAL.Data;
 using sportify.DAL.Entities;
 using sportify.BLL.Services.Contracts;
 using sportify.BLL.Services;
+using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +38,10 @@ builder.Services.AddScoped<ILeagueService, LeagueService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ILeagueTeamCountUpdateService, LeagueTeamCountUpdateService>();
 
-
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10MB file size limit
+});
 
 builder.Services.AddControllersWithViews();
 
