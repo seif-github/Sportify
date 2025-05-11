@@ -102,23 +102,23 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditTeams(LeagueDetailsViewModel model)
         {
-            // Update teams first
+            // Only update team names
             foreach (var team in model.Teams)
             {
                 await _teamService.UpdateAsync(team);
             }
 
             var league = await _leagueService.GetByIdAsync(model.League.LeagueID);
-            if (league.NumberOfTeams != model.Teams.Count)
-            {
-                await _leagueTeamCountService.UpdateTeamCountAsync(new LeagueTeamCountUpdateDTO
-                {
-                    LeagueID = model.League.LeagueID,
-                    TeamCount = model.Teams.Count
-                });
-            }
+            var teams = await _teamService.GetAllTeamsInLeagueAsync(model.League.LeagueID);
 
-            return RedirectToAction("Details", "League", new { id = model.League.LeagueID });
+            var viewModel = new LeagueDetailsViewModel
+            {
+                League = league,
+                Teams = teams,
+                NewTeamName = ""
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -126,6 +126,13 @@ namespace sportify.PL.Controllers
         public async Task<IActionResult> DeleteTeam(int teamId, int leagueId)
         {
             await _teamService.DeleteAsync(teamId);
+
+            await _leagueTeamCountService.UpdateTeamCountAsync(new LeagueTeamCountUpdateDTO
+            {
+                LeagueID = leagueId,
+                TeamCount = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).Count()
+            });
+
             return RedirectToAction("EditTeams", new { leagueId = leagueId });
         }
 
@@ -150,6 +157,11 @@ namespace sportify.PL.Controllers
                 TotalMatchesPlayed = 0
             };
             await _teamService.AddTeamAsync(newTeam);
+            await _leagueTeamCountService.UpdateTeamCountAsync(new LeagueTeamCountUpdateDTO
+            {
+                LeagueID = leagueId,
+                TeamCount = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).Count()
+            });
             return RedirectToAction("EditTeams", new { leagueId = leagueId });
         }
     }

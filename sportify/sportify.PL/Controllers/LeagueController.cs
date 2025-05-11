@@ -22,7 +22,15 @@ namespace sportify.PL.Controllers
             _accountService = accountService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index()
+        {
+            var organizerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var leagues = await _leagueService.GetOrganizerLeaguesById(organizerId);
+            return View(leagues);
+        }
+
+        public async Task<IActionResult> GuestIndex()
         {
             var League = await _leagueService.GetAllAsync();
             return View(League);
