@@ -61,11 +61,14 @@ namespace sportify.PL.Controllers
         {
             var league = await _leagueService.GetByIdAsync(id);
             var teams = await _teamService.GetAllTeamsInLeagueAsync(id);
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var isOrganizer = currentUserId != null && currentUserId == league.OrganizerID;
 
                 var viewModel = new LeagueDetailsViewModel
                 {
                     League = league,
-                    Teams = teams
+                    Teams = teams,
+                    IsOrganizer = isOrganizer
                 };
                 return View(viewModel);
         }
@@ -114,6 +117,8 @@ namespace sportify.PL.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var league = await _leagueService.GetByIdAsync(id);
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (currentUserId != league.OrganizerID) return Forbid();
             return league == null ? NotFound() : View(league);
         }
 
@@ -122,6 +127,11 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(LeagueDTO model)
         {
+            var league = await _leagueService.GetByIdAsync(model.LeagueID);
+            if (league == null) return NotFound();
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (currentUserId != league.OrganizerID) return Forbid();
             if (ModelState.IsValid)
             {
                 await _leagueService.UpdateAsync(model);
@@ -132,9 +142,12 @@ namespace sportify.PL.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
-            var League = await _leagueService.GetByIdAsync(id);
+            var league = await _leagueService.GetByIdAsync(id);
 
-            return League == null ? NotFound() : View(League);
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if(currentUserId != league.OrganizerID) return Forbid();
+
+            return league == null ? NotFound() : View(league);
         }
 
         
@@ -142,6 +155,11 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            var league = await _leagueService.GetByIdAsync(id);
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (currentUserId != league.OrganizerID) return Forbid();
+
             await _leagueService.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
