@@ -20,8 +20,8 @@ namespace sportify.BLL.Services
         private readonly IMapper _mapper;
 
         public AccountService(UserManager<ApplicationUser> userManager
-            ,SignInManager<ApplicationUser> signInManager,
-            IUserRepository userRepo, IMapper mapper)
+            ,SignInManager<ApplicationUser> signInManager
+            ,IMapper mapper)
         {
             this._userManager = userManager;
             this._signInManager = signInManager;
