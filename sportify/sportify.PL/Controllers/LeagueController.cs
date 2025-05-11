@@ -101,28 +101,28 @@ namespace sportify.PL.Controllers
         //    return RedirectToAction("Create");
         //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> FinalizeCreation(LeagueDTO model)
-        {
-            if (ModelState.IsValid)
-            {
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                model.OrganizerID = userId;
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> FinalizeCreation(LeagueDTO model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        //        model.OrganizerID = userId;
 
-                // Now actually create the league
-                var createdLeague = await _leagueService.AddAndReturnAsync(model);
-                TempData.Remove("LeagueData"); // Clean up
+        //        // Now actually create the league
+        //        var createdLeague = await _leagueService.AddAndReturnAsync(model);
+        //        TempData.Remove("LeagueData"); // Clean up
 
-                return RedirectToAction("Details", new { id = createdLeague.LeagueID });
-            }
+        //        return RedirectToAction("Details", new { id = createdLeague.LeagueID });
+        //    }
 
-            // If validation fails, return to teams page
-            return RedirectToAction("AddTeams", "Team", new
-            {
-                numberOfTeams = model.NumberOfTeams
-            });
-        }
+        //    // If validation fails, return to teams page
+        //    return RedirectToAction("AddTeams", "Team", new
+        //    {
+        //        numberOfTeams = model.NumberOfTeams
+        //    });
+        //}
 
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
