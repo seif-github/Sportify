@@ -1,0 +1,61 @@
+﻿@model sportify.PL.ViewModels.LeagueDetailsViewModel
+
+@* @{ *@
+@*     ViewData["Title"] = "Edit Teams"; *@
+@* } *@
+
+<h1>Edit Teams for @Model.League.Name</h1>
+
+<form asp-action="EditTeams" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="League.LeagueID" />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Draws</th>
+                <th>Points</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (var i = 0; i < Model.Teams.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="hidden" asp-for="Teams[i].TeamID" />
+                        <input type="hidden" asp-for="Teams[i].LeagueID" />
+                        <input asp-for="Teams[i].Name" class="form-control" />
+                    </td>
+                    <td><input asp-for="Teams[i].Wins" class="form-control" /></td>
+                    <td><input asp-for="Teams[i].Losses" class="form-control" /></td>
+                    <td><input asp-for="Teams[i].Draws" class="form-control" /></td>
+                    <td><input asp-for="Teams[i].Points" class="form-control" /></td>
+                    <td>
+                        <button type="submit" formaction="@Url.Action("DeleteTeam", new { teamId = Model.Teams[i].TeamID, leagueId = Model.League.LeagueID })"
+                                class="btn btn-danger" onclick="return confirm('Are you sure?')">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="form-inline mb-3">
+        <input asp-for="NewTeamName" name="teamName" class="form-control" />
+        <input type="hidden" name="leagueId" value="@Model.League.LeagueID" />
+        <button type="submit" formaction="@Url.Action("AddTeam")"
+                class="btn btn-primary">
+            Add Team
+        </button>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save All Changes</button>
+    <a asp-action="Details" asp-controller="League" asp-route-id="@Model.League.LeagueID" class="btn btn-secondary">
+        Back to League
+    </a>
+</form>

@@ -6,52 +6,54 @@
 
 <h1>Edit League</h1>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+<form asp-action="Edit" method="post">
     <input type="hidden" asp-for="LeagueID" />
     <input type="hidden" asp-for="OrganizerID" />
+
     <div class="form-group">
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Name)
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div asp-validation-summary="All" class="error-summary"></div>
+
+    <div class="form-group">
+        <label asp-for="SportType"></label>
+        <input asp-for="SportType" class="form-control" />
+        <span asp-validation-for="SportType" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.SportType)
-        @Html.TextBoxFor(model => model.SportType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.SportType)
+        <label asp-for="StartDate"></label>
+        <input asp-for="StartDate" type="date" class="form-control" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.StartDate)
-        @Html.TextBoxFor(model => model.StartDate, "{0:yyyy-MM-dd}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.StartDate)
+        <label asp-for="DurationBetweenMatches"></label>
+        <input asp-for="DurationBetweenMatches" class="form-control" />
+        <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input asp-for="IsCompleted" class="form-check-input" />
+        <label asp-for="IsCompleted" class="form-check-label"></label>
+        <span asp-validation-for="IsCompleted" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.DurationBetweenMatches)
-        @Html.TextBoxFor(model => model.DurationBetweenMatches, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.DurationBetweenMatches)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.NumberOfTeams)
-        @Html.TextBoxFor(model => model.NumberOfTeams, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.NumberOfTeams)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.IsCompleted)
-        @Html.CheckBoxFor(model => model.IsCompleted)
-        @Html.ValidationMessageFor(model => model.IsCompleted)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.ImageUrl)
-        @Html.TextBoxFor(model => model.ImageUrl, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.ImageUrl)
+        <label asp-for="ImageUrl"></label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

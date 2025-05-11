@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Entities;
+using sportify.PL.ViewModels;
 
 namespace sportify.PL.Controllers
 {
@@ -11,11 +13,14 @@ namespace sportify.PL.Controllers
     {
         private readonly ITeamService _teamService;
         private readonly ILeagueService _leagueService;
+        private readonly ILeagueTeamCountUpdateService _leagueTeamCountService;
 
-        public TeamController(ITeamService teamService, ILeagueService leagueService)
+        public TeamController(ITeamService teamService, ILeagueService leagueService,
+            ILeagueTeamCountUpdateService leagueTeamCountService)
         {
             this._teamService = teamService;
             this._leagueService = leagueService;
+            this._leagueTeamCountService = leagueTeamCountService;
         }
 
         public IActionResult Index()
@@ -77,6 +82,75 @@ namespace sportify.PL.Controllers
             await _teamService.AddTeamsAsync(teams);
             TempData.Remove("LeagueData");
             return RedirectToAction("Details", "League", new { id = createdLeague.LeagueID });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditTeams(int leagueId)
+        {
+            var teams = await _teamService.GetAllTeamsInLeagueAsync(leagueId);
+            var league = await _leagueService.GetByIdAsync(leagueId);
+            var viewModel = new LeagueDetailsViewModel
+            {
+                League = league,
+                Teams = teams,
+                NewTeamName = ""
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditTeams(LeagueDetailsViewModel model)
+        {
+            // Update teams first
+            foreach (var team in model.Teams)
+            {
+                await _teamService.UpdateAsync(team);
+            }
+
+            var league = await _leagueService.GetByIdAsync(model.League.LeagueID);
+            if (league.NumberOfTeams != model.Teams.Count)
+            {
+                await _leagueTeamCountService.UpdateTeamCountAsync(new LeagueTeamCountUpdateDTO
+                {
+                    LeagueID = model.League.LeagueID,
+                    TeamCount = model.Teams.Count
+                });
+            }
+
+            return RedirectToAction("Details", "League", new { id = model.League.LeagueID });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteTeam(int teamId, int leagueId)
+        {
+            await _teamService.DeleteAsync(teamId);
+            return RedirectToAction("EditTeams", new { leagueId = leagueId });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddTeam(int leagueId, string teamName)
+        {
+            if (string.IsNullOrWhiteSpace(teamName))
+            {
+                TempData["Error"] = "Team name cannot be empty";
+                return RedirectToAction("EditTeams", new { leagueId });
+            }
+
+            var newTeam = new TeamDTO
+            {
+                LeagueID = leagueId,
+                Name = teamName,
+                Wins = 0,
+                Losses = 0,
+                Draws = 0,
+                Points = 0,
+                TotalMatchesPlayed = 0
+            };
+            await _teamService.AddTeamAsync(newTeam);
+            return RedirectToAction("EditTeams", new { leagueId = leagueId });
         }
     }
 }

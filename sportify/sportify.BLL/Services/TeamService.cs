@@ -7,6 +7,7 @@ using AutoMapper;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
+using sportify.DAL.Repositories;
 using sportify.DAL.Repositories.Contracts;
 
 namespace sportify.BLL.Services
@@ -21,19 +22,32 @@ namespace sportify.BLL.Services
             this._mapper = mapper;
         }
 
-        public Task<List<TeamDTO>> GetAllASync()
+        public async Task<List<TeamDTO>> GetAllAsync()
+        {
+            var entity = await _genericRepo.GetAllAsync();
+            return _mapper.Map<List<TeamDTO>>(entity);
+
+        }
+
+        public async Task<List<TeamDTO>> GetAllTeamsInLeagueAsync(int leagueId)
+        {
+            var entity = await _genericRepo.GetAllAsync();
+            var teams = entity.Where(i => i.LeagueID == leagueId);
+            return entity == null ?
+                    null :
+                    _mapper.Map<List<TeamDTO>>(teams);
+        }
+
+        public Task<TeamDTO?> GetTeamByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<TeamDTO?> GetByIdAsync(int id)
+        public async Task UpdateAsync(TeamDTO team)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(TeamDTO team)
-        {
-            throw new NotImplementedException();
+            var entity = _mapper.Map<Team>(team);
+            await _genericRepo.UpdateAsync(entity);
+            await _genericRepo.SaveChangesAsync();
         }
 
         public async Task AddTeamsAsync(List<TeamDTO> teams)
@@ -46,10 +60,25 @@ namespace sportify.BLL.Services
             await _genericRepo.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task AddTeamAsync(TeamDTO team)
         {
-            throw new NotImplementedException();
+            var entity = _mapper.Map<Team>(team);
+            await _genericRepo.AddAsync(entity);
+            await _genericRepo.SaveChangesAsync();
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            await _genericRepo.DeleteAsync(id);
+            await _genericRepo.SaveChangesAsync();
+        }
+
+        public async Task<List<TeamDTO>> SortStandings(int leagueId)
+        {
+            var teams = await GetAllTeamsInLeagueAsync(leagueId);
+            return teams.OrderByDescending(t => t.Points)
+                .ThenBy(t => t.Name)
+                .ToList();
+        }
     }
 }

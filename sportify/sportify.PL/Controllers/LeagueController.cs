@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.PL.ViewModels;
 using System.Security.Claims;
 using System.Text.Json;
 
@@ -9,23 +11,40 @@ namespace sportify.PL.Controllers
     public class LeagueController : Controller
     {
         private readonly ILeagueService _leagueService;
+        private readonly ITeamService _teamService;
+        private readonly IAccountService _accountService;
 
-        public LeagueController(ILeagueService leagueService)
+        public LeagueController(ILeagueService leagueService, ITeamService teamService,
+                IAccountService accountService)
         {
             _leagueService = leagueService;
+            _teamService = teamService;
+            _accountService = accountService;
         }
 
         public async Task<IActionResult> Index()
         {
             var League = await _leagueService.GetAllAsync();
+            return View(League);
+        }
 
-            return View("Index",League);
+        public async Task<IActionResult> Standings(int leagueId)
+        {
+            List<TeamDTO> teamsSorted = await _teamService.SortStandings(leagueId);
+            return Ok(teamsSorted);
         }
 
         public async Task<IActionResult> Details(int id)
         {
-            var League = await _leagueService.GetByIdAsync(id);
-            return League == null ? NotFound() : View(League);
+            var league = await _leagueService.GetByIdAsync(id);
+            var teams = await _teamService.GetAllTeamsInLeagueAsync(id);
+
+                var viewModel = new LeagueDetailsViewModel
+                {
+                    League = league,
+                    Teams = teams
+                };
+                return View(viewModel);
         }
 
         [HttpGet]
@@ -105,10 +124,11 @@ namespace sportify.PL.Controllers
         //    });
         //}
 
+        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var League = await _leagueService.GetByIdAsync(id);
-            return League == null ? NotFound() : View(League);
+            var league = await _leagueService.GetByIdAsync(id);
+            return league == null ? NotFound() : View(league);
         }
 
 
