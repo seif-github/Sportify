@@ -1,19 +1,61 @@
-# .NET
-**/bin/
-**/obj/
+## Ignore build output
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
 
-# Visual Studio
+## Ignore NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Package directories with lock file
+**/packages/*/
+!**/packages/build/
+!**/packages/repositories.config
+
+## Ignore Rider / VS Code / VS / JetBrains specific files
 .vs/
-*.suo
+.idea/
 *.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.dbmdl
 
-# Build artifacts
-*.dll
-*.pdb
+## MSBuild project-specific
 *.cache
 *.log
+*.csproj.user
+*.msbuilds
 
-# NuGet & MSBuild
-project.assets.json
-*.nuget.*
-*.csproj.AssemblyReference.cache
+## DotNet-specific
+*.dotCover
+*.dotCover.xml
+TestResults/
+*.coverage
+*.coveragexml
+*.dll
+*.exe
+*.pdb
+
+## Logs
+*.log
+
+## Others
+*.tmp
+*.bak
+*.swp
+
+## Node / Frontend (in case you're using npm or Angular/React in frontend/)
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.*
