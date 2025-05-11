@@ -84,7 +84,10 @@
 </div>
 
 <div class="mt-4">
-    <a asp-action="Edit" asp-route-id="@Model.League.LeagueID" class="btn btn-warning">Edit League</a>
-    <a asp-action="Delete" asp-route-id="@Model.League.LeagueID" class="btn btn-danger">Delete League</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    @if (Model.IsOrganizer)
+    {
+        <a asp-action="Edit" asp-route-id="@Model.League.LeagueID" class="btn btn-warning">Edit League</a>
+        <a asp-action="Delete" asp-route-id="@Model.League.LeagueID" class="btn btn-danger">Delete League</a>
+    }
+    <a asp-action="BrowseLeagues" class="btn btn-secondary">Back to List</a>
 </div>
