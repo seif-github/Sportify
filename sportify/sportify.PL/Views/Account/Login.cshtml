@@ -1,11 +1,18 @@
 ﻿@model sportify.BLL.DTOs.LoginUserDTO
-
 @{
     ViewData["Title"] = "Login";
 }
-
 <!-- Login Form -->
 <div class="my-container">
+    <!-- Success Message for password change -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-bottom: 20px; border-radius: 8px; padding: 12px 16px;">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="position: absolute; right: 10px; top: 10px;"></button>
+        </div>
+    }
+
     <div class="auth-container">
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
@@ -43,10 +50,28 @@
         </form>
     </div>
 </div>
-
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <script>
+        // Auto-dismiss the success alert after 5 seconds
+        document.addEventListener('DOMContentLoaded', function() {
+            const alertElement = document.querySelector('.alert-success');
+            if (alertElement) {
+                setTimeout(function() {
+                    const closeButton = alertElement.querySelector('.btn-close');
+                    if (closeButton) {
+                        closeButton.click();
+                    } else {
+                        alertElement.classList.remove('show');
+                        setTimeout(function() {
+                            alertElement.remove();
+                        }, 150);
+                    }
+                }, 5000);
+            }
+        });
+    </script>
 }

@@ -15,5 +15,7 @@ namespace sportify.BLL.Services.Contracts
         Task LogoutUserAsync();
         Task<ProfileDTO> GetUserProfileAsync(string userId);
         Task<IdentityResult> UpdateUserProfileAsync(ProfileDTO model);
+        Task<IdentityResult> ChangePasswordAsync(string userId, string currentPassword,
+            string newPassword);
     }
 }

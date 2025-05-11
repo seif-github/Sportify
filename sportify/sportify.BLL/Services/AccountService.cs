@@ -17,14 +17,18 @@ namespace sportify.BLL.Services
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly IGenericRepository<ApplicationUser> _genericRepo;
         private readonly IMapper _mapper;
 
-        public AccountService(UserManager<ApplicationUser> userManager
-            ,SignInManager<ApplicationUser> signInManager
-            ,IMapper mapper)
+        public AccountService(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
+            IGenericRepository<ApplicationUser> genericRepo,
+            IUserRepository userRepo, 
+            IMapper mapper)
         {
             this._userManager = userManager;
             this._signInManager = signInManager;
+            this._genericRepo = genericRepo;
             this._mapper = mapper;
         }
 
@@ -55,7 +59,7 @@ namespace sportify.BLL.Services
         public async Task<string> LoginUserAsync(LoginUserDTO model)
         {
             ApplicationUser user = await _userManager.FindByNameAsync(model.UserName);
-            if(user != null)
+            if (user != null)
             {
                 bool checkPassword = await _userManager.CheckPasswordAsync(user, model.Password);
                 if (checkPassword)
@@ -140,6 +144,28 @@ namespace sportify.BLL.Services
             }
 
             return await _userManager.UpdateAsync(user);
+        }
+
+        public async Task<IdentityResult> ChangePasswordAsync(string userId, string currentPassword,
+            string newPassword)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            IdentityResult result = await _userManager.ChangePasswordAsync(user,currentPassword,newPassword);
+
+            if (user == null)
+            {
+                return IdentityResult.Failed(new IdentityError
+                {
+                    Code = "UserNotFound",
+                    Description = "User not found."
+                });
+            }
+
+            if (result.Succeeded)
+            {
+                await _userManager.UpdateSecurityStampAsync(user);
+            }
+            return result;
         }
     }
 }
