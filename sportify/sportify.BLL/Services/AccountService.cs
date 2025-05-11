@@ -20,10 +20,11 @@ namespace sportify.BLL.Services
         private readonly IGenericRepository<ApplicationUser> _genericRepo;
         private readonly IMapper _mapper;
 
-        public AccountService(UserManager<ApplicationUser> userManager
-            , SignInManager<ApplicationUser> signInManager,
+        public AccountService(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
             IGenericRepository<ApplicationUser> genericRepo,
-            IUserRepository userRepo, IMapper mapper)
+            IUserRepository userRepo, 
+            IMapper mapper)
         {
             this._userManager = userManager;
             this._signInManager = signInManager;
