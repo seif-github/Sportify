@@ -1,5 +1,6 @@
 ﻿using System.Security.Claims;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services;
@@ -9,6 +10,7 @@ using sportify.PL.ViewModels;
 
 namespace sportify.PL.Controllers
 {
+    [Authorize]
     public class TeamController : Controller
     {
         private readonly ITeamService _teamService;

@@ -32,9 +32,9 @@
                 <a asp-controller="Home" asp-action="Index">Home</a>
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <a asp-controller="League" asp-action="Dashboard">Dashboard</a>
+                    <a asp-controller="League" asp-action="Index">Dashboard</a>
                 }
-                <a asp-controller="League" asp-action="Index">Leagues</a>
+                <a asp-controller="League" asp-action="BrowseLeagues">Leagues</a>
             </div>
 
             <div class="nav-right">
