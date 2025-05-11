@@ -20,7 +20,8 @@ namespace sportify.BLL.Services
         private readonly IMapper _mapper;
 
         public AccountService(UserManager<ApplicationUser> userManager
-            ,SignInManager<ApplicationUser> signInManager, IMapper mapper)
+            ,SignInManager<ApplicationUser> signInManager,
+            IUserRepository userRepo, IMapper mapper)
         {
             this._userManager = userManager;
             this._signInManager = signInManager;
@@ -77,7 +78,6 @@ namespace sportify.BLL.Services
         {
             await _signInManager.SignOutAsync();
         }
-
 
         public async Task<ProfileDTO> GetUserProfileAsync(string userId)
         {

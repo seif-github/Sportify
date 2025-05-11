@@ -33,10 +33,12 @@ builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IUserRepository, UserRepository>(); 
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ILeagueService, LeagueService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ILeagueTeamCountUpdateService, LeagueTeamCountUpdateService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.Configure<FormOptions>(options =>
 {

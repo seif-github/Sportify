@@ -1,0 +1,116 @@
+﻿@model IEnumerable<sportify.PL.ViewModels.LeagueWithOrganizerViewModel>
+
+@{
+    ViewData["Title"] = "Browse Leagues";
+}
+
+<style>
+    .league-card {
+        transition: transform 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .league-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+    .league-header {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .league-title {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .organizer-badge {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-bottom: 10px;
+    }
+
+    .league-body {
+        padding: 15px;
+    }
+
+    .league-detail {
+        margin-bottom: 8px;
+    }
+
+    .detail-label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .detail-value {
+        color: #6c757d;
+    }
+
+    .no-leagues {
+        text-align: center;
+        padding: 40px;
+        color: #6c757d;
+    }
+</style>
+
+<div class="container">
+    <h1 class="mb-4">Browse Leagues</h1>
+
+    @if (Model.Any())
+    {
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <div class="league-card">
+                        <div class="league-header">
+                            <h3 class="league-title">@item.League.Name</h3>
+                            <div class="organizer-badge">
+                                <i class="fas fa-user"></i> Organized by: @item.OrganizerName
+                            </div>
+                        </div>
+                        <div class="league-body">
+                            <div class="league-detail">
+                                <span class="detail-label">Sport:</span>
+                                <span class="detail-value">@item.League.SportType</span>
+                            </div>
+                            <div class="league-detail">
+                                <span class="detail-label">Teams:</span>
+                                <span class="detail-value">@item.League.NumberOfTeams</span>
+                            </div>
+                            <div class="league-detail">
+                                <span class="detail-label">Start Date:</span>
+                                <span class="detail-value">@item.League.StartDate.ToString("MMMM d, yyyy")</span>
+                            </div>
+                        </div>
+                        <div class="text-center p-3 bg-light">
+                            <a asp-action="Details" asp-route-id="@item.League.LeagueID" class="btn btn-primary">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="no-leagues">
+            <i class="fas fa-trophy fa-3x mb-3"></i>
+            <h3>No leagues available yet</h3>
+            <p>Check back later or create your own league!</p>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <!-- Font Awesome for icons (optional) -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+}

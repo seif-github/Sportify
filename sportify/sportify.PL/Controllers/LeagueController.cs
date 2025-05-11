@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
@@ -8,32 +9,54 @@ using System.Text.Json;
 
 namespace sportify.PL.Controllers
 {
+    [Authorize]
     public class LeagueController : Controller
     {
         private readonly ILeagueService _leagueService;
         private readonly ITeamService _teamService;
-        private readonly IAccountService _accountService;
+        private readonly IUserService _userService;
 
         public LeagueController(ILeagueService leagueService, ITeamService teamService,
-                IAccountService accountService)
+                IUserService userService)
         {
             _leagueService = leagueService;
             _teamService = teamService;
-            _accountService = accountService;
+            _userService = userService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var League = await _leagueService.GetAllAsync();
-            return View(League);
+            var organizerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var leagues = await _leagueService.GetOrganizerLeaguesById(organizerId);
+            return View(leagues);
         }
 
+        [AllowAnonymous]
+        public async Task<IActionResult> BrowseLeagues()
+        {
+            var leagues = await _leagueService.GetAllAsync();
+            var organizerIds = leagues.Select(l => l.OrganizerID).Distinct().ToList();
+            var organizers = await _userService.GetUsersByIds(organizerIds);
+            var organizerDictionary = organizers.ToDictionary(u => u.Id, u => u.UserName);
+
+            var viewModel = leagues.Select(l => new LeagueWithOrganizerViewModel
+            {
+                League = l,
+                OrganizerName = organizerDictionary.TryGetValue(l.OrganizerID, out var name) ? name : "Unknown"
+            }).ToList();
+
+            return View(viewModel);
+        }
+
+        [AllowAnonymous]
         public async Task<IActionResult> Standings(int leagueId)
         {
             List<TeamDTO> teamsSorted = await _teamService.SortStandings(leagueId);
             return Ok(teamsSorted);
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int id)
         {
             var league = await _leagueService.GetByIdAsync(id);
@@ -67,8 +90,6 @@ namespace sportify.PL.Controllers
             });
         }
 
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(LeagueDTO model)
@@ -88,41 +109,6 @@ namespace sportify.PL.Controllers
             }
             return View(model);
         }
-
-        //[HttpGet]
-        //public IActionResult CreateFromTeamSetup()
-        //{
-        //    if (TempData["LeagueData"] is string leagueData)
-        //    {
-        //        var model = JsonSerializer.Deserialize<LeagueDTO>(leagueData);
-        //        TempData.Keep("LeagueData"); // Keep the data for additional requests
-        //        return View("Create", model);
-        //    }
-        //    return RedirectToAction("Create");
-        //}
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> FinalizeCreation(LeagueDTO model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //        model.OrganizerID = userId;
-
-        //        // Now actually create the league
-        //        var createdLeague = await _leagueService.AddAndReturnAsync(model);
-        //        TempData.Remove("LeagueData"); // Clean up
-
-        //        return RedirectToAction("Details", new { id = createdLeague.LeagueID });
-        //    }
-
-        //    // If validation fails, return to teams page
-        //    return RedirectToAction("AddTeams", "Team", new
-        //    {
-        //        numberOfTeams = model.NumberOfTeams
-        //    });
-        //}
 
         [HttpGet]
         public async Task<IActionResult> Edit(int id)

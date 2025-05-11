@@ -8,6 +8,7 @@ using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories.Contracts;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace sportify.BLL.Services
 {
@@ -30,8 +31,15 @@ namespace sportify.BLL.Services
 
         public async Task<LeagueDTO?> GetByIdAsync(int id)
         {
-            var entity = await _genericRepository.GetByIdAsync(id);
-            return entity == null ? null : _mapper.Map<LeagueDTO>(entity);
+            var data = await _genericRepository.GetByIdAsync(id);
+            return data == null ? null : _mapper.Map<LeagueDTO>(data);
+        }
+        
+        public async Task<List<LeagueDTO?>?> GetOrganizerLeaguesById(string organizerId)
+        {
+            var leagues = await _genericRepository.GetAllAsync();
+            var filteredLeagues = leagues.Where(league => league.OrganizerID == organizerId).ToList();
+            return leagues == null ? null : _mapper.Map<List<LeagueDTO?>?>(filteredLeagues);
         }
 
         public async Task AddAsync(LeagueDTO model)
