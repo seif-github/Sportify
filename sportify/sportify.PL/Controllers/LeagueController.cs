@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.PL.Helpers;
 using sportify.PL.ViewModels;
 using System.Security.Claims;
 using System.Text.Json;
@@ -33,7 +34,7 @@ namespace sportify.PL.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> BrowseLeagues()
+        public async Task<IActionResult> BrowseLeagues(string sortBy = "date", bool ascending = true)
         {
             var leagues = await _leagueService.GetAllAsync();
             var organizerIds = leagues.Select(l => l.OrganizerID).Distinct().ToList();
@@ -45,6 +46,16 @@ namespace sportify.PL.Controllers
                 League = l,
                 OrganizerName = organizerDictionary.TryGetValue(l.OrganizerID, out var name) ? name : "Unknown"
             }).ToList();
+
+            viewModel = sortBy.ToLower() switch
+            {
+                "name" => LeagueViewModelSorter.SortLeaguesByName(viewModel, ascending),
+                "teams" => LeagueViewModelSorter.SortLeaguesByTeamCount(viewModel, ascending),
+                _ => LeagueViewModelSorter.SortLeaguesByDate(viewModel, ascending)
+            };
+
+            ViewBag.SortBy = sortBy;
+            ViewBag.Ascending = ascending;
 
             return View(viewModel);
         }
