@@ -14,9 +14,6 @@
             </div>
             <div class="card-body">
                 <div>
-                    <strong>Sport Type:</strong> @Model.League.SportType
-                </div>
-                <div>
                     <strong>Start Date:</strong> @Model.League.StartDate.ToString("yyyy-MM-dd")
                 </div>
                 <div>
@@ -50,8 +47,12 @@
                         <thead>
                             <tr>
                                 <th>Team Name</th>
+                                <th>MP</th>
                                 <th>Wins</th>
                                 <th>Losses</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
                                 <th>Points</th>
                             </tr>
                         </thead>
@@ -66,8 +67,12 @@
                                         }
                                         @team.Name
                                     </td>
+                                    <td>@team.TotalMatchesPlayed</td>
                                     <td>@team.Wins</td>
                                     <td>@team.Losses</td>
+                                    <td>@team.GoalsScored</td>
+                                    <td>@team.GoalsConceded</td>
+                                    <td>@(team.GoalsScored-team.GoalsConceded)</td>
                                     <td>@team.Points</td>
                                 </tr>
                             }
