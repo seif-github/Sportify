@@ -14,7 +14,6 @@ namespace sportify.BLL.DTOs
         [Display(Name = "League Name")]
         public string Name { get; set; } = null!;
         [Display(Name = "Sport Type")]
-        public string SportType { get; set; } = null!;
         public string OrganizerID { get; set; } = null!;
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }

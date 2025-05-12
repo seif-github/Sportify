@@ -11,6 +11,8 @@ namespace sportify.DAL.Entities
         public int Wins { get; set; }
         public int Losses { get; set; }
         public int Draws { get; set; }
+        public int GoalsScored { get; set; }
+        public int GoalsConceded { get; set; }
         public int TotalMatchesPlayed { get; set; }
         public int Points { get; set; }
         [ForeignKey("League")]

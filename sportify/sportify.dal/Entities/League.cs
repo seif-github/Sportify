@@ -7,7 +7,6 @@ namespace sportify.DAL.Entities
     {
         public int LeagueID { get; set; }  
         public string Name { get; set; } = null!;
-        public string SportType { get; set; } = null!;
         [ForeignKey("Organizer")]
         public string OrganizerID { get; set; } = null!; 
         public DateTime StartDate { get; set; }

@@ -16,7 +16,6 @@
         <thead>
             <tr>
                 <th>@Html.DisplayNameFor(model => model.Name)</th>
-                <th>@Html.DisplayNameFor(model => model.SportType)</th>
                 <th>@Html.DisplayNameFor(model => model.StartDate)</th>
                 <th>@Html.DisplayNameFor(model => model.NumberOfTeams)</th>
                 <th>@Html.DisplayNameFor(model => model.IsCompleted)</th>
@@ -28,7 +27,6 @@
             {
                 <tr>
                     <td>@league.Name</td>
-                    <td>@league.SportType</td>
                     <td>@league.StartDate.ToString("yyyy-MM-dd")</td>
                     <td>@league.NumberOfTeams</td>
                     <td>@(league.IsCompleted ? "Yes" : "No")</td>
