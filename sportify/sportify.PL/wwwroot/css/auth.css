@@ -1,36 +1,4 @@
-﻿:root {
-    --primary-green: #22c55e;
-    --primary-dark: #1f2937;
-    --primary-light: #f5f7fa;
-    --gradient: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-    --text-primary: #1f2937;
-    --text-secondary: #4b5563;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --bg-tertiary: #e5e7eb;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    line-height: 1.5;
-    font-size: 16px;
-}
-
-[data-theme="dark"] {
-    --primary-green: #10b981;
-    --primary-dark: #f3f4f6;
-    --primary-light: #1f2937;
-    --text-primary: #f3f4f6;
-    --text-secondary: #d1d5db;
-    --bg-primary: #111827;
-    --bg-secondary: #1f2937;
-    --bg-tertiary: #374151;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.35);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
-}
-
-.my-container {
+﻿.my-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -41,7 +9,7 @@
 }
 
 .auth-container {
-    background: var(--primary-green);
+    background: var(--gradient);
     border-radius: 0.75rem;
     box-shadow: var(--shadow-lg);
     width: 100%;
@@ -116,17 +84,32 @@
 
     .input-group .error-span, .error-summary {
         width: 100%;
-        color: #dc2626;
+        color: var(--text-danger);
+
     }
+
 
 .toggle-password {
     position: absolute;
     right: 2rem;
-    bottom: 1.75rem;
+    top: 0.5rem;
+    transform: translateY(-50%);
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.25rem;
+    z-index: 2; 
+}
+
+/* Hide Edge's built-in password toggle */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+/* Adjust input padding to accommodate the toggle */
+.input-group input {
+    padding-right: 2.5rem !important;
 }
 
 .hidden {

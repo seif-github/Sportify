@@ -135,7 +135,8 @@ namespace sportify.PL.Controllers
             if (result.Succeeded)
             {
                 TempData["SuccessMessage"] = "Profile updated successfully!";
-                return RedirectToAction("Profile");
+                await _signInManager.SignOutAsync();
+                return RedirectToAction("Login", "Account");
             }
 
             foreach (var error in result.Errors)

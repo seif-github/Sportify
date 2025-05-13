@@ -1,77 +1,30 @@
-/* League Form CSS */
 :root {
-  /* General */
-  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-size: 16px;
-  --line-height: 1.5;
-
-  /* Colors */
-  --primary-green: #22c55e;
-  --primary-dark: #1f2937;
-  --primary-light: #f5f7fa;
-  --gradient: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-
-  /* Text */
-  --text-primary: #1f2937;
-  --text-secondary: #4b5563;
-
-  /* Background */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-tertiary: #e5e7eb;
-
-  /* Form */
-  --form-bg: #ffffff;
-  --input-bg: #ffffff;
-  --input-border: #e5e7eb;
-  --input-focus: #22c55e;
-  --label-color: #4b5563;
-
-  /* Buttons */
-  --btn-primary-bg: #0a2540;
-  --btn-primary-text: white;
-  --btn-hover-bg: #0f3256;
-
-  /* Steps */
-  --step-active-bg: #22c55e;
-  --step-inactive-bg: #e5e7eb;
-  --step-active-text: white;
-  --step-inactive-text: #6b7280;
-
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* Form */
+    --form-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #e5e7eb;
+    --input-focus: #22c55e;
+    --label-color: #4b5563;
+    /* Buttons */
+    --btn-primary-bg: #0a2540;
+    --btn-primary-text: white;
+    --btn-hover-bg: #0f3256;
+    /* Steps */
+    --step-active-bg: #22c55e;
+    --step-inactive-bg: #e5e7eb;
+    --step-active-text: white;
+    --step-inactive-text: #6b7280;
 }
-
 [data-theme="dark"] {
-  --primary-green: #10b981;
-  --primary-dark: #f3f4f6;
-  --primary-light: #1f2937;
-  --gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
-
-  --text-primary: #f3f4f6;
-  --text-secondary: #d1d5db;
-
-  --bg-primary: #111827;
-  --bg-secondary: #1f2937;
-  --bg-tertiary: #374151;
-
-  --form-bg: #1f2937;
-  --input-bg: #374151;
-  --input-border: #4b5563;
-  --input-focus: #10b981;
-  --label-color: #d1d5db;
-
-  --btn-primary-bg: #10b981;
-  --btn-hover-bg: #059669;
-
-  --step-inactive-bg: #4b5563;
-  --step-inactive-text: #d1d5db;
-
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+    --form-bg: #1f2937;
+    --input-bg: #374151;
+    --input-border: #4b5563;
+    --input-focus: #10b981;
+    --label-color: #d1d5db;
+    --btn-primary-bg: #10b981;
+    --btn-hover-bg: #059669;
+    --step-inactive-bg: #4b5563;
+    --step-inactive-text: #d1d5db;
 }
 
 .container {
@@ -87,7 +40,7 @@
 
 /* League Form Container */
 .league-form-container {
-  background-color: var(--form-bg);
+  background-color: var(--primary-bg);
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   margin: 3rem auto;

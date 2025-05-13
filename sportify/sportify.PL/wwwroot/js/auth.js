@@ -1,22 +1,30 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
-    // Password visibility toggle
-    const toggleBtns = document.querySelectorAll('.toggle-password');
+    // Password visibility toggle with Edge support
+    const togglePasswordVisibility = (input, eyeIcon, eyeOffIcon) => {
+        if (input.type === 'password') {
+            input.type = 'text';
+            eyeIcon.classList.add('hidden');
+            eyeOffIcon.classList.remove('hidden');
+        } else {
+            input.type = 'password';
+            eyeIcon.classList.remove('hidden');
+            eyeOffIcon.classList.add('hidden');
+        }
+    };
 
-    toggleBtns.forEach(btn => {
+    document.querySelectorAll('.toggle-password').forEach(btn => {
+        const input = btn.closest('.input-group').querySelector('input');
+        const eyeIcon = btn.querySelector('.eye-icon');
+        const eyeOffIcon = btn.querySelector('.eye-off-icon');
+
+        // Only add our toggle if Edge's native toggle is hidden
+        if (window.navigator.userAgent.includes('Edge') ||
+            window.navigator.userAgent.includes('Edg')) {
+            input.style.paddingRight = '2.5rem';
+        }
+
         btn.addEventListener('click', () => {
-            const input = btn.parentElement.querySelector('input');
-            const eyeIcon = btn.querySelector('.eye-icon');
-            const eyeOffIcon = btn.querySelector('.eye-off-icon');
-
-            if (input.type === 'password') {
-                input.type = 'text';
-                eyeIcon.classList.add('hidden');
-                eyeOffIcon.classList.remove('hidden');
-            } else {
-                input.type = 'password';
-                eyeIcon.classList.remove('hidden');
-                eyeOffIcon.classList.add('hidden');
-            }
+            togglePasswordVisibility(input, eyeIcon, eyeOffIcon);
         });
     });
 });

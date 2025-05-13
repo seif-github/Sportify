@@ -1,0 +1,88 @@
+﻿/* Main content */
+h1 {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.card {
+    border-radius: 8px;
+    border: 1px solid var(--primary-light);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    background-color: var(--bg-secondary);
+}
+
+    .card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }
+
+.card-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+    border-radius: 4px;
+}
+
+    .badge.bg-primary {
+        background-color: #e0f2fe !important;
+        color: #0369a1;
+    }
+
+    .badge.bg-success {
+        background-color: #dcfce7 !important;
+        color: #166534;
+    }
+
+    .badge.bg-secondary {
+        background-color: #f1f5f9 !important;
+        color: #475569;
+    }
+
+.league-info {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+    .league-info i {
+        width: 20px;
+        text-align: center;
+    }
+
+.btn-outline-primary {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+    .btn-outline-primary:hover {
+        background-color: var(--primary-green);
+        border-color: var(--primary-green);
+        color: white;
+    }
+
+.btn-outline-secondary {
+    color: var(--text-secondary);
+    border-color: #d1d5db;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+        border-color: #d1d5db;
+    }
+
+.mt-5 {
+    margin-top: 6rem !important;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

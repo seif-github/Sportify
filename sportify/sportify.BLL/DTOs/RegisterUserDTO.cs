@@ -28,6 +28,6 @@ namespace sportify.BLL.DTOs
         [UniqueEmail]
         public string Email { get; set; } = null!;
         [Display(Name = "Image")]
-        public string? ImageUrl { get; set; } = "/assets/default-user-image.png";
+        public string? ImageUrl { get; set; }
     }
 }
