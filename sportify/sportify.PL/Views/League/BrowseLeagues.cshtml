@@ -4,156 +4,128 @@
     ViewData["Title"] = "Browse Leagues";
 }
 
-<style>
-    .league-card {
-        transition: transform 0.2s;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        border-radius: 8px;
-        overflow: hidden;
-    }
+<main class="container my-4 mt-5">
+    <section class="text-center mb-4">
+        <h1 class="mb-2">Explore Leagues</h1>
+    </section>
 
-        .league-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
+    <!-- Search and Filter Section -->
+    <div class="row mb-4">
+        <!-- Search Bar -->
+        <div class="col-md-8">
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search by league name..." aria-label="Search by league name">
+                <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+                    <i class="fas fa-times"></i> Clear
+                </button>
+            </div>
+        </div>
 
-    .league-header {
-        background-color: #f8f9fa;
-        padding: 15px;
-        border-bottom: 1px solid #eee;
-    }
-
-    .league-title {
-        color: #2c3e50;
-        font-weight: 600;
-        margin-bottom: 5px;
-    }
-
-    .organizer-badge {
-        font-size: 0.9rem;
-        color: #6c757d;
-        margin-bottom: 10px;
-    }
-
-    .league-body {
-        padding: 15px;
-    }
-
-    .league-detail {
-        margin-bottom: 8px;
-    }
-
-    .detail-label {
-        font-weight: 600;
-        color: #495057;
-    }
-
-    .detail-value {
-        color: #6c757d;
-    }
-
-    .no-leagues {
-        text-align: center;
-        padding: 40px;
-        color: #6c757d;
-    }
-
-    .sort-controls {
-        background-color: #f8f9fa;
-        padding: 15px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-    }
-
-    .sort-dropdown {
-        max-width: 200px;
-    }
-</style>
-
-<div class="container">
-    <h1 class="mb-4">Browse Leagues</h1>
-
-    <div class="d-flex justify-content-end mb-4">
-        <div class="dropdown sort-dropdown">
-            <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                @(ViewBag.SortBy switch
-                {
-                    "name" => "Sort by Name",
-                    "teams" => "Sort by Teams",
-                    _ => "Sort by Date"
-                })
-            </button>
-            <ul class="dropdown-menu w-100" aria-labelledby="sortDropdown">
-                <li><a class="dropdown-item" asp-action="BrowseLeagues" asp-route-sortBy="date" asp-route-ascending="@ViewBag.Ascending">Sort by Date</a></li>
-                <li><a class="dropdown-item" asp-action="BrowseLeagues" asp-route-sortBy="name" asp-route-ascending="@ViewBag.Ascending">Sort by Name</a></li>
-                <li><a class="dropdown-item" asp-action="BrowseLeagues" asp-route-sortBy="teams" asp-route-ascending="@ViewBag.Ascending">Sort by Teams</a></li>
-            </ul>
-
-            <div class="mt-2">
-                <div class="btn-group w-100">
-                    <a class="btn @(ViewBag.Ascending ? "btn-primary" : "btn-outline-secondary")"
-                       asp-action="BrowseLeagues"
-                       asp-route-sortBy="@ViewBag.SortBy"
-                       asp-route-ascending="true">
-                        <i class="fas fa-sort-amount-up"></i> Asc
-                    </a>
-                    <a class="btn @(!ViewBag.Ascending ? "btn-primary" : "btn-outline-secondary")"
-                       asp-action="BrowseLeagues"
-                       asp-route-sortBy="@ViewBag.SortBy"
-                       asp-route-ascending="false">
-                        <i class="fas fa-sort-amount-down"></i> Desc
-                    </a>
-                </div>
+        <!-- Status Filter Dropdown -->
+        <div class="col-md-4">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="statusFilterButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    All Statuses
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="statusFilterButton">
+                    <li><a class="dropdown-item status-filter" href="#" data-status="all">All Statuses</a></li>
+                    <li><a class="dropdown-item status-filter" href="#" data-status="upcoming">Upcoming</a></li>
+                    <li><a class="dropdown-item status-filter" href="#" data-status="ongoing">Ongoing</a></li>
+                    <li><a class="dropdown-item status-filter" href="#" data-status="finished">Finished</a></li>
+                </ul>
             </div>
         </div>
     </div>
 
-    @if (Model.Any())
-    {
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-6">
-                    <div class="league-card">
-                        <div class="league-header">
-                            <h3 class="league-title">@item.League.Name</h3>
-                            <div class="organizer-badge">
-                                <i class="fas fa-user"></i> Organized by: @item.OrganizerName
-                            </div>
+    <!-- Sorting Controls -->
+    <div class="row mb-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    @(ViewBag.SortBy switch
+                    {
+                        "name" => "Sort by Name",
+                        "teams" => "Sort by Teams",
+                        _ => "Sort by Date"
+                    })
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                    <li><a class="dropdown-item" asp-action="BrowseLeagues" asp-route-sortBy="date" asp-route-ascending="@ViewBag.Ascending">Sort by Date</a></li>
+                    <li><a class="dropdown-item" asp-action="BrowseLeagues" asp-route-sortBy="name" asp-route-ascending="@ViewBag.Ascending">Sort by Name</a></li>
+                    <li><a class="dropdown-item" asp-action="BrowseLeagues" asp-route-sortBy="teams" asp-route-ascending="@ViewBag.Ascending">Sort by Teams</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="btn-group w-100">
+                <a class="btn @(ViewBag.Ascending ? "btn-primary" : "btn-outline-secondary")"
+                   asp-action="BrowseLeagues"
+                   asp-route-sortBy="@ViewBag.SortBy"
+                   asp-route-ascending="true">
+                    <i class="fas fa-sort-amount-up"></i> Asc
+                </a>
+                <a class="btn @(!ViewBag.Ascending ? "btn-primary" : "btn-outline-secondary")"
+                   asp-action="BrowseLeagues"
+                   asp-route-sortBy="@ViewBag.SortBy"
+                   asp-route-ascending="false">
+                    <i class="fas fa-sort-amount-down"></i> Desc
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leagues Container -->
+    <div class="row" id="leaguesContainer">
+        @foreach (var item in Model)
+        {
+            var endDateDays = (item.League.NumberOfTeams - 1) * item.League.DurationBetweenMatches;
+            var EndDate = item.League.StartDate.AddDays(endDateDays);
+            var currentDate = DateTime.Now;
+            var status = currentDate < item.League.StartDate ? "upcoming" :
+            currentDate <= EndDate ? "ongoing" : "finished";
+
+            <div class="col-md-6 col-lg-4 mb-4 league-card" data-status="@status">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <h5 class="card-title league-name">@item.League.Name</h5>
+                            @{
+                                var statusBadge = status == "upcoming" ? "bg-primary" :
+                                status == "ongoing" ? "bg-success" : "bg-secondary";
+                                var statusText = status == "upcoming" ? "Upcoming" :
+                                status == "ongoing" ? "Ongoing" : "Finished";
+                            }
+                            <span class="badge @statusBadge">@statusText</span>
                         </div>
-                        <div class="league-body">
-                            <div class="league-detail">
-                                <span class="detail-label">Sport:</span>
-                            </div>
-                            <div class="league-detail">
-                                <span class="detail-label">Teams:</span>
-                                <span class="detail-value">@item.League.NumberOfTeams</span>
-                            </div>
-                            <div class="league-detail">
-                                <span class="detail-label">Start Date:</span>
-                                <span class="detail-value">@item.League.StartDate.ToString("MMMM d, yyyy")</span>
-                            </div>
+                        <div class="league-info">
+                            <p class="mb-2"><i class="fas fa-users me-2"></i> @item.League.NumberOfTeams Teams</p>
+                            <p class="mb-2"><i class="fas fa-user me-2"></i> Created by: @item.OrganizerName</p>
+                            @if (status == "upcoming")
+                            {
+                                <p class="mb-3"><i class="far fa-calendar me-2"></i> Starts @item.League.StartDate.ToString("MMM d, yyyy")</p>
+                            }
+                            else if (status == "ongoing")
+                            {
+                                <p class="mb-3"><i class="far fa-calendar me-2"></i> Started @item.League.StartDate.ToString("MMM d, yyyy")</p>
+                            }
+                            else
+                            {
+                                <p class="mb-3"><i class="far fa-calendar-check me-2"></i> Ended @EndDate.ToString("MMM d, yyyy")</p>
+                            }
                         </div>
-                        <div class="text-center p-3 bg-light">
-                            <a asp-action="Details" asp-route-id="@item.League.LeagueID" class="btn btn-primary">
-                                <i class="fas fa-info-circle"></i> View Details
-                            </a>
-                        </div>
+                        <a asp-action="Details" asp-route-id="@item.League.LeagueID" class="btn btn-outline-primary w-100">View Details</a>
                     </div>
                 </div>
-            }
-        </div>
-    }
-    else
-    {
-        <div class="no-leagues">
-            <i class="fas fa-trophy fa-3x mb-3"></i>
-            <h3>No leagues available yet</h3>
-            <p>Check back later or create your own league!</p>
-        </div>
-    }
-</div>
+            </div>
+        }
+    </div>
+
+    <div id="noResults" class="text-center py-5" style="display: none;">
+        <i class="fas fa-trophy fa-3x mb-3" style="color: var(--text-secondary);"></i>
+        <h3 class="mb-2">No leagues found</h3>
+        <p class="text-muted">Try adjusting your search or filters</p>
+    </div>
+</main>
 
 @section Scripts {
     <!-- Font Awesome for icons (optional) -->

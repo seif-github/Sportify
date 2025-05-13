@@ -100,8 +100,12 @@ namespace sportify.BLL.Services
             if (user.UserName != model.UserName)
             {
                 var setUsernameResult = await _userManager.SetUserNameAsync(user, model.UserName);
+                
                 if (!setUsernameResult.Succeeded)
+                {
+                    await _signInManager.RefreshSignInAsync(user);
                     return setUsernameResult;
+                }
             }
 
             // Validate email format
