@@ -15,10 +15,10 @@
         <strong>Number of Teams:</strong> @Model.NumberOfTeams
     </div>
 
-    <form method="post">
+    <form asp-action="DeleteConfirmed" method="post">
         @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.LeagueID" />
         <button type="submit" class="btn btn-danger">Delete</button>
         <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
-s

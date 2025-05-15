@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
@@ -38,9 +39,10 @@ namespace sportify.BLL.Services
                     _mapper.Map<List<TeamDTO>>(teams);
         }
 
-        public Task<TeamDTO?> GetTeamByIdAsync(int id)
+        public async Task<TeamDTO?> GetTeamByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var data = await _genericRepo.GetByIdAsync(id);
+            return data == null ? null : _mapper.Map<TeamDTO>(data);
         }
 
         public async Task UpdateAsync(TeamDTO team)
