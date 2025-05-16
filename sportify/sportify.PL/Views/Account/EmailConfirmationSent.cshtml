@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Email Confirmation Sent";
+}
+
+<div class="my-container">
+    <h2>Email Confirmation Sent</h2>
+    @if (TempData["Email"] != null)
+    {
+        <p>Please check your email (<strong>@TempData["Email"]</strong>) to confirm your account.</p>
+    }
+    else
+    {
+        <p>Please check your email to confirm your account.</p>
+    }
+    <p>Didn't receive the email? <a asp-action="ResendConfirmation">Resend confirmation</a>.</p>
+    <strong>If you don't see our email in your inbox, please check your spam or junk folder.</strong>
+</div>

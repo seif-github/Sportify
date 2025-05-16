@@ -58,24 +58,39 @@ namespace sportify.BLL.Services
         #endregion
         public async Task<string> LoginUserAsync(LoginUserDTO model)
         {
-            ApplicationUser user = await _userManager.FindByNameAsync(model.UserName);
-            if (user != null)
+            // Find user by username (since your DTO only has UserName)
+            var user = await _userManager.FindByNameAsync(model.UserName);
+
+            // User not found case
+            if (user == null)
             {
-                bool checkPassword = await _userManager.CheckPasswordAsync(user, model.Password);
-                if (checkPassword)
-                {
-                    await _signInManager.SignInAsync(user, model.RememberMe);
-                    return "0"; // both are right
-                }
-                else
-                {
-                    return "1"; // password is wrong
-                }
+                return "-1"; // User not found
             }
-            else
+
+            // Email confirmation check
+            if (!await _userManager.IsEmailConfirmedAsync(user))
             {
-                return "-1"; //username is wrong
+                return "3"; // Email not confirmed
             }
+
+            var result = await _signInManager.PasswordSignInAsync(
+            user.UserName,
+            model.Password,
+            model.RememberMe,
+            lockoutOnFailure: false);
+
+            return result.Succeeded ? "0" : "1"; // 0=Success, 1=Wrong password
+        }
+
+        public async Task<IdentityResult> ConfirmEmailAsync(string userId, string token)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "User not found." });
+            }
+
+            return await _userManager.ConfirmEmailAsync(user, token);
         }
 
         public async Task LogoutUserAsync()

@@ -12,6 +12,7 @@ namespace sportify.BLL.Services.Contracts
     {
         Task<IdentityResult> RegisterUserAsync(RegisterUserDTO model);
         Task<string> LoginUserAsync(LoginUserDTO model);
+        Task<IdentityResult> ConfirmEmailAsync(string userId, string token);
         Task LogoutUserAsync();
         Task<ProfileDTO> GetUserProfileAsync(string userId);
         Task<IdentityResult> UpdateUserProfileAsync(ProfileDTO model);
