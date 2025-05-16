@@ -12,7 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<SportifyContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("cs"))); 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("cs")),
+    ServiceLifetime.Scoped); 
 
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -39,6 +40,8 @@ builder.Services.AddScoped<ILeagueService, LeagueService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ILeagueTeamCountUpdateService, LeagueTeamCountUpdateService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
 
 builder.Services.Configure<FormOptions>(options =>
 {

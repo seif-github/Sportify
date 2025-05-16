@@ -16,21 +16,24 @@ namespace sportify.PL.Controllers
         private readonly ILeagueService _leagueService;
         private readonly ITeamService _teamService;
         private readonly IUserService _userService;
+        private readonly IDashboardService _dashboardService;
 
         public LeagueController(ILeagueService leagueService, ITeamService teamService,
-                IUserService userService)
+                IUserService userService, IDashboardService dashboardService)
         {
             _leagueService = leagueService;
             _teamService = teamService;
             _userService = userService;
+            _dashboardService = dashboardService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var organizerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var leagues = await _leagueService.GetOrganizerLeaguesById(organizerId);
-            return View(leagues);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null) return Forbid();
+            var dashboardData = await _dashboardService.GetDashboardDataAsync(userId);
+            return View(dashboardData);
         }
 
         [AllowAnonymous]

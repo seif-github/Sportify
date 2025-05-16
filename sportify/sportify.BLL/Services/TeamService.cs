@@ -52,6 +52,23 @@ namespace sportify.BLL.Services
             await _genericRepo.SaveChangesAsync();
         }
 
+        public async Task UpdateTeamNameAsync(int teamId, string newName)
+        {
+            // 1. Get existing team
+            var team = await _genericRepo.GetByIdAsync(teamId);
+            if (team == null)
+            {
+                throw new KeyNotFoundException("Team not found");
+            }
+
+            // 2. Only update the name
+            team.Name = newName;
+
+            // 3. Save changes
+            await _genericRepo.UpdateAsync(team);
+            await _genericRepo.SaveChangesAsync();
+        }
+
         public async Task AddTeamsAsync(List<TeamDTO> teams)
         {
             var entity = _mapper.Map<List<Team>>(teams);

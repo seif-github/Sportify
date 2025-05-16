@@ -142,6 +142,43 @@ namespace sportify.PL.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditTeam([FromBody] TeamDTO team)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // Verify that the team exists and the user has permission to edit it
+            var existingTeam = await _teamService.GetTeamByIdAsync(team.TeamID);
+            if (existingTeam == null)
+            {
+                return NotFound();
+            }
+
+            // Check if the user is the organizer of the league this team belongs to
+            var league = await _leagueService.GetByIdAsync(existingTeam.LeagueID);
+            if (league == null)
+            {
+                return NotFound();
+            }
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (currentUserId != league.OrganizerID)
+            {
+                return Forbid();
+            }
+
+            // Only update the name, preserving other properties
+            existingTeam.Name = team.Name;
+
+            await _teamService.UpdateAsync(existingTeam);
+
+            return Ok(new { success = true });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteTeam(int teamId, int leagueId)
         {
             await _teamService.DeleteAsync(teamId);
