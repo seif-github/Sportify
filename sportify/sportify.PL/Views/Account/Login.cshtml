@@ -44,7 +44,7 @@
                 <label class="remember-me">
                     <input asp-for="RememberMe" tabindex="3"> @Html.DisplayNameFor(model => model.RememberMe)
                 </label>
-                <a href="#" class="forgot-password">Forgot password?</a>
+                <a asp-action="ForgotPassword" class="forgot-password">Forgot password?</a>
             </div>
             <button type="submit" value="Login" class="submit-btn" tabindex="4">Login</button>
         </form>

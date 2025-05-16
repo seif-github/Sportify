@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Email Confirmation Required";
+}
+
+<div class="my-container">
+    <h2>Email Confirmation Required</h2>
+
+    @if (TempData["Email"] != null)
+    {
+        <p>Please check your email (<strong>@TempData["Email"]</strong>) to confirm your account.</p>
+    }
+    else
+    {
+        <p>Please check your email to confirm your account.</p>
+    }
+    <strong>If you don't see our email in your inbox, please check your spam or junk folder.</strong>
+    <br />
+    <form asp-action="ResendConfirmation" method="post">
+        @if (ViewBag.ResendUsername != null)
+        {
+            <input type="hidden" name="username" value="@ViewBag.ResendUsername" />
+        }
+        <button type="submit" class="btn btn-primary">Resend Confirmation Email</button>
+    </form>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success mt-3">@ViewBag.Message</div>
+    }
+</div>
