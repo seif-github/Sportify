@@ -38,7 +38,9 @@ namespace sportify.DAL.Repositories
 
         public async Task UpdateAsync(T entity)
         {
-            _dbSet.Update(entity);
+            _context.ChangeTracker.Clear();
+            _context.Entry(entity).State = EntityState.Modified;
+            //_dbSet.Update(entity);
         }
 
         public async Task DeleteAsync(int id)

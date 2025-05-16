@@ -19,6 +19,12 @@ namespace sportify.DAL.Repositories
             _context = context;
             _dbSet = _context.Set<ApplicationUser>();
         }
+
+        public async Task<ApplicationUser> GetUserById(string userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
         public async Task<List<ApplicationUser>> GetUsersByIds(List<string> userIds)
         {
             return await _dbSet.Where(u => userIds.Contains(u.Id)).ToListAsync();

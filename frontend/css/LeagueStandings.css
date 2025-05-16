@@ -1,0 +1,74 @@
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.trophy-icon {
+    font-size: 2rem;
+    color: #ffc107;
+}
+
+.season-badge {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.search-container {
+    max-width: 500px;
+}
+
+.search-icon {
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+
+.rank-indicator {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.team-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Table Styles */
+.table th {
+    font-weight: 600;
+    border-top: none;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .trophy-icon {
+        font-size: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}

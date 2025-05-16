@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Standings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/LeagueStandings.html">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <!-- League Header -->
+        <div class="header-container mb-4 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between animate-fade">
+            <div class="d-flex align-items-center mb-3 mb-sm-0">
+                <div class="trophy-icon me-3">🏆</div>
+                <h1 class="h2 mb-0">Premier League</h1>
+            </div>
+            <div class="season-badge px-4 py-2 bg-white rounded-pill">2022/23 Season</div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-4 animate-fade">
+            <div class="search-container position-relative">
+                <input type="text" 
+                       id="teamSearch" 
+                       class="form-control form-control-lg ps-5" 
+                       placeholder="Search teams...">
+                <span class="search-icon position-absolute">🔍</span>
+            </div>
+        </div>
+
+        <!-- Standings Table -->
+        <div class="table-responsive bg-white rounded-3 shadow-sm animate-fade">
+            <table class="table table-hover mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th>Team</th>
+                        <th class="text-center d-none d-md-table-cell" title="Matches Played">MP</th>
+                        <th class="text-center d-none d-md-table-cell">W</th>
+                        <th class="text-center d-none d-md-table-cell">D</th>
+                        <th class="text-center d-none d-md-table-cell">L</th>
+                        <th class="text-center d-none d-lg-table-cell" title="Goals For">GF</th>
+                        <th class="text-center d-none d-lg-table-cell" title="Goals Against">GA</th>
+                        <th class="text-center d-none d-sm-table-cell" title="Goal Difference">GD</th>
+                        <th class="text-center">Pts</th>
+                    </tr>
+                </thead>
+                <tbody id="standingsTableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Table Note -->
+        <div class="mt-3 text-muted small">
+            <p class="mb-0">
+                <strong>Note:</strong> Table sorted by Points (descending), followed by Goal Difference, then Goals For.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/standings.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

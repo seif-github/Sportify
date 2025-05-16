@@ -8,14 +8,22 @@ namespace sportify.BLL.DTOs
 {
     public class MatchDTO
     {
+        //public int MatchID { get; set; }
+        //public int LeagueId { get; set; }
+        //public int FirstTeamId { get; set; }
+        //public int SecondTeamId { get; set; }
+        //public DateTime Date { get; set; }
+        //public int FirstTeamGoals { get; set; }
+        //public int SecondTeamGoals { get; set; }
+        //public int? WinnerId { get; set; }
+        //public bool IsCompleted { get; set; }
+
         public int MatchID { get; set; }
-        public int LeagueId { get; set; }
-        public int FirstTeamId { get; set; }
-        public int SecondTeamId { get; set; }
-        public DateTime Date { get; set; }
-        public int FirstTeamGoals { get; set; }
-        public int SecondTeamGoals { get; set; }
-        public int? WinnerId { get; set; }
-        public bool IsCompleted { get; set; }
+        public DateTime MatchDate { get; set; }
+        public string HomeTeamName { get; set; }
+        public string AwayTeamName { get; set; }
+        public int? HomeTeamScore { get; set; }
+        public int? AwayTeamScore { get; set; }
+        public string LeagueName { get; set; }
     }
 }

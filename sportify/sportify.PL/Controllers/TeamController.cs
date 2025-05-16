@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services;
@@ -15,14 +16,16 @@ namespace sportify.PL.Controllers
     {
         private readonly ITeamService _teamService;
         private readonly ILeagueService _leagueService;
+        private readonly IUserService _userService;
         private readonly ILeagueTeamCountUpdateService _leagueTeamCountService;
 
         public TeamController(ITeamService teamService, ILeagueService leagueService,
-            ILeagueTeamCountUpdateService leagueTeamCountService)
+            ILeagueTeamCountUpdateService leagueTeamCountService, IUserService userService)
         {
-            this._teamService = teamService;
-            this._leagueService = leagueService;
-            this._leagueTeamCountService = leagueTeamCountService;
+            _teamService = teamService;
+            _leagueService = leagueService;
+            _leagueTeamCountService = leagueTeamCountService;
+            _userService = userService;
         }
 
         public IActionResult Index()
@@ -87,15 +90,29 @@ namespace sportify.PL.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditTeams(int leagueId)
+        [AllowAnonymous]
+        public async Task<IActionResult> EditTeams(int id) //leagueID
         {
-            var teams = await _teamService.GetAllTeamsInLeagueAsync(leagueId);
-            var league = await _leagueService.GetByIdAsync(leagueId);
+            var league = await _leagueService.GetByIdAsync(id); if(league == null) return NotFound();
+            var teams = await _teamService.GetAllTeamsInLeagueAsync(id);
+            var organizerName = "Unknown Organizer";
+            var isOrganizer = false;
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (!string.IsNullOrEmpty(league.OrganizerID))
+            {
+                var organizer = await _userService.GetUserById(league.OrganizerID);
+                organizerName = organizer?.UserName ?? "Unknown Organizer";
+                isOrganizer = currentUserId != null && currentUserId == league.OrganizerID;
+            }
+
             var viewModel = new LeagueDetailsViewModel
             {
                 League = league,
                 Teams = teams,
-                NewTeamName = ""
+                NewTeamName = "",
+                OrganizerName = organizerName,
+                IsOrganizer = isOrganizer
             };
             return View(viewModel);
         }
@@ -125,6 +142,43 @@ namespace sportify.PL.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditTeam([FromBody] TeamDTO team)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // Verify that the team exists and the user has permission to edit it
+            var existingTeam = await _teamService.GetTeamByIdAsync(team.TeamID);
+            if (existingTeam == null)
+            {
+                return NotFound();
+            }
+
+            // Check if the user is the organizer of the league this team belongs to
+            var league = await _leagueService.GetByIdAsync(existingTeam.LeagueID);
+            if (league == null)
+            {
+                return NotFound();
+            }
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (currentUserId != league.OrganizerID)
+            {
+                return Forbid();
+            }
+
+            // Only update the name, preserving other properties
+            existingTeam.Name = team.Name;
+
+            await _teamService.UpdateAsync(existingTeam);
+
+            return Ok(new { success = true });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteTeam(int teamId, int leagueId)
         {
             await _teamService.DeleteAsync(teamId);
@@ -135,7 +189,7 @@ namespace sportify.PL.Controllers
                 TeamCount = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).Count()
             });
 
-            return RedirectToAction("EditTeams", new { leagueId = leagueId });
+            return RedirectToAction("EditTeams", new { id = leagueId });
         }
 
         [HttpPost]
@@ -164,7 +218,7 @@ namespace sportify.PL.Controllers
                 LeagueID = leagueId,
                 TeamCount = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).Count()
             });
-            return RedirectToAction("EditTeams", new { leagueId = leagueId });
+            return RedirectToAction("EditTeams", new { id = leagueId });
         }
     }
 }

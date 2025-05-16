@@ -4,50 +4,145 @@
     ViewData["Title"] = "Edit League";
 }
 
-<h1>Edit League</h1>
+<!-- Main Content -->
+<div class="container-fluid main-content">
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="LeagueID" />
-    <input type="hidden" asp-for="OrganizerID" />
-
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Edit League</h1>
     </div>
 
-    <div asp-validation-summary="All" class="error-summary"></div>
+    <!-- League Form -->
+    <div class="content-section">
+        <div class="card">
+            <div class="card-body">
+                <form asp-action="Edit" method="post">
+                    <input type="hidden" asp-for="LeagueID" />
+                    <input type="hidden" asp-for="OrganizerID" />
+                    <input type="hidden" asp-for="NumberOfTeams" />
 
-    <div class="form-group">
-        <label asp-for="StartDate"></label>
-        <input asp-for="StartDate" type="date" class="form-control" />
-        <span asp-validation-for="StartDate" class="text-danger"></span>
+                    <!-- Validation Summary -->
+                    <div asp-validation-summary="All" class="error-summary mb-3"></div>
+                    <h5 class="section-title">Basic Details</h5>
+
+                    <!-- League Name -->
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <h5 class="section-title mt-4">Schedule</h5>
+
+                    <!-- Start Date -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="StartDate" class="form-label"></label>
+                            <input asp-for="StartDate" type="date" class="form-control" />
+                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                        </div>
+
+                        <!-- Duration Between Matches -->
+                        <div class="col-md-6">
+                            <label asp-for="DurationBetweenMatches" class="form-label"></label>
+                            <input asp-for="DurationBetweenMatches" class="form-control" />
+                            <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <!-- Is Completed -->
+                    @* <div class="mb-3 form-check"> *@
+                    @*     <input asp-for="IsCompleted" class="form-check-input" /> *@
+                    @*     <label asp-for="IsCompleted" class="form-check-label"></label> *@
+                    @*     <span asp-validation-for="IsCompleted" class="text-danger"></span> *@
+                    @* </div> *@
+
+                    <h5 class="section-title mt-4">League Logo</h5>
+
+                    <!-- Image URL -->
+                    <div class="mb-3">
+                        <label asp-for="ImageUrl" class="form-label"></label>
+                        <input asp-for="ImageUrl" class="form-control" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+
+                    <!-- League Logo Upload (kept from original but not in scaffolding) -->
+                    <div class="league-logo-upload mb-3">
+                        <div class="upload-zone">
+                            <i class="ph-bold ph-cloud-arrow-up"></i>
+                            <p>Drag and drop your League logo here or click to upload</p>
+                            <input type="file" id="league-logo" class="d-none">
+                        </div>
+                    </div>
+
+
+                    <!-- Form Buttons -->
+                    <div class="actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <button type="button" class="btn btn-danger" aria-label="Delete account" data-delete-account>
+                            <i class="ph ph-trash"></i> Delete
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label asp-for="DurationBetweenMatches"></label>
-        <input asp-for="DurationBetweenMatches" class="form-control" />
-        <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span>
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Confirm League Deletion</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <i class="ph ph-warning-circle modal-icon"></i>
+                <p>Are you sure you want to permanently delete your League? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelDelete" class="btn btn-secondary">Cancel</button>
+                <form action="@Url.Action("DeleteConfirmed")" method="post" style="display: inline;">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="id" value="@Model.LeagueID" />
+                    <button type="submit" class="btn btn-danger">Delete League</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group form-check">
-        <input asp-for="IsCompleted" class="form-check-input" />
-        <label asp-for="IsCompleted" class="form-check-label"></label>
-        <span asp-validation-for="IsCompleted" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="ImageUrl"></label>
-        <input asp-for="ImageUrl" class="form-control" />
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
-</form>
+</div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        // Delete league modal
+        const deleteBtn = document.querySelector('[data-delete-account]');
+        const modal = document.getElementById('deleteModal');
+        const closeBtn = document.querySelector('.modal-close');
+        const cancelBtn = document.getElementById('cancelDelete');
+
+        if (deleteBtn) {
+            deleteBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        [closeBtn, cancelBtn].forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 }

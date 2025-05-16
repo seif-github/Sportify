@@ -10,5 +10,6 @@ namespace sportify.BLL.Services.Contracts
     public interface IUserService
     {
         Task<List<UserDTO>> GetUsersByIds(List<string> userIds);
+        Task<UserDTO> GetUserById(string userId);
     }
 }
