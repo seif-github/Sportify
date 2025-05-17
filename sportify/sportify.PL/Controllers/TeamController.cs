@@ -3,6 +3,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
+using sportify.BLL.Helpers;
 using sportify.BLL.Services;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
@@ -16,13 +17,15 @@ namespace sportify.PL.Controllers
         private readonly ITeamService _teamService;
         private readonly ILeagueService _leagueService;
         private readonly ILeagueTeamCountUpdateService _leagueTeamCountService;
+        private readonly IMatchService _matchService;
 
         public TeamController(ITeamService teamService, ILeagueService leagueService,
-            ILeagueTeamCountUpdateService leagueTeamCountService)
+            IMatchService matchService, ILeagueTeamCountUpdateService leagueTeamCountService)
         {
             this._teamService = teamService;
             this._leagueService = leagueService;
             this._leagueTeamCountService = leagueTeamCountService;
+            this._matchService = matchService;
         }
 
         public IActionResult Index()
@@ -80,8 +83,11 @@ namespace sportify.PL.Controllers
                     team.Name = $"Team {index + 1}";
                 }
             }
+            var createdTeams = await _teamService.AddTeamsAndReturnAsync(teams);
+            var matches = MatchGenerator.GenerateMatches(createdLeague, createdTeams);
 
-            await _teamService.AddTeamsAsync(teams);
+            await _matchService.AddMatchesAsync(matches);
+
             TempData.Remove("LeagueData");
             return RedirectToAction("Details", "League", new { id = createdLeague.LeagueID });
         }
@@ -138,33 +144,5 @@ namespace sportify.PL.Controllers
             return RedirectToAction("EditTeams", new { leagueId = leagueId });
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddTeam(int leagueId, string teamName)
-        {
-            if (string.IsNullOrWhiteSpace(teamName))
-            {
-                TempData["Error"] = "Team name cannot be empty";
-                return RedirectToAction("EditTeams", new { leagueId });
-            }
-
-            var newTeam = new TeamDTO
-            {
-                LeagueID = leagueId,
-                Name = teamName,
-                Wins = 0,
-                Losses = 0,
-                Draws = 0,
-                Points = 0,
-                TotalMatchesPlayed = 0
-            };
-            await _teamService.AddTeamAsync(newTeam);
-            await _leagueTeamCountService.UpdateTeamCountAsync(new LeagueTeamCountUpdateDTO
-            {
-                LeagueID = leagueId,
-                TeamCount = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).Count()
-            });
-            return RedirectToAction("EditTeams", new { leagueId = leagueId });
-        }
     }
 }

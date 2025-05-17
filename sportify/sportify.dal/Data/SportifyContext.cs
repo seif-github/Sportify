@@ -40,11 +40,11 @@ public partial class SportifyContext : IdentityDbContext<ApplicationUser>
             .HasForeignKey(m => m.SecondTeamId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        modelBuilder.Entity<Match>()
-            .HasOne(m => m.Winner)
-            .WithMany()
-            .HasForeignKey(m => m.WinnerId)
-            .OnDelete(DeleteBehavior.Restrict);
+        //modelBuilder.Entity<Match>()
+        //    .HasOne(m => m.Winner)
+        //    .WithMany()
+        //    .HasForeignKey(m => m.WinnerId)
+        //    .OnDelete(DeleteBehavior.Restrict);
 
         OnModelCreatingPartial(modelBuilder);
 

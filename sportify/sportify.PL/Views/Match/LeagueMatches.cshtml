@@ -1,0 +1,124 @@
+﻿@model List<sportify.BLL.DTOs.MatchDTO>
+
+@{
+    ViewData["Title"] = "League Matches";
+}
+
+<div class="container">
+    <h2>League Matches</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <p>No matches found for this league.</p>
+    }
+    else
+    {
+        // Group matches by round (or date if rounds aren't available)
+        var groupedMatches = Model
+        .OrderBy(m => m.Date)
+        .GroupBy(m => m.Date.ToString("MMMM d, yyyy")) // Group by formatted date
+        .ToList();
+
+        @foreach (var matchGroup in groupedMatches)
+        {
+            <div class="match-round">
+                <h3 class="round-header">@matchGroup.Key</h3>
+
+                @foreach (var match in matchGroup)
+                {
+                    <div class="match-item">
+                        <div class="match-field-time">
+                            <span class="field">Field 1</span>
+                            <span class="time">@match.Date.ToString("h:mm tt")</span>
+                            @if (match.IsCompleted)
+                            {
+                                <span class="completed-badge">✔</span>
+                            }
+                        </div>
+                        <div class="match-teams">
+                            <span class="team">@match.FirstTeamName</span>
+                            <span class="vs">vs</span>
+                            <span class="team">@match.SecondTeamName</span>
+                        </div>
+                        @if (match.IsCompleted)
+                        {
+                            <div class="match-score">
+                                @match.FirstTeamGoals - @match.SecondTeamGoals
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
+
+<style>
+    .match-round {
+        margin-bottom: 2rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1rem;
+        background-color: #f9f9f9;
+    }
+
+    .round-header {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .match-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+        .match-item:last-child {
+            border-bottom: none;
+        }
+
+    .match-field-time {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .field {
+        font-weight: 500;
+        color: #555;
+    }
+
+    .time {
+        color: #666;
+    }
+
+    .completed-badge {
+        color: green;
+        font-weight: bold;
+    }
+
+    .match-teams {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .team {
+        font-weight: 500;
+    }
+
+    .vs {
+        color: #777;
+    }
+
+    .match-score {
+        width: 80px;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>

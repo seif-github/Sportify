@@ -14,6 +14,7 @@ namespace sportify.BLL.Services.Contracts
         Task<List<TeamDTO>> GetAllTeamsInLeagueAsync(int leagueId);
         Task<TeamDTO?> GetTeamByIdAsync(int id);
         Task AddTeamsAsync(List<TeamDTO> teams);
+        Task<List<TeamDTO>> AddTeamsAndReturnAsync(List<TeamDTO> model);
         Task AddTeamAsync(TeamDTO team);
         Task UpdateAsync(TeamDTO team);
         Task DeleteAsync(int id);

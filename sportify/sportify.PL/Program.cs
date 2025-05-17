@@ -7,6 +7,7 @@ using sportify.DAL.Entities;
 using sportify.BLL.Services.Contracts;
 using sportify.BLL.Services;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,11 +35,13 @@ builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUserRepository, UserRepository>(); 
+builder.Services.AddScoped<IMatchRepository, MatchRepository>(); 
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ILeagueService, LeagueService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ILeagueTeamCountUpdateService, LeagueTeamCountUpdateService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IMatchService, MatchService>();
 
 builder.Services.Configure<FormOptions>(options =>
 {
@@ -59,8 +62,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 
-app.UseAuthentication(); 
-app.UseAuthorization(); 
+app.UseAuthentication();
+app.UseAuthorization();
 
 
 app.MapControllerRoute(

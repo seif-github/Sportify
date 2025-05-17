@@ -12,6 +12,7 @@ namespace sportify.DAL.Entities
         public DateTime StartDate { get; set; }
         public int DurationBetweenMatches { get; set; }
         public int NumberOfTeams { get; set; }
+        public bool RoundRobin { get; set; }
         public bool IsCompleted { get; set; }  
         public IEnumerable<Team> Teams { get; set; } = new List<Team>();  
         public string? ImageUrl { get; set; }

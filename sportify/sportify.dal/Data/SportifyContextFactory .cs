@@ -13,7 +13,7 @@ namespace sportify.DAL.Data
         public SportifyContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<SportifyContext>();
-            var connectionString = "Data Source=.; Initial Catalog=SportifyDB; Integrated Security=True; Encrypt=False; Trust Server Certificate=True"; 
+            var connectionString = "Data Source=.; Initial Catalog=Sportify; Integrated Security=True; Encrypt=False; Trust Server Certificate=True"; 
             optionsBuilder.UseSqlServer(connectionString);
 
             return new SportifyContext(optionsBuilder.Options);

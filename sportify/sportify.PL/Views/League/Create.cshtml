@@ -56,6 +56,13 @@
                             <span asp-validation-for="NumberOfTeams" class="text-danger"></span>
                         </div>
 
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input asp-for="RoundRobin" class="form-check-input" />
+                                <label asp-for="RoundRobin" class="form-check-label">Play each team twice (home and away)</label>
+                            </div>
+                        </div>
+
                         <div class="form-actions">
                             <button type="submit" class="btn btn-primary">Continue to Team Setup</button>
                         </div>

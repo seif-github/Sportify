@@ -35,6 +35,10 @@ namespace sportify.DAL.Repositories
         {
             await _dbSet.AddAsync(entity);
         }
+        public async Task AddRangeAsync(List<T> entity)
+        {
+            await _dbSet.AddRangeAsync(entity);
+        }
 
         public async Task UpdateAsync(T entity)
         {

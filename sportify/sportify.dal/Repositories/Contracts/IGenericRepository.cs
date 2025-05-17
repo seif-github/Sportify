@@ -11,6 +11,7 @@ namespace sportify.DAL.Repositories.Contracts
         Task<IEnumerable<T>> GetAllAsync();
         Task<T?> GetByIdAsync(int id);
         Task AddAsync(T entity);
+        Task AddRangeAsync(List<T> entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
         Task SaveChangesAsync();

@@ -164,11 +164,11 @@ namespace sportify.DAL.Migrations
                     LeagueID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SportType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OrganizerID = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DurationBetweenMatches = table.Column<int>(type: "int", nullable: false),
                     NumberOfTeams = table.Column<int>(type: "int", nullable: false),
+                    RoundRobin = table.Column<bool>(type: "bit", nullable: false),
                     IsCompleted = table.Column<bool>(type: "bit", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -193,6 +193,8 @@ namespace sportify.DAL.Migrations
                     Wins = table.Column<int>(type: "int", nullable: false),
                     Losses = table.Column<int>(type: "int", nullable: false),
                     Draws = table.Column<int>(type: "int", nullable: false),
+                    GoalsScored = table.Column<int>(type: "int", nullable: false),
+                    GoalsConceded = table.Column<int>(type: "int", nullable: false),
                     TotalMatchesPlayed = table.Column<int>(type: "int", nullable: false),
                     Points = table.Column<int>(type: "int", nullable: false),
                     LeagueID = table.Column<int>(type: "int", nullable: false),
@@ -221,9 +223,8 @@ namespace sportify.DAL.Migrations
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FirstTeamGoals = table.Column<int>(type: "int", nullable: false),
                     SecondTeamGoals = table.Column<int>(type: "int", nullable: false),
-                    WinnerId = table.Column<int>(type: "int", nullable: true),
                     IsCompleted = table.Column<bool>(type: "bit", nullable: false),
-                    TeamID = table.Column<int>(type: "int", nullable: true)
+                    Result = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -243,17 +244,6 @@ namespace sportify.DAL.Migrations
                     table.ForeignKey(
                         name: "FK_Matches_Teams_SecondTeamId",
                         column: x => x.SecondTeamId,
-                        principalTable: "Teams",
-                        principalColumn: "TeamID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Matches_Teams_TeamID",
-                        column: x => x.TeamID,
-                        principalTable: "Teams",
-                        principalColumn: "TeamID");
-                    table.ForeignKey(
-                        name: "FK_Matches_Teams_WinnerId",
-                        column: x => x.WinnerId,
                         principalTable: "Teams",
                         principalColumn: "TeamID",
                         onDelete: ReferentialAction.Restrict);
@@ -317,16 +307,6 @@ namespace sportify.DAL.Migrations
                 name: "IX_Matches_SecondTeamId",
                 table: "Matches",
                 column: "SecondTeamId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Matches_TeamID",
-                table: "Matches",
-                column: "TeamID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Matches_WinnerId",
-                table: "Matches",
-                column: "WinnerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Teams_LeagueID",

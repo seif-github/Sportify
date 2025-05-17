@@ -18,7 +18,6 @@ namespace sportify.DAL.Entities
         [ForeignKey("League")]
         public int LeagueID { get; set; } 
         public League League { get; set; } = null!;
-        public IEnumerable<Match> Matches { get; set; } = new List<Match>(); 
         public string? ImageUrl { get; set; }
         [NotMapped]
         public IFormFile? ImageFile { get; set; } 

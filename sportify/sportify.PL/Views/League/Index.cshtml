@@ -36,6 +36,8 @@
                             <a asp-action="Edit" asp-route-id="@league.LeagueID" class="btn btn-warning">Edit</a>
                             <a asp-action="Delete" asp-route-id="@league.LeagueID" class="btn btn-danger">Delete</a>
                             <a asp-action="EditTeams" asp-controller="Team" asp-route-leagueId="@league.LeagueID" class="btn btn-secondary">Teams</a>
+                            <!-- New Matches Button -->
+                            <a asp-action="LeagueMatches" asp-controller="Match" asp-route-leagueId="@league.LeagueID" class="btn btn-success">Matches</a>
                         </div>
                     </td>
                 </tr>
