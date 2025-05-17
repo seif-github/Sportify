@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using sportify.BLL.DTOs;
+using sportify.BLL.Helpers;
 using sportify.BLL.Services;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
@@ -18,13 +19,15 @@ namespace sportify.PL.Controllers
         private readonly ILeagueService _leagueService;
         private readonly IUserService _userService;
         private readonly ILeagueTeamCountUpdateService _leagueTeamCountService;
+        private readonly IMatchService _matchService;
 
         public TeamController(ITeamService teamService, ILeagueService leagueService,
-            ILeagueTeamCountUpdateService leagueTeamCountService, IUserService userService)
+            IMatchService matchService, IUserService userService, ILeagueTeamCountUpdateService leagueTeamCountService)
         {
             _teamService = teamService;
             _leagueService = leagueService;
             _leagueTeamCountService = leagueTeamCountService;
+            _matchService = matchService;
             _userService = userService;
         }
 
@@ -83,8 +86,11 @@ namespace sportify.PL.Controllers
                     team.Name = $"Team {index + 1}";
                 }
             }
+            var createdTeams = await _teamService.AddTeamsAndReturnAsync(teams);
+            var matches = MatchGenerator.GenerateMatches(createdLeague, createdTeams);
 
-            await _teamService.AddTeamsAsync(teams);
+            await _matchService.AddMatchesAsync(matches);
+
             TempData.Remove("LeagueData");
             return RedirectToAction("Details", "League", new { id = createdLeague.LeagueID });
         }

@@ -12,8 +12,8 @@ using sportify.DAL.Data;
 namespace sportify.DAL.Migrations
 {
     [DbContext(typeof(SportifyContext))]
-    [Migration("20250512125726_teamAndLeagueModifications")]
-    partial class teamAndLeagueModifications
+    [Migration("20250513111648_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -254,6 +254,9 @@ namespace sportify.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<bool>("RoundRobin")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
@@ -287,16 +290,13 @@ namespace sportify.DAL.Migrations
                     b.Property<int>("LeagueId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Result")
+                        .HasColumnType("int");
+
                     b.Property<int>("SecondTeamGoals")
                         .HasColumnType("int");
 
                     b.Property<int>("SecondTeamId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("TeamID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("WinnerId")
                         .HasColumnType("int");
 
                     b.HasKey("MatchID");
@@ -306,10 +306,6 @@ namespace sportify.DAL.Migrations
                     b.HasIndex("LeagueId");
 
                     b.HasIndex("SecondTeamId");
-
-                    b.HasIndex("TeamID");
-
-                    b.HasIndex("WinnerId");
 
                     b.ToTable("Matches");
                 });
@@ -442,22 +438,11 @@ namespace sportify.DAL.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("sportify.DAL.Entities.Team", null)
-                        .WithMany("Matches")
-                        .HasForeignKey("TeamID");
-
-                    b.HasOne("sportify.DAL.Entities.Team", "Winner")
-                        .WithMany()
-                        .HasForeignKey("WinnerId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.Navigation("FirstTeam");
 
                     b.Navigation("League");
 
                     b.Navigation("SecondTeam");
-
-                    b.Navigation("Winner");
                 });
 
             modelBuilder.Entity("sportify.DAL.Entities.Team", b =>
@@ -479,11 +464,6 @@ namespace sportify.DAL.Migrations
             modelBuilder.Entity("sportify.DAL.Entities.League", b =>
                 {
                     b.Navigation("Teams");
-                });
-
-            modelBuilder.Entity("sportify.DAL.Entities.Team", b =>
-                {
-                    b.Navigation("Matches");
                 });
 #pragma warning restore 612, 618
         }
