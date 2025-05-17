@@ -28,7 +28,8 @@ namespace sportify.BLL.DTOs
         [Display(Name = "Completed")]
         public bool IsCompleted { get; set; }
         [Display(Name = "League Image")]
-        public string? ImageUrl { get; set; }
+        
+        public string? imageUrl;
 
         //public ApplicationUser Organizer {  get; set; }
 

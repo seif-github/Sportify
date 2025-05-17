@@ -7,17 +7,24 @@ using sportify.DAL.Entities;
 using sportify.BLL.Services.Contracts;
 using sportify.BLL.Services;
 using Microsoft.AspNetCore.Http.Features;
+using sportify.BLL.Settings;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<SportifyContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("cs"))); 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("cs")),
+    ServiceLifetime.Scoped);
 
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("gmail"));
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-                        options.Password.RequireNonAlphanumeric = false)
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => 
+{
+    options.Password.RequireNonAlphanumeric = false;
+    options.SignIn.RequireConfirmedAccount = true;
+    options.User.RequireUniqueEmail = true; 
+})
     .AddEntityFrameworkStores<SportifyContext>()
     .AddDefaultTokenProviders();
 
@@ -42,6 +49,9 @@ builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ILeagueTeamCountUpdateService, LeagueTeamCountUpdateService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMatchService, MatchService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.Configure<FormOptions>(options =>
 {

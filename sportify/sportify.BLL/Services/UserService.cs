@@ -20,6 +20,12 @@ namespace sportify.BLL.Services
             this._mapper = mapper;
         }
 
+        public async Task<UserDTO> GetUserById(string userId)
+        {
+            var user = await _userRepo.GetUserById(userId);
+            return _mapper.Map<UserDTO>(user);
+        }
+
         public async Task<List<UserDTO>> GetUsersByIds(List<string> userIds)
         {
             return _mapper.Map<List<UserDTO>>(await _userRepo.GetUsersByIds(userIds));

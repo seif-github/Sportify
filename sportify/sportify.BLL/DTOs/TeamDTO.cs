@@ -21,6 +21,7 @@ namespace sportify.BLL.DTOs
         public int? Points { get; set; }
         public int LeagueID { get; set; }
         [Display(Name = "Team Image")]
-        public string? ImageUrl { get; set; }
+        
+        public string? imageUrl;
     }
 }

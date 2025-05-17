@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Email Confirmation";
+}
+
+<div class="my-container">
+    <h2>@ViewBag.Message</h2>
+    @if (ViewBag.Message.Contains("Thank you"))
+    {
+        <a asp-action="Login" class="btn btn-primary">Go to Login</a>
+    }
+    else
+    {
+        <a asp-action="Register" class="btn btn-secondary">Back to Registration</a>
+    }
+</div>

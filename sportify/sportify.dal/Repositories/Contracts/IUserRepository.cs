@@ -9,6 +9,7 @@ namespace sportify.DAL.Repositories.Contracts
 {
     public interface IUserRepository
     {
+        Task<ApplicationUser> GetUserById(string userId);
         Task<List<ApplicationUser>> GetUsersByIds(List<string> userIds);
     }
 }

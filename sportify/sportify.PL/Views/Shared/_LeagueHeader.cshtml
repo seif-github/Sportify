@@ -1,0 +1,88 @@
+﻿@model sportify.PL.ViewModels.LeagueDetailsViewModel
+
+@{
+    string IsActive(string controller, string action)
+    {
+        var currentController = ViewContext.RouteData.Values["Controller"].ToString();
+        var currentAction = ViewContext.RouteData.Values["Action"].ToString();
+        return (controller == currentController && action == currentAction) ? "active" : "";
+    }
+
+    var endDateDays = (Model.League.NumberOfTeams - 1) * Model.League.DurationBetweenMatches;
+    var endDate = Model.League.StartDate.AddDays(endDateDays);
+    var currentDate = DateTime.Now;
+    var status = currentDate < Model.League.StartDate ? "upcoming" :
+                 currentDate <= endDate ? "ongoing" : "finished";
+}
+
+<div class="league-header">
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+            <div>
+                <div class="league-title">
+                    <h1 class="league-name">@Model.League.Name</h1>
+                    <span class="league-status @status.ToLower()">@status.ToUpper()</span>
+                </div>
+            </div>
+            @if (Model.IsOrganizer)
+            {
+                <div class="mt-3 mt-md-0">
+                    <a asp-controller="League" asp-action="Edit" asp-route-id="@Model.League.LeagueID"
+                       class="btn btn-sm btn-outline-secondary">
+                        <i class="fas fa-cog me-1"></i> League Settings
+                    </a>
+                </div>
+            }
+        </div>
+
+        <div class="league-meta">
+            <div class="league-meta-item">
+                <i class="fas fa-user"></i>
+                <span>Organized by: @Model.OrganizerName</span>
+            </div>
+
+            <div class="league-meta-item">
+                <i class="fas fa-calendar"></i>
+                <span>
+                    @if (status == "upcoming")
+                    {
+                        <text>Starts @Model.League.StartDate.ToString("MMM d, yyyy")</text>
+                    }
+                    else if (status == "ongoing")
+                    {
+                        <text>Started @Model.League.StartDate.ToString("MMM d, yyyy")</text>
+                        <span class="mx-1">•</span>
+                        <text>Ends @endDate.ToString("MMM d, yyyy")</text>
+                    }
+                    else
+                    {
+                        <text>Ended @endDate.ToString("MMM d, yyyy")</text>
+                    }
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation Tabs -->
+<div class="league-tabs">
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link @IsActive("League", "Details")"
+                   asp-controller="League" asp-action="Details" asp-route-id="@Model.League.LeagueID">Standings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @IsActive("Team", "EditTeams")"
+                   asp-controller="Team" asp-action="EditTeams" asp-route-id="@Model.League.LeagueID">Teams</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @IsActive("League", "Matches")"
+                   asp-controller="League" asp-action="Matches" asp-route-id="@Model.League.LeagueID">Matches</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+@section Scripts{}

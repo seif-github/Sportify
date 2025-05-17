@@ -34,7 +34,11 @@ namespace sportify.BLL.Services
             var data = await _genericRepository.GetByIdAsync(id);
             return data == null ? null : _mapper.Map<LeagueDTO>(data);
         }
-        
+        public async Task<string?> GetOrganizerIdByLeagueId(int leagueId)
+        {
+            var league = await _genericRepository.GetByIdAsync(leagueId);
+            return league?.OrganizerID;
+        }
         public async Task<List<LeagueDTO?>?> GetOrganizerLeaguesById(string organizerId)
         {
             var leagues = await _genericRepository.GetAllAsync();
