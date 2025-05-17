@@ -11,9 +11,10 @@ namespace sportify.PL.Controllers
             this._matchService = matchService;
         }
 
-        public async Task<IActionResult> LeagueMatches(int leagueId)
+        [HttpGet]
+        public async Task<IActionResult> LeagueMatches(int id) // id -> leagueId
         {
-            var matches = await _matchService.GetMatchesByLeagueIdAsync(leagueId);
+            var matches = await _matchService.GetMatchesByLeagueIdAsync(id);
             return View(matches);
         }
     }

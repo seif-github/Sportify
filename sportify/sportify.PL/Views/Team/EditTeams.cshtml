@@ -24,9 +24,9 @@
                             <div class="card-body text-center">
                                 <div class="rounded-circle bg-white d-flex align-items-center justify-content-center shadow-sm mx-auto mb-3"
                                      style="width: 60px; height: 60px;">
-                                    @if (!string.IsNullOrEmpty(team.ImageUrl))
+                                    @if (!string.IsNullOrEmpty(team.imageUrl))
                                     {
-                                        <img src="@team.ImageUrl" class="img-fluid rounded-circle" alt="@team.Name" />
+                                        <img src="@team.imageUrl" class="img-fluid rounded-circle" alt="@team.Name" />
                                     }
                                     else
                                     {
@@ -52,12 +52,12 @@
                                             <i class="ph ph-pencil-simple"></i> Edit
                                         </button>
 
-                                        <button type="button" 
-                                                class="btn btn-sm btn-outline-danger mt-2 delete-team-btn" 
-                                                data-team-id="@team.TeamID"
-                                                data-delete-account>
-                                            <i class="ph ph-trash"></i> Delete
-                                        </button>
+                                        @* <button type="button"  *@
+                                        @*         class="btn btn-sm btn-outline-danger mt-2 delete-team-btn"  *@
+                                        @*         data-team-id="@team.TeamID" *@
+                                        @*         data-delete-account> *@
+                                        @*     <i class="ph ph-trash"></i> Delete *@
+                                        @* </button> *@
                                     </div>
                                 }
                                 else
