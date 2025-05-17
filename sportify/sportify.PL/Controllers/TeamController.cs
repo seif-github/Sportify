@@ -3,6 +3,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Utilities.IO;
 using sportify.BLL.DTOs;
 using sportify.BLL.Helpers;
 using sportify.BLL.Services;
@@ -208,6 +209,7 @@ namespace sportify.PL.Controllers
                 return RedirectToAction("EditTeams", new { leagueId });
             }
 
+            // Create and add the new team
             var newTeam = new TeamDTO
             {
                 LeagueID = leagueId,
@@ -219,11 +221,24 @@ namespace sportify.PL.Controllers
                 TotalMatchesPlayed = 0
             };
             await _teamService.AddTeamAsync(newTeam);
+
+            var teams = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).ToList();
+
             await _leagueTeamCountService.UpdateTeamCountAsync(new LeagueTeamCountUpdateDTO
             {
                 LeagueID = leagueId,
-                TeamCount = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).Count()
+                TeamCount = teams.Count
             });
+
+            var league = await _leagueService.GetByIdAsync(leagueId);
+            if (league == null)
+                return NotFound();
+
+            await _matchService.DeleteAllMatchesAsync(leagueId);
+
+            var matches = MatchGenerator.GenerateMatches(league, teams);
+            await _matchService.AddMatchesAsync(matches);
+
             return RedirectToAction("EditTeams", new { id = leagueId });
         }
     }

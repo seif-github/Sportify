@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using sportify.BLL.DTOs;
+using sportify.BLL.Helpers;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Entities;
 using sportify.PL.Helpers;
 using sportify.PL.ViewModels;
 using System.Security.Claims;
@@ -15,14 +17,16 @@ namespace sportify.PL.Controllers
     {
         private readonly ILeagueService _leagueService;
         private readonly ITeamService _teamService;
+        private readonly IMatchService _matchService;
         private readonly IUserService _userService;
         private readonly IDashboardService _dashboardService;
 
         public LeagueController(ILeagueService leagueService, ITeamService teamService,
-                IUserService userService, IDashboardService dashboardService)
+                IUserService userService, IMatchService matchService, IDashboardService dashboardService)
         {
             _leagueService = leagueService;
             _teamService = teamService;
+            _matchService = matchService;
             _userService = userService;
             _dashboardService = dashboardService;
         }
@@ -167,6 +171,12 @@ namespace sportify.PL.Controllers
 
             // Update the entity
             await _leagueService.UpdateAsync(model);
+
+            var teams = (await _teamService.GetAllTeamsInLeagueAsync(model.LeagueID)).ToList();
+            await _matchService.DeleteAllMatchesAsync(model.LeagueID);
+            var matches = MatchGenerator.GenerateMatches(model, teams);
+            await _matchService.AddMatchesAsync(matches);
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -193,6 +203,8 @@ namespace sportify.PL.Controllers
 
             var organizerId = await _leagueService.GetOrganizerIdByLeagueId(id);
             if (organizerId != league.OrganizerID) return Forbid();
+
+            await _matchService.DeleteAllMatchesAsync(id);
 
             // Get all teams in this league
             var teams = await _teamService.GetAllTeamsInLeagueAsync(id);

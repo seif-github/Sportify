@@ -64,5 +64,10 @@ namespace sportify.BLL.Services
             await _genericRepository.AddRangeAsync(matchEntities);
             await _genericRepository.SaveChangesAsync();
         }
+
+        public async Task DeleteAllMatchesAsync(int id)
+        {
+            await _matchRepository.DeleteAllMatchesAsync(id);
+        }
     }
 }

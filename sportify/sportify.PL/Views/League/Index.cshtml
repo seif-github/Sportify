@@ -101,38 +101,38 @@
             <h2>Upcoming Matches</h2>
             @* <a asp-controller="Match" asp-action="Index">View All</a> *@
         </div>
-        <div class="matches-grid">
-            @if (Model.UpcomingMatchesList.Any())
-            {
-                @foreach (var match in Model.UpcomingMatchesList)
-                {
-                    <div class="match-card">
-                        <div class="match-header">
-                            <span class="match-date">@match.MatchDate.ToString("MMM dd, yyyy - HH:mm")</span>
-                            @* <span class="match-sport">@match.SportName</span> *@
-                        </div>
-                        <div class="match-teams">
-                            <div class="team">
-                                <span class="team-name">@match.HomeTeamName</span>
-                                <span class="team-score">@(match.HomeTeamScore?.ToString() ?? "-")</span>
-                            </div>
-                            <div class="vs">VS</div>
-                            <div class="team">
-                                <span class="team-score">@(match.AwayTeamScore?.ToString() ?? "-")</span>
-                                <span class="team-name">@match.AwayTeamName</span>
-                            </div>
-                        </div>
-                        <div class="match-footer">
-                            <span class="league-name">@match.LeagueName</span>
-                        </div>
-                    </div>
-                }
-            }
-            else
-            {
-                <div class="no-matches">No upcoming matches scheduled</div>
-            }
-        </div>
+        @* <div class="matches-grid"> *@
+        @*     @if (Model.UpcomingMatchesList.Any()) *@
+        @*     { *@
+        @*         @foreach (var match in Model.UpcomingMatchesList) *@
+        @*         { *@
+        @*             <div class="match-card"> *@
+        @*                 <div class="match-header"> *@
+        @*                     <span class="match-date">@match.MatchDate.ToString("MMM dd, yyyy - HH:mm")</span> *@
+        @*                     @* <span class="match-sport">@match.SportName</span> *@ 
+        @*                 </div> *@
+        @*                 <div class="match-teams"> *@
+        @*                     <div class="team"> *@
+        @*                         <span class="team-name">@match.HomeTeamName</span> *@
+        @*                         <span class="team-score">@(match.HomeTeamScore?.ToString() ?? "-")</span> *@
+        @*                     </div> *@
+        @*                     <div class="vs">VS</div> *@
+        @*                     <div class="team"> *@
+        @*                         <span class="team-score">@(match.AwayTeamScore?.ToString() ?? "-")</span> *@
+        @*                         <span class="team-name">@match.AwayTeamName</span> *@
+        @*                     </div> *@
+        @*                 </div> *@
+        @*                 <div class="match-footer"> *@
+        @*                     <span class="league-name">@match.LeagueName</span> *@
+        @*                 </div> *@
+        @*             </div> *@
+        @*         } *@
+        @*     } *@
+        @*     else *@
+        @*     { *@
+        @*         <div class="no-matches">No upcoming matches scheduled</div> *@
+        @*     } *@
+        @* </div> *@
     </div>
 </main>
 

@@ -27,5 +27,13 @@ namespace sportify.DAL.Repositories
                 .Include(m => m.SecondTeam)
                 .ToListAsync();
         }
+
+        public async Task DeleteAllMatchesAsync(int leagueId) // id -> leagueId
+        {
+            await _dbSet.Where(m => m.LeagueId == leagueId).ExecuteDeleteAsync();
+            //var matches = await _dbSet.Where(m => m.LeagueId == leagueId).ToListAsync();
+            //_dbSet.RemoveRange(matches);
+            //await _context.SaveChangesAsync();
+        }
     }
 }
