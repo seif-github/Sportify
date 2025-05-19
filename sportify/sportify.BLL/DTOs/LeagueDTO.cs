@@ -1,4 +1,6 @@
-﻿using sportify.DAL.Entities;
+﻿using Microsoft.AspNetCore.Http;
+using sportify.BLL.Attributes;
+using sportify.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,6 +15,7 @@ namespace sportify.BLL.DTOs
         public int LeagueID { get; set; }
         [Required]
         [Display(Name = "League Name")]
+        [UniqueLeagueName]
         public string Name { get; set; } = null!;
         [Display(Name = "Sport Type")]
         public string OrganizerID { get; set; } = null!;
@@ -29,7 +32,8 @@ namespace sportify.BLL.DTOs
         public bool IsCompleted { get; set; }
         [Display(Name = "League Image")]
         
-        public string? imageUrl;
+        public string? ImageUrl;
+        public IFormFile? ImageFile { get; set; }
 
         //public ApplicationUser Organizer {  get; set; }
 

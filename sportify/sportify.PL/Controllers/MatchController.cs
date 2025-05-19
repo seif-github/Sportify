@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using sportify.BLL.Services;
 using sportify.BLL.Services.Contracts;
+using sportify.PL.Hubs;
 using sportify.PL.ViewModels;
 using System.Security.Claims;
 
@@ -13,13 +15,15 @@ namespace sportify.PL.Controllers
         private readonly ITeamService _teamService;
         private readonly ILeagueService _leagueService;
         private readonly IUserService _userService;
+        private readonly IHubContext<ScoreHub> _hubContext;
 
-        public MatchController(IMatchService matchService, ITeamService teamService, ILeagueService leagueService, IUserService userService)
+        public MatchController(IMatchService matchService, ITeamService teamService, ILeagueService leagueService, IUserService userService, IHubContext<ScoreHub> hubContext)
         {
             _matchService = matchService;
             _teamService = teamService;
             _leagueService = leagueService;
             _userService = userService;
+            _hubContext = hubContext;
         }
 
         [HttpGet]
@@ -125,6 +129,22 @@ namespace sportify.PL.Controllers
                 }
 
                 await _matchService.UpdateMatchResultAsync(model.MatchId, model.FirstTeamGoals, model.SecondTeamGoals);
+
+                var updatedMatch = await _matchService.GetMatchByIdAsync(model.MatchId);
+
+                // Broadcast the update to all clients watching this league
+                await _hubContext.Clients.Group($"league-{model.LeagueId}")
+                    .SendAsync("ReceiveScoreUpdate", new
+                    {
+                        matchId = model.MatchId,
+                        firstTeamGoals = model.FirstTeamGoals,
+                        secondTeamGoals = model.SecondTeamGoals,
+                        isCompleted = true,
+                        firstTeamName = updatedMatch.FirstTeamName,
+                        secondTeamName = updatedMatch.SecondTeamName,
+                        date = updatedMatch.Date.ToString("MMM dd, yyyy")
+                    });
+
                 return Json(new { success = true });
             }
             catch (Exception ex)
@@ -132,6 +152,52 @@ namespace sportify.PL.Controllers
                 // Log the exception
                 Console.WriteLine($"Error updating match score: {ex.Message}");
                 return Json(new { success = false, message = $"Error updating match: {ex.Message}" });
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateMatchTime([FromBody] UpdateMatchTimeViewModel model)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return Json(new { success = false, message = "Invalid time data" });
+                }
+
+                var match = await _matchService.GetMatchByIdAsync(model.MatchId);
+                if (match == null)
+                {
+                    return Json(new { success = false, message = "Match not found" });
+                }
+
+                // Update just the time portion
+                match.Date = new DateTime(
+                    match.Date.Year,
+                    match.Date.Month,
+                    match.Date.Day,
+                    model.Hour,
+                    model.Minute,
+                    0
+                );
+
+                await _matchService.UpdateAsync(match);
+
+                //var hubContext = HttpContext.RequestServices.GetRequiredService<IHubContext<ScoreHub>>();
+                //await hubContext.Clients.Group($"League_{model.LeagueId}").SendAsync("ReceiveTimeUpdate", new
+                //{
+                //    matchId = model.MatchId,
+                //    hour = model.Hour,
+                //    minute = model.Minute
+                //});
+
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
             }
         }
     }

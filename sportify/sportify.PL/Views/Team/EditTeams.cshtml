@@ -25,13 +25,13 @@
                             <div class="card-body text-center">
                                 <div class="rounded-circle bg-white d-flex align-items-center justify-content-center shadow-sm mx-auto mb-3"
                                      style="width: 60px; height: 60px;">
-                                    @if (!string.IsNullOrEmpty(team.imageUrl))
+                                    @if (!string.IsNullOrEmpty(team.ImageUrl))
                                     {
-                                        <img src="@team.imageUrl" class="img-fluid rounded-circle" alt="@team.Name" />
+                                        <img src="~/images/@team.ImageUrl" class="img-fluid rounded-circle" alt="@team.Name" />
                                     }
                                     else
                                     {
-                                        <i class="ph ph-users text-muted" style="font-size: 24px;"></i>
+                                        <img src="~/assets/default-team-logo.png" style="width: 60px; height: 60px;" />
                                     }
                                 </div>
 
@@ -42,15 +42,17 @@
 
                                         <div class="team-edit-controls" style="display: none;">
                                             <div class="input-group mb-2">
-                                                <input type="text" class="form-control text-center team-name-input"
+                                                @* form-control text-center *@
+                                                <input type="text" class="team-name-input"
                                                        value="@team.Name">
                                                 <button class="btn btn-outline-success save-team-btn" type="button">Save</button>
                                                 <button class="btn btn-outline-danger cancel-edit-btn" type="button">Cancel</button>
+                                                <input class="btn btn-secondry change-logo-btn" type="file"/>
                                             </div>
                                         </div>
 
                                         <button class="btn btn-sm btn-outline-secondary edit-team-btn mt-2">
-                                            <i class="ph ph-pencil-simple"></i> Edit
+                                            Edit
                                         </button>
 
                                         @* <button type="button"  *@
@@ -142,6 +144,63 @@
 @section Scripts {
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Handle logo upload and preview
+            document.querySelectorAll('.change-logo-btn').forEach(input => {
+                input.addEventListener('change', function() {
+                    const container = this.closest('.team-edit-container');
+                    const teamId = container.dataset.teamId;
+                    const logoPreview = container.closest('.card-body').querySelector('.rounded-circle img');
+
+                    if (this.files && this.files[0]) {
+                        // Create preview
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            logoPreview.src = e.target.result;
+
+                            // Automatically save the new logo
+                            saveTeamLogo(teamId, this.files[0]);
+                        }.bind(this);
+                        reader.readAsDataURL(this.files[0]);
+                    }
+                });
+            });
+
+            // Function to save the logo via AJAX
+            function saveTeamLogo(teamId, imageFile) {
+                const formData = new FormData();
+                formData.append('TeamID', teamId);
+                formData.append('ImageFile', imageFile);
+                formData.append('LeagueID', @Model.League.LeagueID);
+
+                // Get CSRF token
+                const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                fetch('@Url.Action("EditTeamLogo")', {
+                    method: 'POST',
+                    headers: {
+                        'RequestVerificationToken': token
+                    },
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to update logo');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (!data.success) {
+                        throw new Error(data.message || 'Logo update failed');
+                    }
+                    // Optional: Show success message
+                    console.log('Logo updated successfully');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Optional: Show error to user
+                    alert('Error updating logo: ' + error.message);
+                });
+            }
             // Setup edit buttons
             document.querySelectorAll('.edit-team-btn').forEach(btn => {
                 btn.addEventListener('click', function() {

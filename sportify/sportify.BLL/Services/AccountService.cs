@@ -19,17 +19,19 @@ namespace sportify.BLL.Services
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IGenericRepository<ApplicationUser> _genericRepo;
         private readonly IMapper _mapper;
+        private readonly IFileService _fileService;
 
         public AccountService(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IGenericRepository<ApplicationUser> genericRepo,
             IUserRepository userRepo, 
-            IMapper mapper)
+            IMapper mapper, IFileService fileService)
         {
-            this._userManager = userManager;
-            this._signInManager = signInManager;
-            this._genericRepo = genericRepo;
-            this._mapper = mapper;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _genericRepo = genericRepo;
+            _mapper = mapper;
+            _fileService = fileService;
         }
 
         public async Task<IdentityResult> RegisterUserAsync(RegisterUserDTO model)
@@ -44,7 +46,7 @@ namespace sportify.BLL.Services
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                await _signInManager.SignInAsync(user, true);
+                //await _signInManager.SignInAsync(user, true);
             }
             return result;
         }
@@ -139,27 +141,14 @@ namespace sportify.BLL.Services
 
             if (model.ImageFile != null && model.ImageFile.Length > 0)
             {
-                // In a real app, you'd upload this to cloud storage or your file system
-                // For simplicity, we'll just store the file name
                 // Delete old image if exists
                 if (!string.IsNullOrEmpty(user.ImageUrl))
                 {
-                    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", user.ImageUrl);
-                    if (System.IO.File.Exists(oldImagePath))
-                    {
-                        System.IO.File.Delete(oldImagePath);
-                    }
+                    await _fileService.DeleteFileAsync(user.ImageUrl);
                 }
 
                 // Save new image
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(model.ImageFile.FileName);
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await model.ImageFile.CopyToAsync(stream);
-                }
-
-                user.ImageUrl = fileName;
+                user.ImageUrl = await _fileService.SaveFileAsync(model.ImageFile);
             }
 
             return await _userManager.UpdateAsync(user);

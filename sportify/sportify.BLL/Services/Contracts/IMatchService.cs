@@ -9,6 +9,7 @@ namespace sportify.BLL.Services.Contracts
 {
     public interface IMatchService
     {
+        Task<MatchDTO?> GetMatchByIdAsync(int id);
         Task<List<MatchDTO?>> GetMatchesByLeagueIdAsync(int id);
         Task AddMatchesAsync(List<MatchDTO> matches);
         Task UpdateAsync(MatchDTO model);

@@ -18,6 +18,7 @@
                 <thead class="bg-light">
                     <tr>
                         <th class="text-center">#</th>
+                        <th>Logo</th>
                         <th>Team</th>
                         <th class="text-center" title="Matches Played">MP</th>
                         <th class="text-center">W</th>
@@ -35,12 +36,17 @@
                         <tr>
                             <td class="text-center"></td>
                             <td>
-                                @if (!string.IsNullOrEmpty(team.imageUrl))
+                                @if (!string.IsNullOrEmpty(team.ImageUrl))
                                 {
-                                    <img src="@team.imageUrl" alt="@team.Name" style="max-height: 30px; margin-right: 10px;" />
+                                    <img src="~/images/@team.ImageUrl" alt="" style="max-height: 30px; margin-right: 10px;" />
                                 }
-                                @team.Name
+                                else
+                                {
+                                    <img src="~/assets/default-team-logo.png" alt="" style="max-height: 30px; margin-right: 10px;" />
+                                }
+                                
                             </td>
+                            <td>@team.Name</td>
                             <td class="text-center">@team.TotalMatchesPlayed</td>
                             <td class="text-center">@team.Wins</td>
                             <td class="text-center">@team.Draws</td>

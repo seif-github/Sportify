@@ -9,6 +9,7 @@ using sportify.BLL.Services;
 using Microsoft.AspNetCore.Http.Features;
 using sportify.BLL.Settings;
 using Microsoft.Extensions.Options;
+using sportify.PL.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,12 +54,14 @@ builder.Services.AddScoped<ILeagueService, LeagueService>();
 builder.Services.AddScoped<ILeagueTeamCountUpdateService, LeagueTeamCountUpdateService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10MB file size limit
 });
 
+builder.Services.AddSignalR();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -76,6 +79,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapHub<ScoreHub>("/scoreHub");
 
 app.MapControllerRoute(
     name: "default",

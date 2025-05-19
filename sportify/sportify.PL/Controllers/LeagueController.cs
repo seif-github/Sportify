@@ -19,14 +19,16 @@ namespace sportify.PL.Controllers
         private readonly ITeamService _teamService;
         private readonly IMatchService _matchService;
         private readonly IUserService _userService;
+        private readonly IFileService _fileService;
 
         public LeagueController(ILeagueService leagueService, ITeamService teamService,
-                IUserService userService, IMatchService matchService)
+                IUserService userService, IMatchService matchService, IFileService fileService)
         {
             _leagueService = leagueService;
             _teamService = teamService;
             _matchService = matchService;
             _userService = userService;
+            _fileService = fileService;
         }
 
         public IActionResult Index()
@@ -153,6 +155,28 @@ namespace sportify.PL.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
+            }
+
+            var existingLeague = await _leagueService.GetByIdAsync(model.LeagueID);
+
+            if (existingLeague == null)
+            {
+                return NotFound();
+            }
+
+            if (model.ImageFile != null && model.ImageFile.Length > 0)
+            {
+                // Delete old image if exists
+                if (!string.IsNullOrEmpty(existingLeague.ImageUrl))
+                    {
+                        await _fileService.DeleteFileAsync(existingLeague.ImageUrl);
+                    }
+                // Save the file and get the URL
+                model.ImageUrl = await _fileService.SaveFileAsync(model.ImageFile);
+            }
+            else
+            {
+                model.ImageUrl = existingLeague.ImageUrl;
             }
 
             // Verify permission by getting just the organizer ID
