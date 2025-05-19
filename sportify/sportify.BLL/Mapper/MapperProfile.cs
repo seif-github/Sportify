@@ -15,14 +15,14 @@ public class MapperProfile : Profile
         CreateMap<Team, TeamDTO>().ReverseMap();
         CreateMap<Match, MatchDTO>().ReverseMap();
 
-        // Enhanced Match mapping for dashboard
+        CreateMap<MatchDTO, Match>()
+            .ForMember(dest => dest.FirstTeam, opt => opt.Ignore())
+            .ForMember(dest => dest.SecondTeam, opt => opt.Ignore())
+            .ForMember(dest => dest.League, opt => opt.Ignore());
         CreateMap<Match, MatchDTO>()
-            //.ForMember(dest => dest.MatchDate, opt => opt.MapFrom(src => src.Date))
             .ForMember(dest => dest.FirstTeamName, opt => opt.MapFrom(src => src.FirstTeam.Name))
             .ForMember(dest => dest.SecondTeamName, opt => opt.MapFrom(src => src.SecondTeam.Name))
-            .ForMember(dest => dest.FirstTeamGoals, opt => opt.MapFrom(src => src.FirstTeamGoals))
-            .ForMember(dest => dest.SecondTeamGoals, opt => opt.MapFrom(src => src.SecondTeamGoals));
-            //.ForMember(dest => dest.LeagueId, opt => opt.MapFrom(src => src.League.Name));
+            .ForMember(dest => dest.Result, opt => opt.MapFrom(src => src.Result));
     }
 }
 

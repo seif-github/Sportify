@@ -28,7 +28,7 @@
 
                         <div class="form-group">
                             <label asp-for="Name">League Name</label>
-                            <input asp-for="Name" class="form-control" placeholder="Premier League" required>
+                            <input asp-for="Name" class="form-control" placeholder="Enter Your League Name" required>
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
 
@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label asp-for="DurationBetweenMatches">Duration Between Matches (days)</label>
+                                <label asp-for="DurationBetweenMatches">Duration Between Rounds (days)</label>
                                 <input asp-for="DurationBetweenMatches" class="form-control" type="number" min="1" value="7" required>
                                 <span asp-validation-for="DurationBetweenMatches" class="text-danger"></span>
                             </div>
@@ -52,7 +52,7 @@
 
                         <div class="form-group">
                             <label asp-for="NumberOfTeams">Number of Teams</label>
-                            <input asp-for="NumberOfTeams" class="form-control" type="number" min="2" max="32" value="8" required>
+                            <input asp-for="NumberOfTeams" class="form-control" type="number" min="2" max="50" value="8" required>
                             <span asp-validation-for="NumberOfTeams" class="text-danger"></span>
                         </div>
 

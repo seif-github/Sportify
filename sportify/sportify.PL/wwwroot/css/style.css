@@ -446,6 +446,37 @@ body {
     opacity: 0.8;
 }
 
+/*.highlight-match {
+    position: relative;
+    z-index: 1;
+}
+
+    .highlight-match::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(13, 110, 253, 0.1);
+        z-index: -1;
+        animation: highlight-pulse 2s ease-out;
+    }
+
+@keyframes highlight-pulse {
+    0% {
+        background-color: rgba(13, 110, 253, 0);
+    }
+
+    50% {
+        background-color: rgba(13, 110, 253, 0.3);
+    }
+
+    100% {
+        background-color: rgba(13, 110, 253, 0);
+    }
+}*/
+
 /* Animations */
 @keyframes fadeInUp {
     to {

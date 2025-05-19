@@ -13,18 +13,19 @@ namespace sportify.DAL.Repositories
     public class MatchRepository : IMatchRepository
     {
         private readonly SportifyContext _context;
-        private readonly DbSet<Entities.Match> _dbSet;
+        private readonly DbSet<Match> _dbSet;
         public MatchRepository(SportifyContext context)
         {
-            this._context = context;
-            this._dbSet = _context.Set<Entities.Match>();
+            _context = context;
+            _dbSet = _context.Set<Match>();
         }
 
         public async Task<List<Match>> GetMatchesWithTeamsByLeagueAsync(int leagueId)
         {
-            return await _dbSet.Where(m => m.LeagueId == leagueId)
+            return await _context.Matches
                 .Include(m => m.FirstTeam)
                 .Include(m => m.SecondTeam)
+                .Where(m => m.LeagueId == leagueId)
                 .ToListAsync();
         }
 

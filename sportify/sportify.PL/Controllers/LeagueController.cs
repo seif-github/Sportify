@@ -19,25 +19,19 @@ namespace sportify.PL.Controllers
         private readonly ITeamService _teamService;
         private readonly IMatchService _matchService;
         private readonly IUserService _userService;
-        private readonly IDashboardService _dashboardService;
 
         public LeagueController(ILeagueService leagueService, ITeamService teamService,
-                IUserService userService, IMatchService matchService, IDashboardService dashboardService)
+                IUserService userService, IMatchService matchService)
         {
             _leagueService = leagueService;
             _teamService = teamService;
             _matchService = matchService;
             _userService = userService;
-            _dashboardService = dashboardService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId == null) return Forbid();
-            var dashboardData = await _dashboardService.GetDashboardDataAsync(userId);
-            return View(dashboardData);
+            return View();
         }
 
         [AllowAnonymous]
@@ -67,18 +61,19 @@ namespace sportify.PL.Controllers
             return View(viewModel);
         }
 
-        [AllowAnonymous]
-        public async Task<IActionResult> Standings(int leagueId)
-        {
-            List<TeamDTO> teamsSorted = await _teamService.SortStandings(leagueId);
-            return Ok(teamsSorted);
-        }
+        //[AllowAnonymous]
+        //public async Task<IActionResult> Standings(int leagueId)
+        //{
+        //    var teamsSorted = await _teamService.UpdateAndSortStandingsAsync(leagueId);
+        //    return View(teamsSorted);
+        //}
 
         [AllowAnonymous]
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(int id) //league ID
         {
             var league = await _leagueService.GetByIdAsync(id); if (league == null) return NotFound();
             var teams = await _teamService.GetAllTeamsInLeagueAsync(id);
+            var teamsSorted = await _teamService.UpdateAndSortStandingsAsync(id);
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var isOrganizer = currentUserId != null && currentUserId == league.OrganizerID;
 
@@ -92,7 +87,7 @@ namespace sportify.PL.Controllers
             var viewModel = new LeagueDetailsViewModel
             {
                 League = league,
-                Teams = teams,
+                Teams = teamsSorted,
                 IsOrganizer = isOrganizer,
                 OrganizerName = organizerName
             };
@@ -143,6 +138,7 @@ namespace sportify.PL.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var league = await _leagueService.GetByIdAsync(id); if (league == null) return NotFound();
+            if (DateTime.Now >= league.StartDate) return BadRequest();
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (currentUserId != league.OrganizerID) return Forbid();
             return View(league);
@@ -177,7 +173,7 @@ namespace sportify.PL.Controllers
             var matches = MatchGenerator.GenerateMatches(model, teams);
             await _matchService.AddMatchesAsync(matches);
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Dashboard");
         }
 
         public async Task<IActionResult> Delete(int id)
@@ -216,7 +212,7 @@ namespace sportify.PL.Controllers
             }
 
             await _leagueService.DeleteAsync(id);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Dashboard");
         }
     }
 }

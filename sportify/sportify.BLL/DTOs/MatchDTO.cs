@@ -21,10 +21,11 @@ namespace sportify.BLL.DTOs
 
         public int MatchID { get; set; }
         public int LeagueId { get; set; }
+        public string LeagueName { get; set; }
         public int FirstTeamId { get; set; }
-        public string FirstTeamName { get; set; } // Add this
+        public string FirstTeamName { get; set; }
         public int SecondTeamId { get; set; }
-        public string SecondTeamName { get; set; } // Add this
+        public string SecondTeamName { get; set; }
         public DateTime Date { get; set; }
         public int FirstTeamGoals { get; set; }
         public int SecondTeamGoals { get; set; }

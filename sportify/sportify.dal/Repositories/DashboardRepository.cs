@@ -69,5 +69,17 @@ namespace sportify.DAL.Repositories
                 .Take(count)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<Match>> GetPendingMatchesNearestDateAsync(string userId)
+        {
+            return await _context.Matches
+                .Include(m => m.League)
+                .Include(m => m.FirstTeam)
+                .Include(m => m.SecondTeam)
+                .Where(m => m.League.OrganizerID == userId && !m.IsCompleted)
+                .OrderBy(m => m.Date)
+                .Take(3)
+                .ToListAsync();
+        }
     }
 }

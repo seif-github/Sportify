@@ -16,11 +16,15 @@ namespace sportify.BLL.Services
     public class TeamService : ITeamService
     {
         private readonly IGenericRepository<Team> _genericRepo;
+        private readonly ITeamRepository _teamRepo;
+        private readonly IMatchRepository _matchRepo;
         private readonly IMapper _mapper;
-        public TeamService(IGenericRepository<Team> genericRepo, IMapper mapper)
+        public TeamService(IGenericRepository<Team> genericRepo, ITeamRepository teamRepo, IMatchRepository matchRepo, IMapper mapper)
         {
-            this._genericRepo = genericRepo;
-            this._mapper = mapper;
+            _genericRepo = genericRepo;
+            _teamRepo = teamRepo;
+            _matchRepo = matchRepo;
+            _mapper = mapper;
         }
 
         public async Task<List<TeamDTO>> GetAllAsync()
@@ -102,12 +106,83 @@ namespace sportify.BLL.Services
             await _genericRepo.SaveChangesAsync();
         }
 
-        public async Task<List<TeamDTO>> SortStandings(int leagueId)
+        //public async Task<List<TeamDTO>> SortStandings(int leagueId)
+        //{
+        //    var teams = await GetAllTeamsInLeagueAsync(leagueId);
+        //    return teams.OrderByDescending(t => t.Points)
+        //        .ThenBy(t => t.Name)
+        //        .ToList();
+        //}
+
+        public async Task<List<TeamDTO>> UpdateAndSortStandingsAsync(int leagueId)
         {
-            var teams = await GetAllTeamsInLeagueAsync(leagueId);
-            return teams.OrderByDescending(t => t.Points)
-                .ThenBy(t => t.Name)
-                .ToList();
+            var teams = await _teamRepo.GetAllTeamsInLeagueAsync(leagueId);
+            var teamDTOs = _mapper.Map<List<TeamDTO>>(teams);
+
+            // reset standings
+            foreach (var team in teamDTOs)
+            {
+                team.Wins = 0;
+                team.Losses = 0;
+                team.Draws = 0;
+                team.GoalsScored = 0;
+                team.GoalsConceded = 0;
+                team.TotalMatchesPlayed = 0;
+                team.Points = 0;
+            }
+
+            var matches = await _matchRepo.GetMatchesWithTeamsByLeagueAsync(leagueId);
+            var completedMatches = matches.Where(m => m.IsCompleted).ToList();
+
+            foreach (var match in completedMatches)
+            {
+                var firstTeam = teamDTOs.FirstOrDefault(t => t.TeamID == match.FirstTeamId);
+                var secondTeam = teamDTOs.FirstOrDefault(t => t.TeamID == match.SecondTeamId);
+
+                if (firstTeam == null || secondTeam == null) continue;
+
+                firstTeam.GoalsScored += match.FirstTeamGoals;
+                firstTeam.GoalsConceded += match.SecondTeamGoals;
+                secondTeam.GoalsScored += match.SecondTeamGoals;
+                secondTeam.GoalsConceded += match.FirstTeamGoals;
+
+                firstTeam.TotalMatchesPlayed++;
+                secondTeam.TotalMatchesPlayed++;
+
+                switch (match.Result)
+                {
+                    case MatchResult.FirstTeamWin:
+                        firstTeam.Wins++;
+                        firstTeam.Points += 3;
+                        secondTeam.Losses++;
+                        break;
+                    case MatchResult.SecondTeamWin:
+                        secondTeam.Wins++;
+                        secondTeam.Points += 3;
+                        firstTeam.Losses++;
+                        break;
+                    case MatchResult.Draw:
+                        firstTeam.Draws++;
+                        firstTeam.Points += 1;
+                        secondTeam.Draws++;
+                        secondTeam.Points += 1;
+                        break;
+                }
+            }
+
+            foreach (var teamDTO in teamDTOs)
+            {
+                var teamEntity = _mapper.Map<Team>(teamDTO);
+                await _genericRepo.UpdateAsync(teamEntity);
+            }
+
+            var sortedTeams = teamDTOs
+            .OrderByDescending(t => t.Points)
+            .ThenByDescending(t => t.GoalsScored - t.GoalsConceded)
+            .ToList();
+
+            return sortedTeams;
+
         }
     }
 }

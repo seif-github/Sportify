@@ -13,17 +13,19 @@ using Match = sportify.DAL.Entities.Match;
 
 namespace sportify.BLL.Services
 {
-    public class MatchService: IMatchService
+    public class MatchService : IMatchService
     {
         private readonly IGenericRepository<Match> _genericRepository;
         private readonly IMatchRepository _matchRepository;
+        private readonly ITeamService _teamService;
         private readonly IMapper _mapper;
 
         public MatchService(IGenericRepository<Match> genericRepository,
-            IMatchRepository matchRepository, IMapper mapper)
+            IMatchRepository matchRepository, ITeamService teamService, IMapper mapper)
         {
             this._genericRepository = genericRepository;
             this._matchRepository = matchRepository;
+            this._teamService = teamService;
             this._mapper = mapper;
         }
         public async Task<List<MatchDTO>> GetMatchesByLeagueIdAsync(int id)
@@ -68,6 +70,29 @@ namespace sportify.BLL.Services
         public async Task DeleteAllMatchesAsync(int id)
         {
             await _matchRepository.DeleteAllMatchesAsync(id);
+        }
+
+        public async Task UpdateMatchResultAsync(int matchId, int firstTeamGoals, int secondTeamGoals)
+        {
+            var match = await _genericRepository.GetByIdAsync(matchId);
+            if (match == null)
+                throw new Exception("Match not found");
+
+            match.FirstTeamGoals = firstTeamGoals;
+            match.SecondTeamGoals = secondTeamGoals;
+            match.IsCompleted = true;
+
+            if (firstTeamGoals > secondTeamGoals)
+                match.Result = MatchResult.FirstTeamWin;
+            else if (secondTeamGoals > firstTeamGoals)
+                match.Result = MatchResult.SecondTeamWin;
+            else
+                match.Result = MatchResult.Draw;
+
+            await _genericRepository.UpdateAsync(match);
+            await _genericRepository.SaveChangesAsync();
+
+            await _teamService.UpdateAndSortStandingsAsync(match.LeagueId);
         }
     }
 }
