@@ -24,44 +24,53 @@ namespace sportify.BLL.Services
             var activeTeams = await _dashboardRepository.GetActiveTeamsCountAsync(userId);
             var upcomingMatches = await _dashboardRepository.GetUpcomingMatchesCountAsync(userId);
 
-            var recentLeagues = await GetRecentLeaguesAsync(userId);
-            var upcomingMatchesList = await GetUpcomingMatchesAsync(userId);
+            //var upcomingMatchesList = await GetUpcomingMatchesAsync(userId);
+            //var counts = await GetCountsAsync(userId);
+
+            var recentLeagues = await _dashboardRepository.GetRecentLeaguesAsync(userId, 5);
+            var pendingMatches = await _dashboardRepository.GetPendingMatchesNearestDateAsync(userId);
 
             return new DashboardDTO
             {
                 TotalLeagues = totalLeagues,
                 ActiveTeams = activeTeams,
                 UpcomingMatches = upcomingMatches,
-                RecentLeagues = recentLeagues,
-                UpcomingMatchesList = upcomingMatchesList
+                RecentLeagues = _mapper.Map<IEnumerable<LeagueDTO>>(recentLeagues),
+                //UpcomingMatchesList = upcomingMatchesList
+                PendingMatches = _mapper.Map<IEnumerable<MatchDTO>>(pendingMatches)
             };
         }
+        //private async Task<IEnumerable<MatchDTO>> GetPendingMatchesNearestDateAsync(string userId)
+        //{
+        //    var matches = await _dashboardRepository.GetPendingMatchesNearestDateAsync(userId);
+        //    return _mapper.Map<IEnumerable<MatchDTO>>(matches);
+        //}
 
-        private async Task<(int totalLeagues, int activeTeams, int upcomingMatches)> GetCountsAsync(string userId)
-        {
-            var totalLeaguesTask = _dashboardRepository.GetTotalLeaguesCountAsync(userId);
-            var activeTeamsTask = _dashboardRepository.GetActiveTeamsCountAsync(userId);
-            var upcomingMatchesTask = _dashboardRepository.GetUpcomingMatchesCountAsync(userId);
+        //private async Task<(int totalLeagues, int activeTeams, int upcomingMatches)> GetCountsAsync(string userId)
+        //{
+        //    var totalLeaguesTask = _dashboardRepository.GetTotalLeaguesCountAsync(userId);
+        //    var activeTeamsTask = _dashboardRepository.GetActiveTeamsCountAsync(userId);
+        //    var upcomingMatchesTask = _dashboardRepository.GetUpcomingMatchesCountAsync(userId);
 
-            await Task.WhenAll(totalLeaguesTask, activeTeamsTask, upcomingMatchesTask);
+        //    await Task.WhenAll(totalLeaguesTask, activeTeamsTask, upcomingMatchesTask);
 
-            return (
-                await totalLeaguesTask,
-                await activeTeamsTask,
-                await upcomingMatchesTask
-            );
-        }
+        //    return (
+        //        await totalLeaguesTask,
+        //        await activeTeamsTask,
+        //        await upcomingMatchesTask
+        //    );
+        //}
 
-        private async Task<IEnumerable<LeagueDTO>> GetRecentLeaguesAsync(string userId)
-        {
-            var leagues = await _dashboardRepository.GetRecentLeaguesAsync(userId, 5);
-            return _mapper.Map<IEnumerable<LeagueDTO>>(leagues);
-        }
+        //private async Task<IEnumerable<LeagueDTO>> GetRecentLeaguesAsync(string userId)
+        //{
+        //    var leagues = await _dashboardRepository.GetRecentLeaguesAsync(userId, 5);
+        //    return _mapper.Map<IEnumerable<LeagueDTO>>(leagues);
+        //}
 
-        private async Task<IEnumerable<MatchDTO>> GetUpcomingMatchesAsync(string userId)
-        {
-            var matches = await _dashboardRepository.GetUpcomingMatchesAsync(userId, 5);
-            return _mapper.Map<IEnumerable<MatchDTO>>(matches);
-        }
+        //private async Task<IEnumerable<MatchDTO>> GetUpcomingMatchesAsync(string userId)
+        //{
+        //    var matches = await _dashboardRepository.GetUpcomingMatchesAsync(userId, 5);
+        //    return _mapper.Map<IEnumerable<MatchDTO>>(matches);
+        //}
     }
 }

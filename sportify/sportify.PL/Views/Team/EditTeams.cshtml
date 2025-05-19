@@ -3,6 +3,7 @@
 @{
     Layout = "_LeagueLayout";
     ViewData["Title"] = "League Teams";
+    var leagueHasStarted = DateTime.Now >= Model.League.StartDate;
 }
 
 @section LeagueHeader {
@@ -80,26 +81,36 @@
                 <h3>Add New Team</h3>
             </div>
             <div class="card-body">
-                <form method="post" asp-action="AddTeam">
-                    @Html.AntiForgeryToken()
-                    <input type="hidden" name="leagueId" value="@Model.League.LeagueID" />
-
-                    <div class="mb-3">
-                        <label for="teamName" class="form-label">Team Name</label>
-                        <input type="text" class="form-control" id="teamName" name="teamName" required />
+                @if (leagueHasStarted)
+                {
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Teams cannot be added after the league has started.
                     </div>
+                }
+                else
+                {
+                    <form method="post" asp-action="AddTeam">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="leagueId" value="@Model.League.LeagueID" />
 
-                    <div class="mb-3">
-                        <label for="teamImage" class="form-label">Team Image URL (optional)</label>
-                        <input type="url" class="form-control" id="teamImage" name="imageUrl" />
-                    </div>
+                        <div class="mb-3">
+                            <label for="teamName" class="form-label">Team Name</label>
+                            <input type="text" class="form-control" id="teamName" name="teamName" required />
+                        </div>
 
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-success">
-                            <i class="fas fa-plus"></i> Add Team
-                        </button>
-                    </div>
-                </form>
+                        <div class="mb-3">
+                            <label for="teamImage" class="form-label">Team Image URL (optional)</label>
+                            <input type="url" class="form-control" id="teamImage" name="imageUrl" />
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-plus"></i> Add Team
+                            </button>
+                        </div>
+                    </form>
+                }
             </div>
         </div>
     }

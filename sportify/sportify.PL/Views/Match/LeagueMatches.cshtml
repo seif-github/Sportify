@@ -1,124 +1,203 @@
-﻿@model List<sportify.BLL.DTOs.MatchDTO>
+﻿@model sportify.PL.ViewModels.LeagueDetailsViewModel
 
 @{
+    Layout = "_LeagueLayout";
     ViewData["Title"] = "League Matches";
+    var highlightMatchId = Context.Request.Query["highlightMatch"].FirstOrDefault();
+}
+
+@section LeagueHeader {
+    <partial name="_LeagueHeader" model="Model" />
 }
 
 <div class="container">
     <h2>League Matches</h2>
 
-    @if (Model == null || !Model.Any())
+    @if (Model == null || !Model.MatchesByRound.Any())
     {
         <p>No matches found for this league.</p>
     }
     else
     {
-        // Group matches by round (or date if rounds aren't available)
-        var groupedMatches = Model
-        .OrderBy(m => m.Date)
-        .GroupBy(m => m.Date.ToString("MMMM d, yyyy")) // Group by formatted date
-        .ToList();
-
-        @foreach (var matchGroup in groupedMatches)
+        @foreach (var round in Model.MatchesByRound)
         {
-            <div class="match-round">
-                <h3 class="round-header">@matchGroup.Key</h3>
-
-                @foreach (var match in matchGroup)
+            var roundDate = round.Value.FirstOrDefault()?.Date;
+            var isCurrentRound = round.Key == Model.CurrentRound;
+            var isPastRound = round.Key < Model.CurrentRound;
+            <h3 class="round-header @(isCurrentRound ? "current-round" : "")">
+                Round @round.Key - @roundDate?.ToLongDateString()
+                @if (isPastRound)
                 {
-                    <div class="match-item">
-                        <div class="match-field-time">
-                            <span class="field">Field 1</span>
-                            <span class="time">@match.Date.ToString("h:mm tt")</span>
-                            @if (match.IsCompleted)
-                            {
-                                <span class="completed-badge">✔</span>
-                            }
-                        </div>
-                        <div class="match-teams">
-                            <span class="team">@match.FirstTeamName</span>
-                            <span class="vs">vs</span>
-                            <span class="team">@match.SecondTeamName</span>
-                        </div>
-                        @if (match.IsCompleted)
-                        {
-                            <div class="match-score">
-                                @match.FirstTeamGoals - @match.SecondTeamGoals
-                            </div>
-                        }
-                    </div>
+                    <span class="badge bg-success">Completed</span>
                 }
-            </div>
+                @if (isCurrentRound)
+                {
+                    <span class="badge bg-primary">Current</span>
+                }
+            </h3>
+            <table class="matches-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Home Team</th>
+                        <th>Score</th>
+                        <th>Away Team</th>
+                        @if (Model.IsOrganizer)
+                        {
+                            <th>Actions</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var match in round.Value)
+                    {
+                        <tr id="match-@match.MatchID" class="@(match.MatchID.ToString() == highlightMatchId ? "highlight-match" : "")">
+                            <td>@match.Date.ToString("h:mm tt")</td>
+                            <td>@match.FirstTeamName</td>
+                            <td>
+                                @if (match.IsCompleted)
+                                {
+                                    @($"{match.FirstTeamGoals} - {match.SecondTeamGoals}")
+                                }
+                                else
+                                {
+                                    <span class="vs">vs</span>
+                                    <div class="score-input" style="display: none;">
+                                        <input type="number" min="0" class="form-control first-goals" tabindex="1" />
+                                        <span> - </span>
+                                        <input type="number" min="0" class="form-control second-goals" tabindex="2"/>
+                                    </div>
+                                }
+                            </td>
+                            <td>@match.SecondTeamName</td>
+                            @if (Model.IsOrganizer && !match.IsCompleted) //round.Key == Model.CurrentRound
+                            {
+                                <td>
+                                    <button class="btn btn-primary input-score-btn" data-match-id="@match.MatchID">Enter Score</button>
+                                    <div class="score-input" style="display: none;">
+                                        <button class="btn btn-success save-score-btn" data-match-id="@match.MatchID" data-league-id="@Model.League.LeagueID">Save</button>
+                                        <button class="btn btn-secondary cancel-score-btn">Cancel</button>
+                                    </div>
+                                </td>
+                            }
+                            else if (Model.IsOrganizer && match.IsCompleted){
+                                <td>
+                                    <button class="btn btn-primary input-score-btn" data-match-id="@match.MatchID" disabled>Enter Score</button>
+
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
         }
     }
 </div>
 
-<style>
-    .match-round {
-        margin-bottom: 2rem;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 1rem;
-        background-color: #f9f9f9;
-    }
+<!-- Anti-forgery token inside a hidden form -->
+<form id="anti-forgery-form" style="display: none;">
+    @Html.AntiForgeryToken()
+</form>
 
-    .round-header {
-        color: #333;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-    }
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Check if we have a match to highlight
+            const highlightMatchId = '@highlightMatchId';
+            if (highlightMatchId) {
+                // Scroll to the match
+                const matchRow = $('#match-' + highlightMatchId);
+                if (matchRow.length) {
+                    $('html, body').animate({
+                        scrollTop: matchRow.offset().top - 100
+                    }, 800);
 
-    .match-item {
-        display: flex;
-        align-items: center;
-        padding: 0.75rem 0;
-        border-bottom: 1px solid #eee;
-    }
+                    // Auto-open score input if it's an organizer and match isn't completed
+                    // if (@Json.Serialize(Model.IsOrganizer) {
+                    //     matchRow.find('.input-score-btn').trigger('click');
+                    // }
+                }
+            }
+            // Show score input fields
+            $('.input-score-btn').click(function () {
+                var row = $(this).closest('tr');
+                row.find('.vs').hide();
+                row.find('.score-input').show();
+                $(this).hide();
+            });
 
-        .match-item:last-child {
-            border-bottom: none;
-        }
+            // Cancel score input
+            $('.cancel-score-btn').click(function () {
+                var row = $(this).closest('tr');
+                row.find('.score-input').hide();
+                row.find('.vs').show();
+                row.find('.input-score-btn').show();
+                row.find('.first-goals').val('');
+                row.find('.second-goals').val('');
+            });
 
-    .match-field-time {
-        width: 150px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+            // Save score
+            $('.save-score-btn').click(function () {
+                var matchId = $(this).data('match-id');
+                var leagueId = $(this).data('league-id');
+                var row = $(this).closest('tr');
+                var firstGoals = parseInt(row.find('.first-goals').val());
+                var secondGoals = parseInt(row.find('.second-goals').val());
 
-    .field {
-        font-weight: 500;
-        color: #555;
-    }
+                if (isNaN(firstGoals) || isNaN(secondGoals) || firstGoals < 0 || secondGoals < 0) {
+                    alert('Please enter valid non-negative scores.');
+                    return;
+                }
 
-    .time {
-        color: #666;
-    }
+                $.ajax({
+                    url: '@Url.Action("UpdateMatchScore", "Match")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    headers: {
+                        'RequestVerificationToken': $('#anti-forgery-form input[name="__RequestVerificationToken"]').val()
+                    },
+                    data: JSON.stringify({
+                        MatchId: matchId,
+                        LeagueId: leagueId,
+                        FirstTeamGoals: firstGoals,
+                        SecondTeamGoals: secondGoals
+                    }),
+                    success: function (response) {
+                        if (response.success) {
+                            // Update match row
+                            // row.find('td:eq(2)').html(firstGoals + ' - ' + secondGoals);
+                            // row.find('td:eq(3)').text(getResultText(firstGoals, secondGoals));
+                            row.find('.vs').html(firstGoals + ' - ' + secondGoals);
+                            row.find('.score-input').hide();
+                            var enterScoreBtn = row.find('.input-score-btn');
+                            enterScoreBtn.show().prop('disabled', true);
+                            enterScoreBtn.removeClass('btn-primary').addClass('btn-secondary');
 
-    .completed-badge {
-        color: green;
-        font-weight: bold;
-    }
+                            // Check if all matches in current round are complete
+                            checkRoundCompletion();
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("AJAX Error:", xhr.responseText);
+                        alert('An error occurred while saving the score. Please try again.');
+                    }
+                });
+            });
 
-    .match-teams {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+            function checkRoundCompletion() {
+                var currentRoundMatches = $('.matches-table').filter(function () {
+                    return $(this).prev('h3').text().includes('Round ' + @Model.CurrentRound);
+                }).find('tr').filter(function () {
+                    return $(this).find('.input-score-btn').length > 0;
+                });
 
-    .team {
-        font-weight: 500;
-    }
-
-    .vs {
-        color: #777;
-    }
-
-    .match-score {
-        width: 80px;
-        text-align: center;
-        font-weight: bold;
-    }
-</style>
+                if (currentRoundMatches.length === 0) {
+                    window.location.reload();
+                }
+            }
+        });
+    </script>
+}

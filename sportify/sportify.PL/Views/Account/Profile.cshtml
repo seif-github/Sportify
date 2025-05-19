@@ -42,7 +42,7 @@
                 </div>
                 <div class="profile-info">
                     <h1>@Model.UserName</h1>
-                    <div class="role">Member</div>
+                    <div class="role">League Organizer</div>
                 </div>
             </div>
 
@@ -64,7 +64,7 @@
                         <div class="input-icon">
                             <i class="ph ph-envelope"></i>
                         </div>
-                        <input asp-for="Email" class="form-control" aria-label="Email" />
+                        <input asp-for="Email" class="form-control" aria-label="Email" readonly/>
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                 </div>

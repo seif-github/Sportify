@@ -42,7 +42,7 @@
                 <a asp-controller="Home" asp-action="Index">Home</a>
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <a asp-controller="League" asp-action="Index">Dashboard</a>
+                    <a asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                 }
                 <a asp-controller="League" asp-action="BrowseLeagues">Leagues</a>
             </div>
@@ -52,7 +52,7 @@
                 {
                     <div class="user-controls">
                         <button class="theme-toggle" aria-label="Toggle theme">
-                            <i class="ph ph-moon"></i>
+                            <i class="ph ph-moon" alt="D/L"></i>
                         </button>
                         <div class="user-buttons">
                             @* <a href="#notifications" class="nav-icon" title="Notifications"> *@
@@ -82,7 +82,7 @@
                 else
                 {
                         <button class="theme-toggle" aria-label="Toggle theme">
-                            <i class="ph ph-moon"></i>
+                            <i class="ph ph-moon" alt="D/L"></i>
                         </button>
                         <div class="auth-buttons">
                             <a asp-controller="Account" asp-action="Login" class="sign-in-btn">Login</a>

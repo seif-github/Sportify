@@ -15,5 +15,6 @@ namespace sportify.DAL.Repositories.Contracts
         //Task<int> GetTotalPlayersCountAsync(string userId);
         Task<IEnumerable<League>> GetRecentLeaguesAsync(string userId, int count);
         Task<IEnumerable<Match>> GetUpcomingMatchesAsync(string userId, int count);
+        Task<IEnumerable<Match>> GetPendingMatchesNearestDateAsync(string userId);
     }
 }

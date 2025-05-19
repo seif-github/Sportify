@@ -292,6 +292,103 @@
     background-color: var(--bg-tertiary);
 }
 
+/*Match Styles*/
+th, td{
+    text-align: center;
+}
+
+    td:nth-child(3), td:nth-child(5),
+    th:nth-child(3), th:nth-child(5) {
+        width: 200px; /* adjust as needed */
+    }
+
+.round-header {
+    padding: 0.75rem 1.25rem;
+    background-color: var(--bg-secondary);
+    border-radius: 0.25rem;
+    margin: 1rem auto;
+    color: var(--text-primary);
+}
+
+.current-round {
+    background-color: #e7f1ff;
+    border-left: 4px solid #0d6efd;
+}
+
+.match-completed {
+    opacity: 0.9;
+}
+
+    .match-completed td {
+        background-color: #f8f9fa;
+    }
+
+.final-score {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.vs {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.score-input {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+    .score-input input {
+        color: var(--text-primary);
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        margin: auto;
+    }
+    .score-input button {
+        height: 2rem;
+        padding: 0 1rem;
+        line-height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+/*.badge {
+    font-size: 0.8em;
+    margin-left: 0.5rem;
+}*/
+
+.highlight-match {
+    animation: highlight-fade 3s;
+    border: 1px solid var(--primary-green);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*@@keyframes highlight-fade {
+    0% {
+        background-color: rgba(13, 110, 253, 0.3);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}*/
+
 /* Dark mode styles */
 body {
     background-color: var(--bg-primary);

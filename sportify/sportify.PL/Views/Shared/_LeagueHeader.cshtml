@@ -13,6 +13,8 @@
     var currentDate = DateTime.Now;
     var status = currentDate < Model.League.StartDate ? "upcoming" :
                  currentDate <= endDate ? "ongoing" : "finished";
+
+    var leagueHasStarted = currentDate >= Model.League.StartDate;
 }
 
 <div class="league-header">
@@ -27,10 +29,19 @@
             @if (Model.IsOrganizer)
             {
                 <div class="mt-3 mt-md-0">
-                    <a asp-controller="League" asp-action="Edit" asp-route-id="@Model.League.LeagueID"
-                       class="btn btn-sm btn-outline-secondary">
-                        <i class="fas fa-cog me-1"></i> League Settings
-                    </a>
+                    @if(leagueHasStarted){
+                        <a asp-controller="League" asp-action="Edit" asp-route-id="@Model.League.LeagueID"
+                           class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true">
+                            <i class="fas fa-cog me-1"></i> League Settings
+                        </a>
+                    }
+                    else{
+                        <a asp-controller="League" asp-action="Edit" asp-route-id="@Model.League.LeagueID"
+                           class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-cog me-1"></i> League Settings
+                        </a>
+                    }
+                    
                 </div>
             }
         </div>
@@ -77,7 +88,7 @@
                    asp-controller="Team" asp-action="EditTeams" asp-route-id="@Model.League.LeagueID">Teams</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link @IsActive("League", "Matches")"
+                <a class="nav-link @IsActive("Match", "LeagueMatches")"
                    asp-controller="Match" asp-action="LeagueMatches" asp-route-id="@Model.League.LeagueID">Matches</a>
             </li>
         </ul>

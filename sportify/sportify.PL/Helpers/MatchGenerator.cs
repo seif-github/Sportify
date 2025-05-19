@@ -13,6 +13,7 @@ namespace sportify.BLL.Helpers
             var matches = new List<MatchDTO>();
             var teamIds = teams.Select(t => t.TeamID).ToList();
             bool isOddNumberOfTeams = teamIds.Count % 2 != 0;
+            var random = new Random();
 
             // For odd number of teams, add a "dummy" team (represented as -1)
             // This team will be paired with the team that sits out each round
@@ -61,12 +62,23 @@ namespace sportify.BLL.Helpers
                         secondTeamId = teamIds[awayTeamIndex];
                     }
 
+                    // Generate time - only 12 PM or later
+                    int hour = random.Next(15, 22); // (3 PM to 10 PM)
+                    int minute = random.Next(0, 4) * 15; // 0, 15, 30, or 45 minutes
+
+                    // Create match date with time
+                    DateTime matchDateTime = new DateTime(
+                        currentDate.Year,
+                        currentDate.Month,
+                        currentDate.Day,
+                        hour, minute, 0);
+
                     matches.Add(new MatchDTO
                     {
                         LeagueId = league.LeagueID,
                         FirstTeamId = firstTeamId,
                         SecondTeamId = secondTeamId,
-                        Date = currentDate,
+                        Date = matchDateTime,
                         FirstTeamGoals = 0,
                         SecondTeamGoals = 0,
                         Result = MatchResult.Pending,

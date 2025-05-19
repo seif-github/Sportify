@@ -147,6 +147,81 @@ th {
 /* Matches Grid */
 .matches-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.match-card {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+    .match-card:hover {
+        transform: translateY(-5px);
+    }
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.team-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team-score {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.vs {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.match-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.no-matches {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.match-status {
+    background: #ffc107;
+    color: #333;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+/*.matches-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-bottom: 1rem;
@@ -192,11 +267,11 @@ th {
 .vs {
     color: var(--text-secondary);
     font-weight: 500;
-}
+}*/
 
 /* Add the CSS you provided here */
 /* I've added one additional style for the completed status */
-.status.completed {
+/*.status.completed {
     background: rgba(156, 163, 175, 0.1);
     color: #9ca3af;
 }
@@ -214,7 +289,7 @@ th {
     font-size: 0.875rem;
     color: var(--text-secondary);
     text-align: center;
-}
+}*/
 
 .league-name {
     font-weight: 500;

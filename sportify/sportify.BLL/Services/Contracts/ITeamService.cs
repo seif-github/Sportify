@@ -18,7 +18,8 @@ namespace sportify.BLL.Services.Contracts
         Task AddTeamAsync(TeamDTO team);
         Task UpdateAsync(TeamDTO team);
         Task DeleteAsync(int id);
-        Task<List<TeamDTO>> SortStandings(int leagueId);
+        //Task<List<TeamDTO>> SortStandings(int leagueId);
+        Task<List<TeamDTO>> UpdateAndSortStandingsAsync(int leagueId);
 
     }
 }

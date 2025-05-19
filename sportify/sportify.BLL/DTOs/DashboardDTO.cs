@@ -13,6 +13,7 @@ namespace sportify.BLL.DTOs
         public int UpcomingMatches { get; set; }
         //public int TotalPlayers { get; set; }
         public IEnumerable<LeagueDTO> RecentLeagues { get; set; }
-        public IEnumerable<MatchDTO> UpcomingMatchesList { get; set; }
+        //public IEnumerable<MatchDTO> UpcomingMatchesList { get; set; }
+        public IEnumerable<MatchDTO> PendingMatches { get; set; }
     }
 }
