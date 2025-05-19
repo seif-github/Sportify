@@ -3,6 +3,7 @@
 @{
     Layout = "_LeagueLayout";
     ViewData["Title"] = "League Matches";
+    ViewData["LeagueId"] = Model?.League?.LeagueID ?? 0;
     var highlightMatchId = Context.Request.Query["highlightMatch"].FirstOrDefault();
 }
 
@@ -52,7 +53,27 @@
                     @foreach (var match in round.Value)
                     {
                         <tr id="match-@match.MatchID" class="@(match.MatchID.ToString() == highlightMatchId ? "highlight-match" : "")">
-                            <td>@match.Date.ToString("h:mm tt")</td>
+                            @* <td>@match.Date.ToString("h:mm tt")</td> *@
+                            <td>
+                                <span class="match-time-display">@match.Date.ToString("h:mm tt")</span>
+                                <div class="time-edit-container" style="display: none;">
+                                    <div class="time-input">
+                                        <select class="form-control hour-select">
+                                            @for (int i = 0; i <= 23; i++)
+                                            {
+                                                <option value="@i" selected="@(i == match.Hour)">@i.ToString("00")</option>
+                                            }
+                                        </select>
+                                        <span>:</span>
+                                        <select class="form-control minute-select">
+                                            @for (int i = 0; i < 60; i += 5)
+                                            {
+                                                <option value="@i-12" selected="@(i == match.Minute)">@i.ToString("00")</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
                             <td>@match.FirstTeamName</td>
                             <td>
                                 @if (match.IsCompleted)
@@ -73,10 +94,19 @@
                             @if (Model.IsOrganizer && !match.IsCompleted) //round.Key == Model.CurrentRound
                             {
                                 <td>
-                                    <button class="btn btn-primary input-score-btn" data-match-id="@match.MatchID">Enter Score</button>
+                                    <div class="match-controls">
+                                        <button class="btn btn-primary input-score-btn" data-match-id="@match.MatchID">Enter Score</button>
+                                        <button class="btn btn-primary edit-time-btn" data-match-id="@match.MatchID">
+                                            Edit Time
+                                        </button>
+                                    </div>
                                     <div class="score-input" style="display: none;">
                                         <button class="btn btn-success save-score-btn" data-match-id="@match.MatchID" data-league-id="@Model.League.LeagueID">Save</button>
                                         <button class="btn btn-secondary cancel-score-btn">Cancel</button>
+                                    </div>
+                                    <div class="time-actions" style="display: none;">
+                                        <button class="btn btn-sm btn-success save-time-btn" data-match-id="@match.MatchID">Save</button>
+                                        <button class="btn btn-sm btn-outline-secondary cancel-time-btn">Cancel</button>
                                     </div>
                                 </td>
                             }
@@ -103,6 +133,82 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
+            // Time editing functionality
+            $('.edit-time-btn').click(function() {
+                const row = $(this).closest('tr');
+                row.find('.match-time-display').hide();
+                row.find('.input-score-btn').hide();
+                row.find('.time-edit-container').show();
+                row.find('.time-actions').show();
+                $(this).hide();
+            });
+
+            $('.cancel-time-btn').click(function() {
+                const row = $(this).closest('tr');
+                row.find('.input-score-btn').show();
+                resetTimeEdit(row);
+            });
+
+            $('.save-time-btn').click(function() {
+                const matchId = $(this).data('match-id');
+                const row = $(this).closest('tr');
+                const hour = parseInt(row.find('.hour-select').val());
+                const minute = parseInt(row.find('.minute-select').val());
+
+                if (isNaN(hour)) { // Fixed missing parenthesis
+                    alert('Please select a valid hour');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/Match/UpdateMatchTime',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    headers: {
+                        'RequestVerificationToken': $('#anti-forgery-form input[name="__RequestVerificationToken"]').val()
+                    },
+                    data: JSON.stringify({
+                        MatchId: matchId,
+                        Hour: hour,
+                        Minute: minute
+                    }),
+                    success: function(response) {
+                        if (response.success) {
+                            // Update displayed time
+                            const newTime = new Date();
+                            newTime.setHours(hour);
+                            newTime.setMinutes(minute);
+                            row.find('.match-time-display').text(newTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+                            resetTimeEdit(row);
+
+                            // Show success message
+                            // const successMsg = $('<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+                            //     'Match time updated successfully!' +
+                            //     '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+                            //     '</div>');
+
+                            // $('.container').prepend(successMsg);
+                            // setTimeout(() => successMsg.alert('close'), 3000);
+                            
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                    },
+                    error: function(xhr) {
+                        console.error("Error updating time:", xhr.responseText);
+                        alert('An error occurred while updating the time');
+                    }
+                });
+            });
+
+            function resetTimeEdit(row) {
+                row.find('.match-time-display').show();
+                row.find('.time-edit-container').hide();
+                row.find('.time-actions').hide();
+                row.find('.edit-time-btn').show();
+                row.find('.input-score-btn').show();
+                window.location.reload();
+            }
             // Check if we have a match to highlight
             const highlightMatchId = '@highlightMatchId';
             if (highlightMatchId) {
@@ -124,6 +230,7 @@
                 var row = $(this).closest('tr');
                 row.find('.vs').hide();
                 row.find('.score-input').show();
+                row.find('.edit-time-btn').hide();
                 $(this).hide();
             });
 
@@ -131,6 +238,7 @@
             $('.cancel-score-btn').click(function () {
                 var row = $(this).closest('tr');
                 row.find('.score-input').hide();
+                row.find('.edit-time-btn').show();
                 row.find('.vs').show();
                 row.find('.input-score-btn').show();
                 row.find('.first-goals').val('');
@@ -168,14 +276,14 @@
                             // Update match row
                             // row.find('td:eq(2)').html(firstGoals + ' - ' + secondGoals);
                             // row.find('td:eq(3)').text(getResultText(firstGoals, secondGoals));
-                            row.find('.vs').html(firstGoals + ' - ' + secondGoals);
+                            // row.find('.vs').html(firstGoals + ' - ' + secondGoals);
                             row.find('.score-input').hide();
                             var enterScoreBtn = row.find('.input-score-btn');
                             enterScoreBtn.show().prop('disabled', true);
-                            enterScoreBtn.removeClass('btn-primary').addClass('btn-secondary');
+                            // enterScoreBtn.removeClass('btn-primary').addClass('btn-secondary');
 
                             // Check if all matches in current round are complete
-                            checkRoundCompletion();
+                            // checkRoundCompletion();
                         } else {
                             alert('Error: ' + response.message);
                         }
@@ -187,16 +295,54 @@
                 });
             });
 
-            function checkRoundCompletion() {
-                var currentRoundMatches = $('.matches-table').filter(function () {
-                    return $(this).prev('h3').text().includes('Round ' + @Model.CurrentRound);
-                }).find('tr').filter(function () {
-                    return $(this).find('.input-score-btn').length > 0;
+            // function checkRoundCompletion() {
+            //     var currentRound = parseInt($('.current-round').text().match(/Round (\d+)/)[1]);
+            //     var currentRoundMatches = $('.matches-table').filter(function () {
+            //         return $(this).prev('h3').hasClass('current-round');
+            //     }).find('tr').filter(function () {
+            //         return $(this).find('.input-score-btn:not(:disabled)').length > 0;
+            //     });
+
+            //     if (currentRoundMatches.length === 0) {
+            //         window.location.reload();
+            //     }
+            // }
+
+            // Connection status UI element
+            // const connectionStatus = $(`
+            //     <div id="connection-status" style="position: fixed; bottom: 10px; right: 10px;
+            //          padding: 8px 12px; border-radius: 4px; background: #f8f9fa;
+            //          box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: none; z-index: 1000;">
+            //         <span id="status-icon" style="margin-right: 5px;">🔴</span>
+            //         <span id="status-text">Disconnected</span>
+            //     </div>
+            // `);
+            // $('body').append(connectionStatus);
+
+            const leagueId = @Model?.League?.LeagueID ?? 0;
+
+            if (leagueId > 0) {
+                const connection = new signalR.HubConnectionBuilder()
+                    .withUrl("/scoreHub")
+                    .withAutomaticReconnect()
+                    .build();
+
+                connection.on("ReceiveScoreUpdate", update => {
+                    console.log("Score update received:", update);
+                    const row = $(`#match-${update.matchId}`);
+                    if (row.length) {
+                        row.find('td:nth-child(3)').text(`${update.firstTeamGoals} - ${update.secondTeamGoals}`);
+                        // Add other update logic
+                    }
                 });
 
-                if (currentRoundMatches.length === 0) {
-                    window.location.reload();
+                function startConnection() {
+                    connection.start()
+                        .then(() => connection.invoke("JoinLeagueGroup", leagueId))
+                        .catch(err => console.error("Connection error:", err));
                 }
+
+                startConnection();
             }
         });
     </script>

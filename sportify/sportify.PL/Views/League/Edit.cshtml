@@ -16,13 +16,15 @@
     <div class="content-section">
         <div class="card">
             <div class="card-body">
-                <form asp-action="Edit" method="post">
+                <form asp-action="Edit" enctype="multipart/form-data" method="post">
                     <input type="hidden" asp-for="LeagueID" />
                     <input type="hidden" asp-for="OrganizerID" />
                     <input type="hidden" asp-for="NumberOfTeams" />
+                    <input type="hidden" asp-for="ImageUrl" />
+
 
                     <!-- Validation Summary -->
-                    <div asp-validation-summary="All" class="error-summary mb-3"></div>
+                    @* <div asp-validation-summary="All" class="error-summary mb-3"></div> *@
                     <h5 class="section-title">Basic Details</h5>
 
                     <!-- League Name -->
@@ -59,21 +61,43 @@
 
                     <h5 class="section-title mt-4">League Logo</h5>
 
-                    <!-- Image URL -->
-                    <div class="mb-3">
-                        <label asp-for="imageUrl" class="form-label"></label>
-                        <input asp-for="imageUrl" class="form-control" />
-                        <span asp-validation-for="imageUrl" class="text-danger"></span>
-                    </div>
-
-                    <!-- League Logo Upload (kept from original but not in scaffolding) -->
+                    <!-- Logo Upload -->
                     <div class="league-logo-upload mb-3">
                         <div class="upload-zone">
                             <i class="ph-bold ph-cloud-arrow-up"></i>
                             <p>Drag and drop your League logo here or click to upload</p>
-                            <input type="file" id="league-logo" class="d-none">
+                            <input type="file" asp-for="ImageFile" class="form-control" id="logoUpload"
+                                   accept="image/png, image/jpeg, image/jpg, image/gif" />
+                            <span asp-validation-for="ImageFile" class="text-danger"></span>
                         </div>
                     </div>
+
+                    <!-- Upload Preview -->
+                    <div class="mb-3" id="logoPreviewContainer" style="display:none;">
+                        <label class="form-label">New Logo Preview</label>
+                        <div>
+                            <img id="logoPreview" src="#" alt="Logo preview"
+                                 style="max-width: 200px; max-height: 200px; border-radius: 4px;" />
+                        </div>
+                    </div>
+
+                    <!-- Hidden field to preserve existing image URL -->
+
+                    @* <!-- Image URL --> *@
+                    @* <div class="mb-3"> *@
+                    @*     <label asp-for="imageUrl" class="form-label"></label> *@
+                    @*     <input asp-for="imageUrl" class="form-control" /> *@
+                    @*     <span asp-validation-for="imageUrl" class="text-danger"></span> *@
+                    @* </div> *@
+
+                    @* <!-- League Logo Upload (kept from original but not in scaffolding) --> *@
+                    @* <div class="league-logo-upload mb-3"> *@
+                    @*     <div class="upload-zone"> *@
+                    @*         <i class="ph-bold ph-cloud-arrow-up"></i> *@
+                    @*         <p>Drag and drop your League logo here or click to upload</p> *@
+                    @*         <input type="file" id="league-logo" class="d-none"> *@
+                    @*     </div> *@
+                    @* </div> *@
 
 
                     <!-- Form Buttons -->
@@ -116,6 +140,20 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
+        // Logo preview functionality
+        document.getElementById('logoUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('logoPreview').src = e.target.result;
+                    document.getElementById('logoPreviewContainer').style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            } else {
+                document.getElementById('logoPreviewContainer').style.display = 'none';
+            }
+        });
         // Delete league modal
         const deleteBtn = document.querySelector('[data-delete-account]');
         const modal = document.getElementById('deleteModal');

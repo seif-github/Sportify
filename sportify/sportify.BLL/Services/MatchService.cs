@@ -28,7 +28,13 @@ namespace sportify.BLL.Services
             this._teamService = teamService;
             this._mapper = mapper;
         }
-        public async Task<List<MatchDTO>> GetMatchesByLeagueIdAsync(int id)
+
+        public async Task<MatchDTO?> GetMatchByIdAsync(int id) // id -> match id
+        {
+            var data = await _genericRepository.GetByIdAsync(id);
+            return data == null ? null : _mapper.Map<MatchDTO>(data);
+        }
+        public async Task<List<MatchDTO>> GetMatchesByLeagueIdAsync(int id) // id -> league id
         {
             var matches = await _matchRepository.GetMatchesWithTeamsByLeagueAsync(id);
 

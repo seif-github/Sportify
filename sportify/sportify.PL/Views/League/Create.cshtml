@@ -37,7 +37,7 @@
                                 <label asp-for="StartDate">Start Date</label>
                                 <div class="date-input-container">
                                     <input asp-for="StartDate" type="date" class="form-control" required
-                                           value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                                           value="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")">
                                     <span class="date-icon">📅</span>
                                 </div>
                                 <span asp-validation-for="StartDate" class="text-danger"></span>

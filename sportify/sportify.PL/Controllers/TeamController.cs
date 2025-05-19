@@ -3,6 +3,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Org.BouncyCastle.Utilities.IO;
 using sportify.BLL.DTOs;
 using sportify.BLL.Helpers;
@@ -21,15 +22,19 @@ namespace sportify.PL.Controllers
         private readonly IUserService _userService;
         private readonly ILeagueTeamCountUpdateService _leagueTeamCountService;
         private readonly IMatchService _matchService;
+        private readonly IFileService _fileService;
+
 
         public TeamController(ITeamService teamService, ILeagueService leagueService,
-            IMatchService matchService, IUserService userService, ILeagueTeamCountUpdateService leagueTeamCountService)
+            IMatchService matchService, IUserService userService, 
+            ILeagueTeamCountUpdateService leagueTeamCountService, IFileService fileService)
         {
             _teamService = teamService;
             _leagueService = leagueService;
             _leagueTeamCountService = leagueTeamCountService;
             _matchService = matchService;
             _userService = userService;
+            _fileService = fileService;
         }
 
         public IActionResult Index()
@@ -153,21 +158,27 @@ namespace sportify.PL.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new
+                {
+                    error = ModelState.Values
+                .SelectMany(v => v.Errors)
+                .FirstOrDefault()?.ErrorMessage
+                });
             }
 
             // Verify that the team exists and the user has permission to edit it
             var existingTeam = await _teamService.GetTeamByIdAsync(team.TeamID);
+
             if (existingTeam == null)
             {
-                return NotFound();
+                return NotFound(new { error = "Team not found" });
             }
 
             // Check if the user is the organizer of the league this team belongs to
             var league = await _leagueService.GetByIdAsync(existingTeam.LeagueID);
             if (league == null)
             {
-                return NotFound();
+                return NotFound(new { error = "League not found" });
             }
 
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -176,12 +187,79 @@ namespace sportify.PL.Controllers
                 return Forbid();
             }
 
+            //if (team.ImageFile != null && team.ImageFile.Length > 0)
+            //{
+            //    // Delete old image if exists
+            //    if (!string.IsNullOrEmpty(existingTeam.ImageUrl))
+            //    {
+            //        await _fileService.DeleteFileAsync(existingTeam.ImageUrl);
+            //    }
+            //    // Save the file and get the URL
+            //    team.ImageUrl = await _fileService.SaveFileAsync(team.ImageFile);
+            //}
+            //else
+            //{
+            //    team.ImageUrl = existingTeam.ImageUrl;
+            //}
+
             // Only update the name, preserving other properties
+            if (string.IsNullOrWhiteSpace(team.Name)) // what to do here
+            {
+                return BadRequest(new { error = "Team name cannot be empty" });
+            }
+
             existingTeam.Name = team.Name;
 
             await _teamService.UpdateAsync(existingTeam);
 
             return Ok(new { success = true });
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditTeamLogo(int TeamID, IFormFile ImageFile, int LeagueID)
+        {
+            try
+            {
+                var existingTeam = await _teamService.GetTeamByIdAsync(TeamID);
+                if (existingTeam == null)
+                {
+                    return NotFound(new { success = false, message = "Team not found" });
+                }
+
+                // Verify user is league organizer
+                var league = await _leagueService.GetByIdAsync(existingTeam.LeagueID);
+                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (currentUserId != league?.OrganizerID)
+                {
+                    return Forbid();
+                }
+
+                // Handle image upload
+                if (ImageFile != null && ImageFile.Length > 0)
+                {
+                    // Delete old image if exists
+                    if (!string.IsNullOrEmpty(existingTeam.ImageUrl))
+                    {
+                        await _fileService.DeleteFileAsync(existingTeam.ImageUrl);
+                    }
+
+                    // Save new image
+                    existingTeam.ImageUrl = await _fileService.SaveFileAsync(ImageFile);
+                    await _teamService.UpdateAsync(existingTeam);
+
+                    return Ok(new
+                    {
+                        success = true,
+                        imageUrl = existingTeam.ImageUrl
+                    });
+                }
+
+                return BadRequest(new { success = false, message = "No image provided" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { success = false, message = ex.Message });
+            }
         }
 
         [HttpPost]

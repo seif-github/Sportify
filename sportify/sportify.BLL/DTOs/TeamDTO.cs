@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using sportify.BLL.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -22,6 +24,7 @@ namespace sportify.BLL.DTOs
         public int LeagueID { get; set; }
         [Display(Name = "Team Image")]
         
-        public string? imageUrl;
+        public string? ImageUrl;
+        public IFormFile? ImageFile { get; set; }
     }
 }

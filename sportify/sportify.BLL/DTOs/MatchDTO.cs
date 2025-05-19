@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,5 +32,19 @@ namespace sportify.BLL.DTOs
         public int SecondTeamGoals { get; set; }
         public MatchResult Result { get; set; }
         public bool IsCompleted { get; set; }
+
+        [NotMapped]
+        public int Hour
+        {
+            get => Date.Hour;
+            set => Date = new DateTime(Date.Year, Date.Month, Date.Day, value, Date.Minute, 0);
+        }
+
+        [NotMapped]
+        public int Minute
+        {
+            get => Date.Minute;
+            set => Date = new DateTime(Date.Year, Date.Month, Date.Day, Date.Hour, value, 0);
+        }
     }
 }
