@@ -17,5 +17,7 @@ namespace sportify.BLL.Services.Contracts
         Task<LeagueDTO> AddAndReturnAsync(LeagueDTO model);
         Task UpdateAsync(LeagueDTO model);
         Task DeleteAsync(int id);
+        Task<LeagueReportDTO?> GetLeagueReportDataAsync(int leagueId);
+        void ClearTracking();
     }
 }

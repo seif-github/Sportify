@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace sportify.DAL.Repositories.Contracts
 {
-    public interface IMatchRepository: IGenericRepository<Match>
+    public interface ILeagueRepository: IGenericRepository<League>
     {
-        Task<List<Entities.Match>> GetMatchesWithTeamsByLeagueAsync(int leagueId);
-        Task DeleteAllMatchesAsync(int leagueId);
+        Task<League?> GetLeagueWithTeamsAsync(int leagueId);
     }
 }

@@ -20,6 +20,7 @@ namespace sportify.BLL.Services.Contracts
         Task DeleteAsync(int id);
         //Task<List<TeamDTO>> SortStandings(int leagueId);
         Task<List<TeamDTO>> UpdateAndSortStandingsAsync(int leagueId);
+        void ClearTracking();
 
     }
 }

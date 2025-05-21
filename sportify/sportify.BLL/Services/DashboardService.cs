@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Data;
 using sportify.DAL.Repositories.Contracts;
 using System.Threading.Tasks;
 
@@ -8,27 +9,22 @@ namespace sportify.BLL.Services
 {
     public class DashboardService : IDashboardService
     {
-        private readonly IDashboardRepository _dashboardRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public DashboardService(IDashboardRepository dashboardRepository, IMapper mapper)
+        public DashboardService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _dashboardRepository = dashboardRepository;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
         public async Task<DashboardDTO> GetDashboardDataAsync(string userId)
         {
-            // Await each operation sequentially
-            var totalLeagues = await _dashboardRepository.GetTotalLeaguesCountAsync(userId);
-            var activeTeams = await _dashboardRepository.GetActiveTeamsCountAsync(userId);
-            var upcomingMatches = await _dashboardRepository.GetUpcomingMatchesCountAsync(userId);
-
-            //var upcomingMatchesList = await GetUpcomingMatchesAsync(userId);
-            //var counts = await GetCountsAsync(userId);
-
-            var recentLeagues = await _dashboardRepository.GetRecentLeaguesAsync(userId, 5);
-            var pendingMatches = await _dashboardRepository.GetPendingMatchesNearestDateAsync(userId);
+            var totalLeagues = await _unitOfWork.DashboardRepository.GetTotalLeaguesCountAsync(userId);
+            var activeTeams = await _unitOfWork.DashboardRepository.GetActiveTeamsCountAsync(userId);
+            var upcomingMatches = await _unitOfWork.DashboardRepository.GetUpcomingMatchesCountAsync(userId);
+            var recentLeagues = await _unitOfWork.DashboardRepository.GetRecentLeaguesAsync(userId);
+            var pendingMatches = await _unitOfWork.DashboardRepository.GetPendingMatchesNearestDateAsync(userId);
 
             return new DashboardDTO
             {
@@ -36,7 +32,6 @@ namespace sportify.BLL.Services
                 ActiveTeams = activeTeams,
                 UpcomingMatches = upcomingMatches,
                 RecentLeagues = _mapper.Map<IEnumerable<LeagueDTO>>(recentLeagues),
-                //UpcomingMatchesList = upcomingMatchesList
                 PendingMatches = _mapper.Map<IEnumerable<MatchDTO>>(pendingMatches)
             };
         }

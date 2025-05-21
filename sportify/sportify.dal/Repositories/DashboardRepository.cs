@@ -19,14 +19,14 @@ namespace sportify.DAL.Repositories
 
         public async Task<int> GetTotalLeaguesCountAsync(string userId)
         {
-            return await _context.Leagues
+            return await _context.Set<League>()
                 .Where(l => l.OrganizerID == userId)
                 .CountAsync();
         }
 
         public async Task<int> GetActiveTeamsCountAsync(string userId)
         {
-            return await _context.Teams
+            return await _context.Set<Team>()
                 .Include(t => t.League)
                 .Where(t => t.League.OrganizerID == userId)
                 .CountAsync();
@@ -34,7 +34,7 @@ namespace sportify.DAL.Repositories
 
         public async Task<int> GetUpcomingMatchesCountAsync(string userId)
         {
-            return await _context.Matches
+            return await _context.Set<Match>()
                 .Include(m => m.League)
                 .Where(m => m.League.OrganizerID == userId && m.Date > DateTime.Now)
                 .CountAsync();
@@ -49,26 +49,25 @@ namespace sportify.DAL.Repositories
         //        .CountAsync();
         //}
 
-        public async Task<IEnumerable<League>> GetRecentLeaguesAsync(string userId, int count)
+        public async Task<IEnumerable<League>> GetRecentLeaguesAsync(string userId)
         {
-            return await _context.Leagues
+            return await _context.Set<League>()
                 .Where(l => l.OrganizerID == userId)
                 .OrderByDescending(l => l.StartDate)
-                .Take(count)
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Match>> GetUpcomingMatchesAsync(string userId, int count)
-        {
-            return await _context.Matches
-                .Include(m => m.League)
-                .Include(m => m.FirstTeam)
-                .Include(m => m.SecondTeam)
-                .Where(m => m.League.OrganizerID == userId && m.Date > DateTime.Now)
-                .OrderBy(m => m.Date)
-                .Take(count)
-                .ToListAsync();
-        }
+        //public async Task<IEnumerable<Match>> GetUpcomingMatchesAsync(string userId, int count)
+        //{
+        //    return await _context.Matches
+        //        .Include(m => m.League)
+        //        .Include(m => m.FirstTeam)
+        //        .Include(m => m.SecondTeam)
+        //        .Where(m => m.League.OrganizerID == userId && m.Date > DateTime.Now)
+        //        .OrderBy(m => m.Date)
+        //        .Take(count)
+        //        .ToListAsync();
+        //}
 
         public async Task<IEnumerable<Match>> GetPendingMatchesNearestDateAsync(string userId)
         {

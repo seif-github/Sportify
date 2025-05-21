@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Data;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories.Contracts;
 
@@ -13,23 +14,23 @@ namespace sportify.BLL.Services
 {
     public class LeagueTeamCountUpdateService: ILeagueTeamCountUpdateService
     {
-        private readonly IGenericRepository<League> _genericRepo;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public LeagueTeamCountUpdateService(IGenericRepository<League> genericRepo, IMapper mapper)
+        public LeagueTeamCountUpdateService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            this._genericRepo = genericRepo;
-            this._mapper = mapper;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task UpdateTeamCountAsync(LeagueTeamCountUpdateDTO model)
         {
-            var league = await _genericRepo.GetByIdAsync(model.LeagueID);
+            var league = await _unitOfWork.LeagueRepository.GetByIdAsync(model.LeagueID);
             if (league != null)
             {
                 league.NumberOfTeams = model.TeamCount;
-                await _genericRepo.UpdateAsync(league);
-                await _genericRepo.SaveChangesAsync();
+                _unitOfWork.LeagueRepository.Update(league);
+                await _unitOfWork.CompleteAsync();
             }
         }
     }
