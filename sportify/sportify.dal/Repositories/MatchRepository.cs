@@ -10,26 +10,20 @@ using sportify.DAL.Repositories.Contracts;
 
 namespace sportify.DAL.Repositories
 {
-    public class MatchRepository : IMatchRepository
+    public class MatchRepository : GenericRepository<Match>, IMatchRepository
     {
-        private readonly SportifyContext _context;
-        private readonly DbSet<Match> _dbSet;
-        public MatchRepository(SportifyContext context)
-        {
-            _context = context;
-            _dbSet = _context.Set<Match>();
-        }
+        public MatchRepository(DbContext context) : base(context) { }
 
         public async Task<List<Match>> GetMatchesWithTeamsByLeagueAsync(int leagueId)
         {
-            return await _context.Matches
+            return await _dbSet
                 .Include(m => m.FirstTeam)
                 .Include(m => m.SecondTeam)
                 .Where(m => m.LeagueId == leagueId)
                 .ToListAsync();
         }
 
-        public async Task DeleteAllMatchesAsync(int leagueId) // id -> leagueId
+        public async Task DeleteAllMatchesAsync(int leagueId)
         {
             await _dbSet.Where(m => m.LeagueId == leagueId).ExecuteDeleteAsync();
             //var matches = await _dbSet.Where(m => m.LeagueId == leagueId).ToListAsync();

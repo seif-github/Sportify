@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Http.Features;
 using sportify.BLL.Settings;
 using Microsoft.Extensions.Options;
 using sportify.PL.Hubs;
+using sportify.PL.Helpers;
+using DinkToPdf.Contracts;
+using DinkToPdf;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,25 +44,31 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped<IUserRepository, UserRepository>(); 
+//builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+//builder.Services.AddScoped<IUserRepository, UserRepository>(); 
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IMatchRepository, MatchRepository>(); 
+//builder.Services.AddScoped<IMatchRepository, MatchRepository>(); 
 builder.Services.AddScoped<IMatchService, MatchService>();
+//builder.Services.AddScoped<ITeamRepository, TeamRepository>();
 builder.Services.AddScoped<ITeamService, TeamService>();
-builder.Services.AddScoped<ITeamRepository, TeamRepository>();
+//builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
-builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+//builder.Services.AddScoped<ILeagueRepository, LeagueRepository>();
 builder.Services.AddScoped<ILeagueService, LeagueService>();
 builder.Services.AddScoped<ILeagueTeamCountUpdateService, LeagueTeamCountUpdateService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<LeagueReportPdfGenerator>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10MB file size limit
 });
+
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+
 
 builder.Services.AddSignalR();
 builder.Services.AddControllersWithViews();

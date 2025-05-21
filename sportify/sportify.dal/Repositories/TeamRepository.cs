@@ -10,16 +10,9 @@ using System.Threading.Tasks;
 
 namespace sportify.DAL.Repositories
 {
-    public class TeamRepository : ITeamRepository
+    public class TeamRepository : GenericRepository<Team>, ITeamRepository
     {
-        private readonly SportifyContext _context;
-        private readonly DbSet<Team> _dbSet;
-        public TeamRepository(SportifyContext context)
-        {
-            _context = context;
-            _dbSet = context.Set<Team>();
-                       
-        }
+        public TeamRepository(DbContext context) : base(context) { }
         public async Task<List<Team>> GetAllTeamsInLeagueAsync(int leagueId)
         {
             return await _dbSet.Where(m => m.LeagueID == leagueId).ToListAsync();

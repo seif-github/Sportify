@@ -10,19 +10,13 @@ using sportify.DAL.Repositories.Contracts;
 
 namespace sportify.DAL.Repositories
 {
-    public class UserRepository: IUserRepository
+    public class UserRepository: GenericRepository<ApplicationUser>, IUserRepository
     {
-        private readonly SportifyContext _context;
-        private readonly DbSet<ApplicationUser> _dbSet;
-        public UserRepository(SportifyContext context)
-        {
-            _context = context;
-            _dbSet = _context.Set<ApplicationUser>();
-        }
+        public UserRepository(DbContext context) : base(context) { }
 
         public async Task<ApplicationUser> GetUserById(string userId)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            return await _context.Set<ApplicationUser>().FirstOrDefaultAsync(u => u.Id == userId);
         }
 
         public async Task<List<ApplicationUser>> GetUsersByIds(List<string> userIds)

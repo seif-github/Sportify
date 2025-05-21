@@ -181,6 +181,7 @@ namespace sportify.PL.Controllers
                     model.Minute,
                     0
                 );
+                _matchService.ClearTracking();
 
                 await _matchService.UpdateAsync(match);
 

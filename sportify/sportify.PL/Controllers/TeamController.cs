@@ -161,8 +161,8 @@ namespace sportify.PL.Controllers
                 return BadRequest(new
                 {
                     error = ModelState.Values
-                .SelectMany(v => v.Errors)
-                .FirstOrDefault()?.ErrorMessage
+                        .SelectMany(v => v.Errors)
+                        .FirstOrDefault()?.ErrorMessage
                 });
             }
 
@@ -202,11 +202,12 @@ namespace sportify.PL.Controllers
             //    team.ImageUrl = existingTeam.ImageUrl;
             //}
 
-            // Only update the name, preserving other properties
-            if (string.IsNullOrWhiteSpace(team.Name)) // what to do here
+            if (string.IsNullOrWhiteSpace(team.Name))
             {
                 return BadRequest(new { error = "Team name cannot be empty" });
             }
+
+            _teamService.ClearTracking();
 
             existingTeam.Name = team.Name;
 
@@ -243,6 +244,8 @@ namespace sportify.PL.Controllers
                         await _fileService.DeleteFileAsync(existingTeam.ImageUrl);
                     }
 
+                    _teamService.ClearTracking();
+
                     // Save new image
                     existingTeam.ImageUrl = await _fileService.SaveFileAsync(ImageFile);
                     await _teamService.UpdateAsync(existingTeam);
@@ -266,6 +269,7 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteTeam(int teamId, int leagueId)
         {
+            await _matchService.DeleteAllMatchesAsync(leagueId);
             await _teamService.DeleteAsync(teamId);
 
             await _leagueTeamCountService.UpdateTeamCountAsync(new LeagueTeamCountUpdateDTO
@@ -273,6 +277,18 @@ namespace sportify.PL.Controllers
                 LeagueID = leagueId,
                 TeamCount = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).Count()
             });
+
+            var teams = (await _teamService.GetAllTeamsInLeagueAsync(leagueId)).ToList();
+
+            var league = await _leagueService.GetByIdAsync(leagueId);
+            if (league == null)
+                return NotFound();
+
+
+            var matches = MatchGenerator.GenerateMatches(league, teams);
+            await _matchService.AddMatchesAsync(matches);
+
+            await _teamService.UpdateAndSortStandingsAsync(leagueId);
 
             return RedirectToAction("EditTeams", new { id = leagueId });
         }
@@ -316,6 +332,8 @@ namespace sportify.PL.Controllers
 
             var matches = MatchGenerator.GenerateMatches(league, teams);
             await _matchService.AddMatchesAsync(matches);
+
+            await _teamService.UpdateAndSortStandingsAsync(leagueId);
 
             return RedirectToAction("EditTeams", new { id = leagueId });
         }

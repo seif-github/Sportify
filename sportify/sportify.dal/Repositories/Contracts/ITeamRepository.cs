@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace sportify.DAL.Repositories.Contracts
 {
-    public interface ITeamRepository
+    public interface ITeamRepository: IGenericRepository<Team>
     {
         Task<List<Team>> GetAllTeamsInLeagueAsync(int leagueId);
     }

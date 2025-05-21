@@ -8,6 +8,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Data;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories.Contracts;
 
@@ -15,21 +16,22 @@ namespace sportify.BLL.Services
 {
     public class AccountService : IAccountService
     {
+        private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly IGenericRepository<ApplicationUser> _genericRepo;
         private readonly IMapper _mapper;
         private readonly IFileService _fileService;
 
-        public AccountService(UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
-            IGenericRepository<ApplicationUser> genericRepo,
-            IUserRepository userRepo, 
-            IMapper mapper, IFileService fileService)
+        public AccountService(
+        IUnitOfWork unitOfWork,
+        UserManager<ApplicationUser> userManager,
+        SignInManager<ApplicationUser> signInManager,
+        IMapper mapper,
+        IFileService fileService)
         {
+            _unitOfWork = unitOfWork;
             _userManager = userManager;
             _signInManager = signInManager;
-            _genericRepo = genericRepo;
             _mapper = mapper;
             _fileService = fileService;
         }

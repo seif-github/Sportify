@@ -7,6 +7,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Data;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories;
 using sportify.DAL.Repositories.Contracts;
@@ -15,95 +16,85 @@ namespace sportify.BLL.Services
 {
     public class TeamService : ITeamService
     {
-        private readonly IGenericRepository<Team> _genericRepo;
-        private readonly ITeamRepository _teamRepo;
-        private readonly IMatchRepository _matchRepo;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public TeamService(IGenericRepository<Team> genericRepo, ITeamRepository teamRepo, IMatchRepository matchRepo, IMapper mapper)
+        public TeamService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _genericRepo = genericRepo;
-            _teamRepo = teamRepo;
-            _matchRepo = matchRepo;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
         public async Task<List<TeamDTO>> GetAllAsync()
         {
-            var entity = await _genericRepo.GetAllAsync();
+            var entity = await _unitOfWork.TeamRepository.GetAllAsync();
             return _mapper.Map<List<TeamDTO>>(entity);
 
         }
 
         public async Task<List<TeamDTO>> GetAllTeamsInLeagueAsync(int leagueId)
         {
-            var entity = await _genericRepo.GetAllAsync();
-            var teams = entity.Where(i => i.LeagueID == leagueId);
-            return entity == null ?
-                    null :
-                    _mapper.Map<List<TeamDTO>>(teams);
+            var teams = await _unitOfWork.TeamRepository.GetAllTeamsInLeagueAsync(leagueId);
+            return _mapper.Map<List<TeamDTO>>(teams);
         }
 
         public async Task<TeamDTO?> GetTeamByIdAsync(int id)
         {
-            var data = await _genericRepo.GetByIdAsync(id);
+            var data = await _unitOfWork.TeamRepository.GetByIdAsync(id);
             return data == null ? null : _mapper.Map<TeamDTO>(data);
+        }
+
+        public async Task AddTeamsAsync(List<TeamDTO> teams)
+        {
+            var entities = _mapper.Map<List<Team>>(teams);
+            await _unitOfWork.TeamRepository.AddRangeAsync(entities);
+            await _unitOfWork.CompleteAsync();
+        }
+        public async Task<List<TeamDTO>> AddTeamsAndReturnAsync(List<TeamDTO> model)
+        {
+            var entity = _mapper.Map<List<Team>>(model);
+            await _unitOfWork.TeamRepository.AddRangeAsync(entity);
+            await _unitOfWork.CompleteAsync();
+
+            // Map the saved entity back to DTO to return
+            return _mapper.Map<List<TeamDTO>>(entity);
+        }
+        public async Task AddTeamAsync(TeamDTO team)
+        {
+            var entity = _mapper.Map<Team>(team);
+            await _unitOfWork.TeamRepository.AddAsync(entity);
+            await _unitOfWork.CompleteAsync();
         }
 
         public async Task UpdateAsync(TeamDTO team)
         {
             var entity = _mapper.Map<Team>(team);
-            await _genericRepo.UpdateAsync(entity);
-            await _genericRepo.SaveChangesAsync();
+            _unitOfWork.TeamRepository.Update(entity);
+            await _unitOfWork.CompleteAsync();
         }
 
-        public async Task UpdateTeamNameAsync(int teamId, string newName)
-        {
-            // 1. Get existing team
-            var team = await _genericRepo.GetByIdAsync(teamId);
-            if (team == null)
-            {
-                throw new KeyNotFoundException("Team not found");
-            }
+        //public async Task UpdateTeamNameAsync(int teamId, string newName)
+        //{
+        //    // 1. Get existing team
+        //    var team = await _genericRepo.GetByIdAsync(teamId);
+        //    if (team == null)
+        //    {
+        //        throw new KeyNotFoundException("Team not found");
+        //    }
 
-            // 2. Only update the name
-            team.Name = newName;
+        //    // 2. Only update the name
+        //    team.Name = newName;
 
-            // 3. Save changes
-            await _genericRepo.UpdateAsync(team);
-            await _genericRepo.SaveChangesAsync();
-        }
+        //    // 3. Save changes
+        //    await _genericRepo.UpdateAsync(team);
+        //    await _genericRepo.SaveChangesAsync();
+        //}
 
-        public async Task AddTeamsAsync(List<TeamDTO> teams)
-        {
-            var entity = _mapper.Map<List<Team>>(teams);
-            foreach (var team in entity)
-            {
-                await _genericRepo.AddAsync(team);
-            }
-            await _genericRepo.SaveChangesAsync();
-        }
 
-        public async Task<List<TeamDTO>> AddTeamsAndReturnAsync(List<TeamDTO> model)
-        {
-            var entity = _mapper.Map<List<Team>>(model);
-            await _genericRepo.AddRangeAsync(entity);
-            await _genericRepo.SaveChangesAsync();
-
-            // Map the saved entity back to DTO to return
-            return _mapper.Map<List<TeamDTO>>(entity);
-        }
-
-        public async Task AddTeamAsync(TeamDTO team)
-        {
-            var entity = _mapper.Map<Team>(team);
-            await _genericRepo.AddAsync(entity);
-            await _genericRepo.SaveChangesAsync();
-        }
 
         public async Task DeleteAsync(int id)
         {
-            await _genericRepo.DeleteAsync(id);
-            await _genericRepo.SaveChangesAsync();
+            await _unitOfWork.TeamRepository.DeleteAsync(id);
+            await _unitOfWork.CompleteAsync();
         }
 
         //public async Task<List<TeamDTO>> SortStandings(int leagueId)
@@ -116,11 +107,14 @@ namespace sportify.BLL.Services
 
         public async Task<List<TeamDTO>> UpdateAndSortStandingsAsync(int leagueId)
         {
-            var teams = await _teamRepo.GetAllTeamsInLeagueAsync(leagueId);
-            var teamDTOs = _mapper.Map<List<TeamDTO>>(teams);
+            var teams = await _unitOfWork.TeamRepository.GetAllTeamsInLeagueAsync(leagueId);
+            //var teamDTOs = _mapper.Map<List<TeamDTO>>(teams);
+
+            var matches = await _unitOfWork.MatchRepository.GetMatchesWithTeamsByLeagueAsync(leagueId);
+            var completedMatches = matches.Where(m => m.IsCompleted).ToList();
 
             // reset standings
-            foreach (var team in teamDTOs)
+            foreach (var team in teams)
             {
                 team.Wins = 0;
                 team.Losses = 0;
@@ -131,13 +125,11 @@ namespace sportify.BLL.Services
                 team.Points = 0;
             }
 
-            var matches = await _matchRepo.GetMatchesWithTeamsByLeagueAsync(leagueId);
-            var completedMatches = matches.Where(m => m.IsCompleted).ToList();
 
             foreach (var match in completedMatches)
             {
-                var firstTeam = teamDTOs.FirstOrDefault(t => t.TeamID == match.FirstTeamId);
-                var secondTeam = teamDTOs.FirstOrDefault(t => t.TeamID == match.SecondTeamId);
+                var firstTeam = teams.FirstOrDefault(t => t.TeamID == match.FirstTeamId);
+                var secondTeam = teams.FirstOrDefault(t => t.TeamID == match.SecondTeamId);
 
                 if (firstTeam == null || secondTeam == null) continue;
 
@@ -170,19 +162,27 @@ namespace sportify.BLL.Services
                 }
             }
 
-            foreach (var teamDTO in teamDTOs)
+            foreach (var team in teams)
             {
-                var teamEntity = _mapper.Map<Team>(teamDTO);
-                await _genericRepo.UpdateAsync(teamEntity);
+                //var teamEntity = _mapper.Map<Team>(teamDTO);
+                _unitOfWork.TeamRepository.Update(team);
             }
 
-            var sortedTeams = teamDTOs
+            await _unitOfWork.CompleteAsync();
+
+            var sortedTeams = teams
             .OrderByDescending(t => t.Points)
             .ThenByDescending(t => t.GoalsScored - t.GoalsConceded)
+            .Select(t => _mapper.Map<TeamDTO>(t))
             .ToList();
 
             return sortedTeams;
 
+        }
+
+        public void ClearTracking()
+        {
+            _unitOfWork.ClearTracking();
         }
     }
 }

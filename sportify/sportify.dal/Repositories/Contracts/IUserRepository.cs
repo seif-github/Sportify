@@ -7,7 +7,7 @@ using sportify.DAL.Entities;
 
 namespace sportify.DAL.Repositories.Contracts
 {
-    public interface IUserRepository
+    public interface IUserRepository: IGenericRepository<ApplicationUser>
     {
         Task<ApplicationUser> GetUserById(string userId);
         Task<List<ApplicationUser>> GetUsersByIds(List<string> userIds);

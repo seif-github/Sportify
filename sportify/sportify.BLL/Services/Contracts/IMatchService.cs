@@ -15,6 +15,7 @@ namespace sportify.BLL.Services.Contracts
         Task UpdateAsync(MatchDTO model);
         Task DeleteAllMatchesAsync(int id);
         Task UpdateMatchResultAsync(int matchId, int firstTeamGoals, int secondTeamGoals);
+        void ClearTracking();
 
     }
 }

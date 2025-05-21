@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using sportify.BLL.DTOs;
 using sportify.BLL.Helpers;
+using sportify.BLL.Services;
 using sportify.BLL.Services.Contracts;
 using sportify.DAL.Entities;
 using sportify.PL.Helpers;
@@ -15,15 +16,17 @@ namespace sportify.PL.Controllers
     [Authorize]
     public class LeagueController : Controller
     {
+        private readonly LeagueReportPdfGenerator _pdfGenerator;
         private readonly ILeagueService _leagueService;
         private readonly ITeamService _teamService;
         private readonly IMatchService _matchService;
         private readonly IUserService _userService;
         private readonly IFileService _fileService;
 
-        public LeagueController(ILeagueService leagueService, ITeamService teamService,
+        public LeagueController(LeagueReportPdfGenerator pdfGenerator ,ILeagueService leagueService, ITeamService teamService,
                 IUserService userService, IMatchService matchService, IFileService fileService)
         {
+            _pdfGenerator = pdfGenerator;
             _leagueService = leagueService;
             _teamService = teamService;
             _matchService = matchService;
@@ -75,7 +78,7 @@ namespace sportify.PL.Controllers
         {
             var league = await _leagueService.GetByIdAsync(id); if (league == null) return NotFound();
             var teams = await _teamService.GetAllTeamsInLeagueAsync(id);
-            var teamsSorted = await _teamService.UpdateAndSortStandingsAsync(id);
+            //var teamsSorted = await _teamService.UpdateAndSortStandingsAsync(id);
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var isOrganizer = currentUserId != null && currentUserId == league.OrganizerID;
 
@@ -89,7 +92,7 @@ namespace sportify.PL.Controllers
             var viewModel = new LeagueDetailsViewModel
             {
                 League = league,
-                Teams = teamsSorted,
+                Teams = teams,
                 IsOrganizer = isOrganizer,
                 OrganizerName = organizerName
             };
@@ -164,6 +167,14 @@ namespace sportify.PL.Controllers
                 return NotFound();
             }
 
+
+            // Verify permission by getting just the organizer ID
+            var organizerId = await _leagueService.GetOrganizerIdByLeagueId(model.LeagueID);
+            if (organizerId == null) return NotFound();
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (currentUserId != organizerId) return Forbid();
+
             if (model.ImageFile != null && model.ImageFile.Length > 0)
             {
                 // Delete old image if exists
@@ -179,16 +190,9 @@ namespace sportify.PL.Controllers
                 model.ImageUrl = existingLeague.ImageUrl;
             }
 
-            // Verify permission by getting just the organizer ID
-            var organizerId = await _leagueService.GetOrganizerIdByLeagueId(model.LeagueID);
-            if (organizerId == null) return NotFound();
-
-            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (currentUserId != organizerId) return Forbid();
-
             // Preserve the original OrganizerID to prevent hijacking
             model.OrganizerID = organizerId;
-
+            _leagueService.ClearTracking();
             // Update the entity
             await _leagueService.UpdateAsync(model);
 
@@ -196,7 +200,7 @@ namespace sportify.PL.Controllers
             await _matchService.DeleteAllMatchesAsync(model.LeagueID);
             var matches = MatchGenerator.GenerateMatches(model, teams);
             await _matchService.AddMatchesAsync(matches);
-
+            await _teamService.UpdateAndSortStandingsAsync(model.LeagueID);
             return RedirectToAction("Index", "Dashboard");
         }
 
@@ -237,6 +241,17 @@ namespace sportify.PL.Controllers
 
             await _leagueService.DeleteAsync(id);
             return RedirectToAction("Index", "Dashboard");
+        }
+
+        [HttpGet]
+        //[HttpGet("report/{id}")]
+        public async Task<IActionResult> GenerateLeagueReport(int id)
+        {
+            var reportData = await _leagueService.GetLeagueReportDataAsync(id);
+            if (reportData == null) return NotFound();
+
+            var pdfBytes = _pdfGenerator.Generate(reportData);
+            return File(pdfBytes, "application/pdf", $"League_{id}_Report.pdf");
         }
     }
 }

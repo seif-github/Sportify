@@ -7,58 +7,51 @@ namespace sportify.DAL.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected readonly SportifyContext _context;
+        protected readonly DbContext _context;
         protected readonly DbSet<T> _dbSet;
 
-        public GenericRepository(SportifyContext context)
+        public GenericRepository(DbContext context)
         {
             _context = context;
-            _dbSet = _context.Set<T>();
+            _dbSet = context.Set<T>();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
-        {
-            return await _dbSet.ToListAsync();
-        }
+        public async Task<IEnumerable<T>> GetAllAsync() => await _dbSet.ToListAsync();
 
-        public async Task<T?> GetByIdAsync(int id)
-        {
-            return await _dbSet.FindAsync(id);
-        }
+        public async Task<T?> GetByIdAsync(int id) => await _dbSet.FindAsync(id);
 
-        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
-        {
-            return await _dbSet.Where(predicate).ToListAsync();
-        }
+        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate) =>
+            await _dbSet.Where(predicate).ToListAsync();
 
-        public async Task AddAsync(T entity)
-        {
-            await _dbSet.AddAsync(entity);
-        }
-        public async Task AddRangeAsync(List<T> entity)
-        {
-            await _dbSet.AddRangeAsync(entity);
-        }
+        public async Task AddAsync(T entity) => await _dbSet.AddAsync(entity);
 
-        public async Task UpdateAsync(T entity)
-        {
-            _context.ChangeTracker.Clear();
-            _context.Entry(entity).State = EntityState.Modified;
-            //_dbSet.Update(entity);
-        }
+        public async Task AddRangeAsync(List<T> entities) => await _dbSet.AddRangeAsync(entities);
+
+        public void Update(T entity) => _dbSet.Update(entity);
+        //public void Update(T entity)
+        //{
+        //    // If entity is already tracked, do not try to re-track it
+        //    var trackedEntity = _context.ChangeTracker.Entries<T>()
+        //        .FirstOrDefault(e => EqualityComparer<object>.Default.Equals(
+        //            e.Property("Id").CurrentValue, entity.GetType().GetProperty("Id").GetValue(entity)));
+
+        //    if (trackedEntity != null)
+        //    {
+        //        // Entity already tracked, apply property values
+        //        _context.Entry(trackedEntity.Entity).CurrentValues.SetValues(entity);
+        //    }
+        //    else
+        //    {
+        //        // Entity not tracked, track it
+        //        _dbSet.Update(entity);
+        //    }
+        //}
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _dbSet.FindAsync(id);
-            if (entity != null)
-            {
-                _dbSet.Remove(entity);
-            }
+            var entity = await GetByIdAsync(id);
+            if (entity != null) _dbSet.Remove(entity);
         }
 
-        public virtual async Task SaveChangesAsync()
-        {
-            await _context.SaveChangesAsync();
-        }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using sportify.BLL.DTOs;
 using sportify.BLL.Services.Contracts;
+using sportify.DAL.Data;
 using sportify.DAL.Entities;
 using sportify.DAL.Repositories.Contracts;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -14,34 +15,33 @@ namespace sportify.BLL.Services
 {
     public class LeagueService : ILeagueService
     {
-        private readonly IGenericRepository<League> _genericRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public LeagueService(IGenericRepository<League> genericRepository, IMapper mapper)
+        public LeagueService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            this._genericRepository = genericRepository;
-            this._mapper = mapper;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task<List<LeagueDTO>> GetAllAsync()
         {
-            var data = await _genericRepository.GetAllAsync();
+            var data = await _unitOfWork.LeagueRepository.GetAllAsync();
             return _mapper.Map<List<LeagueDTO>>(data);
         }
-
         public async Task<LeagueDTO?> GetByIdAsync(int id)
         {
-            var data = await _genericRepository.GetByIdAsync(id);
+            var data = await _unitOfWork.LeagueRepository.GetByIdAsync(id);
             return data == null ? null : _mapper.Map<LeagueDTO>(data);
         }
         public async Task<string?> GetOrganizerIdByLeagueId(int leagueId)
         {
-            var league = await _genericRepository.GetByIdAsync(leagueId);
+            var league = await _unitOfWork.LeagueRepository.GetByIdAsync(leagueId);
             return league?.OrganizerID;
         }
         public async Task<List<LeagueDTO?>?> GetOrganizerLeaguesById(string organizerId)
         {
-            var leagues = await _genericRepository.GetAllAsync();
+            var leagues = await _unitOfWork.LeagueRepository.GetAllAsync();
             var filteredLeagues = leagues.Where(league => league.OrganizerID == organizerId).ToList();
             return leagues == null ? null : _mapper.Map<List<LeagueDTO?>?>(filteredLeagues);
         }
@@ -49,31 +49,72 @@ namespace sportify.BLL.Services
         public async Task AddAsync(LeagueDTO model)
         {
             var entity = _mapper.Map<League>(model);
-            await _genericRepository.AddAsync(entity);
-            await _genericRepository.SaveChangesAsync();
+            await _unitOfWork.LeagueRepository.AddAsync(entity);
+            await _unitOfWork.CompleteAsync();
         }
 
         public async Task<LeagueDTO> AddAndReturnAsync(LeagueDTO model)
         {
             var entity = _mapper.Map<League>(model);
-            await _genericRepository.AddAsync(entity);
-            await _genericRepository.SaveChangesAsync();
-
-            // Map the saved entity back to DTO to return
+            await _unitOfWork.LeagueRepository.AddAsync(entity);
+            await _unitOfWork.CompleteAsync();
             return _mapper.Map<LeagueDTO>(entity);
         }
 
         public async Task UpdateAsync(LeagueDTO model)
         {
             var entity = _mapper.Map<League>(model);
-            await _genericRepository.UpdateAsync(entity);
-            await _genericRepository.SaveChangesAsync();
+            _unitOfWork.LeagueRepository.Update(entity);
+            await _unitOfWork.CompleteAsync();
         }
 
         public async Task DeleteAsync(int id)
         {
-            await _genericRepository.DeleteAsync(id);
-            await _genericRepository.SaveChangesAsync();
+            await _unitOfWork.LeagueRepository.DeleteAsync(id);
+            await _unitOfWork.CompleteAsync();
         }
+
+        public async Task<LeagueReportDTO?> GetLeagueReportDataAsync(int leagueId)
+        {
+            var league = await _unitOfWork.LeagueRepository.GetLeagueWithTeamsAsync(leagueId);
+            if (league == null || league.Teams == null) return null;
+
+            var matches = await _unitOfWork.MatchRepository.GetMatchesWithTeamsByLeagueAsync(leagueId);
+            int totalMatchesPlayed = matches.Count(m => m.IsCompleted);
+            var teams = await _unitOfWork.TeamRepository.GetAllTeamsInLeagueAsync(leagueId);
+            var teamsDto = teams.Select(t => new TeamDTO
+            {
+                Name = t.Name,
+                Wins = t.Wins,
+                Losses = t.Losses,
+                Draws = t.Draws,
+                GoalsScored = t.GoalsScored,
+                GoalsConceded = t.GoalsConceded,
+                Points = t.Points
+            }).ToList();
+
+            var topScoringTeam = league.Teams.OrderByDescending(t => t.GoalsScored).FirstOrDefault();
+            var mostGoalsConcededTeam = league.Teams.OrderByDescending(t => t.GoalsConceded).FirstOrDefault();
+
+            return new LeagueReportDTO
+            {
+                LeagueName = league.Name,
+                OrganizerId = league.OrganizerID,
+                StartDate = league.StartDate,
+                NumberOfTeams = league.NumberOfTeams,
+                DurationBetweenMatches = league.DurationBetweenMatches,
+                RoundRobin = league.RoundRobin,
+                Teams = teamsDto,
+                TotalMatchesPlayed = totalMatchesPlayed,
+                TopScoringTeam = topScoringTeam?.Name ?? "N/A",
+                MostGoalsConcededTeam = mostGoalsConcededTeam?.Name ?? "N/A"
+            };
+        }
+
+        public void ClearTracking()
+        {
+            _unitOfWork.ClearTracking();
+        }
+
     }
 }
