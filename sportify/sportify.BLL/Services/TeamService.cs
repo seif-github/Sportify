@@ -55,7 +55,6 @@ namespace sportify.BLL.Services
             await _unitOfWork.TeamRepository.AddRangeAsync(entity);
             await _unitOfWork.CompleteAsync();
 
-            // Map the saved entity back to DTO to return
             return _mapper.Map<List<TeamDTO>>(entity);
         }
         public async Task AddTeamAsync(TeamDTO team)
@@ -72,48 +71,21 @@ namespace sportify.BLL.Services
             await _unitOfWork.CompleteAsync();
         }
 
-        //public async Task UpdateTeamNameAsync(int teamId, string newName)
-        //{
-        //    // 1. Get existing team
-        //    var team = await _genericRepo.GetByIdAsync(teamId);
-        //    if (team == null)
-        //    {
-        //        throw new KeyNotFoundException("Team not found");
-        //    }
-
-        //    // 2. Only update the name
-        //    team.Name = newName;
-
-        //    // 3. Save changes
-        //    await _genericRepo.UpdateAsync(team);
-        //    await _genericRepo.SaveChangesAsync();
-        //}
-
-
-
+      
         public async Task DeleteAsync(int id)
         {
             await _unitOfWork.TeamRepository.DeleteAsync(id);
             await _unitOfWork.CompleteAsync();
         }
 
-        //public async Task<List<TeamDTO>> SortStandings(int leagueId)
-        //{
-        //    var teams = await GetAllTeamsInLeagueAsync(leagueId);
-        //    return teams.OrderByDescending(t => t.Points)
-        //        .ThenBy(t => t.Name)
-        //        .ToList();
-        //}
 
         public async Task<List<TeamDTO>> UpdateAndSortStandingsAsync(int leagueId)
         {
             var teams = await _unitOfWork.TeamRepository.GetAllTeamsInLeagueAsync(leagueId);
-            //var teamDTOs = _mapper.Map<List<TeamDTO>>(teams);
 
             var matches = await _unitOfWork.MatchRepository.GetMatchesWithTeamsByLeagueAsync(leagueId);
             var completedMatches = matches.Where(m => m.IsCompleted).ToList();
 
-            // reset standings
             foreach (var team in teams)
             {
                 team.Wins = 0;
@@ -164,7 +136,6 @@ namespace sportify.BLL.Services
 
             foreach (var team in teams)
             {
-                //var teamEntity = _mapper.Map<Team>(teamDTO);
                 _unitOfWork.TeamRepository.Update(team);
             }
 

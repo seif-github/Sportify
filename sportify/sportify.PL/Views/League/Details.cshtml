@@ -70,11 +70,9 @@
 @section Scripts {
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Sort table by points (descending) and update position numbers
             const tableBody = document.getElementById('standingsTableBody');
             const rows = Array.from(tableBody.querySelectorAll('tr'));
 
-            // Sort by points (column 9), then by GD (column 8), then by GF (column 6)
             rows.sort((a, b) => {
                 const pointsA = parseInt(a.cells[9].textContent);
                 const pointsB = parseInt(b.cells[9].textContent);
@@ -89,7 +87,6 @@
                 return gfB - gfA;
             });
 
-            // Clear and re-append sorted rows
             tableBody.innerHTML = '';
             rows.forEach((row, index) => {
                 row.cells[0].textContent = index + 1;

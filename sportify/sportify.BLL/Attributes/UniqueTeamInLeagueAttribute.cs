@@ -8,7 +8,6 @@ namespace sportify.BLL.Attributes
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            // Skip validation if value is null/empty (let Required attribute handle it)
             if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
             {
                 return ValidationResult.Success;
@@ -23,7 +22,6 @@ namespace sportify.BLL.Attributes
             var teamName = value.ToString().Trim();
             var instance = validationContext.ObjectInstance;
 
-            // Get LeagueID from the model
             var leagueIdProperty = instance.GetType().GetProperty("LeagueID");
             if (leagueIdProperty == null)
             {

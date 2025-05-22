@@ -26,9 +26,7 @@ namespace sportify.DAL.Repositories
         public async Task DeleteAllMatchesAsync(int leagueId)
         {
             await _dbSet.Where(m => m.LeagueId == leagueId).ExecuteDeleteAsync();
-            //var matches = await _dbSet.Where(m => m.LeagueId == leagueId).ToListAsync();
-            //_dbSet.RemoveRange(matches);
-            //await _context.SaveChangesAsync();
+
         }
     }
 }

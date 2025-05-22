@@ -18,7 +18,21 @@ namespace sportify.PL.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult TermsOfService()
         {
             return View();
         }

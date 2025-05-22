@@ -15,42 +15,35 @@ namespace sportify.BLL.Helpers
             bool isOddNumberOfTeams = teamIds.Count % 2 != 0;
             var random = new Random();
 
-            // For odd number of teams, add a "dummy" team (represented as -1)
-            // This team will be paired with the team that sits out each round
             if (isOddNumberOfTeams)
             {
                 teamIds.Add(-1); // -1 represents a "bye" (no match)
             }
 
-            int numberOfTeams = teamIds.Count; // Including dummy team if odd
-            int rounds = numberOfTeams - 1;    // N-1 rounds needed for N teams (including dummy)
+            int numberOfTeams = teamIds.Count;
+            int rounds = numberOfTeams - 1;
             int totalRounds = league.RoundRobin ? rounds * 2 : rounds;
             DateTime currentDate = league.StartDate;
 
-            // List to track round numbers - we don't directly add this to MatchDTO
-            // but we'll use it to ensure rounds are properly tracked in our view
+
             var matchRounds = new Dictionary<int, int>(); // matchId -> roundNumber
             int matchId = 0;
 
-            // Generate round-robin schedule
             for (int round = 0; round < totalRounds; round++)
             {
                 bool isSecondRoundRobin = round >= rounds;
                 int displayRound = isSecondRoundRobin ? round - rounds + 1 : round + 1;
 
-                // Generate matches for this round
                 for (int i = 0; i < numberOfTeams / 2; i++)
                 {
                     int homeTeamIndex = i;
                     int awayTeamIndex = numberOfTeams - 1 - i;
 
-                    // Skip if either team is the dummy (-1)
                     if (teamIds[homeTeamIndex] == -1 || teamIds[awayTeamIndex] == -1)
                         continue;
 
                     int firstTeamId, secondTeamId;
 
-                    // For second round-robin, swap home/away teams
                     if (isSecondRoundRobin && league.RoundRobin)
                     {
                         firstTeamId = teamIds[awayTeamIndex];
@@ -62,11 +55,9 @@ namespace sportify.BLL.Helpers
                         secondTeamId = teamIds[awayTeamIndex];
                     }
 
-                    // Generate time - only 12 PM or later
                     int hour = random.Next(15, 22); // (3 PM to 10 PM)
                     int minute = random.Next(0, 4) * 15; // 0, 15, 30, or 45 minutes
 
-                    // Create match date with time
                     DateTime matchDateTime = new DateTime(
                         currentDate.Year,
                         currentDate.Month,
@@ -83,17 +74,13 @@ namespace sportify.BLL.Helpers
                         SecondTeamGoals = 0,
                         Result = MatchResult.Pending,
                         IsCompleted = false
-                        // No RoundNumber property
                     });
 
-                    // Store round number in our local dictionary - we'll use this in our view
                     matchRounds[matchId++] = displayRound;
                 }
 
-                // Rotate teams for next round (except last round)
                 if (round < totalRounds - 1)
                 {
-                    // Standard circle method: first position is fixed, all others rotate
                     var firstElement = teamIds[0];
                     var secondElement = teamIds[1];
 
@@ -104,22 +91,17 @@ namespace sportify.BLL.Helpers
 
                     teamIds[numberOfTeams - 1] = secondElement;
 
-                    // Move to next date for the next round
-                    // If we're transitioning to second round-robin, consider adding a longer break
                     if ((round + 1) % rounds != 0 || !league.RoundRobin)
                     {
                         currentDate = currentDate.AddDays(league.DurationBetweenMatches);
                     }
                     else if (league.RoundRobin)
                     {
-                        // Optional: Add longer break between round-robin cycles
                         currentDate = currentDate.AddDays(league.DurationBetweenMatches * 2);
                     }
                 }
             }
 
-            // We can add round information to ViewData in the controller
-            // ViewData["MatchRounds"] = matchRounds;
 
             return matches;
         }

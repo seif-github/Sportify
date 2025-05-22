@@ -95,20 +95,17 @@
 </div>
 
 <script>
-    // Show loader immediately when partial loads
     document.getElementById('globalLoader').style.opacity = '1';
     document.getElementById('globalLoader').style.visibility = 'visible';
 
-    // Hide when new page is fully loaded
     window.addEventListener('load', function() {
         const loader = document.getElementById('globalLoader');
         loader.style.opacity = '0';
         setTimeout(() => {
             loader.style.visibility = 'hidden';
-        }, 500); // Match this with your CSS transition time
+        }, 500);
     });
 
-    // Show loader when any link is clicked
     document.addEventListener('click', function(e) {
         if (e.target.tagName === 'A' &&
             !e.target.href.includes('#') &&

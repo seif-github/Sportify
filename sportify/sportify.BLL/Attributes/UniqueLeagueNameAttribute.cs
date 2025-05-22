@@ -12,7 +12,6 @@ namespace sportify.BLL.Attributes
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            // If the value is null or empty, return success (let Required attribute handle it)
             if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
             {
                 return ValidationResult.Success;

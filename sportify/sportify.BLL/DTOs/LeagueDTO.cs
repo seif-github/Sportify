@@ -35,7 +35,6 @@ namespace sportify.BLL.DTOs
         public string? ImageUrl;
         public IFormFile? ImageFile { get; set; }
 
-        //public ApplicationUser Organizer {  get; set; }
 
 
     }

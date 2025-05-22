@@ -26,7 +26,6 @@ namespace sportify.DAL.Entities
         public int FirstTeamGoals { get; set; }
         public int SecondTeamGoals { get; set; }
         public bool IsCompleted { get; set; }
-        // This will be stored as an integer in the database (0, 1, 2, 3)
         public MatchResult Result { get; set; }
     }
 

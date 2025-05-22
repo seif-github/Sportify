@@ -64,19 +64,11 @@ namespace sportify.PL.Controllers
             return View(viewModel);
         }
 
-        //[AllowAnonymous]
-        //public async Task<IActionResult> Standings(int leagueId)
-        //{
-        //    var teamsSorted = await _teamService.UpdateAndSortStandingsAsync(leagueId);
-        //    return View(teamsSorted);
-        //}
-
         [AllowAnonymous]
         public async Task<IActionResult> Details(int id) //league ID
         {
             var league = await _leagueService.GetByIdAsync(id); if (league == null) return NotFound();
             var teams = await _teamService.GetAllTeamsInLeagueAsync(id);
-            //var teamsSorted = await _teamService.UpdateAndSortStandingsAsync(id);
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var isOrganizer = currentUserId != null && currentUserId == league.OrganizerID;
 
@@ -100,15 +92,13 @@ namespace sportify.PL.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            // If coming back from teams page, use TempData
             if (TempData["LeagueData"] is string leagueData)
             {
                 var model = JsonSerializer.Deserialize<LeagueDTO>(leagueData);
-                TempData.Keep("LeagueData"); // Keep for another request
+                TempData.Keep("LeagueData");
                 return View(model);
             }
 
-            // Otherwise show fresh form
             return View(new LeagueDTO
             {
                 StartDate = DateTime.Today,
@@ -129,7 +119,6 @@ namespace sportify.PL.Controllers
             if (ModelState.IsValid)
             {
                 TempData["LeagueData"] = JsonSerializer.Serialize(model);
-                //var createdLeague = await _leagueService.AddAndReturnAsync(model);
                 return RedirectToAction("AddTeams", "Team", new{
                     numberOfTeams = model.NumberOfTeams
                 });
@@ -152,7 +141,6 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(LeagueDTO model)
         {
-            // Skip getting the league again since we'll be completely replacing it
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -166,7 +154,6 @@ namespace sportify.PL.Controllers
             }
 
 
-            // Verify permission by getting just the organizer ID
             var organizerId = await _leagueService.GetOrganizerIdByLeagueId(model.LeagueID);
             if (organizerId == null) return NotFound();
 
@@ -175,12 +162,10 @@ namespace sportify.PL.Controllers
 
             if (model.ImageFile != null && model.ImageFile.Length > 0)
             {
-                // Delete old image if exists
                 if (!string.IsNullOrEmpty(existingLeague.ImageUrl))
                     {
                         await _fileService.DeleteFileAsync(existingLeague.ImageUrl);
                     }
-                // Save the file and get the URL
                 model.ImageUrl = await _fileService.SaveFileAsync(model.ImageFile);
             }
             else
@@ -188,10 +173,8 @@ namespace sportify.PL.Controllers
                 model.ImageUrl = existingLeague.ImageUrl;
             }
 
-            // Preserve the original OrganizerID to prevent hijacking
             model.OrganizerID = organizerId;
             _leagueService.ClearTracking();
-            // Update the entity
             await _leagueService.UpdateAsync(model);
 
             var teams = (await _teamService.GetAllTeamsInLeagueAsync(model.LeagueID)).ToList();
@@ -228,10 +211,8 @@ namespace sportify.PL.Controllers
 
             await _matchService.DeleteAllMatchesAsync(id);
 
-            // Get all teams in this league
             var teams = await _teamService.GetAllTeamsInLeagueAsync(id);
 
-            // Delete all teams first
             foreach (var team in teams)
             {
                 await _teamService.DeleteAsync(team.TeamID);

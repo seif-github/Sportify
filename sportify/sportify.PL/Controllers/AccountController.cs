@@ -128,7 +128,7 @@ namespace sportify.PL.Controllers
                     ModelState.AddModelError(string.Empty, "Account not found. Please register first.");
                     return View(model);
                 case "3": // Email not confirmed
-                    TempData["ResendUsername"] = model.UserName; // Store username for resend
+                    TempData["ResendUsername"] = model.UserName;
                     return RedirectToAction("EmailConfirmationRequired");
                 default:
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
@@ -206,10 +206,8 @@ namespace sportify.PL.Controllers
                 return RedirectToAction("Login");
             }
 
-            // Sign out first
             await _signInManager.SignOutAsync();
 
-            // Then delete
             var result = await _userManager.DeleteAsync(user);
 
             if (result.Succeeded)
@@ -217,7 +215,6 @@ namespace sportify.PL.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            // If deletion failed
             TempData["Error"] = "Failed to delete account. Please try again.";
             return RedirectToAction("Profile");
         }
@@ -311,7 +308,6 @@ namespace sportify.PL.Controllers
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
             {
-                // Don't reveal that the user doesn't exist or isn't confirmed
                 return RedirectToAction("ForgotPasswordConfirmation");
             }
 
@@ -353,7 +349,6 @@ namespace sportify.PL.Controllers
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
-                // Don't reveal that the user doesn't exist
                 return RedirectToAction("ResetPasswordConfirmation");
             }
 
