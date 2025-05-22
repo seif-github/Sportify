@@ -81,9 +81,20 @@ namespace sportify.BLL.Services
 
             var matches = await _unitOfWork.MatchRepository.GetMatchesWithTeamsByLeagueAsync(leagueId);
             int totalMatchesPlayed = matches.Count(m => m.IsCompleted);
+            var matchesDto = matches.Select(m => new MatchDTO
+            {
+                Date = m.Date,
+                FirstTeamName = m.FirstTeam?.Name ?? "Unknown",
+                SecondTeamName = m.SecondTeam?.Name ?? "Unknown",
+                FirstTeamGoals = m.FirstTeamGoals,
+                SecondTeamGoals = m.SecondTeamGoals,
+                IsCompleted = m.IsCompleted
+            }).OrderBy(m => m.Date).ToList();
+
             var teams = await _unitOfWork.TeamRepository.GetAllTeamsInLeagueAsync(leagueId);
             var teamsDto = teams.Select(t => new TeamDTO
             {
+                ImageUrl = t.ImageUrl,
                 Name = t.Name,
                 Wins = t.Wins,
                 Losses = t.Losses,
@@ -91,23 +102,58 @@ namespace sportify.BLL.Services
                 GoalsScored = t.GoalsScored,
                 GoalsConceded = t.GoalsConceded,
                 Points = t.Points
-            }).ToList();
+            }).OrderByDescending(x => x.Points).ToList();
 
             var topScoringTeam = league.Teams.OrderByDescending(t => t.GoalsScored).FirstOrDefault();
             var mostGoalsConcededTeam = league.Teams.OrderByDescending(t => t.GoalsConceded).FirstOrDefault();
 
+            var topMatch = matches
+                .Where(m => m.IsCompleted)
+                .OrderByDescending(m => (m.FirstTeamGoals) + (m.SecondTeamGoals))
+                .Select(m => new {
+                    MatchDate = m.Date,
+                    HomeTeam = m.FirstTeam?.Name ?? "Unknown",
+                    AwayTeam = m.SecondTeam?.Name ?? "Unknown",
+                    HomeScore = m.FirstTeamGoals,
+                    AwayScore = m.SecondTeamGoals,
+                    TotalGoals = (m.FirstTeamGoals) + (m.SecondTeamGoals)
+                })
+                .FirstOrDefault();
+
+            var TopMatch = topMatch != null
+                ? new TopMatch(
+                    topMatch.MatchDate,
+                    topMatch.HomeTeam,
+                    topMatch.AwayTeam,
+                    topMatch.HomeScore,
+                    topMatch.AwayScore)
+                : new TopMatch(
+                    DateTime.MinValue,
+                    "N/A",
+                    "N/A",
+                    0,
+                    0);
+
+            var organizerUser = await _unitOfWork.UserRepository.GetUserById(league.OrganizerID);
+            var organizerName = organizerUser?.UserName ?? "Unknown";
+
             return new LeagueReportDTO
             {
+                ImageUrl = league.ImageUrl,
                 LeagueName = league.Name,
                 OrganizerId = league.OrganizerID,
+                OrganizerName = organizerName,
                 StartDate = league.StartDate,
                 NumberOfTeams = league.NumberOfTeams,
                 DurationBetweenMatches = league.DurationBetweenMatches,
                 RoundRobin = league.RoundRobin,
                 Teams = teamsDto,
+                Matches = matchesDto,
                 TotalMatchesPlayed = totalMatchesPlayed,
                 TopScoringTeam = topScoringTeam?.Name ?? "N/A",
-                MostGoalsConcededTeam = mostGoalsConcededTeam?.Name ?? "N/A"
+                TopScoringMatch = TopMatch,
+                MostGoalsConcededTeam = mostGoalsConcededTeam?.Name ?? "N/A",
+                GeneratedAt = DateTime.Now
             };
         }
 

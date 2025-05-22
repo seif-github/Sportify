@@ -1,67 +1,234 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PdfSharpCore.Drawing;
-using PdfSharpCore.Pdf;
+﻿using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+using QuestPDF.Drawing;
+using QuestPDF.Elements;
 using sportify.BLL.DTOs;
-using System.Text;
-using static System.Net.Mime.MediaTypeNames;
-using System.Xml.Linq;
+using System;
+using System.Globalization;
+using System.Composition;
+using sportify.DAL.Entities;
 
-namespace sportify.PL.Helpers
+public static class LeagueReportPdfGenerator
 {
-    public class LeagueReportPdfGenerator
+    public static byte[] GenerateLeagueReportPdf(LeagueReportDTO report)
     {
-        public byte[] Generate(LeagueReportDTO report)
+        QuestPDF.Settings.License = LicenseType.Community;
+
+        return Document.Create(container =>
         {
-            var document = new PdfDocument();
-            var page = document.AddPage();
-            var gfx = XGraphics.FromPdfPage(page);
-            var font = new XFont("Arial", 12);
-            int y = 40;
-
-            void DrawLine(string text, int fontSize = 12, bool bold = false)
+            container.Page(page =>
             {
-                var style = bold ? XFontStyle.Bold : XFontStyle.Regular;
-                var xFont = new XFont("Arial", fontSize, style);
-                gfx.DrawString(text, xFont, XBrushes.Black, new XRect(40, y, page.Width - 80, page.Height), XStringFormats.TopLeft);
-                y += 25;
-            }
-
-            // Title
-            DrawLine($"League Report - {report.LeagueName}", 16, bold: true);
-            y += 10;
-
-            // Basic Info
-            DrawLine($"Organizer ID: {report.OrganizerId}");
-            DrawLine($"Start Date: {report.StartDate.ToShortDateString()}");
-            DrawLine($"Number of Teams: {report.NumberOfTeams}");
-            DrawLine($"Duration Between Matches (Days): {report.DurationBetweenMatches}");
-            DrawLine($"Round Robin: {(report.RoundRobin ? "Yes" : "No")}");
-            DrawLine($"Total Matches Played: {report.TotalMatchesPlayed}");
-            DrawLine($"Top Scoring Team: {report.TopScoringTeam}");
-            DrawLine($"Most Goals Conceded Team: {report.MostGoalsConcededTeam}");
-
-            y += 15;
-            DrawLine("Teams Summary:", 14, bold: true);
-            y += 5;
-
-            foreach (var team in report.Teams)
-            {
-                DrawLine($"Team: {team.Name}", bold: true);
-                DrawLine($"  Wins: {team.Wins}, Draws: {team.Draws}, Losses: {team.Losses}");
-                DrawLine($"  Goals Scored: {team.GoalsScored}, Goals Conceded: {team.GoalsConceded}");
-                DrawLine($"  Points: {team.Points}");
-                y += 10;
-            }
-
-            using (var stream = new MemoryStream())
-            {
-                document.Save(stream, false);
-                return stream.ToArray();
-            }
-        }
+                page.Margin(40);
+                page.Size(PageSizes.A4);
+                page.DefaultTextStyle(x => x.FontSize(12));
+                page.Header().Element(c => ComposeHeader(c, report));
+                page.Content().Element(c => ComposeContent(c, report));
+                page.Footer().AlignCenter().Text(x =>
+                {
+                    x.Span("Sportify © 2025 - Page ");
+                    x.CurrentPageNumber();
+                });
+            });
+        }).GeneratePdf();
     }
+
+    private static void ComposeHeader(IContainer container, LeagueReportDTO report)
+    {
+        container.Row(row =>
+        {
+            row.RelativeItem().Column(col =>
+            {
+                col.Item().Text("Sportify League Report").Bold().FontSize(18).FontColor(Colors.Blue.Darken2);
+                col.Item().Text("Professional League Summary").FontSize(10).FontColor(Colors.Grey.Darken2);
+                col.Item().Text($"Generated on: {report.GeneratedAt:dd MMM yyyy hh:mm tt}").FontSize(10).FontColor(Colors.Grey.Darken2);
+            });
+
+            row.ConstantItem(80).Image("wwwroot/assets/logo.png");
+        });
+    }
+
+    private static void ComposeContent(IContainer container, LeagueReportDTO report)
+    {
+        container.PaddingVertical(10).Column(col =>
+        {
+            // League Metadata
+            var leagueLogoCell = col.Item();
+            if (!string.IsNullOrEmpty(report.ImageUrl))
+            {
+                leagueLogoCell
+                    .Width(50)
+                    .Height(50)
+                    .AlignMiddle()
+                    .AlignCenter()
+                    .Image($"wwwroot/images/{report.ImageUrl}");
+            }
+            else
+            {
+                leagueLogoCell
+                    .Width(50)
+                    .Height(50)
+                    .AlignMiddle()
+                    .AlignCenter()
+                    .Image($"wwwroot/assets/default-league-logo.png");
+            }
+            col.Item().Text($"League: {report.LeagueName}").Bold().FontSize(14);
+            col.Item().Text($"Organizer: {report.OrganizerName}");
+            col.Item().Text($"Start Date: {report.StartDate:dd MMM yyyy}");
+            col.Item().Text($"End Date: {report.StartDate.AddDays((report.NumberOfTeams - 1) * report.DurationBetweenMatches):dd MMM yyyy}");
+            col.Item().Text($"Number of Teams: {report.NumberOfTeams}");
+            col.Item().Text($"Duration Between Rounds: {report.DurationBetweenMatches} days");
+            col.Item().Text($"Round Robin: {(report.RoundRobin ? "Yes (Home & Away)" : "No (Single Round)")}");
+            col.Item().Text($"Total Matches Played: {report.TotalMatchesPlayed}");
+
+            col.Item().PaddingTop(10).Element(ComposeHighlights(report));
+            col.Item().PaddingTop(10).Element(ComposeStandingsTable(report));
+            col.Item().PaddingTop(10).Element(ComposeMatchesTable(report));
+        });
+    }
+
+    private static Action<IContainer> ComposeStandingsTable(LeagueReportDTO report) => container =>
+    {
+        container.Column(col =>
+        {
+            col.Item().Text("Standings").Bold().FontSize(14).FontColor(Colors.Blue.Medium);
+
+            col.Item().Table(table =>
+            {
+                table.ColumnsDefinition(columns =>
+                {
+                    columns.ConstantColumn(40); // #
+                    columns.ConstantColumn(40); // Logo
+                    columns.RelativeColumn(); // Name
+                    columns.ConstantColumn(40); // W
+                    columns.ConstantColumn(40); // D
+                    columns.ConstantColumn(40); // L
+                    columns.ConstantColumn(50); // GS
+                    columns.ConstantColumn(50); // GC
+                    columns.ConstantColumn(50); // Pts
+                });
+
+                // Header
+                table.Header(header =>
+                {
+                    header.Cell().Element(CellStyle).Text("#").Bold();
+                    header.Cell().Element(CellStyle).Text("Logo").Bold();
+                    header.Cell().Element(CellStyle).Text("Team").Bold();
+                    header.Cell().Element(CellStyle).Text("W").Bold();
+                    header.Cell().Element(CellStyle).Text("D").Bold();
+                    header.Cell().Element(CellStyle).Text("L").Bold();
+                    header.Cell().Element(CellStyle).Text("GS").Bold();
+                    header.Cell().Element(CellStyle).Text("GC").Bold();
+                    header.Cell().Element(CellStyle).Text("Pts").Bold();
+
+                    static IContainer CellStyle(IContainer container) =>
+                        container.DefaultTextStyle(x => x.SemiBold()).Padding(5).Background(Colors.Grey.Lighten3);
+                });
+
+                int i = 1;
+                foreach (var team in report.Teams)
+                {
+                    table.Cell().Element(CellStyle).Text(i.ToString()); i++;
+                    var logoCell = table.Cell();
+                    if (!string.IsNullOrEmpty(team.ImageUrl))
+                    {
+                        logoCell
+                            .Width(20) 
+                            .Height(20)
+                            .AlignMiddle()
+                            .AlignCenter()
+                            .Image($"wwwroot/images/{team.ImageUrl}");
+                    }
+                    else
+                    {
+                        logoCell
+                            .Width(20)
+                            .Height(20)
+                            .AlignMiddle()
+                            .AlignCenter()
+                            .Image($"wwwroot/assets/default-team-logo.png");
+                    }
+                    table.Cell().Element(CellStyle).Text(team.Name);
+                    table.Cell().Element(CellStyle).Text(team.Wins.ToString());
+                    table.Cell().Element(CellStyle).Text(team.Draws.ToString());
+                    table.Cell().Element(CellStyle).Text(team.Losses.ToString());
+                    table.Cell().Element(CellStyle).Text(team.GoalsScored.ToString());
+                    table.Cell().Element(CellStyle).Text(team.GoalsConceded.ToString());
+                    table.Cell().Element(CellStyle).Text(team.Points.ToString());
+
+                    static IContainer CellStyle(IContainer container) =>
+                        container.PaddingVertical(5).PaddingHorizontal(2);
+                }
+            });
+        });
+    };
+
+    private static Action<IContainer> ComposeMatchesTable(LeagueReportDTO report) => container =>
+    {
+        container.PaddingTop(20).Column(col =>
+        {
+            col.Item().Text("All Matches").Bold().FontSize(14).FontColor(Colors.Blue.Medium);
+
+            col.Item().Table(table =>
+            {
+                table.ColumnsDefinition(columns =>
+                {
+                    columns.ConstantColumn(150); // Date
+                    columns.RelativeColumn(); // Home Team
+                    columns.ConstantColumn(40); // vs
+                    columns.RelativeColumn(); // Away Team
+                    columns.ConstantColumn(40); // Score
+                    columns.ConstantColumn(80); // Status
+                });
+
+                // Header
+                table.Header(header =>
+                {
+                    header.Cell().Element(CellStyle).Text("Date").Bold();
+                    header.Cell().Element(CellStyle).Text("Home Team").Bold();
+                    header.Cell().Element(CellStyle); // Empty for vs column
+                    header.Cell().Element(CellStyle).Text("Away Team").Bold();
+                    header.Cell().Element(CellStyle).Text("Score").Bold();
+                    header.Cell().Element(CellStyle).Text("Status").Bold();
+
+                    static IContainer CellStyle(IContainer container) =>
+                        container.DefaultTextStyle(x => x.SemiBold()).Padding(5).Background(Colors.Grey.Lighten3);
+                });
+
+                foreach (var match in report.Matches)
+                {
+                    table.Cell().Element(CellStyle).Text(match.Date.ToString("dd MMM yyyy h mm tt"));
+                    table.Cell().Element(CellStyle).Text(match.FirstTeamName);
+                    table.Cell().Element(CellStyle).AlignCenter().Text("vs");
+                    table.Cell().Element(CellStyle).Text(match.SecondTeamName);
+
+                    if (match.IsCompleted)
+                    {
+                        table.Cell().Element(CellStyle).AlignCenter()
+                            .Text($"{match.FirstTeamGoals} - {match.SecondTeamGoals}");
+                    }
+                    else
+                    {
+                        table.Cell().Element(CellStyle).AlignCenter().Text("-");
+                    }
+
+                    table.Cell().Element(CellStyle).Text(match.IsCompleted ? "Completed" : "Pending");
+
+                    static IContainer CellStyle(IContainer container) =>
+                        container.Border(1).BorderColor(Colors.Black).PaddingVertical(3).PaddingHorizontal(5);
+                }
+            });
+        });
+    };
+
+    private static Action<IContainer> ComposeHighlights(LeagueReportDTO report) => container =>
+    {
+        container.Column(col =>
+        {
+            col.Item().Text("Highlights").Bold().FontSize(14).FontColor(Colors.Blue.Medium);
+            col.Item().Text($"Top Scoring Team: {report.TopScoringTeam}");
+            col.Item().Text($"Most Goals Conceded Team: {report.MostGoalsConcededTeam}");
+            col.Item().Text($"Highest Scoring Match: {report.TopScoringMatch.Team1} {report.TopScoringMatch.Goals1} - {report.TopScoringMatch.Goals2} {report.TopScoringMatch.Team2}");
+        });
+    };
 }
