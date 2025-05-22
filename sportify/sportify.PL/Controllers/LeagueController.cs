@@ -16,17 +16,15 @@ namespace sportify.PL.Controllers
     [Authorize]
     public class LeagueController : Controller
     {
-        private readonly LeagueReportPdfGenerator _pdfGenerator;
         private readonly ILeagueService _leagueService;
         private readonly ITeamService _teamService;
         private readonly IMatchService _matchService;
         private readonly IUserService _userService;
         private readonly IFileService _fileService;
 
-        public LeagueController(LeagueReportPdfGenerator pdfGenerator ,ILeagueService leagueService, ITeamService teamService,
+        public LeagueController(ILeagueService leagueService, ITeamService teamService,
                 IUserService userService, IMatchService matchService, IFileService fileService)
         {
-            _pdfGenerator = pdfGenerator;
             _leagueService = leagueService;
             _teamService = teamService;
             _matchService = matchService;
@@ -244,13 +242,13 @@ namespace sportify.PL.Controllers
         }
 
         [HttpGet]
-        //[HttpGet("report/{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GenerateLeagueReport(int id)
         {
             var reportData = await _leagueService.GetLeagueReportDataAsync(id);
             if (reportData == null) return NotFound();
 
-            var pdfBytes = _pdfGenerator.Generate(reportData);
+            byte[] pdfBytes = LeagueReportPdfGenerator.GenerateLeagueReportPdf(reportData);
             return File(pdfBytes, "application/pdf", $"League_{id}_Report.pdf");
         }
     }

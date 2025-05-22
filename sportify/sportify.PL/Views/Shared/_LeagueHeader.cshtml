@@ -9,7 +9,8 @@
     }
 
     var endDateDays = (Model.League.NumberOfTeams - 1) * Model.League.DurationBetweenMatches;
-    var endDate = Model.League.StartDate.AddDays(endDateDays);
+    var startDate = Model.League.StartDate;
+    var endDate = startDate.AddDays(endDateDays);
     var currentDate = DateTime.Now;
     var status = currentDate < Model.League.StartDate ? "upcoming" :
                  currentDate <= endDate ? "ongoing" : "finished";
@@ -53,11 +54,15 @@
                             League Settings
                         </a>
                     }
-                    <a asp-action="GenerateLeagueReport" asp-controller="League" asp-route-id="@Model.League.LeagueID" class="btn btn-outline-primary" target="_blank">
-                        Generate PDF Report
-                    </a>
+                    
                     
                 </div>
+            }
+            @if(currentDate >= startDate)
+            {
+                <a asp-action="GenerateLeagueReport" asp-controller="League" asp-route-id="@Model.League.LeagueID" class="btn btn-outline-primary" target="_blank">
+                    Generate PDF Report
+                </a>
             }
         </div>
 
