@@ -134,10 +134,8 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
-        // Store the original image source for fallback
         const originalImageSrc = document.getElementById('profileImage').src;
 
-        // Image preview functionality with original image fallback
         document.getElementById('ImageFile').addEventListener('change', function(e) {
             const [file] = e.target.files;
             if (file) {
@@ -168,7 +166,6 @@
         });
     });
 
-    // Close modal when clicking outside
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.classList.remove('active');

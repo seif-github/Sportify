@@ -8,6 +8,7 @@ using System;
 using System.Globalization;
 using System.Composition;
 using sportify.DAL.Entities;
+using static QuestPDF.Helpers.Colors;
 
 public static class LeagueReportPdfGenerator
 {
@@ -52,26 +53,38 @@ public static class LeagueReportPdfGenerator
     {
         container.PaddingVertical(10).Column(col =>
         {
-            // League Metadata
-            var leagueLogoCell = col.Item();
-            if (!string.IsNullOrEmpty(report.ImageUrl))
-            {
-                leagueLogoCell
-                    .Width(50)
-                    .Height(50)
-                    .AlignMiddle()
-                    .AlignCenter()
-                    .Image($"wwwroot/images/{report.ImageUrl}");
-            }
-            else
-            {
-                leagueLogoCell
-                    .Width(50)
-                    .Height(50)
-                    .AlignMiddle()
-                    .AlignCenter()
-                    .Image($"wwwroot/assets/default-league-logo.png");
-            }
+            //string defaultLogoPath = "wwwroot/assets/default-league-logo.png";
+            //string logoPath = $"wwwroot/images/{report.ImageUrl}";
+            //if (!string.IsNullOrEmpty(report.ImageUrl))
+            //{
+            //    if (File.Exists(logoPath))
+            //    {
+            //        col.Item()
+            //            .Width(50)
+            //            .Height(50)
+            //            .AlignMiddle()
+            //            .AlignCenter()
+            //            .Image(logoPath);
+            //    }
+            //    else
+            //    {
+            //        col.Item()
+            //            .Width(50)
+            //            .Height(50)
+            //            .AlignMiddle()
+            //            .AlignCenter()
+            //            .Image(defaultLogoPath);
+            //    }
+            //}
+            //else
+            //{
+            //    col.Item()
+            //        .Width(50)
+            //        .Height(50)
+            //        .AlignMiddle()
+            //        .AlignCenter()
+            //        .Image(defaultLogoPath);
+            //}
             col.Item().Text($"League: {report.LeagueName}").Bold().FontSize(14);
             col.Item().Text($"Organizer: {report.OrganizerName}");
             col.Item().Text($"Start Date: {report.StartDate:dd MMM yyyy}");
@@ -98,7 +111,7 @@ public static class LeagueReportPdfGenerator
                 table.ColumnsDefinition(columns =>
                 {
                     columns.ConstantColumn(40); // #
-                    columns.ConstantColumn(40); // Logo
+                    //columns.ConstantColumn(40); // Logo
                     columns.RelativeColumn(); // Name
                     columns.ConstantColumn(40); // W
                     columns.ConstantColumn(40); // D
@@ -108,11 +121,10 @@ public static class LeagueReportPdfGenerator
                     columns.ConstantColumn(50); // Pts
                 });
 
-                // Header
                 table.Header(header =>
                 {
                     header.Cell().Element(CellStyle).Text("#").Bold();
-                    header.Cell().Element(CellStyle).Text("Logo").Bold();
+                    //header.Cell().Element(CellStyle).Text("Logo").Bold();
                     header.Cell().Element(CellStyle).Text("Team").Bold();
                     header.Cell().Element(CellStyle).Text("W").Bold();
                     header.Cell().Element(CellStyle).Text("D").Bold();
@@ -122,42 +134,55 @@ public static class LeagueReportPdfGenerator
                     header.Cell().Element(CellStyle).Text("Pts").Bold();
 
                     static IContainer CellStyle(IContainer container) =>
-                        container.DefaultTextStyle(x => x.SemiBold()).Padding(5).Background(Colors.Grey.Lighten3);
+                        container.DefaultTextStyle(x => x.SemiBold()).Border(1).BorderColor(Colors.Black).Padding(5).Background(Colors.Grey.Lighten3);
                 });
 
                 int i = 1;
                 foreach (var team in report.Teams)
                 {
-                    table.Cell().Element(CellStyle).Text(i.ToString()); i++;
-                    var logoCell = table.Cell();
-                    if (!string.IsNullOrEmpty(team.ImageUrl))
-                    {
-                        logoCell
-                            .Width(20) 
-                            .Height(20)
-                            .AlignMiddle()
-                            .AlignCenter()
-                            .Image($"wwwroot/images/{team.ImageUrl}");
-                    }
-                    else
-                    {
-                        logoCell
-                            .Width(20)
-                            .Height(20)
-                            .AlignMiddle()
-                            .AlignCenter()
-                            .Image($"wwwroot/assets/default-team-logo.png");
-                    }
+                    table.Cell().Element(CellStyle).AlignCenter().Text(i.ToString()); i++;
+                    //string defaultLogoPath = "wwwroot/assets/default-team-logo.png";
+                    //string logoPath = $"wwwroot/images/{team.ImageUrl}";
+                    //if (!string.IsNullOrEmpty(team.ImageUrl))
+                    //{
+                    //    if (File.Exists(logoPath))
+                    //    {
+                    //        table.Cell()
+                    //            .Width(20)
+                    //            .Height(20)
+                    //            .AlignMiddle()
+                    //            .AlignCenter()
+                    //            .Image(logoPath);
+                    //    }
+                    //    else
+                    //    {
+                    //        table.Cell()
+                    //            .Width(20)
+                    //            .Height(20)
+                    //            .AlignMiddle()
+                    //            .AlignCenter()
+                    //            .Image(defaultLogoPath);
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    table.Cell()
+                    //        .Width(20)
+                    //        .Height(20)
+                    //        .AlignMiddle()
+                    //        .AlignCenter()
+                    //        .Image(defaultLogoPath);
+                    //}
                     table.Cell().Element(CellStyle).Text(team.Name);
-                    table.Cell().Element(CellStyle).Text(team.Wins.ToString());
-                    table.Cell().Element(CellStyle).Text(team.Draws.ToString());
-                    table.Cell().Element(CellStyle).Text(team.Losses.ToString());
-                    table.Cell().Element(CellStyle).Text(team.GoalsScored.ToString());
-                    table.Cell().Element(CellStyle).Text(team.GoalsConceded.ToString());
-                    table.Cell().Element(CellStyle).Text(team.Points.ToString());
+                    table.Cell().Element(CellStyle).AlignCenter().Text(team.Wins.ToString());
+                    table.Cell().Element(CellStyle).AlignCenter().Text(team.Draws.ToString());
+                    table.Cell().Element(CellStyle).AlignCenter().Text(team.Losses.ToString());
+                    table.Cell().Element(CellStyle).AlignCenter().Text(team.GoalsScored.ToString());
+                    table.Cell().Element(CellStyle).AlignCenter().Text(team.GoalsConceded.ToString());
+                    table.Cell().Element(CellStyle).AlignCenter().Text(team.Points.ToString());
 
                     static IContainer CellStyle(IContainer container) =>
-                        container.PaddingVertical(5).PaddingHorizontal(2);
+                        container.Border(1).BorderColor(Colors.Black).PaddingVertical(5).PaddingHorizontal(2);
                 }
             });
         });
@@ -181,18 +206,17 @@ public static class LeagueReportPdfGenerator
                     columns.ConstantColumn(80); // Status
                 });
 
-                // Header
                 table.Header(header =>
                 {
                     header.Cell().Element(CellStyle).Text("Date").Bold();
                     header.Cell().Element(CellStyle).Text("Home Team").Bold();
-                    header.Cell().Element(CellStyle); // Empty for vs column
+                    header.Cell().Element(CellStyle);
                     header.Cell().Element(CellStyle).Text("Away Team").Bold();
                     header.Cell().Element(CellStyle).Text("Score").Bold();
                     header.Cell().Element(CellStyle).Text("Status").Bold();
 
                     static IContainer CellStyle(IContainer container) =>
-                        container.DefaultTextStyle(x => x.SemiBold()).Padding(5).Background(Colors.Grey.Lighten3);
+                        container.DefaultTextStyle(x => x.SemiBold()).Border(1).BorderColor(Colors.Black).Padding(5).Background(Colors.Grey.Lighten3);
                 });
 
                 foreach (var match in report.Matches)

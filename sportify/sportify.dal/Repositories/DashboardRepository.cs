@@ -40,14 +40,6 @@ namespace sportify.DAL.Repositories
                 .CountAsync();
         }
 
-        //public async Task<int> GetTotalPlayersCountAsync(string userId)
-        //{
-        //    return await _context.Players
-        //        .Include(p => p.Team)
-        //        .ThenInclude(t => t.League)
-        //        .Where(p => p.Team.League.OrganizerID == userId)
-        //        .CountAsync();
-        //}
 
         public async Task<IEnumerable<League>> GetRecentLeaguesAsync(string userId)
         {
@@ -57,17 +49,6 @@ namespace sportify.DAL.Repositories
                 .ToListAsync();
         }
 
-        //public async Task<IEnumerable<Match>> GetUpcomingMatchesAsync(string userId, int count)
-        //{
-        //    return await _context.Matches
-        //        .Include(m => m.League)
-        //        .Include(m => m.FirstTeam)
-        //        .Include(m => m.SecondTeam)
-        //        .Where(m => m.League.OrganizerID == userId && m.Date > DateTime.Now)
-        //        .OrderBy(m => m.Date)
-        //        .Take(count)
-        //        .ToListAsync();
-        //}
 
         public async Task<IEnumerable<Match>> GetPendingMatchesNearestDateAsync(string userId)
         {

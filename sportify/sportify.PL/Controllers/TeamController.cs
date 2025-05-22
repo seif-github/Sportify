@@ -51,7 +51,7 @@ namespace sportify.PL.Controllers
             }
 
             var model = JsonSerializer.Deserialize<LeagueDTO>(leagueData);
-            TempData.Keep("LeagueData"); // Preserve for form submission
+            TempData.Keep("LeagueData");
 
             var teams = new List<TeamDTO>();
             for (int i = 0; i < numberOfTeams; i++)
@@ -71,7 +71,6 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddTeams(List<TeamDTO> teams, LeagueDTO leagueModel)
         {
-            // Retrieve league data from TempData
             if (TempData["LeagueData"] is not string leagueDataJson)
             {
                 return RedirectToAction("Create", "League");
@@ -79,10 +78,8 @@ namespace sportify.PL.Controllers
 
             var league = JsonSerializer.Deserialize<LeagueDTO>(leagueDataJson);
 
-            // 1. First create the league
             var createdLeague = await _leagueService.AddAndReturnAsync(league);
 
-            // 2. Then add teams with their league ID
             foreach (var team in teams)
             {
                 team.LeagueID = createdLeague.LeagueID;
@@ -133,7 +130,6 @@ namespace sportify.PL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditTeams(LeagueDetailsViewModel model)
         {
-            // Only update team names
             foreach (var team in model.Teams)
             {
                 await _teamService.UpdateAsync(team);
@@ -166,7 +162,6 @@ namespace sportify.PL.Controllers
                 });
             }
 
-            // Verify that the team exists and the user has permission to edit it
             var existingTeam = await _teamService.GetTeamByIdAsync(team.TeamID);
 
             if (existingTeam == null)
@@ -174,7 +169,6 @@ namespace sportify.PL.Controllers
                 return NotFound(new { error = "Team not found" });
             }
 
-            // Check if the user is the organizer of the league this team belongs to
             var league = await _leagueService.GetByIdAsync(existingTeam.LeagueID);
             if (league == null)
             {
@@ -186,21 +180,6 @@ namespace sportify.PL.Controllers
             {
                 return Forbid();
             }
-
-            //if (team.ImageFile != null && team.ImageFile.Length > 0)
-            //{
-            //    // Delete old image if exists
-            //    if (!string.IsNullOrEmpty(existingTeam.ImageUrl))
-            //    {
-            //        await _fileService.DeleteFileAsync(existingTeam.ImageUrl);
-            //    }
-            //    // Save the file and get the URL
-            //    team.ImageUrl = await _fileService.SaveFileAsync(team.ImageFile);
-            //}
-            //else
-            //{
-            //    team.ImageUrl = existingTeam.ImageUrl;
-            //}
 
             if (string.IsNullOrWhiteSpace(team.Name))
             {
@@ -227,7 +206,6 @@ namespace sportify.PL.Controllers
                     return NotFound(new { success = false, message = "Team not found" });
                 }
 
-                // Verify user is league organizer
                 var league = await _leagueService.GetByIdAsync(existingTeam.LeagueID);
                 var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 if (currentUserId != league?.OrganizerID)
@@ -235,10 +213,8 @@ namespace sportify.PL.Controllers
                     return Forbid();
                 }
 
-                // Handle image upload
                 if (ImageFile != null && ImageFile.Length > 0)
                 {
-                    // Delete old image if exists
                     if (!string.IsNullOrEmpty(existingTeam.ImageUrl))
                     {
                         await _fileService.DeleteFileAsync(existingTeam.ImageUrl);
@@ -246,7 +222,6 @@ namespace sportify.PL.Controllers
 
                     _teamService.ClearTracking();
 
-                    // Save new image
                     existingTeam.ImageUrl = await _fileService.SaveFileAsync(ImageFile);
                     await _teamService.UpdateAsync(existingTeam);
 
@@ -303,7 +278,6 @@ namespace sportify.PL.Controllers
                 return RedirectToAction("EditTeams", new { leagueId });
             }
 
-            // Create and add the new team
             var newTeam = new TeamDTO
             {
                 LeagueID = leagueId,

@@ -36,20 +36,7 @@ namespace sportify.BLL.Services
         {
             var matches = await _unitOfWork.MatchRepository.GetMatchesWithTeamsByLeagueAsync(id);
             return matches.Select(m => _mapper.Map<MatchDTO>(m)).ToList();
-            //return matches.Select(m => new MatchDTO
-            //{
-            //    MatchID = m.MatchID,
-            //    LeagueId = m.LeagueId,
-            //    FirstTeamId = m.FirstTeamId,
-            //    FirstTeamName = m.FirstTeam?.Name ?? "Unknown Team",
-            //    SecondTeamId = m.SecondTeamId,
-            //    SecondTeamName = m.SecondTeam?.Name ?? "Unknown Team",
-            //    Date = m.Date,
-            //    FirstTeamGoals = m.FirstTeamGoals,
-            //    SecondTeamGoals = m.SecondTeamGoals,
-            //    Result = m.Result,
-            //    IsCompleted = m.IsCompleted
-            //}).ToList();
+            
         }
 
         public async Task UpdateAsync(MatchDTO model)

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <script>
-        // Apply theme immediately before page renders to prevent flash
         (function() {
           const savedTheme = localStorage.getItem('theme') || 'dark'; // Set dark as default
           document.documentElement.setAttribute('data-theme', savedTheme);
@@ -35,7 +34,7 @@
             </button>
 
             <a asp-controller="Home" asp-action="Index" class="nav-logo">
-                <img src="~/assets/logo.png" alt="Sportify Logo">
+                <img src="~/assets/logo.png" alt="Sportify Logo" class="sportify-logo">
             </a>
 
             <div class="nav-center nav-links">
@@ -107,16 +106,16 @@
                 <h3><i class="ph ph-trophy"></i> Sportify</h3>
                 <p>Making league management simple</p><br>
                 <ul class="footer-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3>Legal</h3><br>
                 <ul class="footer-links">
-                    <li><a href="#privacy">Privacy Policy</a></li>
-                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                    <li><a asp-controller="Home" asp-action="TermsOfService">Terms of Service</a></li>
                 </ul>
             </div>
             <div>
@@ -142,7 +141,6 @@
     <script src="https://unpkg.com/@@phosphor-icons/web"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
     <script src="~/js/BrowseLeagues.js" asp-append-version="true"></script>
-    @* <script src="~/js/CreateLeague.js" asp-append-version="true"></script> *@
     <script src="~/js/auth.js" asp-append-version="true"></script>
     <script src="~/js/main.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

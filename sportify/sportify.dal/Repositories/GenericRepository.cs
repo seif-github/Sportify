@@ -28,24 +28,6 @@ namespace sportify.DAL.Repositories
         public async Task AddRangeAsync(List<T> entities) => await _dbSet.AddRangeAsync(entities);
 
         public void Update(T entity) => _dbSet.Update(entity);
-        //public void Update(T entity)
-        //{
-        //    // If entity is already tracked, do not try to re-track it
-        //    var trackedEntity = _context.ChangeTracker.Entries<T>()
-        //        .FirstOrDefault(e => EqualityComparer<object>.Default.Equals(
-        //            e.Property("Id").CurrentValue, entity.GetType().GetProperty("Id").GetValue(entity)));
-
-        //    if (trackedEntity != null)
-        //    {
-        //        // Entity already tracked, apply property values
-        //        _context.Entry(trackedEntity.Entity).CurrentValues.SetValues(entity);
-        //    }
-        //    else
-        //    {
-        //        // Entity not tracked, track it
-        //        _dbSet.Update(entity);
-        //    }
-        //}
 
         public async Task DeleteAsync(int id)
         {

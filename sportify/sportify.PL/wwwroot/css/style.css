@@ -446,6 +446,15 @@ body {
     opacity: 0.8;
 }
 
+.my-footer-container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 5rem;
+}
+
 /*.highlight-match {
     position: relative;
     z-index: 1;
@@ -596,6 +605,9 @@ body {
 }
 
 @media (max-width: 480px) {
+    .nav-content{
+        gap: 5px;
+    }
     .nav-bar {
         padding: 0.75rem 1rem;
     }
@@ -604,9 +616,10 @@ body {
         font-size: 1.25rem;
     }
 
-    .nav-links {
-        margin-top: 1rem;
-    }
+
+/*    .nav-links {
+        margin-top: 0;
+    }*/
 
     .hero {
         padding-top: 5rem;
@@ -629,9 +642,21 @@ body {
         display: none;
     }
 
-    .auth-buttons, .auth-buttons .sign-in-btn, .auth-buttons .sign-up-btn {
-        flex-direction: column;
-        gap: 10px;
-        font-size: 8px;
+    .nav-right{
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: center;
+        justify-content: center;
     }
+
+    .auth-buttons {
+        gap: 10px;
+        
+    }
+
+        .auth-buttons .sign-in-btn, .auth-buttons .sign-up-btn {
+            font-size: 8px;
+        }
+
 }

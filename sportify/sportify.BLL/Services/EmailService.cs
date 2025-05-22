@@ -69,7 +69,6 @@ public class EmailService : IEmailService
     {
         var subject = "Verify your Sportify account";
 
-        // Create the email template
         var emailTemplate = @"
         <table role=""presentation"" cellpadding=""0"" cellspacing=""0"" width=""100%"" style=""background-color: #111827; padding: 20px;"">
             <tr>
@@ -106,7 +105,6 @@ public class EmailService : IEmailService
             </tr>
         </table>";
 
-        // Replace the placeholder with the actual confirmation link
         var message = string.Format(emailTemplate, confirmationLink);
 
         await SendEmailAsync(email, subject, message);

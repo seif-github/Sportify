@@ -155,7 +155,7 @@
                 const hour = parseInt(row.find('.hour-select').val());
                 const minute = parseInt(row.find('.minute-select').val());
 
-                if (isNaN(hour)) { // Fixed missing parenthesis
+                if (isNaN(hour)) {
                     alert('Please select a valid hour');
                     return;
                 }
@@ -174,21 +174,11 @@
                     }),
                     success: function(response) {
                         if (response.success) {
-                            // Update displayed time
                             const newTime = new Date();
                             newTime.setHours(hour);
                             newTime.setMinutes(minute);
                             row.find('.match-time-display').text(newTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
                             resetTimeEdit(row);
-
-                            // Show success message
-                            // const successMsg = $('<div class="alert alert-success alert-dismissible fade show" role="alert">' +
-                            //     'Match time updated successfully!' +
-                            //     '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
-                            //     '</div>');
-
-                            // $('.container').prepend(successMsg);
-                            // setTimeout(() => successMsg.alert('close'), 3000);
                             
                         } else {
                             alert('Error: ' + response.message);
@@ -273,17 +263,10 @@
                     }),
                     success: function (response) {
                         if (response.success) {
-                            // Update match row
-                            // row.find('td:eq(2)').html(firstGoals + ' - ' + secondGoals);
-                            // row.find('td:eq(3)').text(getResultText(firstGoals, secondGoals));
-                            // row.find('.vs').html(firstGoals + ' - ' + secondGoals);
                             row.find('.score-input').hide();
                             var enterScoreBtn = row.find('.input-score-btn');
                             enterScoreBtn.show().prop('disabled', true);
-                            // enterScoreBtn.removeClass('btn-primary').addClass('btn-secondary');
 
-                            // Check if all matches in current round are complete
-                            // checkRoundCompletion();
                         } else {
                             alert('Error: ' + response.message);
                         }
@@ -294,30 +277,6 @@
                     }
                 });
             });
-
-            // function checkRoundCompletion() {
-            //     var currentRound = parseInt($('.current-round').text().match(/Round (\d+)/)[1]);
-            //     var currentRoundMatches = $('.matches-table').filter(function () {
-            //         return $(this).prev('h3').hasClass('current-round');
-            //     }).find('tr').filter(function () {
-            //         return $(this).find('.input-score-btn:not(:disabled)').length > 0;
-            //     });
-
-            //     if (currentRoundMatches.length === 0) {
-            //         window.location.reload();
-            //     }
-            // }
-
-            // Connection status UI element
-            // const connectionStatus = $(`
-            //     <div id="connection-status" style="position: fixed; bottom: 10px; right: 10px;
-            //          padding: 8px 12px; border-radius: 4px; background: #f8f9fa;
-            //          box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: none; z-index: 1000;">
-            //         <span id="status-icon" style="margin-right: 5px;">🔴</span>
-            //         <span id="status-text">Disconnected</span>
-            //     </div>
-            // `);
-            // $('body').append(connectionStatus);
 
             const leagueId = @Model?.League?.LeagueID ?? 0;
 
@@ -332,7 +291,6 @@
                     const row = $(`#match-${update.matchId}`);
                     if (row.length) {
                         row.find('td:nth-child(3)').text(`${update.firstTeamGoals} - ${update.secondTeamGoals}`);
-                        // Add other update logic
                     }
                 });
 

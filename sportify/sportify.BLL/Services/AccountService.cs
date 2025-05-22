@@ -62,10 +62,8 @@ namespace sportify.BLL.Services
         #endregion
         public async Task<string> LoginUserAsync(LoginUserDTO model)
         {
-            // Find user by username (since your DTO only has UserName)
             var user = await _userManager.FindByNameAsync(model.UserName);
 
-            // User not found case
             if (user == null)
             {
                 return "-1"; // User not found
@@ -115,7 +113,6 @@ namespace sportify.BLL.Services
             if (user == null)
                 return IdentityResult.Failed(new IdentityError { Description = "User not found." });
 
-            // Update username if changed
             if (user.UserName != model.UserName)
             {
                 var setUsernameResult = await _userManager.SetUserNameAsync(user, model.UserName);
@@ -127,13 +124,11 @@ namespace sportify.BLL.Services
                 }
             }
 
-            // Validate email format
             if (!new EmailAddressAttribute().IsValid(model.Email))
             {
                 return IdentityResult.Failed(new IdentityError { Description = "Invalid email address format" });
             }
 
-            // Update email if changed
             if (user.Email != model.Email)
             {
                 var setEmailResult = await _userManager.SetEmailAsync(user, model.Email);
@@ -143,13 +138,11 @@ namespace sportify.BLL.Services
 
             if (model.ImageFile != null && model.ImageFile.Length > 0)
             {
-                // Delete old image if exists
                 if (!string.IsNullOrEmpty(user.ImageUrl))
                 {
                     await _fileService.DeleteFileAsync(user.ImageUrl);
                 }
 
-                // Save new image
                 user.ImageUrl = await _fileService.SaveFileAsync(model.ImageFile);
             }
 

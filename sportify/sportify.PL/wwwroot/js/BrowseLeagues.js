@@ -1,5 +1,4 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    // DOM elements
     const searchInput = document.getElementById('searchInput');
     const clearSearch = document.getElementById('clearSearch');
     const leagueCards = document.querySelectorAll('.league-card');
@@ -8,11 +7,9 @@
     const statusFilterItems = document.querySelectorAll('.status-filter');
     const statusFilterButton = document.getElementById('statusFilterButton');
 
-    // Current filter state
     let currentSearchTerm = '';
     let currentStatusFilter = 'all';
 
-    // Filter function
     function filterLeagues() {
         let visibleCount = 0;
 
@@ -20,13 +17,11 @@
             const leagueName = card.querySelector('.league-name').textContent.toLowerCase();
             const cardStatus = card.getAttribute('data-status');
 
-            // Check matches
             const matchesSearch = currentSearchTerm === '' ||
                 leagueName.includes(currentSearchTerm);
             const matchesStatus = currentStatusFilter === 'all' ||
                 cardStatus === currentStatusFilter;
 
-            // Show/hide card
             if (matchesSearch && matchesStatus) {
                 card.style.display = 'block';
                 visibleCount++;
@@ -35,7 +30,6 @@
             }
         });
 
-        // Toggle no results message
         if (visibleCount > 0) {
             noResults.style.display = 'none';
             leaguesContainer.style.display = 'flex';
@@ -45,7 +39,6 @@
         }
     }
 
-    // Event listeners
     searchInput.addEventListener('input', function () {
         currentSearchTerm = this.value.toLowerCase();
         filterLeagues();
@@ -67,6 +60,5 @@
         searchInput.focus();
     });
 
-    // Initial filter
     filterLeagues();
 });

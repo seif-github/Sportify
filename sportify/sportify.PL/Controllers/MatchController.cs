@@ -93,7 +93,6 @@ namespace sportify.PL.Controllers
                     return Json(new { success = false, message = "Unauthorized." });
                 }
 
-                // Verify the match is in the current round
                 var matches = await _matchService.GetMatchesByLeagueIdAsync(model.LeagueId);
                 var matchesByRound = matches
                     .OrderBy(m => m.Date)
@@ -132,7 +131,6 @@ namespace sportify.PL.Controllers
 
                 var updatedMatch = await _matchService.GetMatchByIdAsync(model.MatchId);
 
-                // Broadcast the update to all clients watching this league
                 await _hubContext.Clients.Group($"league-{model.LeagueId}")
                     .SendAsync("ReceiveScoreUpdate", new
                     {
@@ -149,7 +147,6 @@ namespace sportify.PL.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception
                 Console.WriteLine($"Error updating match score: {ex.Message}");
                 return Json(new { success = false, message = $"Error updating match: {ex.Message}" });
             }
@@ -172,7 +169,6 @@ namespace sportify.PL.Controllers
                     return Json(new { success = false, message = "Match not found" });
                 }
 
-                // Update just the time portion
                 match.Date = new DateTime(
                     match.Date.Year,
                     match.Date.Month,
@@ -184,14 +180,6 @@ namespace sportify.PL.Controllers
                 _matchService.ClearTracking();
 
                 await _matchService.UpdateAsync(match);
-
-                //var hubContext = HttpContext.RequestServices.GetRequiredService<IHubContext<ScoreHub>>();
-                //await hubContext.Clients.Group($"League_{model.LeagueId}").SendAsync("ReceiveTimeUpdate", new
-                //{
-                //    matchId = model.MatchId,
-                //    hour = model.Hour,
-                //    minute = model.Minute
-                //});
 
 
                 return Json(new { success = true });
