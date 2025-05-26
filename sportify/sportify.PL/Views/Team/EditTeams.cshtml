@@ -102,12 +102,16 @@
                                             Edit
                                         </button>
 
-                                        <button type="button" 
-                                                class="btn btn-sm btn-outline-danger mt-2 delete-team-btn" 
-                                                data-team-id="@team.TeamID"
-                                                data-delete-account>
-                                            <i class="ph ph-trash"></i> Delete
-                                        </button>
+                                        @if (leagueHasStarted)
+                                        {
+                                            <button type="button"
+                                                    class="btn btn-sm btn-outline-danger mt-2 delete-team-btn"
+                                                    data-team-id="@team.TeamID"
+                                                    data-delete-account>
+                                                <i class="ph ph-trash"></i> Delete
+                                            </button>
+                                        }
+                                        
                                     </div>
                                 }
                                 else
