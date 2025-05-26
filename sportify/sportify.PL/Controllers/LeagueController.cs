@@ -130,7 +130,7 @@ namespace sportify.PL.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var league = await _leagueService.GetByIdAsync(id); if (league == null) return NotFound();
-            if (DateTime.Now >= league.StartDate) return BadRequest();
+            //if (DateTime.Now >= league.StartDate) return BadRequest();
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (currentUserId != league.OrganizerID) return Forbid();
             return View(league);

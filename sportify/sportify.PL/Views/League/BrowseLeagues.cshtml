@@ -71,61 +71,70 @@
     <hr />  
     <!-- Leagues Container -->
     <div class="row" id="leaguesContainer">
-        @foreach (var item in Model)
-        {
-            var endDateDays = (item.League.NumberOfTeams - 1) * item.League.DurationBetweenMatches;
-            var EndDate = item.League.StartDate.AddDays(endDateDays);
-            var currentDate = DateTime.Now;
-            var status = currentDate < item.League.StartDate ? "upcoming" :
-            currentDate <= EndDate ? "ongoing" : "finished";
+        @if(Model.Any()){
+            @foreach (var item in Model)
+            {
+                var endDateDays = (item.League.NumberOfTeams - 1) * item.League.DurationBetweenMatches;
+                var EndDate = item.League.StartDate.AddDays(endDateDays);
+                var currentDate = DateTime.Now;
+                var status = currentDate < item.League.StartDate ? "upcoming" :
+                currentDate <= EndDate ? "ongoing" : "finished";
 
-            <div class="col-md-6 col-lg-4 mb-4 league-card" data-status="@status">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h5 class="card-title league-name">@item.League.Name</h5>
-                            @{
-                                var statusBadge = status == "upcoming" ? "bg-primary" :
-                                status == "ongoing" ? "bg-success" : "bg-secondary";
-                                var statusText = status == "upcoming" ? "Upcoming" :
-                                status == "ongoing" ? "Ongoing" : "Finished";
-                            }
-                            <span class="badge @statusBadge">@statusText</span>
+                <div class="col-md-6 col-lg-4 mb-4 league-card" data-status="@status">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h5 class="card-title league-name">@item.League.Name</h5>
+                                @{
+                                    var statusBadge = status == "upcoming" ? "bg-primary" :
+                                    status == "ongoing" ? "bg-success" : "bg-secondary";
+                                    var statusText = status == "upcoming" ? "Upcoming" :
+                                    status == "ongoing" ? "Ongoing" : "Finished";
+                                }
+                                <span class="badge @statusBadge">@statusText</span>
+                            </div>
+                            <div class="league-info">
+                                <p class="mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
+                                    Created by: @item.OrganizerName
+                                </p>
+                                <p class="mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path></svg>
+                                    @item.League.NumberOfTeams Teams
+                                </p>
+                                @if (status == "upcoming")
+                                {
+                                    <p class="mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
+                                        Starts @item.League.StartDate.ToString("MMM d, yyyy")
+                                    </p>
+                                }
+                                else if (status == "ongoing")
+                                {
+                                    <p class="mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
+                                        Started @item.League.StartDate.ToString("MMM d, yyyy")
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p class="mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
+                                        Ended @EndDate.ToString("MMM d, yyyy")
+                                    </p>
+                                }
+                            </div>
+                            <a asp-action="Details" asp-route-id="@item.League.LeagueID" class="btn btn-outline-primary w-100">View Details</a>
                         </div>
-                        <div class="league-info">
-                            <p class="mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
-                                Created by: @item.OrganizerName
-                            </p>
-                            <p class="mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path></svg>
-                                @item.League.NumberOfTeams Teams
-                            </p>
-                            @if (status == "upcoming")
-                            {
-                                <p class="mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
-                                    Starts @item.League.StartDate.ToString("MMM d, yyyy")
-                                </p>
-                            }
-                            else if (status == "ongoing")
-                            {
-                                <p class="mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
-                                    Started @item.League.StartDate.ToString("MMM d, yyyy")
-                                </p>
-                            }
-                            else
-                            {
-                                <p class="mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-primary)" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path></svg>
-                                    Ended @EndDate.ToString("MMM d, yyyy")
-                                </p>
-                            }
-                        </div>
-                        <a asp-action="Details" asp-route-id="@item.League.LeagueID" class="btn btn-outline-primary w-100">View Details</a>
                     </div>
                 </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center py-5">
+                <h3 class="mb-2">No leagues found</h3>
+                <p class="text-muted">There are currently no leagues available</p>
             </div>
         }
     </div>
