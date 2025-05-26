@@ -11,8 +11,8 @@ using sportify.BLL.Settings;
 using Microsoft.Extensions.Options;
 using sportify.PL.Hubs;
 using sportify.PL.Helpers;
-using DinkToPdf.Contracts;
-using DinkToPdf;
+//using DinkToPdf.Contracts;
+//using DinkToPdf;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,7 +59,7 @@ builder.Services.Configure<FormOptions>(options =>
     options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10MB file size limit
 });
 
-builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+//builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
 
 builder.Services.AddSignalR();
