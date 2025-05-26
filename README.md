@@ -1,18 +1,16 @@
 # 🏆 League Management System  
 
 ## 📌 Project Overview  
-The **League Management System** is a **graduation project from the DEPI internship**, designed to streamline **league and tournament organization** across multiple game types such as **football, table tennis, and e-sports**.  
+The **League Management System** is a **graduation project from the DEPI internship**, designed to streamline **league organization** for football.  
 
 This system allows users to **create leagues, schedule matches, manage teams, and track standings automatically** through an intuitive interface. Initially, we are prototyping with **HTML, CSS, and JavaScript**, and the final implementation will be built using **.NET Core MVC** for scalability and performance.  
 
 ---
 
 ## 🚀 Features  
-✅ **League & Tournament Creation** – Customizable league structures  
-✅ **Team & Player Registration** – Seamless participation management  
+✅ **League Creation** – Customizable league structures  
 ✅ **Automated Scheduling** – Dynamic fixture generation  
 ✅ **Standings & Score Tracking** – Real-time leaderboard updates  
-✅ **Multi-Sport Support** – Suitable for different types of games  
 ✅ **User-Friendly Interface** – Accessible to both organizers and participants  
 
 ---
