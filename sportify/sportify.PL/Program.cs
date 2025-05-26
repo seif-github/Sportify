@@ -18,7 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<SportifyContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("cs")),
+    options.UseSqlServer(builder.Configuration.GetConnectionString("monster")),
     ServiceLifetime.Scoped);
 
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("gmail"));
