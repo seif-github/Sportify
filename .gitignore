@@ -48,7 +48,6 @@ TestResults/
 
 ## Others
 *.tmp
-*.bak
 *.swp
 
 ## Node / Frontend (in case you're using npm or Angular/React in frontend/)
