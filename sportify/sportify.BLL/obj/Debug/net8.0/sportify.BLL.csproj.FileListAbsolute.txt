@@ -1,0 +1,16 @@
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\bin\Debug\net8.0\sportify.BLL.deps.json
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\bin\Debug\net8.0\sportify.BLL.dll
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\bin\Debug\net8.0\sportify.BLL.pdb
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\bin\Debug\net8.0\sportify.DAL.dll
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\bin\Debug\net8.0\sportify.DAL.pdb
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.csproj.AssemblyReference.cache
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.AssemblyInfoInputs.cache
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.AssemblyInfo.cs
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.csproj.CoreCompileInputs.cache
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.sourcelink.json
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.E0101C55.Up2Date
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.dll
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\refint\sportify.BLL.dll
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\sportify.BLL.pdb
+D:\DEPI\Final Project\Submit\Sportify\sportify\sportify.BLL\obj\Debug\net8.0\ref\sportify.BLL.dll

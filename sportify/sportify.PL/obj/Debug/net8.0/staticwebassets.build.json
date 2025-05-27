@@ -1,0 +1,3009 @@
+{
+  "Version": 1,
+  "Hash": "PrACLkP7FXWsoT4YB63iVtQXlV7DyVR3pVe3HjJHV1I=",
+  "Source": "sportify.PL",
+  "BasePath": "_content/sportify.PL",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "sportify.PL\\wwwroot",
+      "Source": "sportify.PL",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "sportify.PL#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "ew210nodlh",
+      "Integrity": "Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "sportify.PL#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "ew210nodlh",
+      "Integrity": "Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-league-logo.png",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "assets/default-league-logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2b2yqwfiwo",
+      "Integrity": "0nUWJx1XYLPAZXZaPbJK8nyCL+Notg5R1orfrPJSztI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\default-league-logo.png"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-team-logo.png",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "assets/default-team-logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y5q2sh31xc",
+      "Integrity": "Ch/fUTQ/BMqNFtjXQKimQvbIeY0hcvIl2ib+PS+qP1w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\default-team-logo.png"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "assets/default-user-image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "28fs6jpt6j",
+      "Integrity": "7gGggKicVWiNpADfc6hKW/9g7QkQO9ZLNIu1xC9NM+I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\default-user-image.png"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "assets/gold-trophy#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gts0tdzk6r",
+      "Integrity": "5FLwCwBsU8Vmhcfa7M9Ln+4i6K+6oFEG5Uph9/asUmI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\gold-trophy.png"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "assets/icon-bg#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0d4pw0fvyq",
+      "Integrity": "VLIb6JPzUa55+gfrZ90AF2kErQCFPtFvoEywFQKaCX8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\icon-bg.png"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "assets/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r6run2orh7",
+      "Integrity": "I+RPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco=",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\logo.png"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/auth#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ffl0vhx60j",
+      "Integrity": "haD9SIJPvDWd8+L4ogPNdRuHBls5jT33rnpyqKaUvmQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\auth.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\BrowseLeagues.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/BrowseLeagues#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "99aultpiwt",
+      "Integrity": "bWihTviqglglXoda2WdGsrozWedNjS6PX83EOFhiwGA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\BrowseLeagues.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\CreateLeague.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/CreateLeague#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6fhljxi1xq",
+      "Integrity": "csKLxkTsES8NZ1D/GQjNm57kzUxjftaqyiq87wQoe4o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CreateLeague.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\Dashboard.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/Dashboard#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1u0kgcmn6f",
+      "Integrity": "x95SzqJM3TvMNFvH/8PfppL/mq3PJ6qzDWbS+fQ+ibo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Dashboard.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\EditLeague.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/EditLeague#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "54772v02kc",
+      "Integrity": "O0It37yxoprFYVWxv/gcqLcChbuT3hSumW3ugQWnP2c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\EditLeague.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\LeagueDetails.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/LeagueDetails#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "czys5dltbe",
+      "Integrity": "6FbkBYVayNmdw9xbbWw2GFMSFF+NdR4W6Sp5ruHRtEk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LeagueDetails.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\profile.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/profile#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lrn5gqmuwh",
+      "Integrity": "b2CyuhL0MdraxS47SXoXUcHSx00uQTy86b9ryiuBF/0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\profile.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8j7ooqw4t3",
+      "Integrity": "JPyQ1z8c0AV6HpqOWt810AFX/bEIZo3CJ/vGX1IpGyI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kihreb8a08",
+      "Integrity": "lJRpIugyE7+PgIeIE6copMqkqNF2UR2TA5hLf3QSI58=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\152ceb07-e443-4036-a52d-bf8740e78d87.jpg",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "images/152ceb07-e443-4036-a52d-bf8740e78d87#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aeoel8r10j",
+      "Integrity": "AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\152ceb07-e443-4036-a52d-bf8740e78d87.jpg"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\64877a4c-d943-4554-b957-76adaee89093.jpg",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "images/64877a4c-d943-4554-b957-76adaee89093#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aeoel8r10j",
+      "Integrity": "AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\64877a4c-d943-4554-b957-76adaee89093.jpg"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\e64c416b-0fed-48c7-9232-d1799f22d178.png",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "images/e64c416b-0fed-48c7-9232-d1799f22d178#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1bajuv8bii",
+      "Integrity": "E0toE5ZHMYfpLvHhI+4bqISCGU/ifjG/8DxFM3nMXfw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e64c416b-0fed-48c7-9232-d1799f22d178.png"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "js/auth#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r46hqhwcmo",
+      "Integrity": "S3fOaYbCwBAJ0iLmZiKUp0476UVAfd8kkkD7iY1lvXI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\auth.js"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\BrowseLeagues.js",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "js/BrowseLeagues#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9cn7x81jq8",
+      "Integrity": "F93v414XLK7SihFszcLGQtKfjZzc5fd9FpSIAz2wL4I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\BrowseLeagues.js"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "js/main#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7ar9gqsx8l",
+      "Integrity": "X6r9LWvJ174YUHOgxzaKNnhzVq9wyGNvVYauQTf18Gw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\main.js"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "81b7ukuj9c",
+      "Integrity": "ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mlv21k5csn",
+      "Integrity": "hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x0q3zqp4vz",
+      "Integrity": "geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "03hjc8e09r",
+      "Integrity": "xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "48y08845bh",
+      "Integrity": "RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Identity": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "sportify.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\",
+      "BasePath": "_content/sportify.PL",
+      "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "356vix0kms",
+      "Integrity": "16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "assets/default-league-logo.2b2yqwfiwo.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-league-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0nUWJx1XYLPAZXZaPbJK8nyCL+Notg5R1orfrPJSztI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2b2yqwfiwo"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/default-league-logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0nUWJx1XYLPAZXZaPbJK8nyCL+Notg5R1orfrPJSztI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/default-league-logo.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-league-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0nUWJx1XYLPAZXZaPbJK8nyCL+Notg5R1orfrPJSztI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0nUWJx1XYLPAZXZaPbJK8nyCL+Notg5R1orfrPJSztI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/default-team-logo.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-team-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36147"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ch/fUTQ/BMqNFtjXQKimQvbIeY0hcvIl2ib+PS+qP1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ch/fUTQ/BMqNFtjXQKimQvbIeY0hcvIl2ib+PS+qP1w="
+        }
+      ]
+    },
+    {
+      "Route": "assets/default-team-logo.y5q2sh31xc.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-team-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36147"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ch/fUTQ/BMqNFtjXQKimQvbIeY0hcvIl2ib+PS+qP1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y5q2sh31xc"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/default-team-logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ch/fUTQ/BMqNFtjXQKimQvbIeY0hcvIl2ib+PS+qP1w="
+        }
+      ]
+    },
+    {
+      "Route": "assets/default-user-image.28fs6jpt6j.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22799"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7gGggKicVWiNpADfc6hKW/9g7QkQO9ZLNIu1xC9NM+I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "28fs6jpt6j"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/default-user-image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7gGggKicVWiNpADfc6hKW/9g7QkQO9ZLNIu1xC9NM+I="
+        }
+      ]
+    },
+    {
+      "Route": "assets/default-user-image.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\default-user-image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22799"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7gGggKicVWiNpADfc6hKW/9g7QkQO9ZLNIu1xC9NM+I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7gGggKicVWiNpADfc6hKW/9g7QkQO9ZLNIu1xC9NM+I="
+        }
+      ]
+    },
+    {
+      "Route": "assets/gold-trophy.gts0tdzk6r.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128120"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5FLwCwBsU8Vmhcfa7M9Ln+4i6K+6oFEG5Uph9/asUmI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gts0tdzk6r"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/gold-trophy.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5FLwCwBsU8Vmhcfa7M9Ln+4i6K+6oFEG5Uph9/asUmI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/gold-trophy.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\gold-trophy.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128120"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5FLwCwBsU8Vmhcfa7M9Ln+4i6K+6oFEG5Uph9/asUmI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5FLwCwBsU8Vmhcfa7M9Ln+4i6K+6oFEG5Uph9/asUmI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/icon-bg.0d4pw0fvyq.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6004"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLIb6JPzUa55+gfrZ90AF2kErQCFPtFvoEywFQKaCX8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0d4pw0fvyq"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/icon-bg.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLIb6JPzUa55+gfrZ90AF2kErQCFPtFvoEywFQKaCX8="
+        }
+      ]
+    },
+    {
+      "Route": "assets/icon-bg.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\icon-bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6004"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLIb6JPzUa55+gfrZ90AF2kErQCFPtFvoEywFQKaCX8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLIb6JPzUa55+gfrZ90AF2kErQCFPtFvoEywFQKaCX8="
+        }
+      ]
+    },
+    {
+      "Route": "assets/logo.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "482374"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I+RPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I+RPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco="
+        }
+      ]
+    },
+    {
+      "Route": "assets/logo.r6run2orh7.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\assets\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "482374"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I+RPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r6run2orh7"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I+RPkERagHtQWWXzS2uXuKHn7TNXvtApuY0ASdXotco="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4875"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"haD9SIJPvDWd8+L4ogPNdRuHBls5jT33rnpyqKaUvmQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-haD9SIJPvDWd8+L4ogPNdRuHBls5jT33rnpyqKaUvmQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.ffl0vhx60j.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\auth.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4875"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"haD9SIJPvDWd8+L4ogPNdRuHBls5jT33rnpyqKaUvmQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ffl0vhx60j"
+        },
+        {
+          "Name": "label",
+          "Value": "css/auth.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-haD9SIJPvDWd8+L4ogPNdRuHBls5jT33rnpyqKaUvmQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/BrowseLeagues.99aultpiwt.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\BrowseLeagues.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1931"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bWihTviqglglXoda2WdGsrozWedNjS6PX83EOFhiwGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "99aultpiwt"
+        },
+        {
+          "Name": "label",
+          "Value": "css/BrowseLeagues.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bWihTviqglglXoda2WdGsrozWedNjS6PX83EOFhiwGA="
+        }
+      ]
+    },
+    {
+      "Route": "css/BrowseLeagues.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\BrowseLeagues.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1931"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bWihTviqglglXoda2WdGsrozWedNjS6PX83EOFhiwGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bWihTviqglglXoda2WdGsrozWedNjS6PX83EOFhiwGA="
+        }
+      ]
+    },
+    {
+      "Route": "css/CreateLeague.6fhljxi1xq.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\CreateLeague.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csKLxkTsES8NZ1D/GQjNm57kzUxjftaqyiq87wQoe4o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6fhljxi1xq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/CreateLeague.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-csKLxkTsES8NZ1D/GQjNm57kzUxjftaqyiq87wQoe4o="
+        }
+      ]
+    },
+    {
+      "Route": "css/CreateLeague.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\CreateLeague.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csKLxkTsES8NZ1D/GQjNm57kzUxjftaqyiq87wQoe4o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-csKLxkTsES8NZ1D/GQjNm57kzUxjftaqyiq87wQoe4o="
+        }
+      ]
+    },
+    {
+      "Route": "css/Dashboard.1u0kgcmn6f.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\Dashboard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x95SzqJM3TvMNFvH/8PfppL/mq3PJ6qzDWbS+fQ+ibo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1u0kgcmn6f"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Dashboard.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-x95SzqJM3TvMNFvH/8PfppL/mq3PJ6qzDWbS+fQ+ibo="
+        }
+      ]
+    },
+    {
+      "Route": "css/Dashboard.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\Dashboard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x95SzqJM3TvMNFvH/8PfppL/mq3PJ6qzDWbS+fQ+ibo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-x95SzqJM3TvMNFvH/8PfppL/mq3PJ6qzDWbS+fQ+ibo="
+        }
+      ]
+    },
+    {
+      "Route": "css/EditLeague.54772v02kc.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\EditLeague.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O0It37yxoprFYVWxv/gcqLcChbuT3hSumW3ugQWnP2c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "54772v02kc"
+        },
+        {
+          "Name": "label",
+          "Value": "css/EditLeague.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O0It37yxoprFYVWxv/gcqLcChbuT3hSumW3ugQWnP2c="
+        }
+      ]
+    },
+    {
+      "Route": "css/EditLeague.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\EditLeague.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O0It37yxoprFYVWxv/gcqLcChbuT3hSumW3ugQWnP2c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O0It37yxoprFYVWxv/gcqLcChbuT3hSumW3ugQWnP2c="
+        }
+      ]
+    },
+    {
+      "Route": "css/LeagueDetails.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\LeagueDetails.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11387"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6FbkBYVayNmdw9xbbWw2GFMSFF+NdR4W6Sp5ruHRtEk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6FbkBYVayNmdw9xbbWw2GFMSFF+NdR4W6Sp5ruHRtEk="
+        }
+      ]
+    },
+    {
+      "Route": "css/LeagueDetails.czys5dltbe.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\LeagueDetails.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11387"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6FbkBYVayNmdw9xbbWw2GFMSFF+NdR4W6Sp5ruHRtEk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "czys5dltbe"
+        },
+        {
+          "Name": "label",
+          "Value": "css/LeagueDetails.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6FbkBYVayNmdw9xbbWw2GFMSFF+NdR4W6Sp5ruHRtEk="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8798"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b2CyuhL0MdraxS47SXoXUcHSx00uQTy86b9ryiuBF/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-b2CyuhL0MdraxS47SXoXUcHSx00uQTy86b9ryiuBF/0="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.lrn5gqmuwh.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8798"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b2CyuhL0MdraxS47SXoXUcHSx00uQTy86b9ryiuBF/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lrn5gqmuwh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-b2CyuhL0MdraxS47SXoXUcHSx00uQTy86b9ryiuBF/0="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.8j7ooqw4t3.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13667"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JPyQ1z8c0AV6HpqOWt810AFX/bEIZo3CJ/vGX1IpGyI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8j7ooqw4t3"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JPyQ1z8c0AV6HpqOWt810AFX/bEIZo3CJ/vGX1IpGyI="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13667"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JPyQ1z8c0AV6HpqOWt810AFX/bEIZo3CJ/vGX1IpGyI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JPyQ1z8c0AV6HpqOWt810AFX/bEIZo3CJ/vGX1IpGyI="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "410598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lJRpIugyE7+PgIeIE6copMqkqNF2UR2TA5hLf3QSI58=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lJRpIugyE7+PgIeIE6copMqkqNF2UR2TA5hLf3QSI58="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.kihreb8a08.ico",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "410598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lJRpIugyE7+PgIeIE6copMqkqNF2UR2TA5hLf3QSI58=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kihreb8a08"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lJRpIugyE7+PgIeIE6copMqkqNF2UR2TA5hLf3QSI58="
+        }
+      ]
+    },
+    {
+      "Route": "images/152ceb07-e443-4036-a52d-bf8740e78d87.aeoel8r10j.jpg",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\152ceb07-e443-4036-a52d-bf8740e78d87.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aeoel8r10j"
+        },
+        {
+          "Name": "label",
+          "Value": "images/152ceb07-e443-4036-a52d-bf8740e78d87.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc="
+        }
+      ]
+    },
+    {
+      "Route": "images/152ceb07-e443-4036-a52d-bf8740e78d87.jpg",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\152ceb07-e443-4036-a52d-bf8740e78d87.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc="
+        }
+      ]
+    },
+    {
+      "Route": "images/64877a4c-d943-4554-b957-76adaee89093.aeoel8r10j.jpg",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\64877a4c-d943-4554-b957-76adaee89093.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aeoel8r10j"
+        },
+        {
+          "Name": "label",
+          "Value": "images/64877a4c-d943-4554-b957-76adaee89093.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc="
+        }
+      ]
+    },
+    {
+      "Route": "images/64877a4c-d943-4554-b957-76adaee89093.jpg",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\64877a4c-d943-4554-b957-76adaee89093.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AriqCfmYpXdbkEd/OtFrPPMjN48iufRBGZjTmPspisc="
+        }
+      ]
+    },
+    {
+      "Route": "images/e64c416b-0fed-48c7-9232-d1799f22d178.1bajuv8bii.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\e64c416b-0fed-48c7-9232-d1799f22d178.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E0toE5ZHMYfpLvHhI+4bqISCGU/ifjG/8DxFM3nMXfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1bajuv8bii"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e64c416b-0fed-48c7-9232-d1799f22d178.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-E0toE5ZHMYfpLvHhI+4bqISCGU/ifjG/8DxFM3nMXfw="
+        }
+      ]
+    },
+    {
+      "Route": "images/e64c416b-0fed-48c7-9232-d1799f22d178.png",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\images\\e64c416b-0fed-48c7-9232-d1799f22d178.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E0toE5ZHMYfpLvHhI+4bqISCGU/ifjG/8DxFM3nMXfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-E0toE5ZHMYfpLvHhI+4bqISCGU/ifjG/8DxFM3nMXfw="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1185"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S3fOaYbCwBAJ0iLmZiKUp0476UVAfd8kkkD7iY1lvXI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-S3fOaYbCwBAJ0iLmZiKUp0476UVAfd8kkkD7iY1lvXI="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth.r46hqhwcmo.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\auth.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1185"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S3fOaYbCwBAJ0iLmZiKUp0476UVAfd8kkkD7iY1lvXI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r46hqhwcmo"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-S3fOaYbCwBAJ0iLmZiKUp0476UVAfd8kkkD7iY1lvXI="
+        }
+      ]
+    },
+    {
+      "Route": "js/BrowseLeagues.9cn7x81jq8.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\BrowseLeagues.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2320"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F93v414XLK7SihFszcLGQtKfjZzc5fd9FpSIAz2wL4I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9cn7x81jq8"
+        },
+        {
+          "Name": "label",
+          "Value": "js/BrowseLeagues.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F93v414XLK7SihFszcLGQtKfjZzc5fd9FpSIAz2wL4I="
+        }
+      ]
+    },
+    {
+      "Route": "js/BrowseLeagues.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\BrowseLeagues.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2320"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F93v414XLK7SihFszcLGQtKfjZzc5fd9FpSIAz2wL4I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F93v414XLK7SihFszcLGQtKfjZzc5fd9FpSIAz2wL4I="
+        }
+      ]
+    },
+    {
+      "Route": "js/main.7ar9gqsx8l.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3201"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6r9LWvJ174YUHOgxzaKNnhzVq9wyGNvVYauQTf18Gw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7ar9gqsx8l"
+        },
+        {
+          "Name": "label",
+          "Value": "js/main.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6r9LWvJ174YUHOgxzaKNnhzVq9wyGNvVYauQTf18Gw="
+        }
+      ]
+    },
+    {
+      "Route": "js/main.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3201"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6r9LWvJ174YUHOgxzaKNnhzVq9wyGNvVYauQTf18Gw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6r9LWvJ174YUHOgxzaKNnhzVq9wyGNvVYauQTf18Gw="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/LICENSE",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "81b7ukuj9c"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/LICENSE"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mlv21k5csn"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery/LICENSE.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery/LICENSE.txt",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation/LICENSE.md",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x0q3zqp4vz"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-validation/LICENSE.md"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03hjc8e09r"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5831"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "48y08845bh"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5831"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "356vix0kms"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-validation-unobtrusive/LICENSE.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "sportify.PL.bundle.scp.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1129"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:41:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI="
+        }
+      ]
+    },
+    {
+      "Route": "sportify.PL.ew210nodlh.bundle.scp.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\sportify.PL.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1129"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:41:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ew210nodlh"
+        },
+        {
+          "Name": "label",
+          "Value": "sportify.PL.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI="
+        }
+      ]
+    },
+    {
+      "Route": "sportify.PL.ew210nodlh.styles.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1129"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:41:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ew210nodlh"
+        },
+        {
+          "Name": "label",
+          "Value": "sportify.PL.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI="
+        }
+      ]
+    },
+    {
+      "Route": "sportify.PL.styles.css",
+      "AssetFile": "D:\\DEPI\\Final Project\\Submit\\Sportify\\sportify\\sportify.PL\\obj\\Debug\\net8.0\\scopedcss\\bundle\\sportify.PL.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1129"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 16:41:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Er9u2UZrES/mL4JvizLUy49ETb9aEgiHZLVGUi5+IpI="
+        }
+      ]
+    }
+  ]
+}
